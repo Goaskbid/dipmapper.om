@@ -1,0 +1,5 @@
+Project: DipMapper.com
+Version: v20.0.0
+Date: 2026-05-15
+Time: 17:20 CEST
+Status: GitHub deployment package ready.

@@ -1,0 +1,17 @@
+{
+  "name": "dipmapper",
+  "version": "20.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "links:check": "node scripts/check-links.mjs",
+    "build": "node scripts/build.mjs",
+    "audit:media": "node scripts/audit-media.mjs",
+    "test": "node scripts/validate.mjs && node scripts/audit-media.mjs && node scripts/check-links.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "description": "DipMapper.com mobile-first swim-place finder with corrected Meilen pack, robust result/map card opening, and GitHub deployment exports."
+}

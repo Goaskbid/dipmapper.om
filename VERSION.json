@@ -1,0 +1,7 @@
+{
+  "project": "DipMapper.com",
+  "version": "v20.0.0",
+  "date": "2026-05-15",
+  "status": "mobile-first Meilen search audit build",
+  "summary": "Corrects Meilen/Herrliberg locality, adds Hallenbad Allmend Meilen, hardens mobile layout and map/list taps."
+}
