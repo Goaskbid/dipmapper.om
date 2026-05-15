@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://dipmapper.com/</loc></url>
-  <url><loc>https://dipmapper.com/privacy.html</loc></url>
-  <url><loc>https://dipmapper.com/cookies.html</loc></url>
-  <url><loc>https://dipmapper.com/disclaimer.html</loc></url>
-  <url><loc>https://dipmapper.com/terms.html</loc></url>
-  <url><loc>https://dipmapper.com/safety.html</loc></url>
-  <url><loc>https://dipmapper.com/advertising.html</loc></url>
-  <url><loc>https://dipmapper.com/imprint.html</loc></url>
-  <url><loc>https://dipmapper.com/sources.html</loc></url>
-</urlset>
+<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>External Sources - DipMapper.com</title><style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:860px;margin:42px auto;padding:0 20px;line-height:1.55;color:#07343b;background:linear-gradient(115deg,#eafffb,#fffdf4 55%,#fff0bd)}a{color:#07343b}h1{font-size:28px}.book{display:inline-block;padding:12px 16px;border:1px solid #c8e3dd;background:#06323a;color:white;text-decoration:none}</style></head><body><h1>External Sources</h1><p>DipMapper.com uses OpenStreetMap and Overpass for mapped places and parking candidates, Wikimedia Commons and Wikidata for open media and civic assets, Open-Meteo for weather, and imported operator or municipality caches where available.</p><p>Commercial launch should connect production-grade providers or self-hosted services where public prototype endpoints are unsuitable.</p><p><a href='index.html'>Back to DipMapper.com</a></p></body></html>
