@@ -1,1 +1,0 @@
-dipmapper.com
