@@ -1,25 +1,7 @@
 {
   "project": "DipMapper.com",
-  "version": "v20.6.0",
+  "version": "v20.7.0",
   "date": "2026-05-16",
-  "time": "10:45 CEST",
-  "changeSummary": [
-    "Bigger anchored map",
-    "Narrower side rail",
-    "Shorter result scroll rail",
-    "All mobile filters visible with icons",
-    "Preserved explicit Open details flow and stored settings"
-  ],
-  "status": "Static GitHub Pages deployment candidate",
-  "openIssues": [
-    "Verified worldwide photo coverage needs production media cache",
-    "Exact global hours, prices and ratings need provider/operator imports",
-    "Prototype public endpoints should be replaced before scale"
-  ],
-  "nextActions": [
-    "Test on desktop and mobile",
-    "Confirm map remains visible while browsing",
-    "Deploy GitHub ZIP to GitHub Pages",
-    "Configure Namecheap DNS for dipmapper.com"
-  ]
+  "status": "Mobile-first deployment candidate",
+  "summary": "Mobile order rebuilt: selection/input first, anchored map second, filters and compact findings side by side below the map. Visible search locks after 10 seconds to prevent flicker."
 }

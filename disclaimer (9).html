@@ -1,18 +1,23 @@
-# DipMapper.com v20.6.0
+# DipMapper.com v20.7.0
 
-DipMapper.com helps people find nearby or holiday-area beaches, lake baths, river baths, pools, thermal baths and water places.
+DipMapper.com is a mobile-first swim finder for beaches, badis, bathing places, public pools, thermal baths, wild-water access, springs and waterfalls.
 
-## This release
+## Current version
 
-- Mobile-first usability hardening.
-- Explicit **Open** button on result cards.
-- Map markers open cards.
-- Visible search stabilizes after 10 seconds.
-- Returning users skip repeated cookie and automatic location prompts.
-- Full filter set is visible on phones.
-- Sticky card close button.
+- Project: DipMapper.com
+- Version: v20.7.0
+- Date: 2026-05-16
+- Status: Mobile-first deployment candidate
 
-## Build
+## What changed in v20.7.0
+
+- Mobile order is now selection/input first, anchored map second, filters and findings side by side below the map.
+- Result cards are compact on phones: thumbnail, name, distance/type and Open button.
+- Visible search locks after 10 seconds to stop flicker.
+- Existing map-dot opening, explicit Open buttons, click-outside close, stored location and stored cookie preference remain.
+- One font family and three font sizes remain enforced.
+
+## Local commands
 
 ```bash
 npm install
@@ -22,27 +27,8 @@ npm run build
 
 ## Deploy
 
-Use GitHub Pages with the included GitHub Actions workflow. The package contains `CNAME` for `dipmapper.com`.
+The `dist/` folder is built for GitHub Pages. The repository also contains a GitHub Actions workflow that deploys the static site.
 
+## Domain
 
-## v20.6.0 mobile interaction hardening
-
-- Result cards open only through an explicit Open button.
-- Scrolling no longer accidentally opens a card.
-- Numbered map dots open the same card directly.
-- The Open button is no longer blocked by card-level pointer-event rules.
-- The map remains visible while browsing.
-
-
-## v20.6.0 update
-
-- Added icons to every filter.
-- Reworked the search/filter controls so they use more vertical space and do not cut off on narrow screens.
-- Travel cards close when clicking outside the card, Escape still works, and Close remains available.
-- Cookie choice, radius, sort, filter and last search location are persisted locally.
-- Preserved the one-font, three-size typography rule.
-
-
-## v20.6.0 layout update
-
-The map is now larger and anchored. The side result rail is narrower and shorter. Mobile filters show all options in a visible grid.
+`CNAME` is set to `dipmapper.com`.

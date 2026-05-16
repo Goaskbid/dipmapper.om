@@ -1,20 +1,17 @@
-# DipMapper v19.4.0 search, media and map update
+# v20.7.0 Space and Map Layout Pass
 
-## Search
-- Starts with the selected radius, default 5 km.
-- Map zoom follows the radius instead of the full destination pack.
-- Destination packs seed the closest useful options first and merge wider choices later.
-- Rhodes now centers on Rhodes Town for normal searches.
-- Miami / South Beach / Key Biscayne added as a destination pack.
+## Goal
+Use screen space better, keep the map larger and anchored, and reduce the vertical footprint of the result rail.
 
-## Names
-- Local names can show English or Latin names where OSM exposes `name:en`, `int_name`, `name:latin`, or Greek transliteration is possible.
+## Changes
+- Desktop shell now uses a narrower side rail and wider map column.
+- Map panel is sticky and remains anchored while browsing the result rail.
+- Map height now uses the viewport and is larger on desktop.
+- Result list is intentionally shorter and scrollable, so the map remains visually dominant.
+- Mobile filters are shown in a two-column grid so all options remain visible instead of being cut off.
+- Phone layout keeps the map first, sticky, and large enough for meaningful tapping.
 
-## Photos
-- Photo audit blocks more off-topic files: coast guard, migrant, police, port, cargo, garbage, documents, maps, sketches, flags and logos.
-- Known destination packs use curated Commons file candidates first.
-- Generic water photos are not treated as exact venue photos.
-
-## Map
-- Radius ring is drawn on the map.
-- Search radius drives the initial zoom.
+## Validation expectation
+- The map should remain visible while the user scrolls the results.
+- Filters should show all options on mobile.
+- Result rail should not consume the full vertical page.

@@ -45,5 +45,6 @@
       "description": "Search a beach, lake or city"
     }
   ],
-  "id": "/dipmapper/"
+  "id": "/dipmapper/",
+  "version": "20.7.0"
 }

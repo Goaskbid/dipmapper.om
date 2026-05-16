@@ -1,16 +1,12 @@
-# DipMapper v20.4.0 interaction hardening
+# v20.7.0 mobile filters and persistence
 
-This build fixes the main usability regression from v20.3.0.
+This update adds icons to every visible filter, changes the search controls to a vertical phone-first layout, closes the travel card when the user taps outside it, and persists cookie/location UI settings in localStorage.
 
-## Problem
-The result card CSS disabled pointer events on every child inside a result card. This made the explicit Open button unreliable because taps could target the parent article instead of the button.
+Validation targets:
 
-## Fix
-- The Open button now has explicit pointer events enabled.
-- Result cards no longer behave as tap targets.
-- Mobile scroll movement blocks card opening for a short guard window.
-- Numbered map markers use direct card opening and do not depend on list state.
-- Escape and Close return the app to a clickable state.
-
-## Validation target
-A user must be able to scroll the result list, tap Open, close the card, repeat that flow across multiple venues, and tap numbered map markers without refreshing the page.
+- all filters visible on mobile
+- no accidental result opening while scrolling
+- Open button still opens cards
+- numbered map dots still open cards
+- outside-card click closes the drawer
+- cookie and last search settings persist
