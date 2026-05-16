@@ -1,24 +1,25 @@
 {
   "project": "DipMapper.com",
-  "version": "v20.2.0",
-  "date": "2026-05-15",
-  "time": "23:05 CEST",
-  "status": "Mobile scroll-safety and persistent-card-close export",
+  "version": "v20.6.0",
+  "date": "2026-05-16",
+  "time": "10:45 CEST",
   "changeSummary": [
-    "Cards now open only on deliberate taps, not pointer-down events.",
-    "Vertical mobile scrolling is protected with movement thresholds and click suppression after scroll gestures.",
-    "Travel-card close control remains visible through a sticky header and floating close button on mobile.",
-    "One-font, three-size typography rule and complete mobile filter visibility are preserved."
+    "Bigger anchored map",
+    "Narrower side rail",
+    "Shorter result scroll rail",
+    "All mobile filters visible with icons",
+    "Preserved explicit Open details flow and stored settings"
   ],
+  "status": "Static GitHub Pages deployment candidate",
   "openIssues": [
-    "Verified worldwide photo coverage still needs a production media cache.",
-    "Provider-backed hours, ratings and prices remain future import tasks.",
-    "Real-device QA on iOS and Android is still required before public launch."
+    "Verified worldwide photo coverage needs production media cache",
+    "Exact global hours, prices and ratings need provider/operator imports",
+    "Prototype public endpoints should be replaced before scale"
   ],
-  "nextRecommendedActions": [
-    "Test scrolling a long result list on iPhone and Android.",
-    "Test that small vertical scroll gestures do not open result cards.",
-    "Test that deliberate taps open list cards and map markers.",
-    "Open a long card and verify the Close button remains visible while scrolling."
+  "nextActions": [
+    "Test on desktop and mobile",
+    "Confirm map remains visible while browsing",
+    "Deploy GitHub ZIP to GitHub Pages",
+    "Configure Namecheap DNS for dipmapper.com"
   ]
 }

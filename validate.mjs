@@ -1,9 +1,16 @@
-# Sources and launch readiness
+# DipMapper v20.4.0 interaction hardening
 
-- OpenStreetMap / Overpass: venues, coordinates, amenities, parking.
-- Wikimedia Commons: open photos and attribution metadata.
-- Open-Meteo: weather and marine/water-temperature support.
-- Operator/municipality caches: hours, seasons, prices, facilities, phone/email.
-- Ratings providers: only via approved APIs or imported server-side caches.
+This build fixes the main usability regression from v20.3.0.
 
-Do not use public OSM tile or Nominatim services as an unapproved commercial-scale backend.
+## Problem
+The result card CSS disabled pointer events on every child inside a result card. This made the explicit Open button unreliable because taps could target the parent article instead of the button.
+
+## Fix
+- The Open button now has explicit pointer events enabled.
+- Result cards no longer behave as tap targets.
+- Mobile scroll movement blocks card opening for a short guard window.
+- Numbered map markers use direct card opening and do not depend on list state.
+- Escape and Close return the app to a clickable state.
+
+## Validation target
+A user must be able to scroll the result list, tap Open, close the card, repeat that flow across multiple venues, and tap numbered map markers without refreshing the page.

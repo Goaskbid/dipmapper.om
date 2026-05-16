@@ -1,5 +1,24 @@
 Project: DipMapper.com
-Version: v20.2.0
-Date: 2026-05-15
-Time: 17:20 CEST
-Status: GitHub deployment package ready.
+Version: v20.6.0
+Date: 2026-05-16
+Time: 10:45 CEST
+
+Change summary:
+- Larger anchored map.
+- More efficient desktop space use.
+- Narrower side rail.
+- Shorter scrollable result list.
+- Mobile filters remain fully visible with icons.
+- Stored cookie/location settings and explicit Open details behavior preserved.
+
+Current status:
+- Static GitHub Pages deployment candidate.
+
+Open issues:
+- Verified global photo cache still required before commercial scale.
+- Exact global opening hours, prices and ratings require provider/import pipelines.
+
+Next recommended actions:
+- Test on phone and desktop.
+- Confirm results scroll independently without losing the map.
+- Deploy GitHub ZIP to GitHub Pages.

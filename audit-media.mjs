@@ -1,16 +1,18 @@
-# Scroll and map-card fix
+# v20.2.0 mobile scroll and card controls
 
-Version: v19.2.1
+## Goal
 
-This update fixes two interaction regressions:
+Mobile users must be able to scroll the result list without accidentally opening cards. When a card is open, the Close button must remain visible.
 
-1. Vertical scrolling must remain available on desktop and mobile.
-2. Numbered map markers must open the same travel card as the ranking list.
+## Changes
 
-Implementation details:
+- Result cards and map markers now record pointer/touch start position.
+- A card opens only when the interaction ends as a clean tap.
+- Touch movement, vertical scroll or long gestures cancel the open action.
+- Result cards use `touch-action: pan-y` so vertical scrolling remains natural.
+- Drawer headers are sticky with safe-area padding so Close remains visible on phones.
+- The full mobile filter grid from v20.1 remains active.
 
-- Result cards use delegated `click` and keyboard handling rather than `pointerdown` with `preventDefault`.
-- Map tiles have `pointer-events: none` so they cannot block marker clicks.
-- Numbered marker buttons have explicit size, circle shape and pointer handling.
-- Map click handling first checks for a marker, then only enters move-point logic when move mode is active.
-- Mobile keeps the map sticky but lets the full page scroll naturally.
+## Preserved behavior
+
+Search, map rendering, photo hydration, parking prefetch, legal pages and deployment package structure were not intentionally changed.

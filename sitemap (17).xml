@@ -1,6 +1,6 @@
 {
   "name": "dipmapper",
-  "version": "20.0.0",
+  "version": "20.6.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -13,5 +13,5 @@
   "engines": {
     "node": ">=20"
   },
-  "description": "DipMapper.com mobile-first swim-place finder with corrected Meilen pack, robust result/map card opening, and GitHub deployment exports."
+  "description": "DipMapper.com mobile-first swim finder with anchored map layout, compact result scrolling, explicit opening, stable 10-second search, and recovery exports."
 }

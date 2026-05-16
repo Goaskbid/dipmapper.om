@@ -1,89 +1,90 @@
-# DipMapper.com GitHub and Namecheap deployment guide
+# DipMapper.com v20.6.0 GitHub + Namecheap deployment guide
 
-Project: DipMapper.com
-Version: v20.2.0
-Date: 2026-05-15
-Time: 23:05 CEST
+This guide is written for a non-developer.
 
-This is the beginner deployment guide for publishing DipMapper.com on GitHub Pages with a Namecheap domain.
+## Files you need
 
-## 1. Create the GitHub repository
+Use `dipmapper_v20_6_0_github_deploy.zip` for GitHub deployment.
 
-1. Sign in to GitHub.
-2. Click the plus button in the top right.
-3. Click New repository.
-4. Name it `dipmapper`.
-5. Leave it empty. Do not add a README because this package already includes one.
-6. Click Create repository.
+Do not upload `dipmapper_v20_6_0_recovery.zip` to GitHub. That file is only for project recovery.
 
-## 2. Upload the website files
+## Part 1. Create the GitHub repository
 
-1. Download `dipmapper_v20_2_0_github_deploy.zip`.
-2. Unzip it.
-3. Open the unzipped folder.
-4. In GitHub, click Add file.
-5. Click Upload files.
-6. Drag every file and folder from the unzipped package into GitHub.
-7. Commit message: `Deploy DipMapper v20.2.0`.
-8. Click Commit changes.
+1. Open GitHub.
+2. Sign in.
+3. Click the plus button in the top right.
+4. Click New repository.
+5. Repository name: `dipmapper`.
+6. Choose Public or Private.
+7. Leave README, license and gitignore unchecked.
+8. Click Create repository.
 
-## 3. Enable GitHub Pages
+## Part 2. Upload DipMapper
 
-1. Open repository Settings.
-2. Click Pages.
-3. Under Build and deployment, choose GitHub Actions.
-4. Open the Actions tab.
-5. Wait for the workflow to finish with a green check.
-6. Open the temporary GitHub Pages URL and test the site.
+1. Unzip `dipmapper_v20_6_0_github_deploy.zip` on your computer.
+2. Open the unzipped folder.
+3. Select all files and folders inside it.
+4. Go back to your empty GitHub repository.
+5. Click uploading an existing file.
+6. Drag all selected files into GitHub.
+7. Wait until upload is complete.
+8. Commit message: `Deploy DipMapper v20.6.0`.
+9. Click Commit changes.
 
-## 4. Add the custom domain
+## Part 3. Enable GitHub Pages
 
-1. Go to Settings.
-2. Click Pages.
-3. Enter `dipmapper.com` in Custom domain.
-4. Click Save.
-5. Keep the included `CNAME` file. It already contains `dipmapper.com`.
+1. Open the repository on GitHub.
+2. Click Settings.
+3. Click Pages.
+4. Under Build and deployment, select GitHub Actions.
+5. Click Actions.
+6. Wait until the deployment workflow has a green checkmark.
+7. Open the site link GitHub shows you.
 
-## 5. Configure Namecheap DNS
+## Part 4. Connect dipmapper.com at Namecheap
 
-1. Sign in to Namecheap.
-2. Go to Domain List.
-3. Click Manage next to `dipmapper.com`.
-4. Open Advanced DNS.
-5. Remove conflicting records for `@` and `www`.
-6. Add these records:
+1. Open Namecheap.
+2. Sign in.
+3. Go to Domain List.
+4. Click Manage next to `dipmapper.com`.
+5. Open Advanced DNS.
+6. Remove conflicting A, AAAA, CNAME, parking or forwarding records for `@` and `www`.
+7. Add these A records for host `@`:
+   - `185.199.108.153`
+   - `185.199.109.153`
+   - `185.199.110.153`
+   - `185.199.111.153`
+8. Add a CNAME record:
+   - Host: `www`
+   - Value: your GitHub Pages hostname, for example `YOUR-GITHUB-USER.github.io`
+9. Save all changes.
 
-| Type | Host | Value | TTL |
-| --- | --- | --- | --- |
-| A Record | @ | 185.199.108.153 | Automatic |
-| A Record | @ | 185.199.109.153 | Automatic |
-| A Record | @ | 185.199.110.153 | Automatic |
-| A Record | @ | 185.199.111.153 | Automatic |
-| CNAME Record | www | YOUR-GITHUB-USERNAME.github.io | Automatic |
+## Part 5. Set the custom domain in GitHub
 
-Replace `YOUR-GITHUB-USERNAME` with your GitHub username or organization.
+1. Go back to GitHub.
+2. Open Settings.
+3. Open Pages.
+4. In Custom domain, enter `dipmapper.com`.
+5. Save.
+6. Wait for DNS checks.
+7. When available, enable Enforce HTTPS.
 
-## 6. Wait and enable HTTPS
+## Part 6. Test on a phone
 
-1. Wait at least 30 minutes.
-2. In GitHub Settings, Pages, wait until the custom domain check passes.
-3. Enable Enforce HTTPS when GitHub allows it.
-4. Test `https://dipmapper.com` and `https://www.dipmapper.com`.
+Open `https://dipmapper.com` on a real phone and test:
 
-## 7. Phone test
+1. Location prompt.
+2. Destination search.
+3. Map size and sticky behavior.
+4. Result list scrolling.
+5. Filter visibility.
+6. Open details buttons.
+7. Numbered map dots.
+8. Close button.
+9. Privacy notice.
+10. Legal links.
+11. Ad booking link.
 
-Use a real phone. Test:
+## Current build note
 
-1. Vertical scrolling on the result list.
-2. Small scroll gestures over cards do not open cards.
-3. Deliberate taps open result cards.
-4. Numbered map dots open cards.
-5. Close button remains visible while a long card is open.
-6. Filters are all visible on mobile.
-7. Location search.
-8. Destination search.
-9. Privacy, cookies and disclaimer links.
-
-## 8. Updating later
-
-For the next export, upload the new GitHub deployment ZIP contents to the same repository and commit the new version.
+v20.6.0 gives the map more desktop space, anchors it while browsing, narrows the left rail and shortens the result-list viewport.

@@ -1,79 +1,90 @@
-# DipMapper.com GitHub + Namecheap deployment guide
+# DipMapper.com v20.6.0 GitHub + Namecheap deployment guide
 
-This is written for a first-time user.
+This guide is written for a non-developer.
 
-## Part 1 - Create the GitHub repository
+## Files you need
 
-1. Sign in to GitHub.
-2. Click the `+` button in the top right.
-3. Click `New repository`.
-4. Repository name: `dipmapper`.
-5. Choose `Public` unless you have a paid plan that supports private Pages deployment.
-6. Do not add a README, license, or gitignore.
-7. Click `Create repository`.
+Use `dipmapper_v20_6_0_github_deploy.zip` for GitHub deployment.
 
-## Part 2 - Upload the deployment ZIP
+Do not upload `dipmapper_v20_6_0_recovery.zip` to GitHub. That file is only for project recovery.
 
-1. Download `dipmapper_v20_0_0_github_deploy.zip`.
-2. Unzip it on your computer.
-3. Open the new GitHub repository.
-4. Click `uploading an existing file`.
-5. Drag all files from the unzipped folder into GitHub.
-6. Click `Commit changes`.
+## Part 1. Create the GitHub repository
 
-## Part 3 - Turn on GitHub Pages
+1. Open GitHub.
+2. Sign in.
+3. Click the plus button in the top right.
+4. Click New repository.
+5. Repository name: `dipmapper`.
+6. Choose Public or Private.
+7. Leave README, license and gitignore unchecked.
+8. Click Create repository.
 
-1. In the repository, click `Settings`.
-2. Click `Pages` in the left menu.
-3. Under `Build and deployment`, choose `GitHub Actions`.
-4. Click the `Actions` tab.
-5. Wait for a green checkmark.
-6. Open the temporary GitHub Pages URL and test the website.
+## Part 2. Upload DipMapper
 
-## Part 4 - Connect dipmapper.com at Namecheap
+1. Unzip `dipmapper_v20_6_0_github_deploy.zip` on your computer.
+2. Open the unzipped folder.
+3. Select all files and folders inside it.
+4. Go back to your empty GitHub repository.
+5. Click uploading an existing file.
+6. Drag all selected files into GitHub.
+7. Wait until upload is complete.
+8. Commit message: `Deploy DipMapper v20.6.0`.
+9. Click Commit changes.
 
-1. Sign in to Namecheap.
-2. Go to `Domain List`.
-3. Click `Manage` beside `dipmapper.com`.
-4. Go to `Advanced DNS`.
-5. Remove conflicting A, CNAME, URL Redirect or parking records for `@` and `www`.
-6. Add these A records for host `@`:
+## Part 3. Enable GitHub Pages
+
+1. Open the repository on GitHub.
+2. Click Settings.
+3. Click Pages.
+4. Under Build and deployment, select GitHub Actions.
+5. Click Actions.
+6. Wait until the deployment workflow has a green checkmark.
+7. Open the site link GitHub shows you.
+
+## Part 4. Connect dipmapper.com at Namecheap
+
+1. Open Namecheap.
+2. Sign in.
+3. Go to Domain List.
+4. Click Manage next to `dipmapper.com`.
+5. Open Advanced DNS.
+6. Remove conflicting A, AAAA, CNAME, parking or forwarding records for `@` and `www`.
+7. Add these A records for host `@`:
    - `185.199.108.153`
    - `185.199.109.153`
    - `185.199.110.153`
    - `185.199.111.153`
-7. Add this CNAME record:
+8. Add a CNAME record:
    - Host: `www`
-   - Value: `YOUR-GITHUB-USERNAME.github.io`
-8. Save all changes.
+   - Value: your GitHub Pages hostname, for example `YOUR-GITHUB-USER.github.io`
+9. Save all changes.
 
-## Part 5 - Add the custom domain in GitHub
+## Part 5. Set the custom domain in GitHub
 
-1. Go back to GitHub repository `Settings`.
-2. Click `Pages`.
-3. In `Custom domain`, enter `dipmapper.com`.
-4. Save.
-5. Wait for DNS checks to pass.
-6. Enable `Enforce HTTPS` when GitHub allows it.
+1. Go back to GitHub.
+2. Open Settings.
+3. Open Pages.
+4. In Custom domain, enter `dipmapper.com`.
+5. Save.
+6. Wait for DNS checks.
+7. When available, enable Enforce HTTPS.
 
-## Part 6 - Test before launch
+## Part 6. Test on a phone
 
-Test on iPhone and Android:
+Open `https://dipmapper.com` on a real phone and test:
 
-- location permission
-- search around current location
-- search for Meilen, Zurich, Rhodes, Palma, Rostock, Miami
-- result card opens from the list
-- result card opens from numbered map dots
-- Quiet now filter
-- photo gallery
-- parking routes
-- privacy/cookie/disclaimer links
-- advertiser email link
+1. Location prompt.
+2. Destination search.
+3. Map size and sticky behavior.
+4. Result list scrolling.
+5. Filter visibility.
+6. Open details buttons.
+7. Numbered map dots.
+8. Close button.
+9. Privacy notice.
+10. Legal links.
+11. Ad booking link.
 
-## If something fails
+## Current build note
 
-- Wait up to 24 hours for DNS propagation.
-- Check GitHub Actions for red errors.
-- Make sure the repository root contains `CNAME` with `dipmapper.com`.
-- Make sure Namecheap has no conflicting records for `@` or `www`.
+v20.6.0 gives the map more desktop space, anchors it while browsing, narrows the left rail and shortens the result-list viewport.
