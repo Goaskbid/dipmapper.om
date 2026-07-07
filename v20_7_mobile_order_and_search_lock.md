@@ -1,24 +1,7 @@
-# v20.7.0 mobile order and search lock
+# Result clicks and user copy - v18.5.0
 
-## Goal
-Make DipMapper usable as a phone-first swim finder.
+The ranking note now explains what users can do instead of describing internal photo or hydration behavior.
 
-## Mobile order
-1. Selection and input block.
-2. Anchored sticky map.
-3. Two-column table below the map:
-   - left: type and feature filters
-   - right: compact top findings
+Result cards use delegated `pointerdown` handling on the results container. This opens the travel card immediately, before active background search rerenders can swallow a normal click event.
 
-## Compact findings
-Each result keeps only the minimum decision payload on mobile:
-- thumbnail
-- name
-- distance and type
-- explicit Open button
-
-## Search stability
-The visible result set locks after 10 seconds. Background network calls cannot keep flickering the list or map after that visible cutoff. A new location, radius change or destination search resets the search lifecycle.
-
-## Design rules
-One font family, three font sizes, reduced bolding, mobile first.
+The app still updates results, photos, parking and details in the background while a user browses.

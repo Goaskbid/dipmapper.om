@@ -1,18 +1,12 @@
-# Meilen search audit - v20.2.0
+# v20.7.0 mobile filters and persistence
 
-The Meilen area was corrected after user testing showed that Ländeli and Steinrad were confused and Hallenbad Allmend Meilen was missing.
+This update adds icons to every visible filter, changes the search controls to a vertical phone-first layout, closes the travel card when the user taps outside it, and persists cookie/location UI settings in localStorage.
 
-## Fixed local entities
+Validation targets:
 
-- Hallenbad Allmend Meilen, Toggwilerstrasse 38, indoor municipal pool and sauna.
-- Strandbad Dorfmeilen, Seestrasse 720.
-- Strandbad Feldmeilen, Seestrasse 236.
-- Badeanlage Ländeli / Dolliker Ländeli, Seestrasse 950.
-- Badeanlage Steinrad, separated as Herrliberg, not Meilen.
-
-## Search behavior
-
-- Current-location searches around Meilen now seed the local pack immediately.
-- The default radius remains 5 km.
-- Live open-map search continues, but seeded official local venues remain visible and are not replaced by stale workplace results.
-- Photo audit blocks non-swim media such as mosques, minarets, churches, documents, maps, logos and generic panoramas.
+- all filters visible on mobile
+- no accidental result opening while scrolling
+- Open button still opens cards
+- numbered map dots still open cards
+- outside-card click closes the drawer
+- cookie and last search settings persist

@@ -1,16 +1,3 @@
-# Scroll and map-card fix
+# Photo audit policy
 
-Version: v19.2.1
-
-This update fixes two interaction regressions:
-
-1. Vertical scrolling must remain available on desktop and mobile.
-2. Numbered map markers must open the same travel card as the ranking list.
-
-Implementation details:
-
-- Result cards use delegated `click` and keyboard handling rather than `pointerdown` with `preventDefault`.
-- Map tiles have `pointer-events: none` so they cannot block marker clicks.
-- Numbered marker buttons have explicit size, circle shape and pointer handling.
-- Map click handling first checks for a marker, then only enters move-point logic when move mode is active.
-- Mobile keeps the map sticky but lets the full page scroll naturally.
+DipMapper v17.0 blocks documents, maps, logos, flags, diagrams, scans, posters and generic city panoramas from venue photo slots unless a venue-specific photo bank explicitly verifies the file. Indoor pools do not borrow lakefront or beach context photos. Outdoor beaches and baths can use immediate waterfront context only after exact venue images. Photo decks remain locked while the user browses.

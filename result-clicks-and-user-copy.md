@@ -1,7 +1,17 @@
-# Result clicks and user copy - v18.5.0
+# v20.7.0 Space and Map Layout Pass
 
-The ranking note now explains what users can do instead of describing internal photo or hydration behavior.
+## Goal
+Use screen space better, keep the map larger and anchored, and reduce the vertical footprint of the result rail.
 
-Result cards use delegated `pointerdown` handling on the results container. This opens the travel card immediately, before active background search rerenders can swallow a normal click event.
+## Changes
+- Desktop shell now uses a narrower side rail and wider map column.
+- Map panel is sticky and remains anchored while browsing the result rail.
+- Map height now uses the viewport and is larger on desktop.
+- Result list is intentionally shorter and scrollable, so the map remains visually dominant.
+- Mobile filters are shown in a two-column grid so all options remain visible instead of being cut off.
+- Phone layout keeps the map first, sticky, and large enough for meaningful tapping.
 
-The app still updates results, photos, parking and details in the background while a user browses.
+## Validation expectation
+- The map should remain visible while the user scrolls the results.
+- Filters should show all options on mobile.
+- Result rail should not consume the full vertical page.

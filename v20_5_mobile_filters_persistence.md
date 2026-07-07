@@ -1,12 +1,24 @@
-# v20.7.0 mobile filters and persistence
+# v20.7.0 mobile order and search lock
 
-This update adds icons to every visible filter, changes the search controls to a vertical phone-first layout, closes the travel card when the user taps outside it, and persists cookie/location UI settings in localStorage.
+## Goal
+Make DipMapper usable as a phone-first swim finder.
 
-Validation targets:
+## Mobile order
+1. Selection and input block.
+2. Anchored sticky map.
+3. Two-column table below the map:
+   - left: type and feature filters
+   - right: compact top findings
 
-- all filters visible on mobile
-- no accidental result opening while scrolling
-- Open button still opens cards
-- numbered map dots still open cards
-- outside-card click closes the drawer
-- cookie and last search settings persist
+## Compact findings
+Each result keeps only the minimum decision payload on mobile:
+- thumbnail
+- name
+- distance and type
+- explicit Open button
+
+## Search stability
+The visible result set locks after 10 seconds. Background network calls cannot keep flickering the list or map after that visible cutoff. A new location, radius change or destination search resets the search lifecycle.
+
+## Design rules
+One font family, three font sizes, reduced bolding, mobile first.

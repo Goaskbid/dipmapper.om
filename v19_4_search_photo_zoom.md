@@ -1,20 +1,9 @@
-# DipMapper v19.4.0 search, media and map update
+# DipMapper v20.4.0 mobile reliability polish
 
-## Search
-- Starts with the selected radius, default 5 km.
-- Map zoom follows the radius instead of the full destination pack.
-- Destination packs seed the closest useful options first and merge wider choices later.
-- Rhodes now centers on Rhodes Town for normal searches.
-- Miami / South Beach / Key Biscayne added as a destination pack.
-
-## Names
-- Local names can show English or Latin names where OSM exposes `name:en`, `int_name`, `name:latin`, or Greek transliteration is possible.
-
-## Photos
-- Photo audit blocks more off-topic files: coast guard, migrant, police, port, cargo, garbage, documents, maps, sketches, flags and logos.
-- Known destination packs use curated Commons file candidates first.
-- Generic water photos are not treated as exact venue photos.
-
-## Map
-- Radius ring is drawn on the map.
-- Search radius drives the initial zoom.
+- Result rows do not open cards accidentally.
+- Explicit Open buttons remain the list opening path.
+- Numbered map dots remain direct opening controls.
+- Vertical scrolling uses mobile-friendly overscroll handling.
+- Visible search updates are capped at 10 seconds to stop flicker.
+- Card Close resets tap locks and media timers.
+- Cookie and privacy choices stay dismissed for returning users.

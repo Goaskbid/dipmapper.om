@@ -1,9 +1,17 @@
-# Sources and launch readiness
+# Continuous loading and media hydration - v18.4.0
 
-- OpenStreetMap / Overpass: venues, coordinates, amenities, parking.
-- Wikimedia Commons: open photos and attribution metadata.
-- Open-Meteo: weather and marine/water-temperature support.
-- Operator/municipality caches: hours, seasons, prices, facilities, phone/email.
-- Ratings providers: only via approved APIs or imported server-side caches.
+## Goal
 
-Do not use public OSM tile or Nominatim services as an unapproved commercial-scale backend.
+The user should see a local top list quickly and the app should continue improving in the background.
+
+## Current behavior
+
+- The visible ranking appears as soon as seeded or live candidates exist.
+- The app continues to hydrate media, parking and details after initial render.
+- Ranking hero photos use `photoForRank`, which prevents the same image fingerprint from appearing twice in the visible list.
+- Photo decks inside travel cards remain stable while a user browses.
+- Parking prefetch runs for the visible top results.
+
+## Remaining issue
+
+Production-quality photos require curated media caches. The client should not fake images from unrelated places.

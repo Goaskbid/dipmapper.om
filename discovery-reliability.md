@@ -1,16 +1,16 @@
-# DipMapper v16.0.0 discovery reliability
+# DipMapper v20.4.0 interaction hardening
 
-This release stops relying on one long live Overpass request.
+This build fixes the main usability regression from v20.3.0.
 
-## Browser path
+## Problem
+The result card CSS disabled pointer events on every child inside a result card. This made the explicit Open button unreliable because taps could target the parent article instead of the button.
 
-1. Seed nearby destination packs instantly when the coordinate is close to a known high-demand swim city.
-2. Start parallel Overpass layers: managed swim venues, natural beaches/hot springs/waterfalls, local-name search, and explicit swimming/bathing tags.
-3. Use bounded Nominatim rescue only if the first layers are weak.
-4. Keep the visible top 10 stable while background discovery, parking and enrichment continue.
+## Fix
+- The Open button now has explicit pointer events enabled.
+- Result cards no longer behave as tap targets.
+- Mobile scroll movement blocks card opening for a short guard window.
+- Numbered map markers use direct card opening and do not depend on list state.
+- Escape and Close return the app to a clickable state.
 
-## Commercial production path
-
-For commercial launch, the browser should be backed by a prebuilt global venue index generated at build time or by a small API. Live public Overpass/Nominatim endpoints should be treated as enrichment/fallback, not the primary source of truth.
-
-The minimum production cache per venue should include: id, name, western name, category, indoor/outdoor, exact coordinate, official site, phone, address, opening/season/price fields, facilities, parking candidates, three vetted images, source URLs, and last-updated timestamp.
+## Validation target
+A user must be able to scroll the result list, tap Open, close the card, repeat that flow across multiple venues, and tap numbered map markers without refreshing the page.

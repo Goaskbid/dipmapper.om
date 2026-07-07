@@ -1,17 +1,20 @@
-# v20.7.0 Space and Map Layout Pass
+# Search rerun and media hydration - v18.3.0
 
-## Goal
-Use screen space better, keep the map larger and anchored, and reduce the vertical footprint of the result rail.
+The previous build could show stale options after a re-scan, radius change or browser-location refresh. v18.3.0 resets the active filter to All, clears old results, closes the card drawer, cancels stale scans by scan id and then starts a fresh local-first pass.
 
-## Changes
-- Desktop shell now uses a narrower side rail and wider map column.
-- Map panel is sticky and remains anchored while browsing the result rail.
-- Map height now uses the viewport and is larger on desktop.
-- Result list is intentionally shorter and scrollable, so the map remains visually dominant.
-- Mobile filters are shown in a two-column grid so all options remain visible instead of being cut off.
-- Phone layout keeps the map first, sticky, and large enough for meaningful tapping.
+Search flow:
 
-## Validation expectation
-- The map should remain visible while the user scrolls the results.
-- Filters should show all options on mobile.
-- Result rail should not consume the full vertical page.
+1. Clear old results and filter state.
+2. Start at 5 km for a location search.
+3. Seed only venues within distance of the actual search coordinate.
+4. Run close Overpass layers in parallel.
+5. Run destination/text rescue early if the first wave is weak.
+6. Hydrate photos and parking for the visible top 10 in the background.
+
+Media flow:
+
+1. Use audited venue photo banks first.
+2. Use operator/open photos already present in venue records.
+3. Use Commons category/search hydration for missing slots.
+4. Lock a deck only when three usable photos are present.
+5. Keep failed image URLs out of future decks during the session.

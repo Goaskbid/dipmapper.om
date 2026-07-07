@@ -1,17 +1,1 @@
-{
-  "name": "dipmapper",
-  "version": "20.9.4",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "validate": "node scripts/validate.mjs",
-    "links:check": "node scripts/check-links.mjs",
-    "build": "node scripts/build.mjs",
-    "audit:media": "node scripts/audit-media.mjs",
-    "test": "node scripts/validate.mjs && node scripts/audit-media.mjs && node scripts/check-links.mjs"
-  },
-  "engines": {
-    "node": ">=20"
-  },
-  "description": "DipMapper.com mobile-first swim finder with anchored map layout, compact result scrolling, explicit opening, stable 10-second search, and recovery exports."
-}
+dipmapper.com

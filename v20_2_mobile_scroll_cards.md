@@ -1,18 +1,16 @@
-# v20.2.0 mobile scroll and card controls
+# DipMapper v16.0.0 discovery reliability
 
-## Goal
+This release stops relying on one long live Overpass request.
 
-Mobile users must be able to scroll the result list without accidentally opening cards. When a card is open, the Close button must remain visible.
+## Browser path
 
-## Changes
+1. Seed nearby destination packs instantly when the coordinate is close to a known high-demand swim city.
+2. Start parallel Overpass layers: managed swim venues, natural beaches/hot springs/waterfalls, local-name search, and explicit swimming/bathing tags.
+3. Use bounded Nominatim rescue only if the first layers are weak.
+4. Keep the visible top 10 stable while background discovery, parking and enrichment continue.
 
-- Result cards and map markers now record pointer/touch start position.
-- A card opens only when the interaction ends as a clean tap.
-- Touch movement, vertical scroll or long gestures cancel the open action.
-- Result cards use `touch-action: pan-y` so vertical scrolling remains natural.
-- Drawer headers are sticky with safe-area padding so Close remains visible on phones.
-- The full mobile filter grid from v20.1 remains active.
+## Commercial production path
 
-## Preserved behavior
+For commercial launch, the browser should be backed by a prebuilt global venue index generated at build time or by a small API. Live public Overpass/Nominatim endpoints should be treated as enrichment/fallback, not the primary source of truth.
 
-Search, map rendering, photo hydration, parking prefetch, legal pages and deployment package structure were not intentionally changed.
+The minimum production cache per venue should include: id, name, western name, category, indoor/outdoor, exact coordinate, official site, phone, address, opening/season/price fields, facilities, parking candidates, three vetted images, source URLs, and last-updated timestamp.
