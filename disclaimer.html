@@ -1,1 +1,34 @@
-<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Disclaimer - DipMapper.com</title><style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:860px;margin:42px auto;padding:0 20px;line-height:1.55;color:#07343b;background:linear-gradient(115deg,#eafffb,#fffdf4 55%,#fff0bd)}a{color:#07343b}h1{font-size:28px}.book{display:inline-block;padding:12px 16px;border:1px solid #c8e3dd;background:#06323a;color:white;text-decoration:none}</style></head><body><h1>Disclaimer</h1><p>DipMapper.com combines open map data, operator caches, weather models, media sources and routing links. Some facts can be incomplete or delayed. The service does not certify that swimming is allowed or safe at a specific moment. Official signs, operators, lifeguards and local authorities override the app.</p><p><a href='index.html'>Back to DipMapper.com</a></p></body></html>
+# DipMapper.com v20.7.0
+
+DipMapper.com is a mobile-first swim finder for beaches, badis, bathing places, public pools, thermal baths, wild-water access, springs and waterfalls.
+
+## Current version
+
+- Project: DipMapper.com
+- Version: v20.7.0
+- Date: 2026-05-16
+- Status: Mobile-first deployment candidate
+
+## What changed in v20.7.0
+
+- Mobile order is now selection/input first, anchored map second, filters and findings side by side below the map.
+- Result cards are compact on phones: thumbnail, name, distance/type and Open button.
+- Visible search locks after 10 seconds to stop flicker.
+- Existing map-dot opening, explicit Open buttons, click-outside close, stored location and stored cookie preference remain.
+- One font family and three font sizes remain enforced.
+
+## Local commands
+
+```bash
+npm install
+npm test
+npm run build
+```
+
+## Deploy
+
+The `dist/` folder is built for GitHub Pages. The repository also contains a GitHub Actions workflow that deploys the static site.
+
+## Domain
+
+`CNAME` is set to `dipmapper.com`.

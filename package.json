@@ -1,17 +1,1 @@
-{
-  "name": "dipmapper",
-  "version": "20.9.4",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "validate": "node scripts/validate.mjs",
-    "links:check": "node scripts/check-links.mjs",
-    "build": "node scripts/build.mjs",
-    "audit:media": "node scripts/audit-media.mjs",
-    "test": "node scripts/validate.mjs && node scripts/audit-media.mjs && node scripts/check-links.mjs"
-  },
-  "engines": {
-    "node": ">=20"
-  },
-  "description": "DipMapper.com mobile-first swim finder with anchored map layout, compact result scrolling, explicit opening, stable 10-second search, and recovery exports."
-}
+<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Advertising and Booking - DipMapper.com</title><style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:860px;margin:42px auto;padding:0 20px;line-height:1.55;color:#07343b;background:linear-gradient(115deg,#eafffb,#fffdf4 55%,#fff0bd)}a{color:#07343b}h1{font-size:28px}.book{display:inline-block;padding:12px 16px;border:1px solid #c8e3dd;background:#06323a;color:white;text-decoration:none}</style></head><body><h1>Advertising and Booking</h1><p>Bookable advertising is available through the labelled header placement and future local swim-place placements.</p><p><a class='book' href='mailto:torsten.sauter@icloud.com?subject=DipMapper.com%20advertising%20booking'>Book this local swim spot</a></p><p>Ads must stay clearly labelled and must not override safety, ranking or source labels.</p><p><a href='index.html'>Back to DipMapper.com</a></p></body></html>

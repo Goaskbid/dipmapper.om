@@ -1,16 +1,36 @@
-# DipMapper v16.0.0 discovery reliability
+# Search redesign, v18.2.0
 
-This release stops relying on one long live Overpass request.
+## Goal
 
-## Browser path
+Search must never reuse a previous location's results. It must start from the current location or searched destination, show the closest useful options first, then broaden in the background.
 
-1. Seed nearby destination packs instantly when the coordinate is close to a known high-demand swim city.
-2. Start parallel Overpass layers: managed swim venues, natural beaches/hot springs/waterfalls, local-name search, and explicit swimming/bathing tags.
-3. Use bounded Nominatim rescue only if the first layers are weak.
-4. Keep the visible top 10 stable while background discovery, parking and enrichment continue.
+## Runtime behavior
 
-## Commercial production path
+1. New search or location request clears results, parking cache, photo locks and selected card.
+2. Radius resets to 5 km.
+3. Seed packs are loaded only when the search point is inside a tight activation radius.
+4. Live discovery starts with core swim venues and local swim-name matches.
+5. If fewer than five results are found quickly, bounded destination rescue begins.
+6. If fewer than ten are found, wider water/beach/pool/nature layers start.
+7. Older async scans are ignored via `state.scanId`.
 
-For commercial launch, the browser should be backed by a prebuilt global venue index generated at build time or by a small API. Live public Overpass/Nominatim endpoints should be treated as enrichment/fallback, not the primary source of truth.
+## Anti-stall changes
 
-The minimum production cache per venue should include: id, name, western name, category, indoor/outdoor, exact coordinate, official site, phone, address, opening/season/price fields, facilities, parking candidates, three vetted images, source URLs, and last-updated timestamp.
+- Overpass endpoint race now returns the first non-empty result rather than the first endpoint to finish.
+- Empty responses do not prematurely end discovery.
+- Text rescue runs early and again if results stay sparse.
+- Pack activation radius prevents Zurich city content from leaking into Meilen local searches.
+
+## Current seeded packs
+
+- Zurich swim culture
+- Meilen and right-bank Zurichsee
+- Rhodes
+- Rostock / Baltic beaches
+- Palma / Mallorca
+
+## Next steps
+
+- Add more regional seed packs only where there is enough verified data.
+- Move geocoding/search to a production backend for better speed and control.
+- Cache verified result sets per region.

@@ -1,24 +1,16 @@
-# v20.7.0 mobile order and search lock
+# Scroll and map-card fix
 
-## Goal
-Make DipMapper usable as a phone-first swim finder.
+Version: v19.2.1
 
-## Mobile order
-1. Selection and input block.
-2. Anchored sticky map.
-3. Two-column table below the map:
-   - left: type and feature filters
-   - right: compact top findings
+This update fixes two interaction regressions:
 
-## Compact findings
-Each result keeps only the minimum decision payload on mobile:
-- thumbnail
-- name
-- distance and type
-- explicit Open button
+1. Vertical scrolling must remain available on desktop and mobile.
+2. Numbered map markers must open the same travel card as the ranking list.
 
-## Search stability
-The visible result set locks after 10 seconds. Background network calls cannot keep flickering the list or map after that visible cutoff. A new location, radius change or destination search resets the search lifecycle.
+Implementation details:
 
-## Design rules
-One font family, three font sizes, reduced bolding, mobile first.
+- Result cards use delegated `click` and keyboard handling rather than `pointerdown` with `preventDefault`.
+- Map tiles have `pointer-events: none` so they cannot block marker clicks.
+- Numbered marker buttons have explicit size, circle shape and pointer handling.
+- Map click handling first checks for a marker, then only enters move-point logic when move mode is active.
+- Mobile keeps the map sticky but lets the full page scroll naturally.

@@ -1,12 +1,17 @@
-# v20.7.0 mobile filters and persistence
+# Continuous loading and media hydration - v18.4.0
 
-This update adds icons to every visible filter, changes the search controls to a vertical phone-first layout, closes the travel card when the user taps outside it, and persists cookie/location UI settings in localStorage.
+## Goal
 
-Validation targets:
+The user should see a local top list quickly and the app should continue improving in the background.
 
-- all filters visible on mobile
-- no accidental result opening while scrolling
-- Open button still opens cards
-- numbered map dots still open cards
-- outside-card click closes the drawer
-- cookie and last search settings persist
+## Current behavior
+
+- The visible ranking appears as soon as seeded or live candidates exist.
+- The app continues to hydrate media, parking and details after initial render.
+- Ranking hero photos use `photoForRank`, which prevents the same image fingerprint from appearing twice in the visible list.
+- Photo decks inside travel cards remain stable while a user browses.
+- Parking prefetch runs for the visible top results.
+
+## Remaining issue
+
+Production-quality photos require curated media caches. The client should not fake images from unrelated places.

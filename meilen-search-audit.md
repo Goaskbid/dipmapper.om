@@ -1,17 +1,18 @@
-# v20.7.0 Space and Map Layout Pass
+# Meilen search audit - v20.2.0
 
-## Goal
-Use screen space better, keep the map larger and anchored, and reduce the vertical footprint of the result rail.
+The Meilen area was corrected after user testing showed that Ländeli and Steinrad were confused and Hallenbad Allmend Meilen was missing.
 
-## Changes
-- Desktop shell now uses a narrower side rail and wider map column.
-- Map panel is sticky and remains anchored while browsing the result rail.
-- Map height now uses the viewport and is larger on desktop.
-- Result list is intentionally shorter and scrollable, so the map remains visually dominant.
-- Mobile filters are shown in a two-column grid so all options remain visible instead of being cut off.
-- Phone layout keeps the map first, sticky, and large enough for meaningful tapping.
+## Fixed local entities
 
-## Validation expectation
-- The map should remain visible while the user scrolls the results.
-- Filters should show all options on mobile.
-- Result rail should not consume the full vertical page.
+- Hallenbad Allmend Meilen, Toggwilerstrasse 38, indoor municipal pool and sauna.
+- Strandbad Dorfmeilen, Seestrasse 720.
+- Strandbad Feldmeilen, Seestrasse 236.
+- Badeanlage Ländeli / Dolliker Ländeli, Seestrasse 950.
+- Badeanlage Steinrad, separated as Herrliberg, not Meilen.
+
+## Search behavior
+
+- Current-location searches around Meilen now seed the local pack immediately.
+- The default radius remains 5 km.
+- Live open-map search continues, but seeded official local venues remain visible and are not replaced by stale workplace results.
+- Photo audit blocks non-swim media such as mosques, minarets, churches, documents, maps, logos and generic panoramas.

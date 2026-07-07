@@ -1,1 +1,9 @@
-<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Cookie Policy - DipMapper.com</title><style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:860px;margin:42px auto;padding:0 20px;line-height:1.55;color:#07343b;background:linear-gradient(115deg,#eafffb,#fffdf4 55%,#fff0bd)}a{color:#07343b}h1{font-size:28px}h2{font-size:19px;margin-top:26px}</style></head><body><h1>Cookie Policy</h1><h2>Essential storage</h2><p>DipMapper.com uses essential local storage on your device to remember your privacy choice, saved spots, recently viewed spots and interface state. This stays on your device and is not used for tracking.</p><h2>Advertising cookies (Google AdSense)</h2><p>With your consent, <b>Google AdSense</b> and its partners set cookies to measure and personalise advertising. These are disabled by default (Google Consent Mode v2) and are enabled only if you select “Allow optional” in the privacy banner.</p><p>You can decline optional cookies in the banner, or opt out of personalised ads at <a href='https://www.google.com/settings/ads' rel='noopener'>Google Ads Settings</a> and <a href='https://www.aboutads.info/choices/' rel='noopener'>aboutads.info/choices</a>.</p><p>See our <a href='privacy.html'>Privacy Policy</a> for details.</p><p><a href='index.html'>Back to DipMapper.com</a></p></body></html>
+# DipMapper v20.4.0 mobile reliability polish
+
+- Result rows do not open cards accidentally.
+- Explicit Open buttons remain the list opening path.
+- Numbered map dots remain direct opening controls.
+- Vertical scrolling uses mobile-friendly overscroll handling.
+- Visible search updates are capped at 10 seconds to stop flicker.
+- Card Close resets tap locks and media timers.
+- Cookie and privacy choices stay dismissed for returning users.

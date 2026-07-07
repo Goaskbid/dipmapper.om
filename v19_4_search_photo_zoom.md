@@ -1,50 +1,20 @@
-{
-  "name": "DipMapper.com",
-  "short_name": "DipMapper",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#fffdf4",
-  "theme_color": "#05aaa7",
-  "icons": [
-    {
-      "src": "assets/dipmapper-icon.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "assets/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "assets/dipmapper-logo-transparent.png",
-      "sizes": "283x177",
-      "type": "image/png",
-      "purpose": "any"
-    }
-  ],
-  "display_override": [
-    "window-controls-overlay",
-    "standalone",
-    "browser"
-  ],
-  "orientation": "portrait-primary",
-  "scope": "./",
-  "description": "Find your next swim with fast nearby ranking, map, photos, parking and travel cards.",
-  "shortcuts": [
-    {
-      "name": "Use my location",
-      "url": "/?start=location",
-      "description": "Find swims nearby"
-    },
-    {
-      "name": "Search destination",
-      "url": "/?focus=search",
-      "description": "Search a beach, lake or city"
-    }
-  ],
-  "id": "/dipmapper/",
-  "version": "20.9.4"
-}
+# DipMapper v19.4.0 search, media and map update
+
+## Search
+- Starts with the selected radius, default 5 km.
+- Map zoom follows the radius instead of the full destination pack.
+- Destination packs seed the closest useful options first and merge wider choices later.
+- Rhodes now centers on Rhodes Town for normal searches.
+- Miami / South Beach / Key Biscayne added as a destination pack.
+
+## Names
+- Local names can show English or Latin names where OSM exposes `name:en`, `int_name`, `name:latin`, or Greek transliteration is possible.
+
+## Photos
+- Photo audit blocks more off-topic files: coast guard, migrant, police, port, cargo, garbage, documents, maps, sketches, flags and logos.
+- Known destination packs use curated Commons file candidates first.
+- Generic water photos are not treated as exact venue photos.
+
+## Map
+- Radius ring is drawn on the map.
+- Search radius drives the initial zoom.

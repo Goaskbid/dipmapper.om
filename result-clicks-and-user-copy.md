@@ -1,9 +1,7 @@
-# DipMapper v20.4.0 mobile reliability polish
+# Result clicks and user copy - v18.5.0
 
-- Result rows do not open cards accidentally.
-- Explicit Open buttons remain the list opening path.
-- Numbered map dots remain direct opening controls.
-- Vertical scrolling uses mobile-friendly overscroll handling.
-- Visible search updates are capped at 10 seconds to stop flicker.
-- Card Close resets tap locks and media timers.
-- Cookie and privacy choices stay dismissed for returning users.
+The ranking note now explains what users can do instead of describing internal photo or hydration behavior.
+
+Result cards use delegated `pointerdown` handling on the results container. This opens the travel card immediately, before active background search rerenders can swallow a normal click event.
+
+The app still updates results, photos, parking and details in the background while a user browses.

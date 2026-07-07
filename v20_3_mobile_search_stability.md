@@ -1,9 +1,12 @@
-# Sources and launch readiness
+# DipMapper.com v20.4.0 mobile and search stability
 
-- OpenStreetMap / Overpass: venues, coordinates, amenities, parking.
-- Wikimedia Commons: open photos and attribution metadata.
-- Open-Meteo: weather and marine/water-temperature support.
-- Operator/municipality caches: hours, seasons, prices, facilities, phone/email.
-- Ratings providers: only via approved APIs or imported server-side caches.
+This release makes mobile opening explicit and stops visible search churn after ten seconds.
 
-Do not use public OSM tile or Nominatim services as an unapproved commercial-scale backend.
+## Decisions
+
+- Result cards no longer open by touching the whole row.
+- Users tap a clear Open button to avoid accidental opening while scrolling.
+- Numbered map dots still open cards.
+- The visible ranking freezes after ten seconds.
+- Returning users reuse the last search without another automatic cookie/location prompt.
+- Full filters remain visible on phone screens.

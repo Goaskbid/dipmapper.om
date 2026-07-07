@@ -1,1 +1,20 @@
-<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Imprint - DipMapper.com</title><style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:860px;margin:42px auto;padding:0 20px;line-height:1.55;color:#07343b;background:linear-gradient(115deg,#eafffb,#fffdf4 55%,#fff0bd)}a{color:#07343b}h1{font-size:28px}.book{display:inline-block;padding:12px 16px;border:1px solid #c8e3dd;background:#06323a;color:white;text-decoration:none}</style></head><body><h1>Imprint</h1><p><b>DipMapper.com operator</b><br>Torsten Sauter<br>Alte Landstr. 77<br>8706 Meilen<br>Switzerland<br><a href='mailto:torsten.sauter@icloud.com'>torsten.sauter@icloud.com</a></p><p><a href='index.html'>Back to DipMapper.com</a></p></body></html>
+# Search rerun and media hydration - v18.3.0
+
+The previous build could show stale options after a re-scan, radius change or browser-location refresh. v18.3.0 resets the active filter to All, clears old results, closes the card drawer, cancels stale scans by scan id and then starts a fresh local-first pass.
+
+Search flow:
+
+1. Clear old results and filter state.
+2. Start at 5 km for a location search.
+3. Seed only venues within distance of the actual search coordinate.
+4. Run close Overpass layers in parallel.
+5. Run destination/text rescue early if the first wave is weak.
+6. Hydrate photos and parking for the visible top 10 in the background.
+
+Media flow:
+
+1. Use audited venue photo banks first.
+2. Use operator/open photos already present in venue records.
+3. Use Commons category/search hydration for missing slots.
+4. Lock a deck only when three usable photos are present.
+5. Keep failed image URLs out of future decks during the session.
