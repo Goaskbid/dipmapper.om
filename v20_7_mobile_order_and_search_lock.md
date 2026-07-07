@@ -1,18 +1,24 @@
-# v20.2.0 mobile scroll and card controls
+# v20.7.0 mobile order and search lock
 
 ## Goal
+Make DipMapper usable as a phone-first swim finder.
 
-Mobile users must be able to scroll the result list without accidentally opening cards. When a card is open, the Close button must remain visible.
+## Mobile order
+1. Selection and input block.
+2. Anchored sticky map.
+3. Two-column table below the map:
+   - left: type and feature filters
+   - right: compact top findings
 
-## Changes
+## Compact findings
+Each result keeps only the minimum decision payload on mobile:
+- thumbnail
+- name
+- distance and type
+- explicit Open button
 
-- Result cards and map markers now record pointer/touch start position.
-- A card opens only when the interaction ends as a clean tap.
-- Touch movement, vertical scroll or long gestures cancel the open action.
-- Result cards use `touch-action: pan-y` so vertical scrolling remains natural.
-- Drawer headers are sticky with safe-area padding so Close remains visible on phones.
-- The full mobile filter grid from v20.1 remains active.
+## Search stability
+The visible result set locks after 10 seconds. Background network calls cannot keep flickering the list or map after that visible cutoff. A new location, radius change or destination search resets the search lifecycle.
 
-## Preserved behavior
-
-Search, map rendering, photo hydration, parking prefetch, legal pages and deployment package structure were not intentionally changed.
+## Design rules
+One font family, three font sizes, reduced bolding, mobile first.
