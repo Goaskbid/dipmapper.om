@@ -1,12 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://dipmapper.com/</loc></url>
-  <url><loc>https://dipmapper.com/privacy.html</loc></url>
-  <url><loc>https://dipmapper.com/cookies.html</loc></url>
-  <url><loc>https://dipmapper.com/disclaimer.html</loc></url>
-  <url><loc>https://dipmapper.com/terms.html</loc></url>
-  <url><loc>https://dipmapper.com/safety.html</loc></url>
-  <url><loc>https://dipmapper.com/advertising.html</loc></url>
-  <url><loc>https://dipmapper.com/imprint.html</loc></url>
-  <url><loc>https://dipmapper.com/sources.html</loc></url>
-</urlset>
+const CACHE='dipmapper-v20.9.4-shell';
+const SHELL=['./','index.html','manifest.webmanifest','privacy.html','cookies.html','terms.html','disclaimer.html','safety.html','advertising.html','imprint.html','sources.html'];
+self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)).catch(()=>{}));self.skipWaiting()});
+self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))));self.clients.claim()});
+self.addEventListener('fetch',e=>{const r=e.request;if(r.method!=='GET')return;e.respondWith(fetch(r).then(res=>{const copy=res.clone();if(new URL(r.url).origin===location.origin)caches.open(CACHE).then(c=>c.put(r,copy)).catch(()=>{});return res}).catch(()=>caches.match(r).then(m=>m||caches.match('index.html'))))});

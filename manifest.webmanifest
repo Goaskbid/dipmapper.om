@@ -1,1 +1,50 @@
-<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Imprint - DipMapper.com</title><style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:860px;margin:42px auto;padding:0 20px;line-height:1.55;color:#07343b;background:linear-gradient(115deg,#eafffb,#fffdf4 55%,#fff0bd)}a{color:#07343b}h1{font-size:28px}.book{display:inline-block;padding:12px 16px;border:1px solid #c8e3dd;background:#06323a;color:white;text-decoration:none}</style></head><body><h1>Imprint</h1><p><b>DipMapper.com operator</b><br>Torsten Sauter<br>Alte Landstr. 77<br>8706 Meilen<br>Switzerland<br><a href='mailto:torsten.sauter@icloud.com'>torsten.sauter@icloud.com</a></p><p><a href='index.html'>Back to DipMapper.com</a></p></body></html>
+{
+  "name": "DipMapper.com",
+  "short_name": "DipMapper",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffdf4",
+  "theme_color": "#05aaa7",
+  "icons": [
+    {
+      "src": "assets/dipmapper-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/dipmapper-logo-transparent.png",
+      "sizes": "283x177",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "browser"
+  ],
+  "orientation": "portrait-primary",
+  "scope": "./",
+  "description": "Find your next swim with fast nearby ranking, map, photos, parking and travel cards.",
+  "shortcuts": [
+    {
+      "name": "Use my location",
+      "url": "/?start=location",
+      "description": "Find swims nearby"
+    },
+    {
+      "name": "Search destination",
+      "url": "/?focus=search",
+      "description": "Search a beach, lake or city"
+    }
+  ],
+  "id": "/dipmapper/",
+  "version": "20.9.4"
+}
