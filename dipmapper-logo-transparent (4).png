@@ -1,4 +1,4 @@
-const CACHE='dipmapper-v20.8.6-shell';
+const CACHE='dipmapper-v20.9.4-shell';
 const SHELL=['./','index.html','manifest.webmanifest','privacy.html','cookies.html','terms.html','disclaimer.html','safety.html','advertising.html','imprint.html','sources.html'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)).catch(()=>{}));self.skipWaiting()});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))));self.clients.claim()});

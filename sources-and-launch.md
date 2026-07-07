@@ -1,16 +1,18 @@
-# DipMapper v16.0.0 discovery reliability
+# Meilen search audit - v20.2.0
 
-This release stops relying on one long live Overpass request.
+The Meilen area was corrected after user testing showed that Ländeli and Steinrad were confused and Hallenbad Allmend Meilen was missing.
 
-## Browser path
+## Fixed local entities
 
-1. Seed nearby destination packs instantly when the coordinate is close to a known high-demand swim city.
-2. Start parallel Overpass layers: managed swim venues, natural beaches/hot springs/waterfalls, local-name search, and explicit swimming/bathing tags.
-3. Use bounded Nominatim rescue only if the first layers are weak.
-4. Keep the visible top 10 stable while background discovery, parking and enrichment continue.
+- Hallenbad Allmend Meilen, Toggwilerstrasse 38, indoor municipal pool and sauna.
+- Strandbad Dorfmeilen, Seestrasse 720.
+- Strandbad Feldmeilen, Seestrasse 236.
+- Badeanlage Ländeli / Dolliker Ländeli, Seestrasse 950.
+- Badeanlage Steinrad, separated as Herrliberg, not Meilen.
 
-## Commercial production path
+## Search behavior
 
-For commercial launch, the browser should be backed by a prebuilt global venue index generated at build time or by a small API. Live public Overpass/Nominatim endpoints should be treated as enrichment/fallback, not the primary source of truth.
-
-The minimum production cache per venue should include: id, name, western name, category, indoor/outdoor, exact coordinate, official site, phone, address, opening/season/price fields, facilities, parking candidates, three vetted images, source URLs, and last-updated timestamp.
+- Current-location searches around Meilen now seed the local pack immediately.
+- The default radius remains 5 km.
+- Live open-map search continues, but seeded official local venues remain visible and are not replaced by stale workplace results.
+- Photo audit blocks non-swim media such as mosques, minarets, churches, documents, maps, logos and generic panoramas.

@@ -1,16 +1,36 @@
-# DipMapper v20.4.0 interaction hardening
+# Search redesign, v18.2.0
 
-This build fixes the main usability regression from v20.3.0.
+## Goal
 
-## Problem
-The result card CSS disabled pointer events on every child inside a result card. This made the explicit Open button unreliable because taps could target the parent article instead of the button.
+Search must never reuse a previous location's results. It must start from the current location or searched destination, show the closest useful options first, then broaden in the background.
 
-## Fix
-- The Open button now has explicit pointer events enabled.
-- Result cards no longer behave as tap targets.
-- Mobile scroll movement blocks card opening for a short guard window.
-- Numbered map markers use direct card opening and do not depend on list state.
-- Escape and Close return the app to a clickable state.
+## Runtime behavior
 
-## Validation target
-A user must be able to scroll the result list, tap Open, close the card, repeat that flow across multiple venues, and tap numbered map markers without refreshing the page.
+1. New search or location request clears results, parking cache, photo locks and selected card.
+2. Radius resets to 5 km.
+3. Seed packs are loaded only when the search point is inside a tight activation radius.
+4. Live discovery starts with core swim venues and local swim-name matches.
+5. If fewer than five results are found quickly, bounded destination rescue begins.
+6. If fewer than ten are found, wider water/beach/pool/nature layers start.
+7. Older async scans are ignored via `state.scanId`.
+
+## Anti-stall changes
+
+- Overpass endpoint race now returns the first non-empty result rather than the first endpoint to finish.
+- Empty responses do not prematurely end discovery.
+- Text rescue runs early and again if results stay sparse.
+- Pack activation radius prevents Zurich city content from leaking into Meilen local searches.
+
+## Current seeded packs
+
+- Zurich swim culture
+- Meilen and right-bank Zurichsee
+- Rhodes
+- Rostock / Baltic beaches
+- Palma / Mallorca
+
+## Next steps
+
+- Add more regional seed packs only where there is enough verified data.
+- Move geocoding/search to a production backend for better speed and control.
+- Cache verified result sets per region.

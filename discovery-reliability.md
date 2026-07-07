@@ -1,16 +1,16 @@
-# DipMapper v16.0.0 discovery reliability
+# Scroll and map-card fix
 
-This release stops relying on one long live Overpass request.
+Version: v19.2.1
 
-## Browser path
+This update fixes two interaction regressions:
 
-1. Seed nearby destination packs instantly when the coordinate is close to a known high-demand swim city.
-2. Start parallel Overpass layers: managed swim venues, natural beaches/hot springs/waterfalls, local-name search, and explicit swimming/bathing tags.
-3. Use bounded Nominatim rescue only if the first layers are weak.
-4. Keep the visible top 10 stable while background discovery, parking and enrichment continue.
+1. Vertical scrolling must remain available on desktop and mobile.
+2. Numbered map markers must open the same travel card as the ranking list.
 
-## Commercial production path
+Implementation details:
 
-For commercial launch, the browser should be backed by a prebuilt global venue index generated at build time or by a small API. Live public Overpass/Nominatim endpoints should be treated as enrichment/fallback, not the primary source of truth.
-
-The minimum production cache per venue should include: id, name, western name, category, indoor/outdoor, exact coordinate, official site, phone, address, opening/season/price fields, facilities, parking candidates, three vetted images, source URLs, and last-updated timestamp.
+- Result cards use delegated `click` and keyboard handling rather than `pointerdown` with `preventDefault`.
+- Map tiles have `pointer-events: none` so they cannot block marker clicks.
+- Numbered marker buttons have explicit size, circle shape and pointer handling.
+- Map click handling first checks for a marker, then only enters move-point logic when move mode is active.
+- Mobile keeps the map sticky but lets the full page scroll naturally.

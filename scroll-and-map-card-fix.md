@@ -1,1 +1,24 @@
-<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop stop-color='#15d6cf'/><stop offset='.52' stop-color='#06323a'/><stop offset='1' stop-color='#ffbc62'/></linearGradient></defs><rect width='128' height='128' rx='30' fill='url(#g)'/><path d='M65 17c20 22 31 39 31 57a31 31 0 1 1-62 0c0-18 12-35 31-57Z' fill='none' stroke='white' stroke-width='9' opacity='.92'/><path d='M31 82c15-12 29-12 42 0 9 7 17 7 25 0' fill='none' stroke='white' stroke-width='8' stroke-linecap='round' opacity='.78'/><circle cx='41' cy='42' r='9' fill='#dffdf8' opacity='.88'/></svg>
+# v20.7.0 mobile order and search lock
+
+## Goal
+Make DipMapper usable as a phone-first swim finder.
+
+## Mobile order
+1. Selection and input block.
+2. Anchored sticky map.
+3. Two-column table below the map:
+   - left: type and feature filters
+   - right: compact top findings
+
+## Compact findings
+Each result keeps only the minimum decision payload on mobile:
+- thumbnail
+- name
+- distance and type
+- explicit Open button
+
+## Search stability
+The visible result set locks after 10 seconds. Background network calls cannot keep flickering the list or map after that visible cutoff. A new location, radius change or destination search resets the search lifecycle.
+
+## Design rules
+One font family, three font sizes, reduced bolding, mobile first.

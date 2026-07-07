@@ -1,3 +1,7 @@
-# Photo audit policy
+# Result clicks and user copy - v18.5.0
 
-DipMapper v17.0 blocks documents, maps, logos, flags, diagrams, scans, posters and generic city panoramas from venue photo slots unless a venue-specific photo bank explicitly verifies the file. Indoor pools do not borrow lakefront or beach context photos. Outdoor beaches and baths can use immediate waterfront context only after exact venue images. Photo decks remain locked while the user browses.
+The ranking note now explains what users can do instead of describing internal photo or hydration behavior.
+
+Result cards use delegated `pointerdown` handling on the results container. This opens the travel card immediately, before active background search rerenders can swallow a normal click event.
+
+The app still updates results, photos, parking and details in the background while a user browses.

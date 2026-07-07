@@ -1,3 +1,50 @@
-# Photo audit policy
-
-DipMapper v17.0 blocks documents, maps, logos, flags, diagrams, scans, posters and generic city panoramas from venue photo slots unless a venue-specific photo bank explicitly verifies the file. Indoor pools do not borrow lakefront or beach context photos. Outdoor beaches and baths can use immediate waterfront context only after exact venue images. Photo decks remain locked while the user browses.
+{
+  "name": "DipMapper.com",
+  "short_name": "DipMapper",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffdf4",
+  "theme_color": "#05aaa7",
+  "icons": [
+    {
+      "src": "assets/dipmapper-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/dipmapper-logo-transparent.png",
+      "sizes": "283x177",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "browser"
+  ],
+  "orientation": "portrait-primary",
+  "scope": "./",
+  "description": "Find your next swim with fast nearby ranking, map, photos, parking and travel cards.",
+  "shortcuts": [
+    {
+      "name": "Use my location",
+      "url": "/?start=location",
+      "description": "Find swims nearby"
+    },
+    {
+      "name": "Search destination",
+      "url": "/?focus=search",
+      "description": "Search a beach, lake or city"
+    }
+  ],
+  "id": "/dipmapper/",
+  "version": "20.9.4"
+}

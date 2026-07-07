@@ -1,16 +1,17 @@
-# Scroll and map-card fix
+# Continuous loading and media hydration - v18.4.0
 
-Version: v19.2.1
+## Goal
 
-This update fixes two interaction regressions:
+The user should see a local top list quickly and the app should continue improving in the background.
 
-1. Vertical scrolling must remain available on desktop and mobile.
-2. Numbered map markers must open the same travel card as the ranking list.
+## Current behavior
 
-Implementation details:
+- The visible ranking appears as soon as seeded or live candidates exist.
+- The app continues to hydrate media, parking and details after initial render.
+- Ranking hero photos use `photoForRank`, which prevents the same image fingerprint from appearing twice in the visible list.
+- Photo decks inside travel cards remain stable while a user browses.
+- Parking prefetch runs for the visible top results.
 
-- Result cards use delegated `click` and keyboard handling rather than `pointerdown` with `preventDefault`.
-- Map tiles have `pointer-events: none` so they cannot block marker clicks.
-- Numbered marker buttons have explicit size, circle shape and pointer handling.
-- Map click handling first checks for a marker, then only enters move-point logic when move mode is active.
-- Mobile keeps the map sticky but lets the full page scroll naturally.
+## Remaining issue
+
+Production-quality photos require curated media caches. The client should not fake images from unrelated places.
