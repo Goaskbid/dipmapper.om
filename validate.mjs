@@ -1,36 +1,10 @@
-# Search redesign, v18.2.0
-
-## Goal
-
-Search must never reuse a previous location's results. It must start from the current location or searched destination, show the closest useful options first, then broaden in the background.
-
-## Runtime behavior
-
-1. New search or location request clears results, parking cache, photo locks and selected card.
-2. Radius resets to 5 km.
-3. Seed packs are loaded only when the search point is inside a tight activation radius.
-4. Live discovery starts with core swim venues and local swim-name matches.
-5. If fewer than five results are found quickly, bounded destination rescue begins.
-6. If fewer than ten are found, wider water/beach/pool/nature layers start.
-7. Older async scans are ignored via `state.scanId`.
-
-## Anti-stall changes
-
-- Overpass endpoint race now returns the first non-empty result rather than the first endpoint to finish.
-- Empty responses do not prematurely end discovery.
-- Text rescue runs early and again if results stay sparse.
-- Pack activation radius prevents Zurich city content from leaking into Meilen local searches.
-
-## Current seeded packs
-
-- Zurich swim culture
-- Meilen and right-bank Zurichsee
-- Rhodes
-- Rostock / Baltic beaches
-- Palma / Mallorca
-
-## Next steps
-
-- Add more regional seed packs only where there is enough verified data.
-- Move geocoding/search to a production backend for better speed and control.
-- Cache verified result sets per region.
+import fs from 'node:fs';
+const html=fs.readFileSync('index.html','utf8');
+const manifest=fs.readFileSync('manifest.webmanifest','utf8');
+const ver='v20.9.4';
+const required=[ver,'data-version="'+ver+'"','dipmapper-logo-transparent','data-open','openPlace','serviceWorker','dm_seen','photoDeck','lightbox','SEARCH_VISIBLE_MS=10000','ca-pub-2870312071451207','google-adsense-account','apple-touch-icon','renderGoldenHour','dmWaterTemp','dmOpenStatus'];
+for(const x of required){ if(!html.includes(x)){ console.error('Missing required marker:',x); process.exit(1); } }
+for(const bad of ['OpenWaterAtlas','OPENWATERATLAS','static build','configured for launch']){ if(html.includes(bad)){ console.error('Banned text present in index.html:',bad); process.exit(1); } }
+if(!manifest.includes('"version": "20.9.4"')){ console.error('manifest.webmanifest version is not 20.8.1'); process.exit(1); }
+if(html.length>2200000){ console.error('index.html too large ('+html.length+' bytes)'); process.exit(1); }
+console.log('DipMapper.com '+ver+' validation passed. index.html '+(html.length/1024).toFixed(1)+' KB.');
