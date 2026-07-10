@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://dipmapper.com/</loc><lastmod>2026-07-10</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-  <url><loc>https://dipmapper.com/swim/</loc><lastmod>2026-07-10</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://dipmapper.com/privacy.html</loc><lastmod>2026-07-10</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://dipmapper.com/swim/zurich.html</loc><lastmod>2026-07-10</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://dipmapper.com/swim/meilen.html</loc><lastmod>2026-07-10</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://dipmapper.com/swim/rhodes.html</loc><lastmod>2026-07-10</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://dipmapper.com/swim/miami.html</loc><lastmod>2026-07-10</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://dipmapper.com/swim/rostock.html</loc><lastmod>2026-07-10</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://dipmapper.com/swim/palma.html</loc><lastmod>2026-07-10</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dipmapper.com/swim.html</loc><lastmod>2026-07-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://dipmapper.com/privacy.html</loc><lastmod>2026-07-10</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://dipmapper.com/imprint.html</loc><lastmod>2026-07-10</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>
