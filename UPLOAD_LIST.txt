@@ -1,0 +1,37 @@
+DIPMAPPER v22.8.1 - GITHUB UPLOAD (25 files)
+
+Repository: https://github.com/Goaskbid/dipmapper.om
+For EACH numbered folder, in order:
+  1. open the folder on your computer
+  2. drag EVERYTHING inside it onto the repository front page
+  3. click "Commit changes"
+One folder = one commit. Never two at once.
+
+01  index.html
+02  assets/dipmapper-icon.png
+03  swim.html
+04  ads.txt
+05  privacy.html
+06  imprint.html
+07  robots.txt
+08  sitemap.xml
+09  ads-config.js
+10  manifest.webmanifest
+11  sw.js
+12  assets/icon-192.png
+13  assets/icon-512.png
+14  assets/icon-maskable-512.png
+15  assets/apple-touch-icon.png
+16  assets/dipmapper-logo.png
+17  assets/screens/phone-list.png
+18  assets/screens/phone-detail.png
+19  assets/screens/desktop-map.png
+20  cookies.html
+21  terms.html
+22  disclaimer.html
+23  safety.html
+24  sources.html
+25  advertising.html
+
+When done: open https://dipmapper.com and press Ctrl+Shift+R.
+Check: https://dipmapper.com/assets/dipmapper-icon.png shows the logo.

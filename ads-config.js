@@ -9,6 +9,7 @@
 window.DM_ADS = {
   client: 'ca-pub-2870312071451207',
   header: '',   // Anzeige oben, unter der Kopfzeile
-  mid:    '',   // Anzeige unter der Karte
+  mid:    '',   // Anzeige unter der Karte (ganze Breite)
+  list:   '',   // Anzeige am Ende der Badeplatz-Liste
   footer: ''    // Anzeige unten, über dem Rechtlichen
 };
