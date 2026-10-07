@@ -1,4 +1,4 @@
-DIPMAPPER v22.15.0 - GITHUB UPLOAD (25 files)
+DIPMAPPER v22.16.0 - GITHUB UPLOAD (25 files)
 
 Repository: https://github.com/Goaskbid/dipmapper.om
 For EACH numbered folder, in order:
