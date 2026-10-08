@@ -1,8 +1,8 @@
-/* DIPMAPPER_SW_V22 — offline shell for the installed app.
+/* DIPMAPPER_SW_V22 (v22.19: root icon path) — offline shell for the installed app.
    Network first for pages (updates arrive immediately), cached copy only when offline.
    Never touches other websites: maps, photos, weather and ads always go straight to the network. */
 const CACHE = 'dipmapper-v22-shell';
-const SHELL = ['/', '/swim.html', '/privacy.html', '/imprint.html', '/assets/icon-192.png'];
+const SHELL = ['/', '/swim.html', '/privacy.html', '/imprint.html', '/icon-192.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).catch(() => {}).then(() => self.skipWaiting()));

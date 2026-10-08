@@ -23,19 +23,19 @@
  ],
  "icons": [
   {
-   "src": "/assets/icon-192.png",
+   "src": "/icon-192.png",
    "sizes": "192x192",
    "type": "image/png",
    "purpose": "any"
   },
   {
-   "src": "/assets/icon-512.png",
+   "src": "/icon-512.png",
    "sizes": "512x512",
    "type": "image/png",
    "purpose": "any"
   },
   {
-   "src": "/assets/icon-maskable-512.png",
+   "src": "/icon-maskable-512.png",
    "sizes": "512x512",
    "type": "image/png",
    "purpose": "maskable"
@@ -43,21 +43,21 @@
  ],
  "screenshots": [
   {
-   "src": "/assets/screens/phone-list.png",
+   "src": "/phone-list.png",
    "sizes": "390x844",
    "type": "image/png",
    "form_factor": "narrow",
    "label": "Nearby swim spots, ranked"
   },
   {
-   "src": "/assets/screens/phone-detail.png",
+   "src": "/phone-detail.png",
    "sizes": "390x844",
    "type": "image/png",
    "form_factor": "narrow",
    "label": "Spot details with weather and access"
   },
   {
-   "src": "/assets/screens/desktop-map.png",
+   "src": "/desktop-map.png",
    "sizes": "1440x900",
    "type": "image/png",
    "form_factor": "wide",
@@ -71,7 +71,7 @@
    "url": "/?source=shortcut",
    "icons": [
     {
-     "src": "/assets/icon-192.png",
+     "src": "/icon-192.png",
      "sizes": "192x192"
     }
    ]
@@ -82,7 +82,7 @@
    "url": "/swim.html",
    "icons": [
     {
-     "src": "/assets/icon-192.png",
+     "src": "/icon-192.png",
      "sizes": "192x192"
     }
    ]
