@@ -110,7 +110,7 @@ html.mobileApp{--s:12px;--m:15px;--l:22px}html.mobileApp body{min-height:100dvh;
 
 
 
-/* DipMapper v22.20.0 - real logo asset dipmapper-logo-transparent.png, sticky map, easier scrolling, animated waterfront */
+/* DipMapper v22.21.0 - real logo asset dipmapper-logo-transparent.png, sticky map, easier scrolling, animated waterfront */
 :root{--appTop:104px}
 body{background:linear-gradient(120deg,#f6fff9 0%,#e9fff9 34%,#fffbe6 70%,#ffeeb8 100%)}
 body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:
@@ -182,7 +182,7 @@ body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;back
 }
 
 
-/* v22.20.0 - supplied logo, animated waterfront, sticky map and smoother scrolling */
+/* v22.21.0 - supplied logo, animated waterfront, sticky map and smoother scrolling */
 html{scroll-behavior:smooth;scroll-padding-top:110px}body{min-height:100svh}.animatedWaterfront{position:fixed;inset:auto -8vw -16vh -8vw;height:44vh;z-index:0;pointer-events:none;opacity:.36;overflow:hidden}.animatedWaterfront:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,253,244,0),rgba(33,191,183,.28)),repeating-linear-gradient(176deg,rgba(255,255,255,.75) 0 2px,transparent 3px 42px);clip-path:polygon(0 34%,9% 25%,21% 33%,36% 18%,50% 31%,64% 21%,79% 29%,92% 17%,100% 24%,100% 100%,0 100%);animation:waterfrontDrift 38s ease-in-out infinite}.animatedWaterfront span{position:absolute;width:32px;height:32px;border:2px solid rgba(255,255,255,.72);border-radius:50%;bottom:18%;animation:logoBubble 18s linear infinite}.animatedWaterfront span:nth-child(1){left:18%;animation-delay:-4s}.animatedWaterfront span:nth-child(2){left:53%;animation-delay:-10s}.animatedWaterfront span:nth-child(3){left:82%;animation-delay:-14s}@keyframes waterfrontDrift{50%{transform:translate3d(-46px,18px,0) scale(1.03)}}@keyframes logoBubble{0%{opacity:0;transform:translateY(100px) scale(.55)}25%,70%{opacity:.7}100%{opacity:0;transform:translateY(-170px) scale(1.35)}}
 .domainHalo{position:fixed!important;right:-8vw!important;bottom:7vh!important;width:min(640px,46vw)!important;height:auto!important;opacity:.08!important;z-index:0!important;pointer-events:none!important;filter:blur(.1px);animation:haloFloat 34s ease-in-out infinite;background:none!important}.domainHalo:after,.domainHalo:before{display:none!important}.domainHalo img{display:block;width:100%;height:auto}.logoWatermark{background:none!important;border-radius:0!important;overflow:visible!important;box-shadow:none!important}.logoWatermark:before,.logoWatermark:after{display:none!important}.logoWatermark img{display:block;width:100%;height:auto;filter:drop-shadow(0 24px 60px rgba(5,80,88,.12))}.logoWatermarkMain{right:-4vw!important;top:15vh!important;width:min(520px,38vw)!important;opacity:.105!important;animation:watermarkFloat 36s ease-in-out infinite}.logoWatermarkSoft{left:-8vw!important;right:auto!important;top:55vh!important;width:min(480px,34vw)!important;opacity:.06!important;animation:watermarkFloat2 44s ease-in-out infinite}@keyframes watermarkFloat2{50%{transform:translate3d(34px,-18px,0) rotate(-4deg) scale(1.04)}}
 .topbar{box-shadow:0 10px 30px rgba(7,52,59,.06)}.topin{max-width:1440px!important;padding:12px 18px!important;grid-template-columns:auto minmax(260px,1fr) auto!important}.brand{min-width:280px}.brandLogo{width:250px;cursor:pointer;height:auto;display:block;object-fit:contain;filter:drop-shadow(0 10px 22px rgba(7,52,59,.18));animation:brandFloat 9s ease-in-out infinite}.brandCopy{display:grid;gap:2px}.logo,.logo:before,.logo:after,.logo b{display:none!important}@keyframes brandFloat{50%{transform:translateY(-2px) rotate(-.5deg)}}.brandTitle{font-size:18px!important}.brandSub{font-size:13px!important;letter-spacing:.1em!important}.urlPill{font-size:13px!important;padding:2px 8px}.ad{clip-path:polygon(0 0,98% 0,100% 50%,98% 100%,0 100%)}
@@ -191,7 +191,7 @@ html{scroll-behavior:smooth;scroll-padding-top:110px}body{min-height:100svh}.ani
 @media(min-width:901px){body{overflow:hidden}.page{height:calc(100svh - 94px);overflow:hidden}.explainer,.legal{display:none}.cookie.hide{display:none!important}}
 
 
-/* v22.20.0 - rebuild vertical scrolling and map click reliability */
+/* v22.21.0 - rebuild vertical scrolling and map click reliability */
 html,body{height:auto!important;min-height:100%;overflow-x:hidden!important;overflow-y:auto!important}
 body{overscroll-behavior-y:auto!important}
 #map{touch-action:manipulation;user-select:none;-webkit-user-select:none}
@@ -224,7 +224,7 @@ body{overscroll-behavior-y:auto!important}
 
 
 
-/* DipMapper v22.20.0: scroll and map-card interaction rebuild */
+/* DipMapper v22.21.0: scroll and map-card interaction rebuild */
 html{height:auto!important;min-height:100%;overflow-y:auto!important;scroll-behavior:smooth}
 body{height:auto!important;min-height:100dvh!important;overflow-x:hidden!important;overflow-y:auto!important;overscroll-behavior-y:auto!important;touch-action:pan-y!important}
 .page{min-height:calc(100dvh - var(--header-h,96px));overflow:visible!important}
@@ -261,12 +261,12 @@ body{height:auto!important;min-height:100dvh!important;overflow-x:hidden!importa
 }
 
 
-/* v22.20.0: animated waterfront background and radius ring */
+/* v22.21.0: animated waterfront background and radius ring */
 body:before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(circle at 16% 20%,rgba(0,191,190,.15),transparent 26%),radial-gradient(circle at 86% 8%,rgba(255,179,77,.18),transparent 25%),linear-gradient(145deg,rgba(247,255,252,.86),rgba(255,249,223,.78));animation:seaLight 22s ease-in-out infinite alternate}.animatedWaterfront{position:fixed;inset:auto 0 0 0;height:42vh;z-index:0;pointer-events:none;opacity:.36;background:linear-gradient(180deg,transparent 0%,rgba(49,209,199,.20) 46%,rgba(255,230,128,.20) 100%);overflow:hidden}.animatedWaterfront:before,.animatedWaterfront:after{content:"";position:absolute;left:-10%;right:-10%;height:55%;bottom:0;border-radius:50% 50% 0 0;background:repeating-radial-gradient(ellipse at 50% 120%,rgba(255,255,255,.74) 0 2px,transparent 3px 30px);animation:slowTide 34s linear infinite}.animatedWaterfront:after{bottom:-10%;opacity:.45;animation-duration:48s;animation-direction:reverse}.domainHalo{position:fixed;right:4vw;bottom:10vh;width:min(52vw,760px);opacity:.08;pointer-events:none;z-index:0;animation:haloDrift 38s ease-in-out infinite}.domainHalo img,.logoWatermark img{width:100%;height:100%;object-fit:contain}.brandLogo{width:92px;height:92px;object-fit:contain;filter:drop-shadow(0 14px 28px rgba(0,58,66,.22));animation:logoFloat 8s ease-in-out infinite}.brandTitle{font-size:22px}.brandSub{font-size:12px}.urlPill{display:inline-block;margin-top:3px;font-size:11px;letter-spacing:.12em;color:#006e7c}.radiusRing{position:absolute;z-index:5;border:2px solid rgba(0,174,168,.42);background:rgba(0,174,168,.055);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;box-shadow:0 0 0 1px rgba(255,255,255,.65) inset}.radiusLabel{position:absolute;z-index:6;transform:translate(-50%,-50%);background:rgba(255,253,244,.93);border:1px solid var(--line);padding:2px 6px;font-size:11px;color:var(--muted);pointer-events:none}@keyframes seaLight{50%{filter:hue-rotate(8deg);transform:scale(1.015)}}@keyframes slowTide{0%{transform:translateX(-3%) translateY(12px)}50%{transform:translateX(3%) translateY(-8px)}100%{transform:translateX(-3%) translateY(12px)}}@keyframes haloDrift{50%{transform:translate(-42px,18px) rotate(2deg) scale(1.04)}}@keyframes logoFloat{50%{transform:translateY(-3px) rotate(.8deg)}}
 @media(max-width:760px){.brandLogo{width:70px;height:70px}.brandTitle{font-size:18px}.domainHalo{width:85vw;right:-18vw;bottom:20vh}.animatedWaterfront{height:36vh}.mapPanel{max-height:62dvh!important}#map{height:46dvh!important}}
 
 
-/* v22.20.0 - essential interaction and brand stability */
+/* v22.21.0 - essential interaction and brand stability */
 .brandLogo{max-width:220px;min-width:150px;background:transparent!important}
 .logoImageFallback{width:210px;max-width:26vw;padding:8px 10px;border:1px solid var(--line);background:rgba(255,253,244,.82);box-shadow:0 10px 24px rgba(7,52,59,.12);font-weight:700;line-height:1.1}.logoImageFallback small{display:block;font-size:12px;font-weight:500;color:var(--muted);letter-spacing:.06em;margin-top:3px}
 .marker{box-sizing:border-box!important;pointer-events:auto!important;z-index:120!important;aspect-ratio:1/1!important;border-radius:999px!important;padding:0!important}.marker *{pointer-events:none!important}.result{position:relative;z-index:2;pointer-events:auto!important}.drawer.open{z-index:500}.drawerBack.open{z-index:490}.mapPanel{position:sticky;top:104px}.cardOpenBody .mapPanel{position:relative}
@@ -287,7 +287,7 @@ button,.btn,.result,.marker{touch-action:manipulation;}
 
 
 
-/* DipMapper v22.20.0 - mobile scroll guard, visible filters, sticky card close, three-size type */
+/* DipMapper v22.21.0 - mobile scroll guard, visible filters, sticky card close, three-size type */
 :root{--text-small:12px;--text-base:15px;--text-large:24px;--s:var(--text-small);--m:var(--text-base);--l:var(--text-large);--font-main:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--weight-regular:400;--weight-medium:500;--weight-strong:650}
 body,button,a,input,select,.btn,.input,.modal,.drawer,.cookie{font-family:var(--font-main)!important;font-size:var(--text-base)!important;font-weight:var(--weight-regular)!important}
 h1,h2,.resultName,.brandTitle,#cardTitle,.gateBox h1{font-size:var(--text-large)!important;font-weight:var(--weight-strong)!important;line-height:1.08!important}
@@ -307,7 +307,7 @@ h3,.statusTop b,.listHead h2,.mapHead h2,.section h3,.gateBox p,.story,.fact div
 @media(max-width:420px){.filters{grid-template-columns:repeat(2,minmax(0,1fr))!important}.searchRow{grid-template-columns:1fr!important}.controls,.quick{grid-template-columns:1fr 1fr!important}.mapActions button{padding:8px!important}.brandLogo{width:min(190px,82vw)!important}.drawerHead{gap:8px!important}.drawerHead h2{max-width:58vw!important;overflow-wrap:anywhere!important}.drawerHead button{padding:9px 10px!important}}
 
 
-/* DipMapper v22.20.0 - mobile-first refinement, explicit open controls, stable 10s search */
+/* DipMapper v22.21.0 - mobile-first refinement, explicit open controls, stable 10s search */
 :root{--font-body:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;--s:12px!important;--m:15px!important;--l:24px!important;--radius:0px!important}
 *{font-family:var(--font-body)!important}body{font-size:var(--m)!important}small,.muted,.eyebrow,.chip,.k,.resultMeta,.photoTag,.photoSrc,.legend,.listNote{font-size:var(--s)!important}h1,h2,.resultName,.drawerHead h2{font-size:var(--l)!important}.resultName{line-height:1.08!important}.result{cursor:default!important;display:grid!important;grid-template-columns:84px minmax(0,1fr)!important;padding:10px!important;gap:10px!important;min-height:104px!important}.result *{pointer-events:auto!important}.resultMain{display:grid;grid-template-rows:auto auto auto auto;gap:5px;min-width:0}.openPlace{justify-self:start;margin-top:2px;background:var(--deep)!important;color:white!important;border-color:var(--deep)!important;padding:8px 14px!important;min-width:78px}.openPlace:active{transform:translateY(1px)}.result .chips{gap:5px}.chip{line-height:1.1}.filters{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(92px,1fr))!important;gap:8px!important;overflow:visible!important}.filter{min-height:40px;white-space:normal!important;text-align:center}.drawerHead{position:sticky!important;top:0!important;z-index:6!important}.drawerHead .actions{margin:0!important}.drawerHead button,#close{min-width:72px}.cardOpenBody{overflow:hidden!important}.animatedWaterfront{opacity:.48}.logoWatermarkMain{opacity:.14!important}.logoWatermarkSoft{opacity:.08!important}.status,.panel,.mapPanel,.explainer,.legal,.result,.drawer,.fact,.badge,.day{box-shadow:0 14px 42px rgba(7,52,59,.06)}
 @media(max-width:900px){.topin{grid-template-columns:1fr!important}.brandLogo{width:min(240px,78vw)!important}.shell{gap:10px!important}.mapPanel{position:sticky!important;top:86px!important}.panel{position:relative!important;top:auto!important;max-height:none!important;overflow:visible!important}.results{overflow:visible!important;min-height:0!important}.filters{grid-template-columns:repeat(3,minmax(0,1fr))!important;padding:10px!important}.filter{padding:9px 7px!important}.result{grid-template-columns:80px minmax(0,1fr)!important;touch-action:pan-y!important}.openPlace{width:100%;max-width:132px}.drawer{width:100vw!important}.drawerHead{padding:10px 12px!important}.drawerBody{padding-bottom:96px!important}.gallery{grid-template-columns:1fr!important}.photo,.photo:first-child{height:228px!important}.cookie{z-index:210!important}.cookie.hide{display:none!important}}
@@ -316,7 +316,7 @@ h3,.statusTop b,.listHead h2,.mapHead h2,.section h3,.gateBox p,.story,.fact div
 .cardCloseFloat{position:fixed;right:14px;bottom:18px;z-index:220}
 
 
-/* v22.20.0 final mobile and interaction polish */
+/* v22.21.0 final mobile and interaction polish */
 :root{--dm-small:12px;--dm-base:15px;--dm-large:24px}
 *{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important}
 body,input,select,button,textarea,.brandSub,.urlPill,.resultMeta,.chip,.btn,.cardStory,.fact,.badge,.sourceList,.cookie,.listNote,.status p,.muted{font-size:var(--dm-base)!important;font-weight:400!important}
@@ -338,7 +338,7 @@ h1,h2,.brandTitle,.mapHead h2,.listHead h2,.drawerHead h2,.resultName{font-size:
 @media(min-width:521px) and (max-width:900px){.filters{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
 
 
-/* v22.20.0 mobile reliability polish: deliberate card opening, stable scroll, no accidental opens */
+/* v22.21.0 mobile reliability polish: deliberate card opening, stable scroll, no accidental opens */
 .results,.drawer{overscroll-behavior:contain;-webkit-overflow-scrolling:touch;scrollbar-gutter:stable;}
 .result{touch-action:pan-y!important;cursor:default!important;contain:layout paint;}
 .openPlace{touch-action:manipulation!important;position:relative;z-index:4;}
@@ -372,7 +372,7 @@ body:not(.cardOpenBody) .drawerBack{pointer-events:none;}
 }
 
 
-/* v22.20.0 interaction polish: explicit open controls, scroll-safe results, reliable map dots */
+/* v22.21.0 interaction polish: explicit open controls, scroll-safe results, reliable map dots */
 .openResultBtn{pointer-events:auto;cursor:pointer;margin-top:8px;min-height:38px;padding:8px 12px;background:var(--deep);color:#fff;border:1px solid var(--deep);font:inherit;font-size:var(--b);font-weight:500;touch-action:manipulation;display:inline-flex;align-items:center;justify-content:center;gap:6px}
 .openResultBtn:focus-visible,.marker:focus-visible,.drawerHead button:focus-visible{outline:3px solid rgba(0,174,168,.45);outline-offset:2px}
 .result .resultCopy,.result .thumb{pointer-events:none}.result .openResultBtn{pointer-events:auto}.result{overscroll-behavior:contain}.results{scrollbar-gutter:stable;overscroll-behavior:contain;touch-action:pan-y}
@@ -382,7 +382,7 @@ body:not(.cardOpenBody) .drawerBack{pointer-events:none;}
 
 
 
-/* v22.20.0 elegance/mobile usability patch */
+/* v22.21.0 elegance/mobile usability patch */
 :root{--font-body:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--s:12px;--m:15px;--l:24px}
 body,button,input,select,a,.chip,.filter,.result,.drawer{font-family:var(--font-body)!important}
 button,input,select{font-size:var(--m)!important}.chip,.muted,.eyebrow,.k,.resultMeta,.legend,.listNote{font-size:var(--s)!important}h1,h2,.resultName,#cardTitle,.drawerHead h2{font-size:var(--l)!important}
@@ -403,7 +403,7 @@ button,input,select{font-size:var(--m)!important}.chip,.muted,.eyebrow,.k,.resul
 
 
 
-/* DipMapper v22.20.0 - space use: larger anchored map, shorter result rail, visible mobile filters */
+/* DipMapper v22.21.0 - space use: larger anchored map, shorter result rail, visible mobile filters */
 :root{--side-rail:320px;--map-anchor-top:calc(var(--appTop,104px) + 6px)}
 .page{max-width:1540px!important;padding:14px 18px 28px!important}
 .shell{grid-template-columns:minmax(284px,var(--side-rail)) minmax(0,1fr)!important;gap:14px!important;align-items:start!important}
@@ -413,7 +413,7 @@ button,input,select{font-size:var(--m)!important}.chip,.muted,.eyebrow,.k,.resul
 @media(max-width:560px){:root{--appTop:76px}.topin{padding:6px 8px!important}.logo{width:142px!important;height:64px!important}.mapPanel{top:calc(var(--appTop) + 2px)!important}#map{height:43svh!important;min-height:292px!important}.filters{grid-template-columns:repeat(2,minmax(0,1fr))!important}.results{max-height:36svh!important}.resultName{font-size:var(--text-large)!important}.nav button{min-height:38px!important}.mapActions button{min-width:40px!important;min-height:40px!important}}
 
 
-/* DipMapper v22.20.0 mobile-first layout: input first, anchored map second, type and top findings side by side. */
+/* DipMapper v22.21.0 mobile-first layout: input first, anchored map second, type and top findings side by side. */
 :root{--text-small:12px;--text-base:15px;--text-large:24px;--font-body:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--mobileTop:86px;}
 html,body,button,input,select,textarea{font-family:var(--font-body)!important;font-size:var(--text-base)!important;font-weight:400!important;}
 .eyebrow,.brandSub,.chip,.muted,.resultMeta,.k,.photoTag,.photoSrc,.legend,.statusText{font-size:var(--text-small)!important;}
@@ -436,7 +436,7 @@ b,strong,.primary,.accent{font-weight:650!important;}
 
 
 /* ============================================================
-   DipMapper v22.20.0 — professional redesign
+   DipMapper v22.21.0 — professional redesign
    CSS-only re-skin via design tokens + component polish.
    JS logic, layout structure, and click handlers are unchanged.
    ============================================================ */
@@ -549,7 +549,7 @@ body.dm-favs-only #results .result:not(.dm-fav){display:none!important}
 }
 
 
-/* v22.20.0 — no-blink smoothing + beach start window */
+/* v22.21.0 — no-blink smoothing + beach start window */
 @keyframes dmFade{from{opacity:0}to{opacity:1}}
 .result .thumb img{animation:dmFade .4s ease both}
 .tile{animation:dmFade .35s ease both}
@@ -569,7 +569,7 @@ body.dm-favs-only #results .result:not(.dm-fav){display:none!important}
 .dmSurprise .dmHeart{display:none}
 
 
-/* v22.20.0 — map layers (no tile blink), heart, beach hero photo, recent/saved filters */
+/* v22.21.0 — map layers (no tile blink), heart, beach hero photo, recent/saved filters */
 #map{position:relative}
 #map .dmTiles,#map .dmOverlay{position:absolute;inset:0;width:100%;height:100%}
 #map .dmTiles{pointer-events:none;z-index:0}
@@ -593,7 +593,7 @@ body.dm-favs-only #results .result:not(.dm-fav){display:none!important}
 body.dm-recent-only #results .result:not(.dm-recent){display:none!important}
 
 
-/* v22.20.0 — results below map + weather alert */
+/* v22.21.0 — results below map + weather alert */
 .dmBelow{margin:18px 0 0;border:1px solid var(--line);background:rgba(255,255,250,.9);border-radius:18px;box-shadow:0 20px 60px rgba(7,52,59,.08);padding:16px 18px}
 .dmBelowHead{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}
 .dmBelowTitle{font-weight:800;font-size:19px;color:var(--ink)}
@@ -606,7 +606,7 @@ body.dm-recent-only #results .result:not(.dm-recent){display:none!important}
 #map .dmWeatherWarn .dmwTxt b{font-weight:800;color:#8a3d0a}
 
 
-/* v22.20.0 — button styling, robust heart, mobile to the max */
+/* v22.21.0 — button styling, robust heart, mobile to the max */
 .dm-heart{z-index:30!important;pointer-events:auto!important}
 .dmActions{display:flex;gap:8px;margin-top:10px}
 .dmBtn{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:8px 10px;border:1px solid var(--line);background:#fff;border-radius:10px;font:inherit;font-size:13px;font-weight:600;color:var(--ink);cursor:pointer;min-height:38px;transition:background .12s ease,transform .12s ease}
@@ -643,7 +643,7 @@ body.dm-recent-only #results .result:not(.dm-recent){display:none!important}
 }
 
 
-/* v22.20.0 — full-screen start photo, bold heart, pro finish */
+/* v22.21.0 — full-screen start photo, bold heart, pro finish */
 .gate.dmHasBg{background:linear-gradient(160deg,#0a6c7d 0%,#0e8f8a 55%,#10a39a 100%)}
 .dmGateFull{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0;transition:opacity .8s ease}
 .dmGateFull.dmLoaded{opacity:1}
@@ -670,14 +670,14 @@ body.dm-recent-only #results .result:not(.dm-recent){display:none!important}
 }
 
 
-/* v22.20.0 — heart spacing + whole-card click */
+/* v22.21.0 — heart spacing + whole-card click */
 .result[data-open]{cursor:pointer}
 
 .dm-heart{top:8px;right:8px}
 #dmBelow .result:hover{cursor:pointer}
 
 
-/* v22.20.0 — feature chip colors + golden-hour badge */
+/* v22.21.0 — feature chip colors + golden-hour badge */
 .chip.star{background:linear-gradient(90deg,#fff6da,#ffe9a0)!important;color:#7a5600!important;border-color:#f0cf76!important;font-weight:800}
 .chip.open{background:#e7f8ee!important;color:#0b7a45!important;border-color:#a6e3c1!important;font-weight:700}
 .chip.closed{background:#fdeceb!important;color:#b23330!important;border-color:#f2b7b4!important;font-weight:700}
@@ -695,10 +695,10 @@ body.dm-recent-only #results .result:not(.dm-recent){display:none!important}
 @media(max-width:760px){#map .dmGolden{max-width:80%;font-size:12px;bottom:10px;left:10px}}
 
 
-/* v22.20.0 — parking-full warning */
+/* v22.21.0 — parking-full warning */
 .chip.parkfull{background:#fdeceb!important;color:#b01e1a!important;border-color:#f0a9a5!important;font-weight:800}
 
-/* v22.20.0 — bigger logo, resets on click */
+/* v22.21.0 — bigger logo, resets on click */
 .brand{cursor:pointer}
 .brand:hover .brandLogo{filter:drop-shadow(0 12px 26px rgba(7,52,59,.26))}
 @media(max-width:760px){.brandLogo{width:180px!important}}
@@ -881,7 +881,7 @@ h1{font-weight:800}
 }
 
 
-/* v22.20.0 - cover stays up as a loading screen while locating */
+/* v22.21.0 - cover stays up as a loading screen while locating */
 #gateLoc.dmBusy{opacity:.92;cursor:progress;position:relative;padding-left:44px!important}
 #gateLoc.dmBusy::before{content:"";position:absolute;left:19px;top:50%;width:15px;height:15px;margin-top:-7.5px;
   border:2.5px solid rgba(255,255,255,.42);border-top-color:#fff;border-radius:50%;animation:dmSpin .7s linear infinite}
@@ -900,14 +900,14 @@ h1{font-weight:800}
 @media print{.dmAd{display:none}}
 
 
-/* v22.20.0 - swim guides teaser */
+/* v22.21.0 - swim guides teaser */
 .guides{background:#fffefa;border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:16px auto;max-width:1180px;box-shadow:0 1px 2px rgba(7,52,59,.05),0 8px 22px rgba(7,52,59,.05)}
 .guides h2{font-size:18px;letter-spacing:-.02em;margin:0 0 6px}
 .guides p{margin:0;font-size:14.5px;line-height:1.65}
 .guides a{color:var(--brand);font-weight:600}
 
 
-/* v22.20.0 - entry-requirement notice (factual, from map data / region) */
+/* v22.21.0 - entry-requirement notice (factual, from map data / region) */
 .chip.idreq{background:#fdecec;border-color:#f3b9b9;color:#9a2b2b;font-weight:700}
 .chip.idnote{background:#fff5e6;border-color:#f3d79a;color:#8a5a12;font-weight:650}
 .dmEntryBar{display:flex;gap:10px;align-items:flex-start;margin:12px 0;padding:12px 14px;border-radius:12px;
@@ -1030,7 +1030,7 @@ html body #map .marker.dmSel::after{content:"";position:absolute;inset:-9px;bord
 @media (min-width:761px){#dmMoreFilters{display:inline-block}}
 
 
-/* v22.20.0 map attribution (required by the OpenStreetMap tile policy) */
+/* v22.21.0 map attribution (required by the OpenStreetMap tile policy) */
 html body #map .dmAttr{position:absolute;right:0;bottom:0;z-index:30;background:rgba(255,255,255,.86);
   font:500 11px/1.4 var(--font,system-ui);color:#33545b;padding:3px 8px;border-top-left-radius:8px;pointer-events:auto}
 html body #map .dmAttr a{color:#0A6F6A;text-decoration:none}
@@ -1063,7 +1063,7 @@ html body #map .dmAttr a:hover{text-decoration:underline}
 }
 
 
-/* v22.20.0 section jumps land below the pinned header */
+/* v22.21.0 section jumps land below the pinned header */
 html body #resultsPanel,html body #mapPanel,html body #how{scroll-margin-top:calc(var(--dmHead,0px) + 10px)}
 
 /* ===== v22.2 dense list (split layout only; phones untouched; nothing hidden) ===== */
@@ -1577,7 +1577,7 @@ window.DM_ADS={client:'ca-pub-2870312071451207',header:'',mid:'',list:'',footer:
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <noscript></noscript>
-</head><body data-version="v22.20.0">
+</head><body data-version="v22.21.0">
 <div class="animatedWaterfront" aria-hidden="true"><span></span><span></span><span></span></div><div class="domainHalo" aria-hidden="true"><img data-dmlogo alt=""></div><div id="dmBoot" role="img" aria-label="DipMapper — Find your next swim"><div class="wGlow"></div><div class="wSunBox"><div class="wRays"></div><div class="wSun"></div></div><svg class="wBird" viewBox="0 0 34 14" aria-hidden="true"><path d="M2 9 Q9 1 17 8 Q25 1 32 9"/></svg><svg class="wBird b2" viewBox="0 0 34 14" aria-hidden="true"><path d="M2 9 Q9 1 17 8 Q25 1 32 9"/></svg><div class="wSea" aria-hidden="true"><svg class="l1" viewBox="0 0 2400 200" preserveAspectRatio="none"><path d="M0 60 C150 30 450 30 600 60 C750 90 1050 90 1200 60 C1350 30 1650 30 1800 60 C1950 90 2250 90 2400 60 V200 H0Z"/></svg><svg class="l2" viewBox="0 0 2400 200" preserveAspectRatio="none"><path d="M0 70 C200 40 400 40 600 70 C800 100 1000 100 1200 70 C1400 40 1600 40 1800 70 C2000 100 2200 100 2400 70 V200 H0Z"/></svg><svg class="l3" viewBox="0 0 2400 200" preserveAspectRatio="none"><path d="M0 80 C150 55 450 55 600 80 C750 105 1050 105 1200 80 C1350 55 1650 55 1800 80 C1950 105 2250 105 2400 80 V200 H0Z"/></svg><i class="wGlint" style="left:18%;animation-delay:.2s"></i><i class="wGlint" style="left:41%;bottom:15vh;animation-delay:1.1s"></i><i class="wGlint" style="left:67%;animation-delay:.6s"></i><i class="wGlint" style="left:84%;bottom:12vh;animation-delay:1.7s"></i></div><i class="wBub" style="left:14%;animation-delay:.1s"></i><i class="wBub" style="left:27%;width:7px;height:7px;animation-delay:1.3s"></i><i class="wBub" style="left:58%;width:13px;height:13px;animation-delay:.7s"></i><i class="wBub" style="left:73%;width:8px;height:8px;animation-delay:2s"></i><i class="wBub" style="left:89%;animation-delay:1.6s"></i><div class="wStage"><div class="wCardWrap"><i class="wRipple"></i><i class="wRipple r2"></i><div class="wCard"><img class="wLogo" id="dmBootLogo" alt="DipMapper"></div></div><p class="wTag">Where shall we swim today?</p><p class="wSub"><span>Lakes</span><span>Beaches</span><span>Pools</span><span>Baths</span></p><div class="wBar"><i></i></div><p class="wHint">Finding the best water near you…</p></div></div>
 <script>/* v22.20 welcome screen: shown for at least 2.4 s from the moment it appears (not from page start), lifts only when the start screen is complete; tap to skip once ready */
 (function(){var B=document.getElementById('dmBoot');if(!B)return;try{document.getElementById('dmBootLogo').src=window.DM_LOGO}catch(e){}
@@ -1592,7 +1592,7 @@ window.DM_ADS={client:'ca-pub-2870312071451207',header:'',mid:'',list:'',footer:
 </script>
 <div class="bgWater"><i></i><i></i><i></i></div><div class="logoWatermark logoWatermarkMain" aria-hidden="true"><img data-dmlogo alt=""></div><div class="logoWatermark logoWatermarkSoft" aria-hidden="true"><img data-dmlogo alt=""></div>
 <script>dmLogoFill()</script><header class="topbar"><div class="topin"><div class="brand"><img class="brandLogo" data-dmlogo alt="DipMapper - Find your next swim" onerror="this.outerHTML='<div class=&quot;logoImageFallback&quot;>DipMapper<small>Find your next swim</small></div>'"><script>dmLogoFill()</script><div class="brandCopy"><div class="brandTitle">DIPMAPPER.COM</div><div class="brandSub">Find your next swim</div><div class="urlPill">Mobile swim map</div></div></div><a class="ad" href="mailto:torsten.sauter@icloud.com?subject=DipMapper.com%20advertising%20booking&body=I%20would%20like%20to%20book%20or%20discuss%20a%20DipMapper%20local%20swim%20advertising%20slot."><span>Advertise</span><b>Book a local swim spot</b></a><nav class="nav"><button data-scroll="resultsPanel">Results</button><button data-scroll="mapPanel">Map</button><button data-scroll="how">How it works</button><button class="primary" id="rescan">Re-scan</button></nav></div></header>
-<main class="page"><section class="shell"><aside class="panel" id="resultsPanel"><div class="pad"><div class="status"><div class="statusTop"><b id="statusTitle">Waiting for location</b><span id="statusPct">0%</span></div><div class="bar"><span id="statusBar"></span></div><div class="muted" id="statusText">Allow location or search a destination.</div></div><div class="searchRow"><input id="dest" class="input" placeholder="Search city, island, beach or lake"><button class="accent" id="search">Search</button></div><div class="controls"><select id="radius" aria-label="Search radius"><option value="5" selected>5 km</option><option value="10">10 km</option><option value="15">15 km</option><option value="30">30 km</option><option value="50">50 km</option></select><select id="sort" aria-label="Sort spots"><option value="best">Best nearby</option><option value="fast">Fastest to reach</option><option value="distance">Closest first</option><option value="free">Free first</option><option value="quiet">Quiet first</option></select></div><div class="quick"><button class="primary" id="useLoc">Use my location</button><button id="movePoint">📍 Pick on map</button></div></div><div class="listHead"><div class="eyebrow">Nearby ranking</div><h2 id="resultTitle">Choose a start point</h2><div class="muted" id="resultSub">Top results appear fast and stay stable.</div></div><div class="filters" id="filters"></div><div class="listNote" id="listNote">Scroll freely. Use the Open button on a place card when you want the details.</div><div class="results" id="results"></div></aside><section class="mapPanel" id="mapPanel"><div class="mapHead"><div><h2>Live map</h2><div class="muted" id="mapSub">Map is ready.</div></div><div class="mapActions"><button id="fit">Fit</button><button id="zin">+</button><button id="zout">−</button></div></div><div id="map" role="application" aria-label="OpenStreetMap tile map with numbered swim-place markers"></div><div class="legend"><span><i class="dot"></i>Bathing</span><span><i class="dot beach"></i>Beach</span><span><i class="dot pool"></i>Pool</span><span><i class="dot wild"></i>Wild</span><span><i class="dot thermal"></i>Thermal</span><span><i class="dot parking"></i>Parking</span></div></section></section><section class="explainer" id="how"><h2>How it works</h2><p>DipMapper opens around your current search radius, keeps the map visible, and shows useful swim choices first. Tap Open on a place, or tap a numbered map dot, for photos, weather, prices, facilities, parking and source links in one travel card.</p><div class="exGrid"><div><b>Close first</b><br><span class="muted">Nearest good options first, then wider only if needed.</span></div><div><b>Useful facts</b><br><span class="muted">Free, family fit, supervision, WC, food, indoor/outdoor and water feel.</span></div><div><b>Source links</b><br><span class="muted">Operator, map, photo, weather and review links are easy to open from the card.</span></div></div></section><section class="guides"><h2>Swim guides</h2><p>Hand-checked swim spots with prices, opening times and facilities: <a href="/swim.html#zurich">Zürich</a>, <a href="/swim.html#meilen">Meilen</a>, <a href="/swim.html#rhodes">Rhodes</a>, <a href="/swim.html#miami">Miami</a>, <a href="/swim.html#rostock">Rostock &amp; Warnemünde</a>, <a href="/swim.html#palma">Palma de Mallorca</a>. <a href="/swim.html"><b>Open all swim guides →</b></a></p></section><section class="legal"><h2>Legal and data protection</h2><p>Location is optional and processed in the browser for nearby search. External providers may receive coordinates or destination text when maps, weather, photos, routes or review links are used.</p><div class="legalLinks"><button id="privacySettings">Privacy settings</button><button data-legal="privacy">Privacy</button><button data-legal="cookies">Cookies</button><button data-legal="terms">Terms</button><button data-legal="disclaimer">Disclaimer</button><button data-legal="safety">Safety</button><button data-legal="advertising">Advertising</button><button data-legal="imprint">Imprint</button><button data-legal="sources">Sources</button></div><p class="dmVer">DipMapper version 22.20.0</p></section></main>
+<main class="page"><section class="shell"><aside class="panel" id="resultsPanel"><div class="pad"><div class="status"><div class="statusTop"><b id="statusTitle">Waiting for location</b><span id="statusPct">0%</span></div><div class="bar"><span id="statusBar"></span></div><div class="muted" id="statusText">Allow location or search a destination.</div></div><div class="searchRow"><input id="dest" class="input" placeholder="Search city, island, beach or lake"><button class="accent" id="search">Search</button></div><div class="controls"><select id="radius" aria-label="Search radius"><option value="5" selected>5 km</option><option value="10">10 km</option><option value="15">15 km</option><option value="30">30 km</option><option value="50">50 km</option></select><select id="sort" aria-label="Sort spots"><option value="best">Best nearby</option><option value="fast">Fastest to reach</option><option value="distance">Closest first</option><option value="free">Free first</option><option value="quiet">Quiet first</option></select></div><div class="quick"><button class="primary" id="useLoc">Use my location</button><button id="movePoint">📍 Pick on map</button></div></div><div class="listHead"><div class="eyebrow">Nearby ranking</div><h2 id="resultTitle">Choose a start point</h2><div class="muted" id="resultSub">Top results appear fast and stay stable.</div></div><div class="filters" id="filters"></div><div class="listNote" id="listNote">Scroll freely. Use the Open button on a place card when you want the details.</div><div class="results" id="results"></div></aside><section class="mapPanel" id="mapPanel"><div class="mapHead"><div><h2>Live map</h2><div class="muted" id="mapSub">Map is ready.</div></div><div class="mapActions"><button id="fit">Fit</button><button id="zin">+</button><button id="zout">−</button></div></div><div id="map" role="application" aria-label="OpenStreetMap tile map with numbered swim-place markers"></div><div class="legend"><span><i class="dot"></i>Bathing</span><span><i class="dot beach"></i>Beach</span><span><i class="dot pool"></i>Pool</span><span><i class="dot wild"></i>Wild</span><span><i class="dot thermal"></i>Thermal</span><span><i class="dot parking"></i>Parking</span></div></section></section><section class="explainer" id="how"><h2>How it works</h2><p>DipMapper opens around your current search radius, keeps the map visible, and shows useful swim choices first. Tap Open on a place, or tap a numbered map dot, for photos, weather, prices, facilities, parking and source links in one travel card.</p><div class="exGrid"><div><b>Close first</b><br><span class="muted">Nearest good options first, then wider only if needed.</span></div><div><b>Useful facts</b><br><span class="muted">Free, family fit, supervision, WC, food, indoor/outdoor and water feel.</span></div><div><b>Source links</b><br><span class="muted">Operator, map, photo, weather and review links are easy to open from the card.</span></div></div></section><section class="guides"><h2>Swim guides</h2><p>Hand-checked swim spots with prices, opening times and facilities: <a href="/swim.html#zurich">Zürich</a>, <a href="/swim.html#meilen">Meilen</a>, <a href="/swim.html#rhodes">Rhodes</a>, <a href="/swim.html#miami">Miami</a>, <a href="/swim.html#rostock">Rostock &amp; Warnemünde</a>, <a href="/swim.html#palma">Palma de Mallorca</a>. <a href="/swim.html"><b>Open all swim guides →</b></a></p></section><section class="legal"><h2>Legal and data protection</h2><p>Location is optional and processed in the browser for nearby search. External providers may receive coordinates or destination text when maps, weather, photos, routes or review links are used.</p><div class="legalLinks"><button id="privacySettings">Privacy settings</button><button data-legal="privacy">Privacy</button><button data-legal="cookies">Cookies</button><button data-legal="terms">Terms</button><button data-legal="disclaimer">Disclaimer</button><button data-legal="safety">Safety</button><button data-legal="advertising">Advertising</button><button data-legal="imprint">Imprint</button><button data-legal="sources">Sources</button></div><p class="dmVer">DipMapper version 22.21.0</p></section></main>
 <div class="drawerBack" id="back"></div><aside class="drawer" id="drawer"><div class="drawerHead"><div><div class="eyebrow" id="cardMeta">Travel card</div><h2 id="cardTitle">Place</h2></div><div><button id="copy">Copy link</button><button class="primary" id="close">Close</button></div></div><div class="drawerBody" id="cardBody"></div></aside>
 <div class="lightbox" id="light"><div class="lightboxTop"><h2 id="lightTitle">Photo</h2><button class="primary" id="lightClose">Close photo</button></div><div class="lightboxFrame"><img id="lightImg" alt=""></div><div class="lightCaption" id="lightCap"></div></div>
 <div class="modalBack" id="modal"><div class="modal"><div style="display:flex;justify-content:space-between;gap:12px;align-items:center"><h2 id="modalTitle">Legal</h2><button class="primary" id="modalClose">Close</button></div><div id="modalBody" style="margin-top:12px"></div></div></div>
@@ -1918,7 +1918,7 @@ function zoomForRadius(km,lat=(state.center?.[0]||state.mapCenter?.[0]||0)){
 function radiusPixels(km,lat,z){const cos=Math.max(.28,Math.cos(lat*Math.PI/180));const mpp=156543.03392*cos/(2**z);return Math.max(10,(Number(km||5)*1000)/mpp)}
 function setMapToSearchRadius(){if(state.center){state.mapCenter=state.center.slice();state.zoom=zoomForRadius(Number($('#radius').value||5),state.center[0])}}
 
-/* v22.20.0 map tiles: OSM tile policy compliance + automatic fallback */
+/* v22.21.0 map tiles: OSM tile policy compliance + automatic fallback */
 var DM_TILE_SRC={
  osm:{u:function(z,x,y){return 'https://tile.openstreetmap.org/'+z+'/'+x+'/'+y+'.png'},
       a:'\u00a9 <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'},
@@ -2067,12 +2067,12 @@ async function textRescue(scanId,query='',delay=0){
  state.rescueBusy=true;
  const [lat,lon]=state.center,km=Math.max(8,Number($('#radius').value||5));
  const view=bboxAround(lat,lon,Math.min(45,Math.max(km,18)));
- const base=query||state.label||'';
+ let base=String(query||state.label||'').trim();if(/^(the map (area|point)|selected map point|map point|your (current )?location.*|current location|my location)$/i.test(base)||(state._pickLabel&&base===state._pickLabel))base='';
  const terms=['beach','swimming pool','public bath','lido','thermal bath','water park','lake swimming','river swimming','bathing place','outdoor pool','indoor pool','Strandbad','Badestrand','Badestelle','Freibad','Hallenbad','Schwimmbad','Schwimmhalle','Therme','Seebad','Flussbad','Lido','Piscina','Piscine','Plage','Playa','Praia','Spiaggia','Cala','Paralia'];
  const batches=[terms.slice(0,10),terms.slice(10,20),terms.slice(20)];let added=0;
  try{for(const batch of batches){
   if(scanId!==state.scanId||state.results.length>=12)break;
-  const jobs=batch.map(term=>fetchJsonTimeout(`https://nominatim.openstreetmap.org/search?format=json&limit=8&bounded=1&viewbox=${view}&q=${encodeURIComponent(term+' '+base)}`,{},2600).catch(()=>[]));
+  const jobs=batch.map(term=>fetchJsonTimeout(`https://nominatim.openstreetmap.org/search?format=json&limit=8&bounded=1&viewbox=${view}&q=${encodeURIComponent((term+' '+base).trim())}`,{},2600).catch(()=>[]));
   const arrs=await Promise.all(jobs);
   const vals=arrs.flat().map(nominatimToVenue).filter(Boolean).filter(v=>dist(lat,lon,v.lat,v.lon)<Math.min(50,Math.max(15,km*2.8)));
   if(vals.length){merge(vals);added+=vals.length;progress(state.results.length>=10?'Top options ready':state.results.length>=5?'Top five ready':'Finding swim places',Math.min(90,42+state.results.length*4),`${Math.min(10,state.results.length)} ranked; fast destination rescue added ${added}.`)}
@@ -2318,7 +2318,7 @@ document.addEventListener('keydown',e=>{const el=e.target.closest?.('.marker[dat
 document.addEventListener('click',e=>{const ph=e.target.closest('[data-photo]');if(ph){$('#lightImg').src=ph.dataset.photo;$('#lightTitle').textContent=ph.dataset.title;$('#lightCap').textContent=ph.dataset.cap;els.light.classList.add('open');return}const l=e.target.closest('[data-legal]');if(l){openLegal(l.dataset.legal);return}const s=e.target.closest('[data-scroll]');if(s){document.getElementById(s.dataset.scroll)?.scrollIntoView({behavior:'smooth'});return}});
 els.results.addEventListener('click',e=>{const b=e.target.closest('[data-open]');if(!b)return;e.preventDefault();e.stopPropagation();openPlaceById(b.dataset.open,'open-button-local')});els.results.addEventListener('keydown',e=>{const b=e.target.closest('[data-open]');if(!b)return;if(e.key==='Enter'||e.key===' '){e.preventDefault();openPlaceById(b.dataset.open,'open-button-key-local')}});
 
-// v22.20.0 mobile scroll safety: do not open cards while the user is scrolling the result list.
+// v22.21.0 mobile scroll safety: do not open cards while the user is scrolling the result list.
 els.results.addEventListener('touchstart',e=>{const b=e.target.closest('.result');if(!b)return;recordTapStart(b,e)},{passive:true});
 els.results.addEventListener('touchmove',e=>{tapState.armed=false},{passive:true});
 els.map.addEventListener('touchstart',e=>{const m=e.target.closest('[data-mid]');if(!m)return;recordTapStart(m,e)},{passive:true});
@@ -2332,7 +2332,7 @@ function isMobileDevice(){return matchMedia('(max-width: 900px), (pointer: coars
 function applyDeviceMode(){document.documentElement.classList.toggle('mobileApp',isMobileDevice());document.body.classList.toggle('appMode',matchMedia('(display-mode: standalone)').matches||navigator.standalone===true);if(!applyDeviceMode._done){applyDeviceMode._done=1;if(isMobileDevice()&&$('#radius').value==='30'&&!localStorage.getItem('dm_radius'))$('#radius').value='5'}setTimeout(drawMap,80)}
 addEventListener('resize',applyDeviceMode,{passive:true});applyDeviceMode();setTimeout(function(){try{mountAds()}catch(e){}},1200);setTimeout(function(){try{dmAdCheck()}catch(e){}},3500);try{const _sp=new URLSearchParams(location.search);const _la=parseFloat(_sp.get('lat')),_lo=parseFloat(_sp.get('lon'));if(isFinite(_la)&&isFinite(_lo)){const _nm=(_sp.get('name')||'this spot').slice(0,80);gateOff();state.center=[_la,_lo];state.mapCenter=state.center.slice();state.zoom=zoomForRadius(Number($('#radius').value||5),_la);state.label=_nm;const _d=$('#dest');if(_d)_d.value=_nm;setTimeout(function(){try{seedNearbyPacks();render();drawMap();backgroundScan()}catch(e){}},60);}else{const _qp=_sp.get('q');if(_qp&&_qp.trim()){const _d=$('#dest'),_g=$('#gateDest');if(_d)_d.value=_qp.trim();if(_g)_g.value=_qp.trim();setTimeout(function(){try{search()}catch(e){}},60)}}}catch(e){}try{window.dmAppBoot&&window.dmAppBoot()}catch(e){}
 
-// DipMapper v22.20.0 - explicit card opening, 10 second visible search lifecycle, repeat-visit privacy/location skip
+// DipMapper v22.21.0 - explicit card opening, 10 second visible search lifecycle, repeat-visit privacy/location skip
 const SEARCH_VISIBLE_MS=10000;
 state.searchCutoffTimer=null;state.scanFrozen=false;state.lastOriginRestored=false;
 function saveLastOrigin(){try{if(state.center){localStorage.setItem('dm_seen','1');localStorage.setItem('dm_last_origin',JSON.stringify({lat:state.center[0],lon:state.center[1],label:state.label||'last search',radius:$('#radius').value||'5',t:Date.now()}));}}catch(e){}}
@@ -2373,7 +2373,7 @@ function bootV203(){
 
 bootV203();
 
-// v22.20.0 hardening: guarded taps, scroll-safe mobile cards, sticky close button, full mobile filters, three-size typography
+// v22.21.0 hardening: guarded taps, scroll-safe mobile cards, sticky close button, full mobile filters, three-size typography
 (function(){
  const boot=()=>{
   document.body.classList.add('dm-v20');
@@ -2389,7 +2389,7 @@ bootV203();
 
 
 
-// v22.20.0 final hardening: explicit open only, map-dot open, 10s no-flicker search window.
+// v22.21.0 final hardening: explicit open only, map-dot open, 10s no-flicker search window.
 (function(){
   const openId=function(id,source){
     if(!id)return false;
@@ -2421,7 +2421,7 @@ bootV203();
 
 
 
-// v22.20.0 reliability polish: freeze flicker after 10s, deliberate Open button, and reset interaction locks on close.
+// v22.21.0 reliability polish: freeze flicker after 10s, deliberate Open button, and reset interaction locks on close.
 (function(){
   const stopRowAccident=function(e){
     const row=e.target && e.target.closest && e.target.closest('.result');
@@ -2445,7 +2445,7 @@ bootV203();
 
 
 
-/* DipMapper v22.20.0 final interaction controller: no accidental list opens, direct map-dot opens, stable after repeated cards */
+/* DipMapper v22.21.0 final interaction controller: no accidental list opens, direct map-dot opens, stable after repeated cards */
 (function(){
   const $ = (s,r=document)=>r.querySelector(s);
   const $$ = (s,r=document)=>Array.from(r.querySelectorAll(s));
@@ -2489,7 +2489,7 @@ bootV203();
 
 
 
-/* DipMapper v22.20.0 - icon filters, outside-card close, persistent settings */
+/* DipMapper v22.21.0 - icon filters, outside-card close, persistent settings */
 (function(){
   const ICON_LABELS={
     all:['🌊','All'], beach:['🏖','Beaches'], pool:['🏊','Pools'], bath:['≈','Bathing places'], thermal:['♨','Thermal'], wild:['〰','Wild swim'], indoor:['⌂','Indoor'], outdoor:['☀','Outdoor'], free:['0','Free'], hours:['◷','Hours'], quiet:['◌','Quiet now'], parking:['P','Parking ready'], family:['♡','Good with kids'], supervised:['◎','Supervised'], women:['♀','Women-friendly'], food:['🍴','Food'], wc:['WC','Toilets'], accessible:['♿','Accessible'], sauna:['♨','Sauna'], waterok:['💧','Water OK']
@@ -2539,7 +2539,7 @@ bootV203();
 })();
 
 
-/* DipMapper v22.20.0 mobile-first control layer: stable 10-second search, compact mobile cards, no flicker after freeze. */
+/* DipMapper v22.21.0 mobile-first control layer: stable 10-second search, compact mobile cards, no flicker after freeze. */
 (function(){
   const oldProgress = window.progress || progress;
   const allowedAfterFreeze = /^(Ready|Spots ready|Top 5 ready|Search radius updated|Re-scanning|Choose map point|Destination|Search manually|Waiting|Using location)/i;
@@ -2571,10 +2571,10 @@ bootV203();
 
 </script>
 
-<!-- v22.20.0 validation: animated waterfront, three-size typography, filter icons, persistent cookie and location settings, outside-card close. -->
+<!-- v22.21.0 validation: animated waterfront, three-size typography, filter icons, persistent cookie and location settings, outside-card close. -->
 
 <script>
-/* DipMapper features v22.20.0 — full-screen gate photo · bold heart · Directions · Share · Surprise · Recent · consent · app-ready */
+/* DipMapper features v22.21.0 — full-screen gate photo · bold heart · Directions · Share · Surprise · Recent · consent · app-ready */
 (function(){
   try{
     function R(){return document.getElementById('results');}
@@ -3108,8 +3108,8 @@ bootV203();
    var off=km(c,m)>Math.max(0.6,r*0.25);pill.classList.toggle('on',off);cross.classList.toggle('on',off||mp.classList.contains('dmPicking'))}
   setInterval(check,300);
   function stopPick(){state.move=false;mp.classList.remove('dmPicking');check()}
-  function searchHere(at){var c=at||state.mapCenter;if(!c)return;stopPick();state.center=[+c[0],+c[1]];state.mapCenter=state.center.slice();state.label='the map area';
-   try{$('#dest').value=''}catch(e){}pill.classList.remove('on');try{rerunCurrentSearch('Searching this area')}catch(e){}}
+  function searchHere(at){var c=at||state.mapCenter;if(!c)return;stopPick();state.center=[+c[0],+c[1]];state.mapCenter=state.center.slice();state.label='the map point';
+   try{$('#dest').value=''}catch(e){}pill.classList.remove('on');try{rerunCurrentSearch('Searching around your map point')}catch(e){}try{window.dmNamePoint&&dmNamePoint(state.center.slice())}catch(e){}}
   pill.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();searchHere()});
   hint.querySelector('button').addEventListener('click',function(e){e.preventDefault();e.stopPropagation();stopPick()});
   var mv=document.getElementById('movePoint');if(mv)mv.onclick=function(){state.move=true;mp.classList.add('dmPicking');check();var p=document.getElementById('mapPanel');if(p)p.scrollIntoView({behavior:RM?'instant':'smooth',block:'start'})};
@@ -3236,4 +3236,56 @@ html body .topbar .brandLogo,html.dmSplit body .topbar .brandLogo{height:100px!i
 @media (max-width:760px){html body .topbar .brandLogo,html.dmSplit body .topbar .brandLogo{height:62px!important;max-height:62px!important;max-width:60vw!important}html body .topbar .topin{min-height:0!important}}
 
 </style>
+<style id="dmV2221">
+/* v22.21: map caption stays on one line, so nothing above the map changes height after a search or a map pick */
+#mapPanel .mapHead>div:first-child{min-width:0;flex:1 1 auto}
+#mapSub{white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;max-width:100%}
+/* phones: solid header (nothing shows through behind the logo) */
+@media (max-width:760px),(hover:none){html body .topbar,html.dmSplit body .topbar{background:rgb(251,253,252)!important}}
+/* phones: compact one-click selectors, so map + legend + all selectors fit on one screen */
+@media (max-width:760px){
+ html.dmPhone body #dmBelow{margin-top:4px!important}
+ html.dmPhone body #dmBelow>#dmFiltersBtn{min-height:30px!important;height:30px!important;margin:2px 0 4px!important;font-size:13px!important}
+ html.dmPhone body #dmBelow>#filters.filters{gap:4px!important;padding:2px 0 4px!important;margin:0 0 6px!important}
+ html.dmPhone body #dmBelow>#filters.filters .filter{min-height:30px!important;height:30px!important;font-size:12px!important;padding:0 9px!important}
+ /* pills no longer scroll sideways: they must not act as snap points */
+ html.dmPhone body #filters .filter{scroll-snap-align:none!important}
+}
+/* touch phones: gentle hold - scrolling down from the search stops with the whole map and all selectors in view; a firmer swipe goes on to the list */
+@media (max-width:760px) and (hover:none) and (pointer:coarse){
+ html.dmPhone{scroll-snap-type:y proximity;scroll-padding-top:var(--dmHdrH,72px)!important}
+ html.dmPhone body #mapPanel{scroll-snap-align:start;scroll-snap-stop:always;scroll-margin-top:0!important}
+ html.dmPhone body .shell{scroll-snap-align:start;scroll-margin-top:4000px}
+}
+</style>
+<script>
+/* ================= v22.21: map pick finds water anywhere; map + selectors fit one phone screen ================= */
+/* name the picked map point (e.g. "Binz, Germany") so titles and the text fallback use a real place */
+window.dmNamePoint=function(c){if(!c)return;var url='https://nominatim.openstreetmap.org/reverse?format=json&zoom=14&addressdetails=1&accept-language=en&lat='+c[0]+'&lon='+c[1];
+ var ctl=('AbortController' in window)?new AbortController():null;var to=setTimeout(function(){try{ctl&&ctl.abort()}catch(e){}},5000);
+ fetch(url,ctl?{signal:ctl.signal}:{}).then(function(r){return r.json()}).then(function(j){clearTimeout(to);var a=(j&&j.address)||{};
+  var place=a.village||a.town||a.city||a.municipality||a.hamlet||a.suburb||a.island||a.county||a.state||'';if(!place)return;
+  var label=place+(a.country?', '+a.country:'');var cc=state.center;if(!cc||Math.abs(cc[0]-c[0])>1e-6||Math.abs(cc[1]-c[1])>1e-6)return;
+  state.label=label;state._pickLabel=label;try{var d=document.getElementById('dest');if(d&&!d.value)d.value=label}catch(e){}
+  try{if(els&&els.mapSub)els.mapSub.textContent=label+' · '+(state.results||[]).length+' mapped places'}catch(e){}
+  try{if(els&&els.resultSub)els.resultSub.textContent=($('#radius').value||5)+' km around '+label}catch(e){}}).catch(function(){clearTimeout(to)})};
+/* phones: size the map so the map, its legend and all selectors fit under the header; uses the small-viewport height, so the browser bar never resizes it */
+(function(){if(!document.getElementById('mapPanel'))return;
+ var probe=document.createElement('div');probe.setAttribute('aria-hidden','true');probe.style.cssText='position:fixed;left:-10px;top:0;width:1px;height:100vh;height:100svh;visibility:hidden;pointer-events:none';document.body.appendChild(probe);
+ var raf=0,set=0,rt=0;var vhKeep=0,vhW=0;function vh(){if(vhKeep&&vhW===innerWidth)return vhKeep;var h=probe.offsetHeight;vhKeep=h>200?h:innerHeight;vhW=innerWidth;return vhKeep}
+ function redraw(){clearTimeout(rt);rt=setTimeout(function(){try{drawMap()}catch(e){}},60)}
+ function fit(){raf=0;var map=document.getElementById('map'),mp=document.getElementById('mapPanel'),f=document.getElementById('filters'),hd=document.querySelector('.topbar');if(!map||!mp)return;
+  var phone=innerWidth<=760&&document.documentElement.classList.contains('dmPhone');
+  if(!phone){if(set){map.style.removeProperty('height');map.style.removeProperty('min-height');set=0;redraw()}return}
+  var hh=hd?hd.offsetHeight:0;document.documentElement.style.setProperty('--dmHdrH',hh+'px');
+  var mr=mp.getBoundingClientRect(),cur=map.getBoundingClientRect().height,bottom=mr.bottom;
+  if(f&&f.getClientRects().length){var fr=f.getBoundingClientRect();if(fr.top>=mr.top)bottom=Math.max(bottom,fr.bottom)}
+  var others=(bottom-mr.top)-cur;var t=Math.round(Math.max(230,Math.min(600,vh()-hh-others-6)));
+  if(Math.abs(t-cur)>2){map.style.setProperty('height',t+'px','important');map.style.setProperty('min-height',t+'px','important');set=t;redraw()}}
+ function q(){if(!raf)raf=requestAnimationFrame(fit)}
+ var lw=innerWidth,lh=innerHeight;function onRs(){var w=innerWidth,h=innerHeight;if(w===lw&&Math.abs(h-lh)<160)return;lw=w;lh=h;vhKeep=0;q()}
+ addEventListener('resize',onRs);addEventListener('orientationchange',q);document.addEventListener('dmbootdone',q);
+ try{var ro=new ResizeObserver(q);['filters','dmFiltersBtn','dmBelow'].forEach(function(i){var e=document.getElementById(i);if(e)ro.observe(e)});['#mapPanel .mapHead','#mapPanel .legend','.topbar'].forEach(function(s){var e=document.querySelector(s);if(e)ro.observe(e)})}catch(e){}
+ q();setTimeout(q,400);setTimeout(q,1500);setTimeout(q,4000)})();
+</script>
 </body></html>
