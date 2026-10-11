@@ -1,0 +1,51 @@
+DipMapper 23.8.0 - upload one file per commit, in this order.
+
+If 23.7 or 23.6 is ALREADY live: upload only these, in this order:
+ 1 index.html            (the app, version 23.8.0, with the About photos built in)
+ 2 CHANGELOG.md          (updated)
+ (README.md is unchanged since 23.6; upload it only if it is not there yet.)
+
+If 23.5 is live (but not 23.6): upload these, in this order:
+ 1 index.html            (the app, version 23.8.0)
+ 2 manifest.webmanifest   (app description)
+ 3 README.md              (new; skip if you want to keep your own)
+ 4 CHANGELOG.md           (new)
+
+If 23.4 is live (but not 23.5): the same 4 files.
+
+If an older version is live, use the matching list below and then also upload
+manifest.webmanifest, README.md and CHANGELOG.md at the end.
+
+If you ALREADY uploaded 23.3 (but not 23.4): upload these 4:
+ 1 unique-water-experiences.html   (new guide page)
+ 2 activities.html
+ 3 index.html                      (the app, version 23.8.0)
+ 4 sitemap.xml
+
+If 23.3 was NOT uploaded yet (but 23.2 was): upload these 11:
+ 1 unique-water-experiences.html
+ 2 activities.html
+ 3 water-sports-lake-zurich.html
+ 4 sup-lake-zurich.html
+ 5 boat-rental-lake-zurich.html
+ 6 diving-lake-zurich.html
+ 7 sailing-lake-zurich.html
+ 8 surfing-switzerland.html
+ 9 kitesurfing-switzerland.html
+10 index.html
+11 sitemap.xml
+
+If 23.2 was NOT uploaded yet either: upload all 18:
+ 1-9 the nine pages above (1 to 9)
+10 zurich.html
+11 meilen.html
+12 swim.html
+13 rhodes.html
+14 miami.html
+15 rostock.html
+16 palma.html
+17 index.html
+18 sitemap.xml
+
+Check: the bottom of dipmapper.com must say "DipMapper version 23.8.0".
+Then submit https://dipmapper.com/sitemap.xml in Google Search Console and Bing Webmaster Tools.

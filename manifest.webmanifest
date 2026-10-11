@@ -2,7 +2,7 @@
  "id": "/",
  "name": "DipMapper — Find your next swim",
  "short_name": "DipMapper",
- "description": "Find real, named swim spots near you or anywhere: lake baths, beaches, pools, thermal baths and wild swimming, with weather, drive times and entry notes.",
+ "description": "Find real, named swim spots near you or anywhere — lake baths, beaches, pools, thermal baths and wild swimming — plus SUP, boat rental, diving, sailing and one-off water experiences, with live conditions, opening hours, prices and emergency help.",
  "start_url": "/?source=pwa",
  "scope": "/",
  "display": "standalone",
