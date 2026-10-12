@@ -1,0 +1,13 @@
+# dependencies and test output — never commit these
+node_modules/
+tools/tests/_site/
+tools/tests/results/
+tools/tests/_shots.js
+tools/tests/*.png
+# build output (rebuilt by tools/build/v23.6/build.py)
+tools/build/*/index.html
+# system files
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
