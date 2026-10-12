@@ -2,6 +2,13 @@
 
 All notable changes to DipMapper (dipmapper.com). Newest first. Versions follow `major.minor.patch`; the live version is printed at the bottom of every page.
 
+## 23.8.3 — 12 October 2026 · Zones in Swim, a picture for every venue, intro
+- **Fixed:** no-boat areas did not show in Swim. Since 23.7, Swim dropped its whole zone layer unless a "no entry" or "no swimming" zone was present, and in Swim the zones only loaded after an activity had been opened once. Both repaired: Swim now shows no-boat areas, bathing zones, protected areas and boat rules from the start.
+- **Changed:** zones are drawn bolder, and up to 6 labels (instead of 3) can show, also on smaller zones, so "No boats" and "No diving" are readable again. Piers in Dive get a "No diving" label where there is room.
+- **New:** a picture for every venue. When no photo of a place exists, the card shows the aerial view of the exact spot (Esri World Imagery, the same source as the map), labelled "Aerial view". Activity list cards with a picture: 48 of 48 in the test (before: about 3 in 4).
+- **Fixed:** the intro's minimum time now counts from the moment it is actually on screen. Before, a phone could spend most of the 2.4 seconds loading the bigger page before showing the first frame.
+- **Tests:** 66 checks. New: `zones-swim`, `photo-fallback`; `photo-coverage` now requires 100 % of list cards and every detail gallery to have a picture.
+
 ## 23.8.2 — 12 October 2026 · Start page and no-boat areas back
 - **Restored:** no-boat areas, motorboat bans, bathing zones (boats keep out), protected areas and every other OpenStreetMap boat rule (no anchoring, no wake, speed limits) are drawn on the water again in **every mode, including Swim**, as in 23.6. 23.7 had limited them to some activities and dropped the "other rules" entirely. The 23.7 clutter fix stays: at most 3 labels, never overlapping, never the generic "Restricted area"; other rules are drawn in amber as "Boat rules".
 - **Changed:** the start page ("Find water nearby", "What do you want to do?") now opens every time dipmapper.com is opened or reloaded, also for returning visitors. Until now (since 22.x) returning visitors landed straight in their last search and never saw it. A new **"Continue with <last place>"** button returns to the last search in one tap; the results keep loading behind the start page. Links to a place (?lat=…) still open the results directly.

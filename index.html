@@ -110,7 +110,7 @@ html.mobileApp{--s:12px;--m:15px;--l:22px}html.mobileApp body{min-height:100dvh;
 
 
 
-/* DipMapper v23.8.2 - real logo asset dipmapper-logo-transparent.png, sticky map, easier scrolling, animated waterfront */
+/* DipMapper v23.8.3 - real logo asset dipmapper-logo-transparent.png, sticky map, easier scrolling, animated waterfront */
 :root{--appTop:104px}
 body{background:linear-gradient(120deg,#f6fff9 0%,#e9fff9 34%,#fffbe6 70%,#ffeeb8 100%)}
 body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:
@@ -182,7 +182,7 @@ body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;back
 }
 
 
-/* v23.8.2 - supplied logo, animated waterfront, sticky map and smoother scrolling */
+/* v23.8.3 - supplied logo, animated waterfront, sticky map and smoother scrolling */
 html{scroll-behavior:smooth;scroll-padding-top:110px}body{min-height:100svh}.animatedWaterfront{position:fixed;inset:auto -8vw -16vh -8vw;height:44vh;z-index:0;pointer-events:none;opacity:.36;overflow:hidden}.animatedWaterfront:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,253,244,0),rgba(33,191,183,.28)),repeating-linear-gradient(176deg,rgba(255,255,255,.75) 0 2px,transparent 3px 42px);clip-path:polygon(0 34%,9% 25%,21% 33%,36% 18%,50% 31%,64% 21%,79% 29%,92% 17%,100% 24%,100% 100%,0 100%);animation:waterfrontDrift 38s ease-in-out infinite}.animatedWaterfront span{position:absolute;width:32px;height:32px;border:2px solid rgba(255,255,255,.72);border-radius:50%;bottom:18%;animation:logoBubble 18s linear infinite}.animatedWaterfront span:nth-child(1){left:18%;animation-delay:-4s}.animatedWaterfront span:nth-child(2){left:53%;animation-delay:-10s}.animatedWaterfront span:nth-child(3){left:82%;animation-delay:-14s}@keyframes waterfrontDrift{50%{transform:translate3d(-46px,18px,0) scale(1.03)}}@keyframes logoBubble{0%{opacity:0;transform:translateY(100px) scale(.55)}25%,70%{opacity:.7}100%{opacity:0;transform:translateY(-170px) scale(1.35)}}
 .domainHalo{position:fixed!important;right:-8vw!important;bottom:7vh!important;width:min(640px,46vw)!important;height:auto!important;opacity:.08!important;z-index:0!important;pointer-events:none!important;filter:blur(.1px);animation:haloFloat 34s ease-in-out infinite;background:none!important}.domainHalo:after,.domainHalo:before{display:none!important}.domainHalo img{display:block;width:100%;height:auto}.logoWatermark{background:none!important;border-radius:0!important;overflow:visible!important;box-shadow:none!important}.logoWatermark:before,.logoWatermark:after{display:none!important}.logoWatermark img{display:block;width:100%;height:auto;filter:drop-shadow(0 24px 60px rgba(5,80,88,.12))}.logoWatermarkMain{right:-4vw!important;top:15vh!important;width:min(520px,38vw)!important;opacity:.105!important;animation:watermarkFloat 36s ease-in-out infinite}.logoWatermarkSoft{left:-8vw!important;right:auto!important;top:55vh!important;width:min(480px,34vw)!important;opacity:.06!important;animation:watermarkFloat2 44s ease-in-out infinite}@keyframes watermarkFloat2{50%{transform:translate3d(34px,-18px,0) rotate(-4deg) scale(1.04)}}
 .topbar{box-shadow:0 10px 30px rgba(7,52,59,.06)}.topin{max-width:1440px!important;padding:12px 18px!important;grid-template-columns:auto minmax(260px,1fr) auto!important}.brand{min-width:280px}.brandLogo{width:250px;cursor:pointer;height:auto;display:block;object-fit:contain;filter:drop-shadow(0 10px 22px rgba(7,52,59,.18));animation:brandFloat 9s ease-in-out infinite}.brandCopy{display:grid;gap:2px}.logo,.logo:before,.logo:after,.logo b{display:none!important}@keyframes brandFloat{50%{transform:translateY(-2px) rotate(-.5deg)}}.brandTitle{font-size:18px!important}.brandSub{font-size:13px!important;letter-spacing:.1em!important}.urlPill{font-size:13px!important;padding:2px 8px}.ad{clip-path:polygon(0 0,98% 0,100% 50%,98% 100%,0 100%)}
@@ -191,7 +191,7 @@ html{scroll-behavior:smooth;scroll-padding-top:110px}body{min-height:100svh}.ani
 @media(min-width:901px){body{overflow:hidden}.page{height:calc(100svh - 94px);overflow:hidden}.explainer,.legal{display:none}.cookie.hide{display:none!important}}
 
 
-/* v23.8.2 - rebuild vertical scrolling and map click reliability */
+/* v23.8.3 - rebuild vertical scrolling and map click reliability */
 html,body{height:auto!important;min-height:100%;overflow-x:hidden!important;overflow-y:auto!important}
 body{overscroll-behavior-y:auto!important}
 #map{touch-action:manipulation;user-select:none;-webkit-user-select:none}
@@ -224,7 +224,7 @@ body{overscroll-behavior-y:auto!important}
 
 
 
-/* DipMapper v23.8.2: scroll and map-card interaction rebuild */
+/* DipMapper v23.8.3: scroll and map-card interaction rebuild */
 html{height:auto!important;min-height:100%;overflow-y:auto!important;scroll-behavior:smooth}
 body{height:auto!important;min-height:100dvh!important;overflow-x:hidden!important;overflow-y:auto!important;overscroll-behavior-y:auto!important;touch-action:pan-y!important}
 .page{min-height:calc(100dvh - var(--header-h,96px));overflow:visible!important}
@@ -261,12 +261,12 @@ body{height:auto!important;min-height:100dvh!important;overflow-x:hidden!importa
 }
 
 
-/* v23.8.2: animated waterfront background and radius ring */
+/* v23.8.3: animated waterfront background and radius ring */
 body:before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(circle at 16% 20%,rgba(0,191,190,.15),transparent 26%),radial-gradient(circle at 86% 8%,rgba(255,179,77,.18),transparent 25%),linear-gradient(145deg,rgba(247,255,252,.86),rgba(255,249,223,.78));animation:seaLight 22s ease-in-out infinite alternate}.animatedWaterfront{position:fixed;inset:auto 0 0 0;height:42vh;z-index:0;pointer-events:none;opacity:.36;background:linear-gradient(180deg,transparent 0%,rgba(49,209,199,.20) 46%,rgba(255,230,128,.20) 100%);overflow:hidden}.animatedWaterfront:before,.animatedWaterfront:after{content:"";position:absolute;left:-10%;right:-10%;height:55%;bottom:0;border-radius:50% 50% 0 0;background:repeating-radial-gradient(ellipse at 50% 120%,rgba(255,255,255,.74) 0 2px,transparent 3px 30px);animation:slowTide 34s linear infinite}.animatedWaterfront:after{bottom:-10%;opacity:.45;animation-duration:48s;animation-direction:reverse}.domainHalo{position:fixed;right:4vw;bottom:10vh;width:min(52vw,760px);opacity:.08;pointer-events:none;z-index:0;animation:haloDrift 38s ease-in-out infinite}.domainHalo img,.logoWatermark img{width:100%;height:100%;object-fit:contain}.brandLogo{width:92px;height:92px;object-fit:contain;filter:drop-shadow(0 14px 28px rgba(0,58,66,.22));animation:logoFloat 8s ease-in-out infinite}.brandTitle{font-size:22px}.brandSub{font-size:12px}.urlPill{display:inline-block;margin-top:3px;font-size:11px;letter-spacing:.12em;color:#006e7c}.radiusRing{position:absolute;z-index:5;border:2px solid rgba(0,174,168,.42);background:rgba(0,174,168,.055);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;box-shadow:0 0 0 1px rgba(255,255,255,.65) inset}.radiusLabel{position:absolute;z-index:6;transform:translate(-50%,-50%);background:rgba(255,253,244,.93);border:1px solid var(--line);padding:2px 6px;font-size:11px;color:var(--muted);pointer-events:none}@keyframes seaLight{50%{filter:hue-rotate(8deg);transform:scale(1.015)}}@keyframes slowTide{0%{transform:translateX(-3%) translateY(12px)}50%{transform:translateX(3%) translateY(-8px)}100%{transform:translateX(-3%) translateY(12px)}}@keyframes haloDrift{50%{transform:translate(-42px,18px) rotate(2deg) scale(1.04)}}@keyframes logoFloat{50%{transform:translateY(-3px) rotate(.8deg)}}
 @media(max-width:760px){.brandLogo{width:70px;height:70px}.brandTitle{font-size:18px}.domainHalo{width:85vw;right:-18vw;bottom:20vh}.animatedWaterfront{height:36vh}.mapPanel{max-height:62dvh!important}#map{height:46dvh!important}}
 
 
-/* v23.8.2 - essential interaction and brand stability */
+/* v23.8.3 - essential interaction and brand stability */
 .brandLogo{max-width:220px;min-width:150px;background:transparent!important}
 .logoImageFallback{width:210px;max-width:26vw;padding:8px 10px;border:1px solid var(--line);background:rgba(255,253,244,.82);box-shadow:0 10px 24px rgba(7,52,59,.12);font-weight:700;line-height:1.1}.logoImageFallback small{display:block;font-size:12px;font-weight:500;color:var(--muted);letter-spacing:.06em;margin-top:3px}
 .marker{box-sizing:border-box!important;pointer-events:auto!important;z-index:120!important;aspect-ratio:1/1!important;border-radius:999px!important;padding:0!important}.marker *{pointer-events:none!important}.result{position:relative;z-index:2;pointer-events:auto!important}.drawer.open{z-index:500}.drawerBack.open{z-index:490}.mapPanel{position:sticky;top:104px}.cardOpenBody .mapPanel{position:relative}
@@ -287,7 +287,7 @@ button,.btn,.result,.marker{touch-action:manipulation;}
 
 
 
-/* DipMapper v23.8.2 - mobile scroll guard, visible filters, sticky card close, three-size type */
+/* DipMapper v23.8.3 - mobile scroll guard, visible filters, sticky card close, three-size type */
 :root{--text-small:12px;--text-base:15px;--text-large:24px;--s:var(--text-small);--m:var(--text-base);--l:var(--text-large);--font-main:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--weight-regular:400;--weight-medium:500;--weight-strong:650}
 body,button,a,input,select,.btn,.input,.modal,.drawer,.cookie{font-family:var(--font-main)!important;font-size:var(--text-base)!important;font-weight:var(--weight-regular)!important}
 h1,h2,.resultName,.brandTitle,#cardTitle,.gateBox h1{font-size:var(--text-large)!important;font-weight:var(--weight-strong)!important;line-height:1.08!important}
@@ -307,7 +307,7 @@ h3,.statusTop b,.listHead h2,.mapHead h2,.section h3,.gateBox p,.story,.fact div
 @media(max-width:420px){.filters{grid-template-columns:repeat(2,minmax(0,1fr))!important}.searchRow{grid-template-columns:1fr!important}.controls,.quick{grid-template-columns:1fr 1fr!important}.mapActions button{padding:8px!important}.brandLogo{width:min(190px,82vw)!important}.drawerHead{gap:8px!important}.drawerHead h2{max-width:58vw!important;overflow-wrap:anywhere!important}.drawerHead button{padding:9px 10px!important}}
 
 
-/* DipMapper v23.8.2 - mobile-first refinement, explicit open controls, stable 10s search */
+/* DipMapper v23.8.3 - mobile-first refinement, explicit open controls, stable 10s search */
 :root{--font-body:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;--s:12px!important;--m:15px!important;--l:24px!important;--radius:0px!important}
 *{font-family:var(--font-body)!important}body{font-size:var(--m)!important}small,.muted,.eyebrow,.chip,.k,.resultMeta,.photoTag,.photoSrc,.legend,.listNote{font-size:var(--s)!important}h1,h2,.resultName,.drawerHead h2{font-size:var(--l)!important}.resultName{line-height:1.08!important}.result{cursor:default!important;display:grid!important;grid-template-columns:84px minmax(0,1fr)!important;padding:10px!important;gap:10px!important;min-height:104px!important}.result *{pointer-events:auto!important}.resultMain{display:grid;grid-template-rows:auto auto auto auto;gap:5px;min-width:0}.openPlace{justify-self:start;margin-top:2px;background:var(--deep)!important;color:white!important;border-color:var(--deep)!important;padding:8px 14px!important;min-width:78px}.openPlace:active{transform:translateY(1px)}.result .chips{gap:5px}.chip{line-height:1.1}.filters{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(92px,1fr))!important;gap:8px!important;overflow:visible!important}.filter{min-height:40px;white-space:normal!important;text-align:center}.drawerHead{position:sticky!important;top:0!important;z-index:6!important}.drawerHead .actions{margin:0!important}.drawerHead button,#close{min-width:72px}.cardOpenBody{overflow:hidden!important}.animatedWaterfront{opacity:.48}.logoWatermarkMain{opacity:.14!important}.logoWatermarkSoft{opacity:.08!important}.status,.panel,.mapPanel,.explainer,.legal,.result,.drawer,.fact,.badge,.day{box-shadow:0 14px 42px rgba(7,52,59,.06)}
 @media(max-width:900px){.topin{grid-template-columns:1fr!important}.brandLogo{width:min(240px,78vw)!important}.shell{gap:10px!important}.mapPanel{position:sticky!important;top:86px!important}.panel{position:relative!important;top:auto!important;max-height:none!important;overflow:visible!important}.results{overflow:visible!important;min-height:0!important}.filters{grid-template-columns:repeat(3,minmax(0,1fr))!important;padding:10px!important}.filter{padding:9px 7px!important}.result{grid-template-columns:80px minmax(0,1fr)!important;touch-action:pan-y!important}.openPlace{width:100%;max-width:132px}.drawer{width:100vw!important}.drawerHead{padding:10px 12px!important}.drawerBody{padding-bottom:96px!important}.gallery{grid-template-columns:1fr!important}.photo,.photo:first-child{height:228px!important}.cookie{z-index:210!important}.cookie.hide{display:none!important}}
@@ -316,7 +316,7 @@ h3,.statusTop b,.listHead h2,.mapHead h2,.section h3,.gateBox p,.story,.fact div
 .cardCloseFloat{position:fixed;right:14px;bottom:18px;z-index:220}
 
 
-/* v23.8.2 final mobile and interaction polish */
+/* v23.8.3 final mobile and interaction polish */
 :root{--dm-small:12px;--dm-base:15px;--dm-large:24px}
 *{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important}
 body,input,select,button,textarea,.brandSub,.urlPill,.resultMeta,.chip,.btn,.cardStory,.fact,.badge,.sourceList,.cookie,.listNote,.status p,.muted{font-size:var(--dm-base)!important;font-weight:400!important}
@@ -338,7 +338,7 @@ h1,h2,.brandTitle,.mapHead h2,.listHead h2,.drawerHead h2,.resultName{font-size:
 @media(min-width:521px) and (max-width:900px){.filters{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
 
 
-/* v23.8.2 mobile reliability polish: deliberate card opening, stable scroll, no accidental opens */
+/* v23.8.3 mobile reliability polish: deliberate card opening, stable scroll, no accidental opens */
 .results,.drawer{overscroll-behavior:contain;-webkit-overflow-scrolling:touch;scrollbar-gutter:stable;}
 .result{touch-action:pan-y!important;cursor:default!important;contain:layout paint;}
 .openPlace{touch-action:manipulation!important;position:relative;z-index:4;}
@@ -372,7 +372,7 @@ body:not(.cardOpenBody) .drawerBack{pointer-events:none;}
 }
 
 
-/* v23.8.2 interaction polish: explicit open controls, scroll-safe results, reliable map dots */
+/* v23.8.3 interaction polish: explicit open controls, scroll-safe results, reliable map dots */
 .openResultBtn{pointer-events:auto;cursor:pointer;margin-top:8px;min-height:38px;padding:8px 12px;background:var(--deep);color:#fff;border:1px solid var(--deep);font:inherit;font-size:var(--b);font-weight:500;touch-action:manipulation;display:inline-flex;align-items:center;justify-content:center;gap:6px}
 .openResultBtn:focus-visible,.marker:focus-visible,.drawerHead button:focus-visible{outline:3px solid rgba(0,174,168,.45);outline-offset:2px}
 .result .resultCopy,.result .thumb{pointer-events:none}.result .openResultBtn{pointer-events:auto}.result{overscroll-behavior:contain}.results{scrollbar-gutter:stable;overscroll-behavior:contain;touch-action:pan-y}
@@ -382,7 +382,7 @@ body:not(.cardOpenBody) .drawerBack{pointer-events:none;}
 
 
 
-/* v23.8.2 elegance/mobile usability patch */
+/* v23.8.3 elegance/mobile usability patch */
 :root{--font-body:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--s:12px;--m:15px;--l:24px}
 body,button,input,select,a,.chip,.filter,.result,.drawer{font-family:var(--font-body)!important}
 button,input,select{font-size:var(--m)!important}.chip,.muted,.eyebrow,.k,.resultMeta,.legend,.listNote{font-size:var(--s)!important}h1,h2,.resultName,#cardTitle,.drawerHead h2{font-size:var(--l)!important}
@@ -403,7 +403,7 @@ button,input,select{font-size:var(--m)!important}.chip,.muted,.eyebrow,.k,.resul
 
 
 
-/* DipMapper v23.8.2 - space use: larger anchored map, shorter result rail, visible mobile filters */
+/* DipMapper v23.8.3 - space use: larger anchored map, shorter result rail, visible mobile filters */
 :root{--side-rail:320px;--map-anchor-top:calc(var(--appTop,104px) + 6px)}
 .page{max-width:1540px!important;padding:14px 18px 28px!important}
 .shell{grid-template-columns:minmax(284px,var(--side-rail)) minmax(0,1fr)!important;gap:14px!important;align-items:start!important}
@@ -413,7 +413,7 @@ button,input,select{font-size:var(--m)!important}.chip,.muted,.eyebrow,.k,.resul
 @media(max-width:560px){:root{--appTop:76px}.topin{padding:6px 8px!important}.logo{width:142px!important;height:64px!important}.mapPanel{top:calc(var(--appTop) + 2px)!important}#map{height:43svh!important;min-height:292px!important}.filters{grid-template-columns:repeat(2,minmax(0,1fr))!important}.results{max-height:36svh!important}.resultName{font-size:var(--text-large)!important}.nav button{min-height:38px!important}.mapActions button{min-width:40px!important;min-height:40px!important}}
 
 
-/* DipMapper v23.8.2 mobile-first layout: input first, anchored map second, type and top findings side by side. */
+/* DipMapper v23.8.3 mobile-first layout: input first, anchored map second, type and top findings side by side. */
 :root{--text-small:12px;--text-base:15px;--text-large:24px;--font-body:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--mobileTop:86px;}
 html,body,button,input,select,textarea{font-family:var(--font-body)!important;font-size:var(--text-base)!important;font-weight:400!important;}
 .eyebrow,.brandSub,.chip,.muted,.resultMeta,.k,.photoTag,.photoSrc,.legend,.statusText{font-size:var(--text-small)!important;}
@@ -436,7 +436,7 @@ b,strong,.primary,.accent{font-weight:650!important;}
 
 
 /* ============================================================
-   DipMapper v23.8.2 — professional redesign
+   DipMapper v23.8.3 — professional redesign
    CSS-only re-skin via design tokens + component polish.
    JS logic, layout structure, and click handlers are unchanged.
    ============================================================ */
@@ -549,7 +549,7 @@ body.dm-favs-only #results .result:not(.dm-fav){display:none!important}
 }
 
 
-/* v23.8.2 — no-blink smoothing + beach start window */
+/* v23.8.3 — no-blink smoothing + beach start window */
 @keyframes dmFade{from{opacity:0}to{opacity:1}}
 .result .thumb img{animation:dmFade .4s ease both}
 .tile{animation:dmFade .35s ease both}
@@ -569,7 +569,7 @@ body.dm-favs-only #results .result:not(.dm-fav){display:none!important}
 .dmSurprise .dmHeart{display:none}
 
 
-/* v23.8.2 — map layers (no tile blink), heart, beach hero photo, recent/saved filters */
+/* v23.8.3 — map layers (no tile blink), heart, beach hero photo, recent/saved filters */
 #map{position:relative}
 #map .dmTiles,#map .dmOverlay{position:absolute;inset:0;width:100%;height:100%}
 #map .dmTiles{pointer-events:none;z-index:0}
@@ -593,7 +593,7 @@ body.dm-favs-only #results .result:not(.dm-fav){display:none!important}
 body.dm-recent-only #results .result:not(.dm-recent){display:none!important}
 
 
-/* v23.8.2 — results below map + weather alert */
+/* v23.8.3 — results below map + weather alert */
 .dmBelow{margin:18px 0 0;border:1px solid var(--line);background:rgba(255,255,250,.9);border-radius:18px;box-shadow:0 20px 60px rgba(7,52,59,.08);padding:16px 18px}
 .dmBelowHead{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}
 .dmBelowTitle{font-weight:800;font-size:19px;color:var(--ink)}
@@ -606,7 +606,7 @@ body.dm-recent-only #results .result:not(.dm-recent){display:none!important}
 #map .dmWeatherWarn .dmwTxt b{font-weight:800;color:#8a3d0a}
 
 
-/* v23.8.2 — button styling, robust heart, mobile to the max */
+/* v23.8.3 — button styling, robust heart, mobile to the max */
 .dm-heart{z-index:30!important;pointer-events:auto!important}
 .dmActions{display:flex;gap:8px;margin-top:10px}
 .dmBtn{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:8px 10px;border:1px solid var(--line);background:#fff;border-radius:10px;font:inherit;font-size:13px;font-weight:600;color:var(--ink);cursor:pointer;min-height:38px;transition:background .12s ease,transform .12s ease}
@@ -643,7 +643,7 @@ body.dm-recent-only #results .result:not(.dm-recent){display:none!important}
 }
 
 
-/* v23.8.2 — full-screen start photo, bold heart, pro finish */
+/* v23.8.3 — full-screen start photo, bold heart, pro finish */
 .gate.dmHasBg{background:linear-gradient(160deg,#0a6c7d 0%,#0e8f8a 55%,#10a39a 100%)}
 .dmGateFull{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0;transition:opacity .8s ease}
 .dmGateFull.dmLoaded{opacity:1}
@@ -670,14 +670,14 @@ body.dm-recent-only #results .result:not(.dm-recent){display:none!important}
 }
 
 
-/* v23.8.2 — heart spacing + whole-card click */
+/* v23.8.3 — heart spacing + whole-card click */
 .result[data-open]{cursor:pointer}
 
 .dm-heart{top:8px;right:8px}
 #dmBelow .result:hover{cursor:pointer}
 
 
-/* v23.8.2 — feature chip colors + golden-hour badge */
+/* v23.8.3 — feature chip colors + golden-hour badge */
 .chip.star{background:linear-gradient(90deg,#fff6da,#ffe9a0)!important;color:#7a5600!important;border-color:#f0cf76!important;font-weight:800}
 .chip.open{background:#e7f8ee!important;color:#0b7a45!important;border-color:#a6e3c1!important;font-weight:700}
 .chip.closed{background:#fdeceb!important;color:#b23330!important;border-color:#f2b7b4!important;font-weight:700}
@@ -695,10 +695,10 @@ body.dm-recent-only #results .result:not(.dm-recent){display:none!important}
 @media(max-width:760px){#map .dmGolden{max-width:80%;font-size:12px;bottom:10px;left:10px}}
 
 
-/* v23.8.2 — parking-full warning */
+/* v23.8.3 — parking-full warning */
 .chip.parkfull{background:#fdeceb!important;color:#b01e1a!important;border-color:#f0a9a5!important;font-weight:800}
 
-/* v23.8.2 — bigger logo, resets on click */
+/* v23.8.3 — bigger logo, resets on click */
 .brand{cursor:pointer}
 .brand:hover .brandLogo{filter:drop-shadow(0 12px 26px rgba(7,52,59,.26))}
 @media(max-width:760px){.brandLogo{width:180px!important}}
@@ -881,7 +881,7 @@ h1{font-weight:800}
 }
 
 
-/* v23.8.2 - cover stays up as a loading screen while locating */
+/* v23.8.3 - cover stays up as a loading screen while locating */
 #gateLoc.dmBusy{opacity:.92;cursor:progress;position:relative;padding-left:44px!important}
 #gateLoc.dmBusy::before{content:"";position:absolute;left:19px;top:50%;width:15px;height:15px;margin-top:-7.5px;
   border:2.5px solid rgba(255,255,255,.42);border-top-color:#fff;border-radius:50%;animation:dmSpin .7s linear infinite}
@@ -900,14 +900,14 @@ h1{font-weight:800}
 @media print{.dmAd{display:none}}
 
 
-/* v23.8.2 - swim guides teaser */
+/* v23.8.3 - swim guides teaser */
 .guides{background:#fffefa;border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:16px auto;max-width:1180px;box-shadow:0 1px 2px rgba(7,52,59,.05),0 8px 22px rgba(7,52,59,.05)}
 .guides h2{font-size:18px;letter-spacing:-.02em;margin:0 0 6px}
 .guides p{margin:0;font-size:14.5px;line-height:1.65}
 .guides a{color:var(--brand);font-weight:600}
 
 
-/* v23.8.2 - entry-requirement notice (factual, from map data / region) */
+/* v23.8.3 - entry-requirement notice (factual, from map data / region) */
 .chip.idreq{background:#fdecec;border-color:#f3b9b9;color:#9a2b2b;font-weight:700}
 .chip.idnote{background:#fff5e6;border-color:#f3d79a;color:#8a5a12;font-weight:650}
 .dmEntryBar{display:flex;gap:10px;align-items:flex-start;margin:12px 0;padding:12px 14px;border-radius:12px;
@@ -1030,7 +1030,7 @@ html body #map .marker.dmSel::after{content:"";position:absolute;inset:-9px;bord
 @media (min-width:761px){#dmMoreFilters{display:inline-block}}
 
 
-/* v23.8.2 map attribution (required by the OpenStreetMap tile policy) */
+/* v23.8.3 map attribution (required by the OpenStreetMap tile policy) */
 html body #map .dmAttr{position:absolute;right:0;bottom:0;z-index:30;background:rgba(255,255,255,.86);
   font:500 11px/1.4 var(--font,system-ui);color:#33545b;padding:3px 8px;border-top-left-radius:8px;pointer-events:auto}
 html body #map .dmAttr a{color:#0A6F6A;text-decoration:none}
@@ -1063,7 +1063,7 @@ html body #map .dmAttr a:hover{text-decoration:underline}
 }
 
 
-/* v23.8.2 section jumps land below the pinned header */
+/* v23.8.3 section jumps land below the pinned header */
 html body #resultsPanel,html body #mapPanel,html body #how{scroll-margin-top:calc(var(--dmHead,0px) + 10px)}
 
 /* ===== v22.2 dense list (split layout only; phones untouched; nothing hidden) ===== */
@@ -1577,17 +1577,17 @@ window.DM_ADS={client:'ca-pub-2870312071451207',header:'',mid:'',list:'',footer:
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <noscript></noscript>
-</head><body data-version="v23.8.2">
+</head><body data-version="v23.8.3">
 <div class="animatedWaterfront" aria-hidden="true"><span></span><span></span><span></span></div><div class="domainHalo" aria-hidden="true"><img data-dmlogo alt=""></div><div id="dmBoot" role="img" aria-label="DipMapper — Find your next swim"><div class="wGlow"></div><div class="wSunBox"><div class="wRays"></div><div class="wSun"></div></div><svg class="wBird" viewBox="0 0 34 14" aria-hidden="true"><path d="M2 9 Q9 1 17 8 Q25 1 32 9"/></svg><svg class="wBird b2" viewBox="0 0 34 14" aria-hidden="true"><path d="M2 9 Q9 1 17 8 Q25 1 32 9"/></svg><div class="wSea" aria-hidden="true"><svg class="l1" viewBox="0 0 2400 200" preserveAspectRatio="none"><path d="M0 60 C150 30 450 30 600 60 C750 90 1050 90 1200 60 C1350 30 1650 30 1800 60 C1950 90 2250 90 2400 60 V200 H0Z"/></svg><svg class="l2" viewBox="0 0 2400 200" preserveAspectRatio="none"><path d="M0 70 C200 40 400 40 600 70 C800 100 1000 100 1200 70 C1400 40 1600 40 1800 70 C2000 100 2200 100 2400 70 V200 H0Z"/></svg><svg class="l3" viewBox="0 0 2400 200" preserveAspectRatio="none"><path d="M0 80 C150 55 450 55 600 80 C750 105 1050 105 1200 80 C1350 55 1650 55 1800 80 C1950 105 2250 105 2400 80 V200 H0Z"/></svg><i class="wGlint" style="left:18%;animation-delay:.2s"></i><i class="wGlint" style="left:41%;bottom:15vh;animation-delay:1.1s"></i><i class="wGlint" style="left:67%;animation-delay:.6s"></i><i class="wGlint" style="left:84%;bottom:12vh;animation-delay:1.7s"></i></div><i class="wBub" style="left:14%;animation-delay:.1s"></i><i class="wBub" style="left:27%;width:7px;height:7px;animation-delay:1.3s"></i><i class="wBub" style="left:58%;width:13px;height:13px;animation-delay:.7s"></i><i class="wBub" style="left:73%;width:8px;height:8px;animation-delay:2s"></i><i class="wBub" style="left:89%;animation-delay:1.6s"></i><div class="wStage"><div class="wCardWrap"><i class="wRipple"></i><i class="wRipple r2"></i><div class="wCard"><img class="wLogo" id="dmBootLogo" alt="DipMapper"></div></div><p class="wTag">Where shall we swim today?</p><p class="wSub"><span>🏊 Swim</span><span>🛶 Paddle</span><span>🤿 Dive</span><span>⛵ Sail</span></p><div class="wBar"><i></i></div><p class="wHint">Finding the best water near you…</p></div></div>
 <script>/* v22.20 welcome screen: shown for at least 2.4 s from the moment it appears (not from page start), lifts only when the start screen is complete; tap to skip once ready */
 (function(){var B=document.getElementById('dmBoot');if(!B)return;try{document.getElementById('dmBootLogo').src=window.DM_LOGO}catch(e){}
- var now=function(){return performance.now()},T0=now(),MIN=2400,MAX=5200;function el(){return now()-T0}
+ var now=function(){return performance.now()},T0=now(),MIN=2400,MAX=5200,painted=false;function el(){return now()-T0}/* v23.8.3: the 2.4 s count starts when the intro is really on screen (first painted frame), not when the code starts: on a phone the bigger page can take seconds before the first frame */try{requestAnimationFrame(function(){requestAnimationFrame(function(){T0=now();painted=true})})}catch(e){painted=true}
  function vis(g){return g&&!g.classList.contains('hidden')&&g.style.display!=='none'&&getComputedStyle(g).display!=='none'}
  function ready(){var g=document.querySelector('.gate');if(document.readyState==='loading')return false;
   if(vis(g)){if(!g.querySelector('.dmGateHero'))return false;var bg=g.querySelector('.dmGateFull');if(bg&&!bg.classList.contains('dmLoaded')&&!(bg.complete&&bg.naturalWidth)&&el()<3400)return false;return true}
   return el()>1200||!!document.querySelector('#results .result')}
  var done=false;function finish(){if(done)return;done=true;document.documentElement.classList.remove('dmBooting');B.classList.add('out');window.__dmBootDone=true;try{document.dispatchEvent(new Event('dmbootdone'))}catch(e){}setTimeout(function(){B.remove();try{if(typeof mountAds==='function')mountAds()}catch(e){}},520)}
- function tick(){window.__dmBootAlive=1;var t=el();if(t>=MIN&&(ready()||t>=MAX))return finish();setTimeout(tick,60)}
+ function tick(){window.__dmBootAlive=1;if(!painted)return setTimeout(tick,60);var t=el();if(t>=MIN&&(ready()||t>=MAX))return finish();setTimeout(tick,60)}
  B.addEventListener('click',function(){if(el()>800&&ready())finish()});setTimeout(tick,60)})();
 </script>
 <div class="bgWater"><i></i><i></i><i></i></div><div class="logoWatermark logoWatermarkMain" aria-hidden="true"><img data-dmlogo alt=""></div><div class="logoWatermark logoWatermarkSoft" aria-hidden="true"><img data-dmlogo alt=""></div>
@@ -1686,7 +1686,7 @@ window.DM_ADS={client:'ca-pub-2870312071451207',header:'',mid:'',list:'',footer:
 <blockquote class="dmAbQuote">“Somebody finds a place that suits them and is glad they went.”</blockquote>
 <p>I am ambitious about how useful DipMapper could become. But the result I care about is still simple: somebody finds a place that suits them and is glad they went.</p>
 </div>
-</article></section><section class="legal"><h2>Legal and data protection</h2><p>Location is optional and processed in the browser for nearby search. External providers may receive coordinates or destination text when maps, weather, photos, routes or review links are used.</p><div class="legalLinks"><button id="privacySettings">Privacy settings</button><button data-legal="privacy">Privacy</button><button data-legal="cookies">Cookies</button><button data-legal="terms">Terms</button><button data-legal="disclaimer">Disclaimer</button><button data-legal="safety">Safety</button><button data-legal="advertising">Advertising</button><button data-legal="imprint">Imprint</button><button data-legal="sources">Sources</button></div><p class="dmVer">DipMapper version 23.8.2</p></section></main>
+</article></section><section class="legal"><h2>Legal and data protection</h2><p>Location is optional and processed in the browser for nearby search. External providers may receive coordinates or destination text when maps, weather, photos, routes or review links are used.</p><div class="legalLinks"><button id="privacySettings">Privacy settings</button><button data-legal="privacy">Privacy</button><button data-legal="cookies">Cookies</button><button data-legal="terms">Terms</button><button data-legal="disclaimer">Disclaimer</button><button data-legal="safety">Safety</button><button data-legal="advertising">Advertising</button><button data-legal="imprint">Imprint</button><button data-legal="sources">Sources</button></div><p class="dmVer">DipMapper version 23.8.3</p></section></main>
 <div class="drawerBack" id="back"></div><aside class="drawer" id="drawer"><div class="drawerHead"><div><div class="eyebrow" id="cardMeta">Travel card</div><h2 id="cardTitle">Place</h2></div><div><button id="copy">Copy link</button><button class="primary" id="close">Close</button></div></div><div class="drawerBody" id="cardBody"></div></aside>
 <div class="lightbox" id="light"><div class="lightboxTop"><h2 id="lightTitle">Photo</h2><button class="primary" id="lightClose">Close photo</button></div><div class="lightboxFrame"><img id="lightImg" alt=""></div><div class="lightCaption" id="lightCap"></div></div>
 <div class="modalBack" id="modal"><div class="modal"><div style="display:flex;justify-content:space-between;gap:12px;align-items:center"><h2 id="modalTitle">Legal</h2><button class="primary" id="modalClose">Close</button></div><div id="modalBody" style="margin-top:12px"></div></div></div>
@@ -1912,7 +1912,7 @@ function rankPhotoId(p){if(!p)return'';const u=p.url||p;return photoFingerprint(
 function photoForRank(v,used){
  const cached=state.rankPhotoCache.get(v.id);if(cached&&!used.has(cached.id)){used.add(cached.id);return cached.photo}
  for(const p of photoDeck(v)){const id=rankPhotoId(p);if(id&&!used.has(id)){used.add(id);state.rankPhotoCache.set(v.id,{id,photo:p});return p}}
- if(!document.documentElement.classList.contains('dmActOn'))hydrateMedia(v,false);return null
+ if(!document.documentElement.classList.contains('dmActOn'))hydrateMedia(v,false);return (window.dmAerialPhoto&&window.dmAerialPhoto(v))||null
 }
 function stopContinuousLoading(){if(state.continuousTimer){clearInterval(state.continuousTimer);state.continuousTimer=null}}
 function startContinuousLoading(scanId){
@@ -2013,7 +2013,7 @@ function zoomForRadius(km,lat=(state.center?.[0]||state.mapCenter?.[0]||0)){
 function radiusPixels(km,lat,z){const cos=Math.max(.28,Math.cos(lat*Math.PI/180));const mpp=156543.03392*cos/(2**z);return Math.max(10,(Number(km||5)*1000)/mpp)}
 function setMapToSearchRadius(){if(state.center){state.mapCenter=state.center.slice();state.zoom=zoomForRadius(Number($('#radius').value||5),state.center[0])}}
 
-/* v23.8.2 map tiles: OSM tile policy compliance + automatic fallback */
+/* v23.8.3 map tiles: OSM tile policy compliance + automatic fallback */
 var DM_TILE_SRC={
  osm:{u:function(z,x,y){return 'https://tile.openstreetmap.org/'+z+'/'+x+'/'+y+'.png'},
       a:'\u00a9 <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'},
@@ -2384,7 +2384,7 @@ function facilityIcon(f){const t=String(f||'');if(/\b\d+\s*m\b.*pool|lanes?\b|te
  if(/lawn|meadow/i.test(t))return '🌱'; if(/parking/i.test(t))return '🅿\uFE0F'; if(/sauna/i.test(t))return '🧖';
  if(/bbq|barbecue/i.test(t))return '🔥'; if(/boat|kayak|jetty/i.test(t))return '🚣'; if(/paddling/i.test(t))return '👶';
  if(/kneipp|non-swimmer/i.test(t))return '💧'; if(/sun lounger/i.test(t))return '\u26F1\uFE0F'; return '💧'}
-function openCard(id,soft=false){const v=state.results.find(x=>x.id===id);if(!v)return;state.selected=id;state.parking=parkingFor(v);els.cardTitle.innerHTML=displayName(v);els.cardMeta.textContent=`${cat(v).toUpperCase()} · ${fmt(v.distance||0)}${v.driveMin!=null?' · '+v.driveMin+' min by road':''} · ${v.address||state.label}`;try{var _en=dmEntryNotice(v);var _eb=els.cardMeta.parentNode&&els.cardMeta.parentNode.querySelector('.dmEntryBar');if(_eb)_eb.remove();if(_en){var _d=document.createElement('div');_d.className='dmEntryBar'+(dmIdRequired(v)?' hard':'');_d.innerHTML='<span class="ic">🪪</span><span><b>Entry requirement.</b> '+_en+'</span>';els.cardMeta.insertAdjacentElement('afterend',_d)}}catch(e){}const photos=photoDeck(v);while(photos.length<3)photos.push(null);const gallery=`<div class="gallery">${photos.slice(0,3).map((p,i)=>p?`<button class="photo" data-photo="${esc(p.url)}" data-title="${esc(plainName(v))}" data-cap="${esc(p.caption+' · '+p.credit)}">${img(p.url,plainName(v),v.id)}<span class="photoSrc">${esc(p.credit)}</span><span class="photoTag">${esc(p.label)}</span></button>`:`<div class="photo loadingPhoto"><div>finding local photo</div></div>`).join('')}</div>`;hydrateMedia(v,false);fetchOfficialSite(v);const facts=[setting(v)&&`<div class="fact"><div class="k">Indoor / outdoor</div><div>${esc(setting(v))}</div></div>`,v.hours&&`<div class="fact"><div class="k">Opening / hours</div><div>${esc(v.hours)}</div></div>`,v.season&&`<div class="fact"><div class="k">Season</div><div>${esc(v.season)}</div></div>`,priceHtml(v)].filter(Boolean).join('');const fac=(v.facilities||[]).filter(f=>!(facilityLabel(f)==='Lifeguard'&&dmNoLifeguard(v))).map(f=>{const L=facilityLabel(f);return `<span class="facility">${facilityIcon(L)} ${esc(L)}</span>`}).join('');const parking=state.parking.length?state.parking.slice(0,6).map((p,i)=>`<div class="parkingRow"><div>${i===0?'Best P pick · ':''}${esc(p.name)}<div class="muted">${fmt(p.d||0)} walk · ${esc(p.fee||'fee unknown')} · ${esc(p.open||'likely open')} · congestion ${esc(p.congestion||'unknown')} · ${esc(p.source||'open map')}</div></div><a class="btn" href="${route(p.lat,p.lon)}" target="_blank" rel="noopener">Route</a></div>`).join(''):'<p class="muted">Parking is being checked now. P Drive routes to the venue until a better local parking point is ready.</p>';
+function openCard(id,soft=false){const v=state.results.find(x=>x.id===id);if(!v)return;state.selected=id;state.parking=parkingFor(v);els.cardTitle.innerHTML=displayName(v);els.cardMeta.textContent=`${cat(v).toUpperCase()} · ${fmt(v.distance||0)}${v.driveMin!=null?' · '+v.driveMin+' min by road':''} · ${v.address||state.label}`;try{var _en=dmEntryNotice(v);var _eb=els.cardMeta.parentNode&&els.cardMeta.parentNode.querySelector('.dmEntryBar');if(_eb)_eb.remove();if(_en){var _d=document.createElement('div');_d.className='dmEntryBar'+(dmIdRequired(v)?' hard':'');_d.innerHTML='<span class="ic">🪪</span><span><b>Entry requirement.</b> '+_en+'</span>';els.cardMeta.insertAdjacentElement('afterend',_d)}}catch(e){}const photos=photoDeck(v).slice();if(!photos.length&&window.dmAerialPhoto){var _dmA=window.dmAerialPhoto(v);if(_dmA)photos.push(_dmA)}while(photos.length<3)photos.push(null);const gallery=`<div class="gallery">${photos.slice(0,3).map((p,i)=>p?`<button class="photo" data-photo="${esc(p.url)}" data-title="${esc(plainName(v))}" data-cap="${esc(p.caption+' · '+p.credit)}">${img(p.url,plainName(v),v.id)}<span class="photoSrc">${esc(p.credit)}</span><span class="photoTag">${esc(p.label)}</span></button>`:`<div class="photo loadingPhoto"><div>finding local photo</div></div>`).join('')}</div>`;hydrateMedia(v,false);fetchOfficialSite(v);const facts=[setting(v)&&`<div class="fact"><div class="k">Indoor / outdoor</div><div>${esc(setting(v))}</div></div>`,v.hours&&`<div class="fact"><div class="k">Opening / hours</div><div>${esc(v.hours)}</div></div>`,v.season&&`<div class="fact"><div class="k">Season</div><div>${esc(v.season)}</div></div>`,priceHtml(v)].filter(Boolean).join('');const fac=(v.facilities||[]).filter(f=>!(facilityLabel(f)==='Lifeguard'&&dmNoLifeguard(v))).map(f=>{const L=facilityLabel(f);return `<span class="facility">${facilityIcon(L)} ${esc(L)}</span>`}).join('');const parking=state.parking.length?state.parking.slice(0,6).map((p,i)=>`<div class="parkingRow"><div>${i===0?'Best P pick · ':''}${esc(p.name)}<div class="muted">${fmt(p.d||0)} walk · ${esc(p.fee||'fee unknown')} · ${esc(p.open||'likely open')} · congestion ${esc(p.congestion||'unknown')} · ${esc(p.source||'open map')}</div></div><a class="btn" href="${route(p.lat,p.lon)}" target="_blank" rel="noopener">Route</a></div>`).join(''):'<p class="muted">Parking is being checked now. P Drive routes to the venue until a better local parking point is ready.</p>';
 const parkingHint=state.parking.length?`${state.parking.length} parking options ready`:'parking check running';els.cardBody.innerHTML=`${gallery}<div class="muted" style="margin-top:6px">Tap photos to enlarge. Credits and source notes are shown in the photo viewer.</div><div class="story">${esc(v.story||makeStory(v.name,cat(v)))}${v.descr?(' '+esc(v.descr)):''}${venueDetails(v)}</div>${adminBadges(v)}<div class="actions"><a class="btn" href="${route((state.parking[0]||v).lat,(state.parking[0]||v).lon)}" target="_blank" rel="noopener">🅿 P Drive</a><a class="btn" href="${route(v.lat,v.lon,'walk')}" target="_blank" rel="noopener">↗ Transit / walk</a>${v.website?`<a class="btn" href="${esc(v.website)}" target="_blank" rel="noopener">⌂ Official</a>`:''}${v.phone?`<a class="btn" href="tel:${esc(String(v.phone).replace(/\s+/g,''))}">☎ Call</a>`:''}<a class="btn" href="https://www.google.com/search?q=${encodeURIComponent(plainName(v)+' '+(v.address||state.label)+' swimming')}" target="_blank" rel="noopener">🔎 Research</a>${v.osmType?`<a class="btn" href="https://www.openstreetmap.org/${esc(v.osmType)}/${esc(String(v.osmId))}" target="_blank" rel="noopener">🗺 Map data</a>`:''}${v.wikipedia?`<a class="btn" href="https://${esc(String(v.wikipedia).split(':')[0])}.wikipedia.org/wiki/${encodeURIComponent(String(v.wikipedia).split(':').slice(1).join(':'))}" target="_blank" rel="noopener">📖 Wikipedia</a>`:''}<a class="btn" href="https://commons.wikimedia.org/w/index.php?search=${encodeURIComponent(plainName(v))}&ns6=1" target="_blank" rel="noopener">▣ More photos</a></div><div class="section"><h3>Area around</h3><p>${esc(areaStory(v))}</p></div><div class="section"><h3>Weather and water</h3>${weatherHtml(v)}</div>${facts?`<div class="section"><h3>Opening, season and prices</h3><div class="factGrid">${facts}</div></div>`:''}${fac?`<div class="section"><h3>Facilities</h3><div class="facilities">${fac}</div></div>`:''}<div class="section"><h3>Rating</h3><p><span class="dmStars" aria-label="${(Math.max(3,Math.min(5,(v.score||80)/20))).toFixed(1)} out of 5">${'★'.repeat(Math.round(+(Math.max(3,Math.min(5,(v.score||80)/20))).toFixed(1)))}${'☆'.repeat(5-Math.round(+(Math.max(3,Math.min(5,(v.score||80)/20))).toFixed(1)))}</span> ${(Math.max(3,Math.min(5,(v.score||80)/20))).toFixed(1)}/5 — DipMapper score. ${isQuietNow(v)?'Likely quiet now from '+quietText()+'.':''}</p></div><div class="section"><h3>Parking and arrival</h3><p class="muted">${parkingHint}. Free and closer public options rank first; restricted/private lots are filtered.</p>${parking}${v.transit?.length?`<p class="muted">Transit: ${v.transit.map(esc).join(' · ')}</p>`:''}</div><div class="section"><h3>Contact</h3><div class="factGrid">${v.operator?`<div class="fact"><div class="k">Operator</div><div>${esc(v.operator)}</div></div>`:''}${v.address?`<div class="fact"><div class="k">Address</div><div>${esc(v.address)}</div></div>`:''}<div class="fact"><div class="k">Coordinate</div><div>${v.lat.toFixed(5)}, ${v.lon.toFixed(5)}</div></div></div></div><div class="section"><h3>External sources</h3>${sourceLinks(v)}</div>`;els.drawer.classList.add('open');els.back.classList.add('open');bindImages();if(!soft)loadParking(v);drawMap()}
 function closeCard(){state.selected=null;els.drawer.classList.remove('open');els.back.classList.remove('open');state.parking=[];drawMap()}
 function openLegal(k){$('#modalTitle').textContent=k[0].toUpperCase()+k.slice(1);$('#modalBody').innerHTML=LEGAL[k]||LEGAL.disclaimer;els.modal.classList.add('open')}
@@ -2413,7 +2413,7 @@ document.addEventListener('keydown',e=>{const el=e.target.closest?.('.marker[dat
 document.addEventListener('click',e=>{const ph=e.target.closest('[data-photo]');if(ph){$('#lightImg').src=ph.dataset.photo;$('#lightTitle').textContent=ph.dataset.title;$('#lightCap').textContent=ph.dataset.cap;els.light.classList.add('open');return}const l=e.target.closest('[data-legal]');if(l){openLegal(l.dataset.legal);return}const s=e.target.closest('[data-scroll]');if(s){document.getElementById(s.dataset.scroll)?.scrollIntoView({behavior:'smooth'});return}});
 els.results.addEventListener('click',e=>{const b=e.target.closest('[data-open]');if(!b)return;e.preventDefault();e.stopPropagation();openPlaceById(b.dataset.open,'open-button-local')});els.results.addEventListener('keydown',e=>{const b=e.target.closest('[data-open]');if(!b)return;if(e.key==='Enter'||e.key===' '){e.preventDefault();openPlaceById(b.dataset.open,'open-button-key-local')}});
 
-// v23.8.2 mobile scroll safety: do not open cards while the user is scrolling the result list.
+// v23.8.3 mobile scroll safety: do not open cards while the user is scrolling the result list.
 els.results.addEventListener('touchstart',e=>{const b=e.target.closest('.result');if(!b)return;recordTapStart(b,e)},{passive:true});
 els.results.addEventListener('touchmove',e=>{tapState.armed=false},{passive:true});
 els.map.addEventListener('touchstart',e=>{const m=e.target.closest('[data-mid]');if(!m)return;recordTapStart(m,e)},{passive:true});
@@ -2427,7 +2427,7 @@ function isMobileDevice(){return matchMedia('(max-width: 900px), (pointer: coars
 function applyDeviceMode(){document.documentElement.classList.toggle('mobileApp',isMobileDevice());document.body.classList.toggle('appMode',matchMedia('(display-mode: standalone)').matches||navigator.standalone===true);if(!applyDeviceMode._done){applyDeviceMode._done=1;if(isMobileDevice()&&$('#radius').value==='30'&&!localStorage.getItem('dm_radius'))$('#radius').value='5'}setTimeout(drawMap,80)}
 addEventListener('resize',applyDeviceMode,{passive:true});applyDeviceMode();setTimeout(function(){try{mountAds()}catch(e){}},1200);setTimeout(function(){try{dmAdCheck()}catch(e){}},3500);try{const _sp=new URLSearchParams(location.search);const _la=parseFloat(_sp.get('lat')),_lo=parseFloat(_sp.get('lon'));if(isFinite(_la)&&isFinite(_lo)){const _nm=(_sp.get('name')||'this spot').slice(0,80);gateOff();state.center=[_la,_lo];state.mapCenter=state.center.slice();state.zoom=zoomForRadius(Number($('#radius').value||5),_la);state.label=_nm;const _d=$('#dest');if(_d)_d.value=_nm;setTimeout(function(){try{seedNearbyPacks();render();drawMap();backgroundScan()}catch(e){}},60);}else{const _qp=_sp.get('q');if(_qp&&_qp.trim()){const _d=$('#dest'),_g=$('#gateDest');if(_d)_d.value=_qp.trim();if(_g)_g.value=_qp.trim();setTimeout(function(){try{search()}catch(e){}},60)}}}catch(e){}try{window.dmAppBoot&&window.dmAppBoot()}catch(e){}
 
-// DipMapper v23.8.2 - explicit card opening, 10 second visible search lifecycle, repeat-visit privacy/location skip
+// DipMapper v23.8.3 - explicit card opening, 10 second visible search lifecycle, repeat-visit privacy/location skip
 const SEARCH_VISIBLE_MS=10000;
 state.searchCutoffTimer=null;state.scanFrozen=false;state.lastOriginRestored=false;
 function saveLastOrigin(){try{if(state.center){localStorage.setItem('dm_seen','1');localStorage.setItem('dm_last_origin',JSON.stringify({lat:state.center[0],lon:state.center[1],label:state.label||'last search',radius:$('#radius').value||'5',t:Date.now()}));}}catch(e){}}
@@ -2468,7 +2468,7 @@ function bootV203(){
 
 bootV203();
 
-// v23.8.2 hardening: guarded taps, scroll-safe mobile cards, sticky close button, full mobile filters, three-size typography
+// v23.8.3 hardening: guarded taps, scroll-safe mobile cards, sticky close button, full mobile filters, three-size typography
 (function(){
  const boot=()=>{
   document.body.classList.add('dm-v20');
@@ -2484,7 +2484,7 @@ bootV203();
 
 
 
-// v23.8.2 final hardening: explicit open only, map-dot open, 10s no-flicker search window.
+// v23.8.3 final hardening: explicit open only, map-dot open, 10s no-flicker search window.
 (function(){
   const openId=function(id,source){
     if(!id)return false;
@@ -2516,7 +2516,7 @@ bootV203();
 
 
 
-// v23.8.2 reliability polish: freeze flicker after 10s, deliberate Open button, and reset interaction locks on close.
+// v23.8.3 reliability polish: freeze flicker after 10s, deliberate Open button, and reset interaction locks on close.
 (function(){
   const stopRowAccident=function(e){
     const row=e.target && e.target.closest && e.target.closest('.result');
@@ -2540,7 +2540,7 @@ bootV203();
 
 
 
-/* DipMapper v23.8.2 final interaction controller: no accidental list opens, direct map-dot opens, stable after repeated cards */
+/* DipMapper v23.8.3 final interaction controller: no accidental list opens, direct map-dot opens, stable after repeated cards */
 (function(){
   const $ = (s,r=document)=>r.querySelector(s);
   const $$ = (s,r=document)=>Array.from(r.querySelectorAll(s));
@@ -2584,7 +2584,7 @@ bootV203();
 
 
 
-/* DipMapper v23.8.2 - icon filters, outside-card close, persistent settings */
+/* DipMapper v23.8.3 - icon filters, outside-card close, persistent settings */
 (function(){
   const ICON_LABELS={
     all:['🌊','All'], beach:['🏖','Beaches'], pool:['🏊','Pools'], bath:['≈','Bathing places'], thermal:['♨','Thermal'], wild:['〰','Wild swim'], indoor:['⌂','Indoor'], outdoor:['☀','Outdoor'], free:['0','Free'], hours:['◷','Hours'], quiet:['◌','Quiet now'], parking:['P','Parking ready'], family:['♡','Good with kids'], supervised:['◎','Supervised'], women:['♀','Women-friendly'], food:['🍴','Food'], wc:['WC','Toilets'], accessible:['♿','Accessible'], sauna:['♨','Sauna'], waterok:['💧','Water OK']
@@ -2634,7 +2634,7 @@ bootV203();
 })();
 
 
-/* DipMapper v23.8.2 mobile-first control layer: stable 10-second search, compact mobile cards, no flicker after freeze. */
+/* DipMapper v23.8.3 mobile-first control layer: stable 10-second search, compact mobile cards, no flicker after freeze. */
 (function(){
   const oldProgress = window.progress || progress;
   const allowedAfterFreeze = /^(Ready|Spots ready|Top 5 ready|Search radius updated|Re-scanning|Choose map point|Destination|Search manually|Waiting|Using location)/i;
@@ -2666,10 +2666,10 @@ bootV203();
 
 </script>
 
-<!-- v23.8.2 validation: animated waterfront, three-size typography, filter icons, persistent cookie and location settings, outside-card close. -->
+<!-- v23.8.3 validation: animated waterfront, three-size typography, filter icons, persistent cookie and location settings, outside-card close. -->
 
 <script>
-/* DipMapper features v23.8.2 — full-screen gate photo · bold heart · Directions · Share · Surprise · Recent · consent · app-ready */
+/* DipMapper features v23.8.3 — full-screen gate photo · bold heart · Directions · Share · Surprise · Recent · consent · app-ready */
 (function(){
   try{
     function R(){return document.getElementById('results');}
@@ -5539,7 +5539,7 @@ window.DM_DIVE={
  var PH=lsGet('dm_actph_v3')||{},PHQ={},PHMISS={},PHUSED={},PHSHARE={};
  function phSave(){try{var keys=Object.keys(PH);if(keys.length>260)keys.sort(function(a,b){return PH[a].t-PH[b].t}).slice(0,80).forEach(function(k){delete PH[k]});lsSet('dm_actph_v3',PH)}catch(e){}}
  function photosFor(v,prio){var c=PH[v.id];if(c&&c.l&&c.l.length&&Date.now()-c.t<14*864e5)return Promise.resolve(c.l);if(PHQ[v.id]){if(prio!=null&&prio<PHQ[v.id].prio)PHQ[v.id].bump(prio);return PHQ[v.id]}
-  if(PHMISS[v.id]&&Date.now()-PHMISS[v.id]<6e5)return Promise.resolve([]);
+  if(PHMISS[v.id]&&Date.now()-PHMISS[v.id]<6e5){var al=[aerialItem(v)];PH[v.id]={t:Date.now(),l:al};return Promise.resolve(al)}
   var pr=prio==null?20:prio,kw=kwFor(),B={own:[],wiki:[],nearArt:[],near:[],name:[],area:[]};
   if(v.img)B.own.push({u:v.img,how:'own'});
   var jobs=[];
@@ -5558,16 +5558,19 @@ window.DM_DIVE={
    .then(function(){var near=B.near.filter(function(x){return x.kw}).concat(B.near.filter(function(x){return !x.kw}));
     var all=B.wiki.concat(B.own,B.name,B.nearArt,near.slice(0,5),B.area.slice(0,3)),seen={},l=[];
     all.forEach(function(x){var f=wmFile(x.u);if(!x.u||seen[x.u]||seen[f]||ACT_PH_BLOCK.test(String(f).replace(/_/g,' ')))return;seen[x.u]=1;seen[f]=1;l.push(x)});l=l.slice(0,9);
-    delete PHQ[v.id];if(l.length){PH[v.id]={t:Date.now(),l:l};phSave()}else PHMISS[v.id]=Date.now();return l});
+    if(l.length)phRealSave(v,l);else PHMISS[v.id]=Date.now();l=l.concat([aerialItem(v)]);delete PHQ[v.id];PH[v.id]={t:Date.now(),l:l,real:l.length>1};return l});
   p.prio=pr;p.bump=function(n){p.prio=n;WMQ.forEach(function(j){if(j.prio>n&&j.url.indexOf(v.lat.toFixed(4))>=0)j.prio=n});wmSort()};PHQ[v.id]=p;return p}
+ function phRealSave(v,l){PH[v.id]={t:Date.now(),l:l};phSave()}
  /* one photo per card: the place's own first; a shared area photo may appear on at most two cards */
  function thumbPhoto(v){var c=PH[v.id];if(!c||!c.l||!c.l.length)return null;var cur=PHUSED['#'+v.id];if(cur){for(var i=0;i<c.l.length;i++)if(c.l[i].u===cur)return c.l[i]}
   for(var i2=0;i2<c.l.length;i2++){var u=c.l[i2].u;if(c.l[i2].how==='area')continue;if(!PHUSED[u]||PHUSED[u]===v.id){PHUSED[u]=v.id;PHUSED['#'+v.id]=u;return c.l[i2]}}
-  for(var i3=0;i3<c.l.length;i3++){var u3=c.l[i3].u;var n=PHSHARE[u3]||[];if(n.indexOf(v.id)>=0||n.length<2){if(n.indexOf(v.id)<0)n.push(v.id);PHSHARE[u3]=n;PHUSED['#'+v.id]=u3;return c.l[i3]}}
+  for(var ia=0;ia<c.l.length;ia++){if(c.l[ia].how==='aerial'&&c.l.every(function(x){return x.how==='aerial'||x.how==='area'})){/* only when nothing else is left */}}
+  for(var i3=0;i3<c.l.length;i3++){if(c.l[i3].how==='aerial')continue;var u3=c.l[i3].u;var n=PHSHARE[u3]||[];if(n.indexOf(v.id)>=0||n.length<2){if(n.indexOf(v.id)<0)n.push(v.id);PHSHARE[u3]=n;PHUSED['#'+v.id]=u3;return c.l[i3]}}
+  for(var i4=0;i4<c.l.length;i4++){if(c.l[i4].how==='aerial'){PHUSED['#'+v.id]=c.l[i4].u;return c.l[i4]}}
   return null}
  function setThumb(el,v){var c=PH[v.id];if(!el||!c||!c.l)return;var tried=0;var go=function(){var p=thumbPhoto(v);if(!p)return;var old=el.querySelector('img');if(old&&old.getAttribute('src')===p.u)return;var im=new Image();im.alt='';im.decoding='async';
    im.onload=function(){var o=el.querySelector('img');if(o)o.remove();el.classList.add('hasPh');el.appendChild(im)};
-   im.onerror=function(){/* broken file: drop it and try the next candidate */c.l=c.l.filter(function(x){return x.u!==p.u});delete PHUSED[p.u];delete PHUSED['#'+v.id];if(++tried<4)go()};im.src=p.u};go()}
+   im.onerror=function(){/* broken file: drop it and try the next candidate */if(p.how==='aerial'&&p.alt&&p.alt.length){p.u=p.alt.shift();delete PHUSED['#'+v.id];if(++tried<4)return go()}c.l=c.l.filter(function(x){return x.u!==p.u});delete PHUSED[p.u];delete PHUSED['#'+v.id];if(++tried<4)go()};im.src=p.u};go()}
  /* cards ask for photos when they come near the screen; the top of the list goes first */
  var PHIO=null;
  function loadPhotos(L){var byId={};L.forEach(function(v,i){byId[v.id]={v:v,i:i}});
@@ -5578,6 +5581,14 @@ window.DM_DIVE={
   else els.forEach(ask);
   /* the first eight always load, even before they scroll into view */
   els.slice(0,8).forEach(function(el){ask(el)})}
+ /* ================= v23.8.3: a picture for every venue =================
+    When no photo of the place (or right next to it) exists, the card shows the real aerial view of the exact spot:
+    Esri World Imagery, the same imagery and attribution the map already uses. Clearly labelled "Aerial view". */
+ function dmAerialUrl(lat,lon,z){z=z||17;var n=Math.pow(2,z),x=Math.floor((lon+180)/360*n),la=lat*Math.PI/180,y=Math.floor((1-Math.log(Math.tan(la)+1/Math.cos(la))/Math.PI)/2*n);return 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/'+z+'/'+y+'/'+x}
+ window.dmAerialUrl=dmAerialUrl;
+ function aerialItem(v){return {u:dmAerialUrl(v.lat,v.lon,17),how:'aerial',t:'Aerial view',alt:[dmAerialUrl(v.lat,v.lon,16)]}}
+ /* swim cards: same fallback, in the swim engine's photo format */
+ window.dmAerialPhoto=function(v){if(!v||v.lat==null)return null;var nm='';try{nm=plainName(v)}catch(e){nm=v.name||''}return {url:dmAerialUrl(+v.lat,+v.lon,17),label:'aerial view',credit:'Esri World Imagery',caption:nm+' · aerial view (Esri World Imagery)',confidence:40,aerial:true}};
 
  /* ================= v23.5 emergency & help nearby: numbers per country (sourced), nearest police, hospital, fire station,
     lifeguard, defibrillator, life ring, pharmacy (OpenStreetMap). Used in the activity card and in the swim card. ================= */
@@ -5760,7 +5771,7 @@ window.DM_DIVE={
  /* ---------- map layers: water temperature, ice, no-go zones ---------- */
  var ZONES={key:'',list:[],busy:false};
  function zoneQuery(c,R){var a='(around:'+R+','+c[0]+','+c[1]+')';return '[out:json][timeout:20];(way["seamark:type"="restricted_area"]'+a+';relation["seamark:type"="restricted_area"]'+a+';way["natural"="water"]["boat"="no"]'+a+';relation["natural"="water"]["boat"="no"]'+a+';way["natural"="water"]["motorboat"="no"]'+a+';relation["natural"="water"]["motorboat"="no"]'+a+';nwr["swimming"="no"]'+a+';nwr["bathing"="no"]'+a+';way["leisure"="nature_reserve"]["boat"="no"]'+a+';node["amenity"="ferry_terminal"]'+a+';);out geom 160;'}
- function loadZones(){var c=state.center;if(!c||typeof overpassFast!=='function')return;var k=c[0].toFixed(3)+','+c[1].toFixed(3);if(ZONES.key===k||ZONES.busy)return;if(ZONES.next&&ZONES.tries&&ZONES.tries.k===k&&Date.now()<ZONES.next)return;if(ZONES.wait!==k){ZONES.wait=k;clearTimeout(ZONES.tm);ZONES.tm=setTimeout(loadZones,A.mode==='swim'?3500:600);return}ZONES.busy=true;ZONES.key=k;
+ function loadZones(){var c=state.center;if(!c||typeof overpassFast!=='function')return;var k=c[0].toFixed(3)+','+c[1].toFixed(3);if(ZONES.key===k||ZONES.busy)return;if(ZONES.next&&ZONES.tries&&ZONES.tries.k===k&&Date.now()<ZONES.next)return;if(ZONES.wait!==k){ZONES.wait=k;clearTimeout(ZONES.tm);ZONES.tm=setTimeout(loadZones,A.mode==='swim'?1500:600);return}ZONES.busy=true;ZONES.key=k;
   /* v23.5: zones are static map data -> cached for 30 days; a failed query is retried (it used to be given up for good) */
   var ck='dm_zones3_'+(Math.round(c[0]*50)/50).toFixed(2)+'_'+(Math.round(c[1]*50)/50).toFixed(2),cz=lsGet(ck);if(cz&&cz.t&&Date.now()-cz.t<30*864e5&&cz.l){ZONES.busy=false;ZONES.list=cz.l;ZONES.src='cache';paintLayers(true);return}
   var tries=ZONES.tries&&ZONES.tries.k===k?ZONES.tries.n:0,R0=Math.max(8000,Math.min(20000,(A.searched||15)*1000)),Rq=tries>=1?Math.min(R0,8000):R0;
@@ -5787,18 +5798,18 @@ window.DM_DIVE={
  function paintLayers(force){var mp=document.getElementById('map');if(!mp)return;var r=mp.getBoundingClientRect();if(!r.width)return;var c=state.mapCenter||state.center;if(!c||typeof project!=='function')return;var z=state.zoom,cp=project(c[0],c[1],z),left=cp[0]-r.width/2,top=cp[1]-r.height/2;
   var P=function(la,lo){var p=project(la,lo,z);return [p[0]-left,p[1]-top]};
   var sig=[c[0],c[1],z,Math.round(r.width),A.mode,A.items.length,ZONES.list.length,A.clim?1:0,A.cd?1:0].join('|');if(!force&&sig===layerSig&&mp.querySelector('.dmZoneSvg'))return;layerSig=sig;
-  if(A.mode==='swim'&&!ZONES.list.some(function(z){return z.kind==='noswim'||z.kind==='noentry'})){['.dmZoneSvg','.dmTempLayer','.dmZoneLeg'].forEach(function(q){var e=mp.querySelector(q);if(e)e.remove()});return}
+  if(A.mode==='swim'&&!ZONES.list.length){/* v23.8.3: in Swim the layer was dropped unless a no-entry/no-swimming zone existed, which hid every no-boat area */['.dmZoneSvg','.dmTempLayer','.dmZoneLeg'].forEach(function(q){var e=mp.querySelector(q);if(e)e.remove()});return}
   var svg=mp.querySelector('.dmZoneSvg');if(!svg){svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('class','dmZoneSvg');svg.setAttribute('aria-hidden','true');mp.appendChild(svg)}
   var vb='0 0 '+Math.round(r.width)+' '+Math.round(r.height);if(svg.getAttribute('viewBox')!==vb){svg.setAttribute('viewBox',vb);svg.setAttribute('width',Math.round(r.width));svg.setAttribute('height',Math.round(r.height))}
-  var h='<defs><pattern id="dmHatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" fill="rgba(208,72,60,.10)"/><line x1="0" y1="0" x2="0" y2="7" stroke="rgba(208,72,60,.55)" stroke-width="2"/></pattern><pattern id="dmHatchA" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" fill="rgba(232,163,23,.10)"/><line x1="0" y1="0" x2="0" y2="7" stroke="rgba(214,140,10,.55)" stroke-width="2"/></pattern><pattern id="dmHatchB" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" fill="rgba(37,99,235,.07)"/><line x1="0" y1="0" x2="0" y2="7" stroke="rgba(37,99,235,.4)" stroke-width="1.6"/></pattern><pattern id="dmHatchG" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" fill="rgba(22,128,61,.07)"/><line x1="0" y1="0" x2="0" y2="7" stroke="rgba(22,128,61,.4)" stroke-width="1.6"/></pattern></defs>',labels='';
+  var h='<defs><pattern id="dmHatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" fill="rgba(208,72,60,.16)"/><line x1="0" y1="0" x2="0" y2="7" stroke="rgba(208,72,60,.7)" stroke-width="2.2"/></pattern><pattern id="dmHatchA" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" fill="rgba(232,163,23,.10)"/><line x1="0" y1="0" x2="0" y2="7" stroke="rgba(214,140,10,.55)" stroke-width="2"/></pattern><pattern id="dmHatchB" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" fill="rgba(37,99,235,.12)"/><line x1="0" y1="0" x2="0" y2="7" stroke="rgba(37,99,235,.55)" stroke-width="1.8"/></pattern><pattern id="dmHatchG" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" fill="rgba(22,128,61,.12)"/><line x1="0" y1="0" x2="0" y2="7" stroke="rgba(22,128,61,.55)" stroke-width="1.8"/></pattern></defs>',labels='';
   var mode=A.mode,lc=[],drawnK={};ZONES.list.forEach(function(zn){var z0=ZL[zn.kind];if(!z0||z0[1].split(' ').indexOf(mode)<0)return;if(zn.kind==='pier'&&!inZurichRule(zn.pt[0],zn.pt[1]))return;
-   if(zn.kind==='pier'&&zn.pt){drawnK.pier=1;var p=P(zn.pt[0],zn.pt[1]),p2=P(zn.pt[0]+0.0009,zn.pt[1]);var rr=Math.max(4,Math.abs(p2[1]-p[1]));h+='<circle cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="'+rr.toFixed(1)+'" fill="url(#dmHatchA)" stroke="rgba(214,140,10,.8)" stroke-width="1.2"/>';return}
+   if(zn.kind==='pier'&&zn.pt){drawnK.pier=1;var p=P(zn.pt[0],zn.pt[1]),p2=P(zn.pt[0]+0.0009,zn.pt[1]);var rr=Math.max(4,Math.abs(p2[1]-p[1]));lc.push({k:'pier',t:'No diving',x:p[0],y:p[1]-rr-10,a:rr*rr,n:'',id:zn.id});h+='<circle cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="'+rr.toFixed(1)+'" fill="url(#dmHatchA)" stroke="rgba(214,140,10,.8)" stroke-width="1.2"/>';return}
    zn.rings.forEach(function(ring){if(ring.length<3)return;var pts=ring.map(function(q){var p=P(q[0],q[1]);return p[0].toFixed(1)+','+p[1].toFixed(1)}).join(' ');drawnK[zn.kind]=1;var zc=zn.kind==='bathzone'?['dmHatchB','rgba(37,99,235,.7)']:zn.kind==='protected'?['dmHatchG','rgba(22,128,61,.7)']:zn.kind==='restricted'?['dmHatchA','rgba(214,140,10,.75)']:['dmHatch','rgba(208,72,60,.8)'];h+='<polygon points="'+pts+'" fill="url(#'+zc[0]+')" stroke="'+zc[1]+'" stroke-width="1.2" stroke-dasharray="5 3"/>'});
    /* v23.7: a label only for zones big enough to hold it — at most 3, never overlapping each other or a pin */
    var bb=null;zn.rings.forEach(function(ring){ring.forEach(function(q){var p=P(q[0],q[1]);if(!bb)bb=[p[0],p[1],p[0],p[1]];else{bb[0]=Math.min(bb[0],p[0]);bb[1]=Math.min(bb[1],p[1]);bb[2]=Math.max(bb[2],p[0]);bb[3]=Math.max(bb[3],p[1])}})});
-   if(bb&&bb[2]-bb[0]>=90&&bb[3]-bb[1]>=36)lc.push({k:zn.kind,t:zoneText(zn),x:(bb[0]+bb[2])/2,y:(bb[1]+bb[3])/2,a:(bb[2]-bb[0])*(bb[3]-bb[1]),n:zn.name,id:zn.id})});
+   if(bb&&bb[2]-bb[0]>=34&&bb[3]-bb[1]>=16)lc.push({k:zn.kind,t:zoneText(zn),x:(bb[0]+bb[2])/2,y:(bb[1]+bb[3])/2,a:(bb[2]-bb[0])*(bb[3]-bb[1]),n:zn.name,id:zn.id})});
   var pinsXY=[].slice.call(mp.querySelectorAll('.dmActPin,.dmOverlay .marker')).map(function(m){return [parseFloat(m.style.left),parseFloat(m.style.top)]});var took=[];
-  lc.sort(function(a,b){var pa=a.k==='restricted'||a.k==='bathzone'?1:0,pb=b.k==='restricted'||b.k==='bathzone'?1:0;return pa-pb||b.a-a.a}).forEach(function(L){if(took.length>=3)return;if(L.x<40||L.x>r.width-40||L.y<20||L.y>r.height-20)return;if(took.some(function(q){return Math.abs(q.x-L.x)<130&&Math.abs(q.y-L.y)<30||q.t===L.t&&Math.abs(q.x-L.x)<260&&Math.abs(q.y-L.y)<160}))return;if(pinsXY.some(function(q){return Math.abs(q[0]-L.x)<60&&Math.abs(q[1]-21-L.y)<30}))return;took.push(L);
+  lc.sort(function(a,b){var pa=a.k==='restricted'||a.k==='bathzone'?1:0,pb=b.k==='restricted'||b.k==='bathzone'?1:0;return pa-pb||b.a-a.a}).forEach(function(L){if(took.length>=6)return;/* v23.8.3: up to 6 labels, also on smaller zones, so 'No boats' and 'No diving' can be read again */if(L.x<40||L.x>r.width-40||L.y<20||L.y>r.height-20)return;if(took.some(function(q){return Math.abs(q.x-L.x)<120&&Math.abs(q.y-L.y)<26||q.t===L.t&&Math.abs(q.x-L.x)<180&&Math.abs(q.y-L.y)<90}))return;if(pinsXY.some(function(q){return Math.abs(q[0]-L.x)<60&&Math.abs(q[1]-21-L.y)<30}))return;took.push(L);
    labels+='<span class="dmZoneLbl '+L.k+'" style="left:'+L.x.toFixed(0)+'px;top:'+L.y.toFixed(0)+'px" title="'+E(L.t+(L.n?' — '+L.n:'')+' · OpenStreetMap '+L.id)+'">⦸ '+E(L.t)+'</span>'});
   if(svg._h!==h){svg._h=h;svg.innerHTML=h}
   var lay=mp.querySelector('.dmTempLayer');if(!lay){lay=document.createElement('div');lay.className='dmTempLayer';mp.appendChild(lay)}
@@ -5820,6 +5831,9 @@ window.DM_DIVE={
   mp.querySelectorAll('.dmOverlay .marker[data-mid]').forEach(function(m){var v=byId[m.getAttribute('data-mid')];if(!v)return;var x=parseFloat(m.style.left),y=parseFloat(m.style.top);if(!isFinite(x)||!isFinite(y))return;
    if(placed.some(function(p){return Math.abs(p[0]-x)<64&&Math.abs(p[1]-y)<40}))return;if(rlb&&x>rlb[0]&&x<rlb[2]&&y>rlb[1]&&y<rlb[3])return;if(placed.length>=8)return;var w=null;try{w=dmDisplayWaterTemp(v)}catch(e){}if(!w||w.c==null)return;placed.push([x,y]);
    h+='<i class="dmPinT '+tempCls(w.c)+'" style="left:'+x.toFixed(0)+'px;top:'+y.toFixed(0)+'px" title="Water '+(w.est?'estimate':'reading')+' — same value as on the card">'+(w.est?'≈':'')+w.c+'°</i>'});if(lay._h!==h){lay._h=h;lay.innerHTML=h}}
+ /* v23.8.3: in Swim the zones only loaded after an activity had been opened once (the swim map redraws through its own
+    internal drawMap, which bypasses the activity hook). Now they load and repaint in Swim on their own. */
+ setInterval(function(){try{if(A.mode==='swim'&&state.center&&!document.hidden){loadZones();paintLayers(false)}}catch(e){}},1200);
 
  /* ================= v23.3: premium cards & detail card (same structure as the swim card), explainers, butler tools ================= */
  function hsh(s){var h=0;s=String(s);for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return Math.abs(h)}
@@ -5976,7 +5990,7 @@ window.DM_DIVE={
   return '<div class="section"><h3>'+I('compass')+'Nearby for the same activities</h3><div class="dmNearGrid">'+nl(nP,'Places to go')+nl(nR,'Rentals, schools & tours')+'</div></div>'}
  function fillSheet(v){var P=PROF[primaryAct(v)]||PROF.sup;var wantRiv=P.river||v.river,wantFish=/dive|snorkel|freedive|wreck|fishing/.test(Object.keys(v.acts).join(' '))||A.mode==='dive';
   photosFor(v,0).then(function(L){if(!alive(v))return;var g=document.getElementById('dmGal');if(!g||!L.length)return;
-   g.innerHTML=L.slice(0,5).map(function(p,i){var pg=photoPage(p.u)||((p.how==='area'||p.how==='nearArt'||p.how==='wiki')&&p.t?'https://en.wikipedia.org/wiki/'+encodeURIComponent(p.t.replace(/ /g,'_')):p.u);return '<a class="photo'+(i===0?' dmOn':'')+'" href="'+E(pg)+'" target="_blank" rel="noopener"><img src="'+E(p.u)+'" alt="'+E(p.t||v.name)+'" loading="lazy" onerror="this.parentNode.remove()"><span class="photoSrc">'+(p.how==='area'||p.how==='wiki'||p.how==='nearArt'?'Wikipedia':'Wikimedia Commons')+'</span><span class="photoTag">'+E(p.how==='area'?(p.t||'The area'):p.how==='nearArt'?(p.t||'Right here'):p.how==='near'?'Near this place':p.how==='name'||p.how==='own'||p.how==='wiki'?'This place':'Photo')+'</span></a>'}).join('');var f0=g.querySelector('a.photo');if(f0)f0.insertAdjacentHTML('beforeend',heroFacts(v,A.as[v.id]))});
+   g.innerHTML=L.slice(0,5).map(function(p,i){var pg=p.how==='aerial'?'https://www.google.com/maps/@'+v.lat+','+v.lon+',300m/data=!3m1!1e3':photoPage(p.u)||((p.how==='area'||p.how==='nearArt'||p.how==='wiki')&&p.t?'https://en.wikipedia.org/wiki/'+encodeURIComponent(p.t.replace(/ /g,'_')):p.u);return '<a class="photo'+(i===0?' dmOn':'')+'" href="'+E(pg)+'" target="_blank" rel="noopener"><img src="'+E(p.u)+'" alt="'+E(p.t||v.name)+'" loading="lazy" onerror="this.parentNode.remove()"><span class="photoSrc">'+(p.how==='aerial'?'Esri World Imagery':p.how==='area'||p.how==='wiki'||p.how==='nearArt'?'Wikipedia':'Wikimedia Commons')+'</span><span class="photoTag">'+E(p.how==='aerial'?'Aerial view of this place':p.how==='area'?(p.t||'The area'):p.how==='nearArt'?(p.t||'Right here'):p.how==='near'?'Near this place':p.how==='name'||p.how==='own'||p.how==='wiki'?'This place':'Photo')+'</span></a>'}).join('');var f0=g.querySelector('a.photo');if(f0)f0.insertAdjacentHTML('beforeend',heroFacts(v,A.as[v.id]))});
   Promise.all([getCond(v.lat,v.lon),getClim(v.lat,v.lon),getSea(v.lat,v.lon),wantRiv?getRiver(v.lat,v.lon):null]).then(function(r){if(!alive(v))return;var cd=r[0],cl=r[1],sea=r[2],riv=r[3];var a=assess(v,cd,cl,sea,riv);if(!v.svc)A.as[v.id]=a;var win=cd&&!v.svc?bestWindow(v,cd):null;
    var el=document.getElementById('dmVerdict');if(el&&v.svc){var so=openInfo(v);el.innerHTML='<p class="dmFuelNow"><b>'+E(so.text)+'</b><br>'+(v.descr?E(v.descr)+'. ':'')+'Fuel for boats. Opening hours and payment can differ from the land station next door — call ahead in the evening and off season.</p>';var na0=document.getElementById('dmNowActs');if(na0)na0.innerHTML=''}else if(el)el.innerHTML=verdictHtml(a,win)+(cd?'<p class="dmBsrc">Forecast for these coordinates (Open-Meteo), loaded '+E(cd.at)+'. Guidance only — not a safety guarantee.</p>':'');
    var na=document.getElementById('dmNowActs');if(na&&cd&&!v.svc){var offS=!!(a&&a.closed&&a.st&&a.st.days>=7);/* v23.7: out of season the list is for the next visit */na.innerHTML='<h4 class="dmKitH">'+I('bag')+(offS?'What to bring when the season starts':'What to bring today')+'</h4>'+kitHtml(kit(v,a,cd))+'<div class="dmBacts"><a href="'+E(icsFor(v,win))+'" download="'+E(v.name.replace(/[^\w]+/g,'-').toLowerCase())+'.ics">'+I('cal')+'Add to calendar</a><button type="button" class="dmShareNow">'+I('share')+'Share plan</button></div>';
