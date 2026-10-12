@@ -2,6 +2,11 @@
 
 All notable changes to DipMapper (dipmapper.com). Newest first. Versions follow `major.minor.patch`; the live version is printed at the bottom of every page.
 
+## 23.8.2 — 12 October 2026 · Start page and no-boat areas back
+- **Restored:** no-boat areas, motorboat bans, bathing zones (boats keep out), protected areas and every other OpenStreetMap boat rule (no anchoring, no wake, speed limits) are drawn on the water again in **every mode, including Swim**, as in 23.6. 23.7 had limited them to some activities and dropped the "other rules" entirely. The 23.7 clutter fix stays: at most 3 labels, never overlapping, never the generic "Restricted area"; other rules are drawn in amber as "Boat rules".
+- **Changed:** the start page ("Find water nearby", "What do you want to do?") now opens every time dipmapper.com is opened or reloaded, also for returning visitors. Until now (since 22.x) returning visitors landed straight in their last search and never saw it. A new **"Continue with <last place>"** button returns to the last search in one tap; the results keep loading behind the start page. Links to a place (?lat=…) still open the results directly.
+- **Tests:** 64 checks. New `start-page-returning`; `zones-clutter` now also requires all 31 test zones to be drawn in Swim.
+
 ## 23.8.1 — 11 October 2026 · Repairs after your phone check
 - **Fixed (phone):** the search card above the map and the map card had different widths, depending on phone size and mode (e.g. on a 430 px phone in Paddle the search card ended 41 px before the map; in Swim the map ended 20 px short on 390 px). The search card, the map and the lists below now share one left and right edge on every phone size and in every mode.
 - **Fixed:** the third interview photo was hidden behind "Read the full interview". The whole interview is now always open, so all three photos are visible.
