@@ -110,7 +110,7 @@ html.mobileApp{--s:12px;--m:15px;--l:22px}html.mobileApp body{min-height:100dvh;
 
 
 
-/* DipMapper v23.8.1 - real logo asset dipmapper-logo-transparent.png, sticky map, easier scrolling, animated waterfront */
+/* DipMapper v23.8.2 - real logo asset dipmapper-logo-transparent.png, sticky map, easier scrolling, animated waterfront */
 :root{--appTop:104px}
 body{background:linear-gradient(120deg,#f6fff9 0%,#e9fff9 34%,#fffbe6 70%,#ffeeb8 100%)}
 body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:
@@ -182,7 +182,7 @@ body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;back
 }
 
 
-/* v23.8.1 - supplied logo, animated waterfront, sticky map and smoother scrolling */
+/* v23.8.2 - supplied logo, animated waterfront, sticky map and smoother scrolling */
 html{scroll-behavior:smooth;scroll-padding-top:110px}body{min-height:100svh}.animatedWaterfront{position:fixed;inset:auto -8vw -16vh -8vw;height:44vh;z-index:0;pointer-events:none;opacity:.36;overflow:hidden}.animatedWaterfront:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,253,244,0),rgba(33,191,183,.28)),repeating-linear-gradient(176deg,rgba(255,255,255,.75) 0 2px,transparent 3px 42px);clip-path:polygon(0 34%,9% 25%,21% 33%,36% 18%,50% 31%,64% 21%,79% 29%,92% 17%,100% 24%,100% 100%,0 100%);animation:waterfrontDrift 38s ease-in-out infinite}.animatedWaterfront span{position:absolute;width:32px;height:32px;border:2px solid rgba(255,255,255,.72);border-radius:50%;bottom:18%;animation:logoBubble 18s linear infinite}.animatedWaterfront span:nth-child(1){left:18%;animation-delay:-4s}.animatedWaterfront span:nth-child(2){left:53%;animation-delay:-10s}.animatedWaterfront span:nth-child(3){left:82%;animation-delay:-14s}@keyframes waterfrontDrift{50%{transform:translate3d(-46px,18px,0) scale(1.03)}}@keyframes logoBubble{0%{opacity:0;transform:translateY(100px) scale(.55)}25%,70%{opacity:.7}100%{opacity:0;transform:translateY(-170px) scale(1.35)}}
 .domainHalo{position:fixed!important;right:-8vw!important;bottom:7vh!important;width:min(640px,46vw)!important;height:auto!important;opacity:.08!important;z-index:0!important;pointer-events:none!important;filter:blur(.1px);animation:haloFloat 34s ease-in-out infinite;background:none!important}.domainHalo:after,.domainHalo:before{display:none!important}.domainHalo img{display:block;width:100%;height:auto}.logoWatermark{background:none!important;border-radius:0!important;overflow:visible!important;box-shadow:none!important}.logoWatermark:before,.logoWatermark:after{display:none!important}.logoWatermark img{display:block;width:100%;height:auto;filter:drop-shadow(0 24px 60px rgba(5,80,88,.12))}.logoWatermarkMain{right:-4vw!important;top:15vh!important;width:min(520px,38vw)!important;opacity:.105!important;animation:watermarkFloat 36s ease-in-out infinite}.logoWatermarkSoft{left:-8vw!important;right:auto!important;top:55vh!important;width:min(480px,34vw)!important;opacity:.06!important;animation:watermarkFloat2 44s ease-in-out infinite}@keyframes watermarkFloat2{50%{transform:translate3d(34px,-18px,0) rotate(-4deg) scale(1.04)}}
 .topbar{box-shadow:0 10px 30px rgba(7,52,59,.06)}.topin{max-width:1440px!important;padding:12px 18px!important;grid-template-columns:auto minmax(260px,1fr) auto!important}.brand{min-width:280px}.brandLogo{width:250px;cursor:pointer;height:auto;display:block;object-fit:contain;filter:drop-shadow(0 10px 22px rgba(7,52,59,.18));animation:brandFloat 9s ease-in-out infinite}.brandCopy{display:grid;gap:2px}.logo,.logo:before,.logo:after,.logo b{display:none!important}@keyframes brandFloat{50%{transform:translateY(-2px) rotate(-.5deg)}}.brandTitle{font-size:18px!important}.brandSub{font-size:13px!important;letter-spacing:.1em!important}.urlPill{font-size:13px!important;padding:2px 8px}.ad{clip-path:polygon(0 0,98% 0,100% 50%,98% 100%,0 100%)}
@@ -191,7 +191,7 @@ html{scroll-behavior:smooth;scroll-padding-top:110px}body{min-height:100svh}.ani
 @media(min-width:901px){body{overflow:hidden}.page{height:calc(100svh - 94px);overflow:hidden}.explainer,.legal{display:none}.cookie.hide{display:none!important}}
 
 
-/* v23.8.1 - rebuild vertical scrolling and map click reliability */
+/* v23.8.2 - rebuild vertical scrolling and map click reliability */
 html,body{height:auto!important;min-height:100%;overflow-x:hidden!important;overflow-y:auto!important}
 body{overscroll-behavior-y:auto!important}
 #map{touch-action:manipulation;user-select:none;-webkit-user-select:none}
@@ -224,7 +224,7 @@ body{overscroll-behavior-y:auto!important}
 
 
 
-/* DipMapper v23.8.1: scroll and map-card interaction rebuild */
+/* DipMapper v23.8.2: scroll and map-card interaction rebuild */
 html{height:auto!important;min-height:100%;overflow-y:auto!important;scroll-behavior:smooth}
 body{height:auto!important;min-height:100dvh!important;overflow-x:hidden!important;overflow-y:auto!important;overscroll-behavior-y:auto!important;touch-action:pan-y!important}
 .page{min-height:calc(100dvh - var(--header-h,96px));overflow:visible!important}
@@ -261,12 +261,12 @@ body{height:auto!important;min-height:100dvh!important;overflow-x:hidden!importa
 }
 
 
-/* v23.8.1: animated waterfront background and radius ring */
+/* v23.8.2: animated waterfront background and radius ring */
 body:before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(circle at 16% 20%,rgba(0,191,190,.15),transparent 26%),radial-gradient(circle at 86% 8%,rgba(255,179,77,.18),transparent 25%),linear-gradient(145deg,rgba(247,255,252,.86),rgba(255,249,223,.78));animation:seaLight 22s ease-in-out infinite alternate}.animatedWaterfront{position:fixed;inset:auto 0 0 0;height:42vh;z-index:0;pointer-events:none;opacity:.36;background:linear-gradient(180deg,transparent 0%,rgba(49,209,199,.20) 46%,rgba(255,230,128,.20) 100%);overflow:hidden}.animatedWaterfront:before,.animatedWaterfront:after{content:"";position:absolute;left:-10%;right:-10%;height:55%;bottom:0;border-radius:50% 50% 0 0;background:repeating-radial-gradient(ellipse at 50% 120%,rgba(255,255,255,.74) 0 2px,transparent 3px 30px);animation:slowTide 34s linear infinite}.animatedWaterfront:after{bottom:-10%;opacity:.45;animation-duration:48s;animation-direction:reverse}.domainHalo{position:fixed;right:4vw;bottom:10vh;width:min(52vw,760px);opacity:.08;pointer-events:none;z-index:0;animation:haloDrift 38s ease-in-out infinite}.domainHalo img,.logoWatermark img{width:100%;height:100%;object-fit:contain}.brandLogo{width:92px;height:92px;object-fit:contain;filter:drop-shadow(0 14px 28px rgba(0,58,66,.22));animation:logoFloat 8s ease-in-out infinite}.brandTitle{font-size:22px}.brandSub{font-size:12px}.urlPill{display:inline-block;margin-top:3px;font-size:11px;letter-spacing:.12em;color:#006e7c}.radiusRing{position:absolute;z-index:5;border:2px solid rgba(0,174,168,.42);background:rgba(0,174,168,.055);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;box-shadow:0 0 0 1px rgba(255,255,255,.65) inset}.radiusLabel{position:absolute;z-index:6;transform:translate(-50%,-50%);background:rgba(255,253,244,.93);border:1px solid var(--line);padding:2px 6px;font-size:11px;color:var(--muted);pointer-events:none}@keyframes seaLight{50%{filter:hue-rotate(8deg);transform:scale(1.015)}}@keyframes slowTide{0%{transform:translateX(-3%) translateY(12px)}50%{transform:translateX(3%) translateY(-8px)}100%{transform:translateX(-3%) translateY(12px)}}@keyframes haloDrift{50%{transform:translate(-42px,18px) rotate(2deg) scale(1.04)}}@keyframes logoFloat{50%{transform:translateY(-3px) rotate(.8deg)}}
 @media(max-width:760px){.brandLogo{width:70px;height:70px}.brandTitle{font-size:18px}.domainHalo{width:85vw;right:-18vw;bottom:20vh}.animatedWaterfront{height:36vh}.mapPanel{max-height:62dvh!important}#map{height:46dvh!important}}
 
 
-/* v23.8.1 - essential interaction and brand stability */
+/* v23.8.2 - essential interaction and brand stability */
 .brandLogo{max-width:220px;min-width:150px;background:transparent!important}
 .logoImageFallback{width:210px;max-width:26vw;padding:8px 10px;border:1px solid var(--line);background:rgba(255,253,244,.82);box-shadow:0 10px 24px rgba(7,52,59,.12);font-weight:700;line-height:1.1}.logoImageFallback small{display:block;font-size:12px;font-weight:500;color:var(--muted);letter-spacing:.06em;margin-top:3px}
 .marker{box-sizing:border-box!important;pointer-events:auto!important;z-index:120!important;aspect-ratio:1/1!important;border-radius:999px!important;padding:0!important}.marker *{pointer-events:none!important}.result{position:relative;z-index:2;pointer-events:auto!important}.drawer.open{z-index:500}.drawerBack.open{z-index:490}.mapPanel{position:sticky;top:104px}.cardOpenBody .mapPanel{position:relative}
@@ -287,7 +287,7 @@ button,.btn,.result,.marker{touch-action:manipulation;}
 
 
 
-/* DipMapper v23.8.1 - mobile scroll guard, visible filters, sticky card close, three-size type */
+/* DipMapper v23.8.2 - mobile scroll guard, visible filters, sticky card close, three-size type */
 :root{--text-small:12px;--text-base:15px;--text-large:24px;--s:var(--text-small);--m:var(--text-base);--l:var(--text-large);--font-main:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--weight-regular:400;--weight-medium:500;--weight-strong:650}
 body,button,a,input,select,.btn,.input,.modal,.drawer,.cookie{font-family:var(--font-main)!important;font-size:var(--text-base)!important;font-weight:var(--weight-regular)!important}
 h1,h2,.resultName,.brandTitle,#cardTitle,.gateBox h1{font-size:var(--text-large)!important;font-weight:var(--weight-strong)!important;line-height:1.08!important}
@@ -307,7 +307,7 @@ h3,.statusTop b,.listHead h2,.mapHead h2,.section h3,.gateBox p,.story,.fact div
 @media(max-width:420px){.filters{grid-template-columns:repeat(2,minmax(0,1fr))!important}.searchRow{grid-template-columns:1fr!important}.controls,.quick{grid-template-columns:1fr 1fr!important}.mapActions button{padding:8px!important}.brandLogo{width:min(190px,82vw)!important}.drawerHead{gap:8px!important}.drawerHead h2{max-width:58vw!important;overflow-wrap:anywhere!important}.drawerHead button{padding:9px 10px!important}}
 
 
-/* DipMapper v23.8.1 - mobile-first refinement, explicit open controls, stable 10s search */
+/* DipMapper v23.8.2 - mobile-first refinement, explicit open controls, stable 10s search */
 :root{--font-body:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;--s:12px!important;--m:15px!important;--l:24px!important;--radius:0px!important}
 *{font-family:var(--font-body)!important}body{font-size:var(--m)!important}small,.muted,.eyebrow,.chip,.k,.resultMeta,.photoTag,.photoSrc,.legend,.listNote{font-size:var(--s)!important}h1,h2,.resultName,.drawerHead h2{font-size:var(--l)!important}.resultName{line-height:1.08!important}.result{cursor:default!important;display:grid!important;grid-template-columns:84px minmax(0,1fr)!important;padding:10px!important;gap:10px!important;min-height:104px!important}.result *{pointer-events:auto!important}.resultMain{display:grid;grid-template-rows:auto auto auto auto;gap:5px;min-width:0}.openPlace{justify-self:start;margin-top:2px;background:var(--deep)!important;color:white!important;border-color:var(--deep)!important;padding:8px 14px!important;min-width:78px}.openPlace:active{transform:translateY(1px)}.result .chips{gap:5px}.chip{line-height:1.1}.filters{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(92px,1fr))!important;gap:8px!important;overflow:visible!important}.filter{min-height:40px;white-space:normal!important;text-align:center}.drawerHead{position:sticky!important;top:0!important;z-index:6!important}.drawerHead .actions{margin:0!important}.drawerHead button,#close{min-width:72px}.cardOpenBody{overflow:hidden!important}.animatedWaterfront{opacity:.48}.logoWatermarkMain{opacity:.14!important}.logoWatermarkSoft{opacity:.08!important}.status,.panel,.mapPanel,.explainer,.legal,.result,.drawer,.fact,.badge,.day{box-shadow:0 14px 42px rgba(7,52,59,.06)}
 @media(max-width:900px){.topin{grid-template-columns:1fr!important}.brandLogo{width:min(240px,78vw)!important}.shell{gap:10px!important}.mapPanel{position:sticky!important;top:86px!important}.panel{position:relative!important;top:auto!important;max-height:none!important;overflow:visible!important}.results{overflow:visible!important;min-height:0!important}.filters{grid-template-columns:repeat(3,minmax(0,1fr))!important;padding:10px!important}.filter{padding:9px 7px!important}.result{grid-template-columns:80px minmax(0,1fr)!important;touch-action:pan-y!important}.openPlace{width:100%;max-width:132px}.drawer{width:100vw!important}.drawerHead{padding:10px 12px!important}.drawerBody{padding-bottom:96px!important}.gallery{grid-template-columns:1fr!important}.photo,.photo:first-child{height:228px!important}.cookie{z-index:210!important}.cookie.hide{display:none!important}}
@@ -316,7 +316,7 @@ h3,.statusTop b,.listHead h2,.mapHead h2,.section h3,.gateBox p,.story,.fact div
 .cardCloseFloat{position:fixed;right:14px;bottom:18px;z-index:220}
 
 
-/* v23.8.1 final mobile and interaction polish */
+/* v23.8.2 final mobile and interaction polish */
 :root{--dm-small:12px;--dm-base:15px;--dm-large:24px}
 *{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important}
 body,input,select,button,textarea,.brandSub,.urlPill,.resultMeta,.chip,.btn,.cardStory,.fact,.badge,.sourceList,.cookie,.listNote,.status p,.muted{font-size:var(--dm-base)!important;font-weight:400!important}
@@ -338,7 +338,7 @@ h1,h2,.brandTitle,.mapHead h2,.listHead h2,.drawerHead h2,.resultName{font-size:
 @media(min-width:521px) and (max-width:900px){.filters{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
 
 
-/* v23.8.1 mobile reliability polish: deliberate card opening, stable scroll, no accidental opens */
+/* v23.8.2 mobile reliability polish: deliberate card opening, stable scroll, no accidental opens */
 .results,.drawer{overscroll-behavior:contain;-webkit-overflow-scrolling:touch;scrollbar-gutter:stable;}
 .result{touch-action:pan-y!important;cursor:default!important;contain:layout paint;}
 .openPlace{touch-action:manipulation!important;position:relative;z-index:4;}
@@ -372,7 +372,7 @@ body:not(.cardOpenBody) .drawerBack{pointer-events:none;}
 }
 
 
-/* v23.8.1 interaction polish: explicit open controls, scroll-safe results, reliable map dots */
+/* v23.8.2 interaction polish: explicit open controls, scroll-safe results, reliable map dots */
 .openResultBtn{pointer-events:auto;cursor:pointer;margin-top:8px;min-height:38px;padding:8px 12px;background:var(--deep);color:#fff;border:1px solid var(--deep);font:inherit;font-size:var(--b);font-weight:500;touch-action:manipulation;display:inline-flex;align-items:center;justify-content:center;gap:6px}
 .openResultBtn:focus-visible,.marker:focus-visible,.drawerHead button:focus-visible{outline:3px solid rgba(0,174,168,.45);outline-offset:2px}
 .result .resultCopy,.result .thumb{pointer-events:none}.result .openResultBtn{pointer-events:auto}.result{overscroll-behavior:contain}.results{scrollbar-gutter:stable;overscroll-behavior:contain;touch-action:pan-y}
@@ -382,7 +382,7 @@ body:not(.cardOpenBody) .drawerBack{pointer-events:none;}
 
 
 
-/* v23.8.1 elegance/mobile usability patch */
+/* v23.8.2 elegance/mobile usability patch */
 :root{--font-body:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--s:12px;--m:15px;--l:24px}
 body,button,input,select,a,.chip,.filter,.result,.drawer{font-family:var(--font-body)!important}
 button,input,select{font-size:var(--m)!important}.chip,.muted,.eyebrow,.k,.resultMeta,.legend,.listNote{font-size:var(--s)!important}h1,h2,.resultName,#cardTitle,.drawerHead h2{font-size:var(--l)!important}
@@ -403,7 +403,7 @@ button,input,select{font-size:var(--m)!important}.chip,.muted,.eyebrow,.k,.resul
 
 
 
-/* DipMapper v23.8.1 - space use: larger anchored map, shorter result rail, visible mobile filters */
+/* DipMapper v23.8.2 - space use: larger anchored map, shorter result rail, visible mobile filters */
 :root{--side-rail:320px;--map-anchor-top:calc(var(--appTop,104px) + 6px)}
 .page{max-width:1540px!important;padding:14px 18px 28px!important}
 .shell{grid-template-columns:minmax(284px,var(--side-rail)) minmax(0,1fr)!important;gap:14px!important;align-items:start!important}
@@ -413,7 +413,7 @@ button,input,select{font-size:var(--m)!important}.chip,.muted,.eyebrow,.k,.resul
 @media(max-width:560px){:root{--appTop:76px}.topin{padding:6px 8px!important}.logo{width:142px!important;height:64px!important}.mapPanel{top:calc(var(--appTop) + 2px)!important}#map{height:43svh!important;min-height:292px!important}.filters{grid-template-columns:repeat(2,minmax(0,1fr))!important}.results{max-height:36svh!important}.resultName{font-size:var(--text-large)!important}.nav button{min-height:38px!important}.mapActions button{min-width:40px!important;min-height:40px!important}}
 
 
-/* DipMapper v23.8.1 mobile-first layout: input first, anchored map second, type and top findings side by side. */
+/* DipMapper v23.8.2 mobile-first layout: input first, anchored map second, type and top findings side by side. */
 :root{--text-small:12px;--text-base:15px;--text-large:24px;--font-body:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--mobileTop:86px;}
 html,body,button,input,select,textarea{font-family:var(--font-body)!important;font-size:var(--text-base)!important;font-weight:400!important;}
 .eyebrow,.brandSub,.chip,.muted,.resultMeta,.k,.photoTag,.photoSrc,.legend,.statusText{font-size:var(--text-small)!important;}
@@ -436,7 +436,7 @@ b,strong,.primary,.accent{font-weight:650!important;}
 
 
 /* ============================================================
-   DipMapper v23.8.1 — professional redesign
+   DipMapper v23.8.2 — professional redesign
    CSS-only re-skin via design tokens + component polish.
    JS logic, layout structure, and click handlers are unchanged.
    ============================================================ */
@@ -549,7 +549,7 @@ body.dm-favs-only #results .result:not(.dm-fav){display:none!important}
 }
 
 
-/* v23.8.1 — no-blink smoothing + beach start window */
+/* v23.8.2 — no-blink smoothing + beach start window */
 @keyframes dmFade{from{opacity:0}to{opacity:1}}
 .result .thumb img{animation:dmFade .4s ease both}
 .tile{animation:dmFade .35s ease both}
@@ -569,7 +569,7 @@ body.dm-favs-only #results .result:not(.dm-fav){display:none!important}
 .dmSurprise .dmHeart{display:none}
 
 
-/* v23.8.1 — map layers (no tile blink), heart, beach hero photo, recent/saved filters */
+/* v23.8.2 — map layers (no tile blink), heart, beach hero photo, recent/saved filters */
 #map{position:relative}
 #map .dmTiles,#map .dmOverlay{position:absolute;inset:0;width:100%;height:100%}
 #map .dmTiles{pointer-events:none;z-index:0}
@@ -593,7 +593,7 @@ body.dm-favs-only #results .result:not(.dm-fav){display:none!important}
 body.dm-recent-only #results .result:not(.dm-recent){display:none!important}
 
 
-/* v23.8.1 — results below map + weather alert */
+/* v23.8.2 — results below map + weather alert */
 .dmBelow{margin:18px 0 0;border:1px solid var(--line);background:rgba(255,255,250,.9);border-radius:18px;box-shadow:0 20px 60px rgba(7,52,59,.08);padding:16px 18px}
 .dmBelowHead{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}
 .dmBelowTitle{font-weight:800;font-size:19px;color:var(--ink)}
@@ -606,7 +606,7 @@ body.dm-recent-only #results .result:not(.dm-recent){display:none!important}
 #map .dmWeatherWarn .dmwTxt b{font-weight:800;color:#8a3d0a}
 
 
-/* v23.8.1 — button styling, robust heart, mobile to the max */
+/* v23.8.2 — button styling, robust heart, mobile to the max */
 .dm-heart{z-index:30!important;pointer-events:auto!important}
 .dmActions{display:flex;gap:8px;margin-top:10px}
 .dmBtn{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:8px 10px;border:1px solid var(--line);background:#fff;border-radius:10px;font:inherit;font-size:13px;font-weight:600;color:var(--ink);cursor:pointer;min-height:38px;transition:background .12s ease,transform .12s ease}
@@ -643,7 +643,7 @@ body.dm-recent-only #results .result:not(.dm-recent){display:none!important}
 }
 
 
-/* v23.8.1 — full-screen start photo, bold heart, pro finish */
+/* v23.8.2 — full-screen start photo, bold heart, pro finish */
 .gate.dmHasBg{background:linear-gradient(160deg,#0a6c7d 0%,#0e8f8a 55%,#10a39a 100%)}
 .dmGateFull{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0;transition:opacity .8s ease}
 .dmGateFull.dmLoaded{opacity:1}
@@ -670,14 +670,14 @@ body.dm-recent-only #results .result:not(.dm-recent){display:none!important}
 }
 
 
-/* v23.8.1 — heart spacing + whole-card click */
+/* v23.8.2 — heart spacing + whole-card click */
 .result[data-open]{cursor:pointer}
 
 .dm-heart{top:8px;right:8px}
 #dmBelow .result:hover{cursor:pointer}
 
 
-/* v23.8.1 — feature chip colors + golden-hour badge */
+/* v23.8.2 — feature chip colors + golden-hour badge */
 .chip.star{background:linear-gradient(90deg,#fff6da,#ffe9a0)!important;color:#7a5600!important;border-color:#f0cf76!important;font-weight:800}
 .chip.open{background:#e7f8ee!important;color:#0b7a45!important;border-color:#a6e3c1!important;font-weight:700}
 .chip.closed{background:#fdeceb!important;color:#b23330!important;border-color:#f2b7b4!important;font-weight:700}
@@ -695,10 +695,10 @@ body.dm-recent-only #results .result:not(.dm-recent){display:none!important}
 @media(max-width:760px){#map .dmGolden{max-width:80%;font-size:12px;bottom:10px;left:10px}}
 
 
-/* v23.8.1 — parking-full warning */
+/* v23.8.2 — parking-full warning */
 .chip.parkfull{background:#fdeceb!important;color:#b01e1a!important;border-color:#f0a9a5!important;font-weight:800}
 
-/* v23.8.1 — bigger logo, resets on click */
+/* v23.8.2 — bigger logo, resets on click */
 .brand{cursor:pointer}
 .brand:hover .brandLogo{filter:drop-shadow(0 12px 26px rgba(7,52,59,.26))}
 @media(max-width:760px){.brandLogo{width:180px!important}}
@@ -881,7 +881,7 @@ h1{font-weight:800}
 }
 
 
-/* v23.8.1 - cover stays up as a loading screen while locating */
+/* v23.8.2 - cover stays up as a loading screen while locating */
 #gateLoc.dmBusy{opacity:.92;cursor:progress;position:relative;padding-left:44px!important}
 #gateLoc.dmBusy::before{content:"";position:absolute;left:19px;top:50%;width:15px;height:15px;margin-top:-7.5px;
   border:2.5px solid rgba(255,255,255,.42);border-top-color:#fff;border-radius:50%;animation:dmSpin .7s linear infinite}
@@ -900,14 +900,14 @@ h1{font-weight:800}
 @media print{.dmAd{display:none}}
 
 
-/* v23.8.1 - swim guides teaser */
+/* v23.8.2 - swim guides teaser */
 .guides{background:#fffefa;border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:16px auto;max-width:1180px;box-shadow:0 1px 2px rgba(7,52,59,.05),0 8px 22px rgba(7,52,59,.05)}
 .guides h2{font-size:18px;letter-spacing:-.02em;margin:0 0 6px}
 .guides p{margin:0;font-size:14.5px;line-height:1.65}
 .guides a{color:var(--brand);font-weight:600}
 
 
-/* v23.8.1 - entry-requirement notice (factual, from map data / region) */
+/* v23.8.2 - entry-requirement notice (factual, from map data / region) */
 .chip.idreq{background:#fdecec;border-color:#f3b9b9;color:#9a2b2b;font-weight:700}
 .chip.idnote{background:#fff5e6;border-color:#f3d79a;color:#8a5a12;font-weight:650}
 .dmEntryBar{display:flex;gap:10px;align-items:flex-start;margin:12px 0;padding:12px 14px;border-radius:12px;
@@ -1030,7 +1030,7 @@ html body #map .marker.dmSel::after{content:"";position:absolute;inset:-9px;bord
 @media (min-width:761px){#dmMoreFilters{display:inline-block}}
 
 
-/* v23.8.1 map attribution (required by the OpenStreetMap tile policy) */
+/* v23.8.2 map attribution (required by the OpenStreetMap tile policy) */
 html body #map .dmAttr{position:absolute;right:0;bottom:0;z-index:30;background:rgba(255,255,255,.86);
   font:500 11px/1.4 var(--font,system-ui);color:#33545b;padding:3px 8px;border-top-left-radius:8px;pointer-events:auto}
 html body #map .dmAttr a{color:#0A6F6A;text-decoration:none}
@@ -1063,7 +1063,7 @@ html body #map .dmAttr a:hover{text-decoration:underline}
 }
 
 
-/* v23.8.1 section jumps land below the pinned header */
+/* v23.8.2 section jumps land below the pinned header */
 html body #resultsPanel,html body #mapPanel,html body #how{scroll-margin-top:calc(var(--dmHead,0px) + 10px)}
 
 /* ===== v22.2 dense list (split layout only; phones untouched; nothing hidden) ===== */
@@ -1577,7 +1577,7 @@ window.DM_ADS={client:'ca-pub-2870312071451207',header:'',mid:'',list:'',footer:
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <noscript></noscript>
-</head><body data-version="v23.8.1">
+</head><body data-version="v23.8.2">
 <div class="animatedWaterfront" aria-hidden="true"><span></span><span></span><span></span></div><div class="domainHalo" aria-hidden="true"><img data-dmlogo alt=""></div><div id="dmBoot" role="img" aria-label="DipMapper — Find your next swim"><div class="wGlow"></div><div class="wSunBox"><div class="wRays"></div><div class="wSun"></div></div><svg class="wBird" viewBox="0 0 34 14" aria-hidden="true"><path d="M2 9 Q9 1 17 8 Q25 1 32 9"/></svg><svg class="wBird b2" viewBox="0 0 34 14" aria-hidden="true"><path d="M2 9 Q9 1 17 8 Q25 1 32 9"/></svg><div class="wSea" aria-hidden="true"><svg class="l1" viewBox="0 0 2400 200" preserveAspectRatio="none"><path d="M0 60 C150 30 450 30 600 60 C750 90 1050 90 1200 60 C1350 30 1650 30 1800 60 C1950 90 2250 90 2400 60 V200 H0Z"/></svg><svg class="l2" viewBox="0 0 2400 200" preserveAspectRatio="none"><path d="M0 70 C200 40 400 40 600 70 C800 100 1000 100 1200 70 C1400 40 1600 40 1800 70 C2000 100 2200 100 2400 70 V200 H0Z"/></svg><svg class="l3" viewBox="0 0 2400 200" preserveAspectRatio="none"><path d="M0 80 C150 55 450 55 600 80 C750 105 1050 105 1200 80 C1350 55 1650 55 1800 80 C1950 105 2250 105 2400 80 V200 H0Z"/></svg><i class="wGlint" style="left:18%;animation-delay:.2s"></i><i class="wGlint" style="left:41%;bottom:15vh;animation-delay:1.1s"></i><i class="wGlint" style="left:67%;animation-delay:.6s"></i><i class="wGlint" style="left:84%;bottom:12vh;animation-delay:1.7s"></i></div><i class="wBub" style="left:14%;animation-delay:.1s"></i><i class="wBub" style="left:27%;width:7px;height:7px;animation-delay:1.3s"></i><i class="wBub" style="left:58%;width:13px;height:13px;animation-delay:.7s"></i><i class="wBub" style="left:73%;width:8px;height:8px;animation-delay:2s"></i><i class="wBub" style="left:89%;animation-delay:1.6s"></i><div class="wStage"><div class="wCardWrap"><i class="wRipple"></i><i class="wRipple r2"></i><div class="wCard"><img class="wLogo" id="dmBootLogo" alt="DipMapper"></div></div><p class="wTag">Where shall we swim today?</p><p class="wSub"><span>🏊 Swim</span><span>🛶 Paddle</span><span>🤿 Dive</span><span>⛵ Sail</span></p><div class="wBar"><i></i></div><p class="wHint">Finding the best water near you…</p></div></div>
 <script>/* v22.20 welcome screen: shown for at least 2.4 s from the moment it appears (not from page start), lifts only when the start screen is complete; tap to skip once ready */
 (function(){var B=document.getElementById('dmBoot');if(!B)return;try{document.getElementById('dmBootLogo').src=window.DM_LOGO}catch(e){}
@@ -1686,7 +1686,7 @@ window.DM_ADS={client:'ca-pub-2870312071451207',header:'',mid:'',list:'',footer:
 <blockquote class="dmAbQuote">“Somebody finds a place that suits them and is glad they went.”</blockquote>
 <p>I am ambitious about how useful DipMapper could become. But the result I care about is still simple: somebody finds a place that suits them and is glad they went.</p>
 </div>
-</article></section><section class="legal"><h2>Legal and data protection</h2><p>Location is optional and processed in the browser for nearby search. External providers may receive coordinates or destination text when maps, weather, photos, routes or review links are used.</p><div class="legalLinks"><button id="privacySettings">Privacy settings</button><button data-legal="privacy">Privacy</button><button data-legal="cookies">Cookies</button><button data-legal="terms">Terms</button><button data-legal="disclaimer">Disclaimer</button><button data-legal="safety">Safety</button><button data-legal="advertising">Advertising</button><button data-legal="imprint">Imprint</button><button data-legal="sources">Sources</button></div><p class="dmVer">DipMapper version 23.8.1</p></section></main>
+</article></section><section class="legal"><h2>Legal and data protection</h2><p>Location is optional and processed in the browser for nearby search. External providers may receive coordinates or destination text when maps, weather, photos, routes or review links are used.</p><div class="legalLinks"><button id="privacySettings">Privacy settings</button><button data-legal="privacy">Privacy</button><button data-legal="cookies">Cookies</button><button data-legal="terms">Terms</button><button data-legal="disclaimer">Disclaimer</button><button data-legal="safety">Safety</button><button data-legal="advertising">Advertising</button><button data-legal="imprint">Imprint</button><button data-legal="sources">Sources</button></div><p class="dmVer">DipMapper version 23.8.2</p></section></main>
 <div class="drawerBack" id="back"></div><aside class="drawer" id="drawer"><div class="drawerHead"><div><div class="eyebrow" id="cardMeta">Travel card</div><h2 id="cardTitle">Place</h2></div><div><button id="copy">Copy link</button><button class="primary" id="close">Close</button></div></div><div class="drawerBody" id="cardBody"></div></aside>
 <div class="lightbox" id="light"><div class="lightboxTop"><h2 id="lightTitle">Photo</h2><button class="primary" id="lightClose">Close photo</button></div><div class="lightboxFrame"><img id="lightImg" alt=""></div><div class="lightCaption" id="lightCap"></div></div>
 <div class="modalBack" id="modal"><div class="modal"><div style="display:flex;justify-content:space-between;gap:12px;align-items:center"><h2 id="modalTitle">Legal</h2><button class="primary" id="modalClose">Close</button></div><div id="modalBody" style="margin-top:12px"></div></div></div>
@@ -2013,7 +2013,7 @@ function zoomForRadius(km,lat=(state.center?.[0]||state.mapCenter?.[0]||0)){
 function radiusPixels(km,lat,z){const cos=Math.max(.28,Math.cos(lat*Math.PI/180));const mpp=156543.03392*cos/(2**z);return Math.max(10,(Number(km||5)*1000)/mpp)}
 function setMapToSearchRadius(){if(state.center){state.mapCenter=state.center.slice();state.zoom=zoomForRadius(Number($('#radius').value||5),state.center[0])}}
 
-/* v23.8.1 map tiles: OSM tile policy compliance + automatic fallback */
+/* v23.8.2 map tiles: OSM tile policy compliance + automatic fallback */
 var DM_TILE_SRC={
  osm:{u:function(z,x,y){return 'https://tile.openstreetmap.org/'+z+'/'+x+'/'+y+'.png'},
       a:'\u00a9 <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'},
@@ -2413,7 +2413,7 @@ document.addEventListener('keydown',e=>{const el=e.target.closest?.('.marker[dat
 document.addEventListener('click',e=>{const ph=e.target.closest('[data-photo]');if(ph){$('#lightImg').src=ph.dataset.photo;$('#lightTitle').textContent=ph.dataset.title;$('#lightCap').textContent=ph.dataset.cap;els.light.classList.add('open');return}const l=e.target.closest('[data-legal]');if(l){openLegal(l.dataset.legal);return}const s=e.target.closest('[data-scroll]');if(s){document.getElementById(s.dataset.scroll)?.scrollIntoView({behavior:'smooth'});return}});
 els.results.addEventListener('click',e=>{const b=e.target.closest('[data-open]');if(!b)return;e.preventDefault();e.stopPropagation();openPlaceById(b.dataset.open,'open-button-local')});els.results.addEventListener('keydown',e=>{const b=e.target.closest('[data-open]');if(!b)return;if(e.key==='Enter'||e.key===' '){e.preventDefault();openPlaceById(b.dataset.open,'open-button-key-local')}});
 
-// v23.8.1 mobile scroll safety: do not open cards while the user is scrolling the result list.
+// v23.8.2 mobile scroll safety: do not open cards while the user is scrolling the result list.
 els.results.addEventListener('touchstart',e=>{const b=e.target.closest('.result');if(!b)return;recordTapStart(b,e)},{passive:true});
 els.results.addEventListener('touchmove',e=>{tapState.armed=false},{passive:true});
 els.map.addEventListener('touchstart',e=>{const m=e.target.closest('[data-mid]');if(!m)return;recordTapStart(m,e)},{passive:true});
@@ -2427,7 +2427,7 @@ function isMobileDevice(){return matchMedia('(max-width: 900px), (pointer: coars
 function applyDeviceMode(){document.documentElement.classList.toggle('mobileApp',isMobileDevice());document.body.classList.toggle('appMode',matchMedia('(display-mode: standalone)').matches||navigator.standalone===true);if(!applyDeviceMode._done){applyDeviceMode._done=1;if(isMobileDevice()&&$('#radius').value==='30'&&!localStorage.getItem('dm_radius'))$('#radius').value='5'}setTimeout(drawMap,80)}
 addEventListener('resize',applyDeviceMode,{passive:true});applyDeviceMode();setTimeout(function(){try{mountAds()}catch(e){}},1200);setTimeout(function(){try{dmAdCheck()}catch(e){}},3500);try{const _sp=new URLSearchParams(location.search);const _la=parseFloat(_sp.get('lat')),_lo=parseFloat(_sp.get('lon'));if(isFinite(_la)&&isFinite(_lo)){const _nm=(_sp.get('name')||'this spot').slice(0,80);gateOff();state.center=[_la,_lo];state.mapCenter=state.center.slice();state.zoom=zoomForRadius(Number($('#radius').value||5),_la);state.label=_nm;const _d=$('#dest');if(_d)_d.value=_nm;setTimeout(function(){try{seedNearbyPacks();render();drawMap();backgroundScan()}catch(e){}},60);}else{const _qp=_sp.get('q');if(_qp&&_qp.trim()){const _d=$('#dest'),_g=$('#gateDest');if(_d)_d.value=_qp.trim();if(_g)_g.value=_qp.trim();setTimeout(function(){try{search()}catch(e){}},60)}}}catch(e){}try{window.dmAppBoot&&window.dmAppBoot()}catch(e){}
 
-// DipMapper v23.8.1 - explicit card opening, 10 second visible search lifecycle, repeat-visit privacy/location skip
+// DipMapper v23.8.2 - explicit card opening, 10 second visible search lifecycle, repeat-visit privacy/location skip
 const SEARCH_VISIBLE_MS=10000;
 state.searchCutoffTimer=null;state.scanFrozen=false;state.lastOriginRestored=false;
 function saveLastOrigin(){try{if(state.center){localStorage.setItem('dm_seen','1');localStorage.setItem('dm_last_origin',JSON.stringify({lat:state.center[0],lon:state.center[1],label:state.label||'last search',radius:$('#radius').value||'5',t:Date.now()}));}}catch(e){}}
@@ -2468,7 +2468,7 @@ function bootV203(){
 
 bootV203();
 
-// v23.8.1 hardening: guarded taps, scroll-safe mobile cards, sticky close button, full mobile filters, three-size typography
+// v23.8.2 hardening: guarded taps, scroll-safe mobile cards, sticky close button, full mobile filters, three-size typography
 (function(){
  const boot=()=>{
   document.body.classList.add('dm-v20');
@@ -2484,7 +2484,7 @@ bootV203();
 
 
 
-// v23.8.1 final hardening: explicit open only, map-dot open, 10s no-flicker search window.
+// v23.8.2 final hardening: explicit open only, map-dot open, 10s no-flicker search window.
 (function(){
   const openId=function(id,source){
     if(!id)return false;
@@ -2516,7 +2516,7 @@ bootV203();
 
 
 
-// v23.8.1 reliability polish: freeze flicker after 10s, deliberate Open button, and reset interaction locks on close.
+// v23.8.2 reliability polish: freeze flicker after 10s, deliberate Open button, and reset interaction locks on close.
 (function(){
   const stopRowAccident=function(e){
     const row=e.target && e.target.closest && e.target.closest('.result');
@@ -2540,7 +2540,7 @@ bootV203();
 
 
 
-/* DipMapper v23.8.1 final interaction controller: no accidental list opens, direct map-dot opens, stable after repeated cards */
+/* DipMapper v23.8.2 final interaction controller: no accidental list opens, direct map-dot opens, stable after repeated cards */
 (function(){
   const $ = (s,r=document)=>r.querySelector(s);
   const $$ = (s,r=document)=>Array.from(r.querySelectorAll(s));
@@ -2584,7 +2584,7 @@ bootV203();
 
 
 
-/* DipMapper v23.8.1 - icon filters, outside-card close, persistent settings */
+/* DipMapper v23.8.2 - icon filters, outside-card close, persistent settings */
 (function(){
   const ICON_LABELS={
     all:['🌊','All'], beach:['🏖','Beaches'], pool:['🏊','Pools'], bath:['≈','Bathing places'], thermal:['♨','Thermal'], wild:['〰','Wild swim'], indoor:['⌂','Indoor'], outdoor:['☀','Outdoor'], free:['0','Free'], hours:['◷','Hours'], quiet:['◌','Quiet now'], parking:['P','Parking ready'], family:['♡','Good with kids'], supervised:['◎','Supervised'], women:['♀','Women-friendly'], food:['🍴','Food'], wc:['WC','Toilets'], accessible:['♿','Accessible'], sauna:['♨','Sauna'], waterok:['💧','Water OK']
@@ -2634,7 +2634,7 @@ bootV203();
 })();
 
 
-/* DipMapper v23.8.1 mobile-first control layer: stable 10-second search, compact mobile cards, no flicker after freeze. */
+/* DipMapper v23.8.2 mobile-first control layer: stable 10-second search, compact mobile cards, no flicker after freeze. */
 (function(){
   const oldProgress = window.progress || progress;
   const allowedAfterFreeze = /^(Ready|Spots ready|Top 5 ready|Search radius updated|Re-scanning|Choose map point|Destination|Search manually|Waiting|Using location)/i;
@@ -2666,10 +2666,10 @@ bootV203();
 
 </script>
 
-<!-- v23.8.1 validation: animated waterfront, three-size typography, filter icons, persistent cookie and location settings, outside-card close. -->
+<!-- v23.8.2 validation: animated waterfront, three-size typography, filter icons, persistent cookie and location settings, outside-card close. -->
 
 <script>
-/* DipMapper features v23.8.1 — full-screen gate photo · bold heart · Directions · Share · Surprise · Recent · consent · app-ready */
+/* DipMapper features v23.8.2 — full-screen gate photo · bold heart · Directions · Share · Surprise · Recent · consent · app-ready */
 (function(){
   try{
     function R(){return document.getElementById('results');}
@@ -4087,6 +4087,8 @@ html.dmPhone body #mapPanel{align-self:stretch!important;width:auto!important;ma
 /* v23.8.1 phone: the search card, the map and the lists below share one width in every mode and on every phone size */
 @media (max-width:760px){html body .shell>#resultsPanel>.pad,html body .shell>.pad,html body .shell #dmBelow{align-self:stretch!important;width:auto!important;max-width:none!important;min-width:0!important}}
 html.dmPhone body .shell>#resultsPanel>.pad,html.dmPhone body .shell #dmBelow{align-self:stretch!important;width:auto!important;max-width:none!important;min-width:0!important}
+html body #map .dmZoneLeg i.a{background:repeating-linear-gradient(45deg,rgba(214,140,10,.55) 0 2px,rgba(214,140,10,.1) 2px 5px)!important;border-color:rgba(214,140,10,.65)!important}
+html body #map .dmZoneLbl.restricted{border-color:rgba(214,140,10,.6)!important;color:#8a5a00!important}
 </style>
 <script>
 /* ================= v23.1: verified provider directory (pilot: Lake Zurich + Swiss surf & kite) =================
@@ -5760,7 +5762,7 @@ window.DM_DIVE={
  function zoneQuery(c,R){var a='(around:'+R+','+c[0]+','+c[1]+')';return '[out:json][timeout:20];(way["seamark:type"="restricted_area"]'+a+';relation["seamark:type"="restricted_area"]'+a+';way["natural"="water"]["boat"="no"]'+a+';relation["natural"="water"]["boat"="no"]'+a+';way["natural"="water"]["motorboat"="no"]'+a+';relation["natural"="water"]["motorboat"="no"]'+a+';nwr["swimming"="no"]'+a+';nwr["bathing"="no"]'+a+';way["leisure"="nature_reserve"]["boat"="no"]'+a+';node["amenity"="ferry_terminal"]'+a+';);out geom 160;'}
  function loadZones(){var c=state.center;if(!c||typeof overpassFast!=='function')return;var k=c[0].toFixed(3)+','+c[1].toFixed(3);if(ZONES.key===k||ZONES.busy)return;if(ZONES.next&&ZONES.tries&&ZONES.tries.k===k&&Date.now()<ZONES.next)return;if(ZONES.wait!==k){ZONES.wait=k;clearTimeout(ZONES.tm);ZONES.tm=setTimeout(loadZones,A.mode==='swim'?3500:600);return}ZONES.busy=true;ZONES.key=k;
   /* v23.5: zones are static map data -> cached for 30 days; a failed query is retried (it used to be given up for good) */
-  var ck='dm_zones2_'+(Math.round(c[0]*50)/50).toFixed(2)+'_'+(Math.round(c[1]*50)/50).toFixed(2),cz=lsGet(ck);if(cz&&cz.t&&Date.now()-cz.t<30*864e5&&cz.l){ZONES.busy=false;ZONES.list=cz.l;ZONES.src='cache';paintLayers(true);return}
+  var ck='dm_zones3_'+(Math.round(c[0]*50)/50).toFixed(2)+'_'+(Math.round(c[1]*50)/50).toFixed(2),cz=lsGet(ck);if(cz&&cz.t&&Date.now()-cz.t<30*864e5&&cz.l){ZONES.busy=false;ZONES.list=cz.l;ZONES.src='cache';paintLayers(true);return}
   var tries=ZONES.tries&&ZONES.tries.k===k?ZONES.tries.n:0,R0=Math.max(8000,Math.min(20000,(A.searched||15)*1000)),Rq=tries>=1?Math.min(R0,8000):R0;
   overpassFast(zoneQuery(c,Rq),20000).then(function(d){if(!d||!d.elements||(d._tried&&d._fails>=d._tried))throw new Error('no data');ZONES.busy=false;ZONES.tries=null;var L=[];((d&&d.elements)||[]).forEach(function(e){var t=e.tags||{};var kind=zoneKind(t);if(!kind)return;
     var rings=[];if(e.geometry)rings.push(e.geometry.map(function(p){return [p.lat,p.lon]}));if(e.members)e.members.forEach(function(m){if(m.role!=='inner'&&m.geometry)rings.push(m.geometry.map(function(p){return [p.lat,p.lon]}))});
@@ -5775,9 +5777,11 @@ window.DM_DIVE={
    if(/swimming|bathing/.test(c))return 'bathzone';
    if(/nature_reserve|bird_sanctuary|game_reserve|seal_sanctuary|protected/.test(c)||/entry_restricted/.test(r))return 'protected';
    if(/no_motor|no_power/.test(r))return 'nomotor';
-   return ''}
+   return 'restricted'}/* v23.8.2: every other OSM restricted area is drawn again (as in 23.6), with its own rule as label */
   if(t.boat==='no')return 'noboat';if(t.motorboat==='no')return 'nomotor';if(t.swimming==='no'||t.bathing==='no')return 'noswim';if(t.amenity==='ferry_terminal')return 'pier';return ''}
- var ZL={noentry:['No entry','dive paddle sail boat swim'],noswim:['No swimming','swim'],nodive:['No diving','dive'],bathzone:['Bathing zone — keep out','paddle sail boat'],protected:['Protected area','paddle sail boat'],noboat:['No boats','paddle sail boat'],nomotor:['No motorboats','boat'],pier:['No diving within 100 m of piers','dive']};
+ /* v23.8.2: no-boat areas and every boat rule are back on the water in every mode (as in 23.6); the 23.7 clutter fix stays: at most 3 labels, never a generic one */
+ var ZL={noentry:['No entry','swim paddle dive sail boat raft special'],noswim:['No swimming','swim dive'],nodive:['No diving','dive'],bathzone:['Bathing zone — no boats','swim paddle dive sail boat raft special'],protected:['Protected area','swim paddle dive sail boat raft special'],noboat:['No boats','swim paddle dive sail boat raft special'],nomotor:['No motorboats','swim paddle dive sail boat raft special'],restricted:['Boat rules','swim paddle dive sail boat raft special'],pier:['No diving within 100 m of piers','dive']};
+ function zoneText(zn){if(zn.kind!=='restricted')return ZL[zn.kind][0];var r=String(zn.restr||'').toLowerCase();return /anchor/.test(r)?'No anchoring':/wake/.test(r)?'No wake':/speed/.test(r)?'Speed limit':/fish/.test(r)?'No fishing':'Boat rules'}
  function inZurichRule(lat,lon){return D(lat,lon,47.27,8.65)<=18}
  var layerSig='',CLV={};
  function paintLayers(force){var mp=document.getElementById('map');if(!mp)return;var r=mp.getBoundingClientRect();if(!r.width)return;var c=state.mapCenter||state.center;if(!c||typeof project!=='function')return;var z=state.zoom,cp=project(c[0],c[1],z),left=cp[0]-r.width/2,top=cp[1]-r.height/2;
@@ -5789,12 +5793,12 @@ window.DM_DIVE={
   var h='<defs><pattern id="dmHatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" fill="rgba(208,72,60,.10)"/><line x1="0" y1="0" x2="0" y2="7" stroke="rgba(208,72,60,.55)" stroke-width="2"/></pattern><pattern id="dmHatchA" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" fill="rgba(232,163,23,.10)"/><line x1="0" y1="0" x2="0" y2="7" stroke="rgba(214,140,10,.55)" stroke-width="2"/></pattern><pattern id="dmHatchB" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" fill="rgba(37,99,235,.07)"/><line x1="0" y1="0" x2="0" y2="7" stroke="rgba(37,99,235,.4)" stroke-width="1.6"/></pattern><pattern id="dmHatchG" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" fill="rgba(22,128,61,.07)"/><line x1="0" y1="0" x2="0" y2="7" stroke="rgba(22,128,61,.4)" stroke-width="1.6"/></pattern></defs>',labels='';
   var mode=A.mode,lc=[],drawnK={};ZONES.list.forEach(function(zn){var z0=ZL[zn.kind];if(!z0||z0[1].split(' ').indexOf(mode)<0)return;if(zn.kind==='pier'&&!inZurichRule(zn.pt[0],zn.pt[1]))return;
    if(zn.kind==='pier'&&zn.pt){drawnK.pier=1;var p=P(zn.pt[0],zn.pt[1]),p2=P(zn.pt[0]+0.0009,zn.pt[1]);var rr=Math.max(4,Math.abs(p2[1]-p[1]));h+='<circle cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="'+rr.toFixed(1)+'" fill="url(#dmHatchA)" stroke="rgba(214,140,10,.8)" stroke-width="1.2"/>';return}
-   zn.rings.forEach(function(ring){if(ring.length<3)return;var pts=ring.map(function(q){var p=P(q[0],q[1]);return p[0].toFixed(1)+','+p[1].toFixed(1)}).join(' ');drawnK[zn.kind]=1;var zc=zn.kind==='bathzone'?['dmHatchB','rgba(37,99,235,.7)']:zn.kind==='protected'?['dmHatchG','rgba(22,128,61,.7)']:['dmHatch','rgba(208,72,60,.8)'];h+='<polygon points="'+pts+'" fill="url(#'+zc[0]+')" stroke="'+zc[1]+'" stroke-width="1.2" stroke-dasharray="5 3"/>'});
+   zn.rings.forEach(function(ring){if(ring.length<3)return;var pts=ring.map(function(q){var p=P(q[0],q[1]);return p[0].toFixed(1)+','+p[1].toFixed(1)}).join(' ');drawnK[zn.kind]=1;var zc=zn.kind==='bathzone'?['dmHatchB','rgba(37,99,235,.7)']:zn.kind==='protected'?['dmHatchG','rgba(22,128,61,.7)']:zn.kind==='restricted'?['dmHatchA','rgba(214,140,10,.75)']:['dmHatch','rgba(208,72,60,.8)'];h+='<polygon points="'+pts+'" fill="url(#'+zc[0]+')" stroke="'+zc[1]+'" stroke-width="1.2" stroke-dasharray="5 3"/>'});
    /* v23.7: a label only for zones big enough to hold it — at most 3, never overlapping each other or a pin */
    var bb=null;zn.rings.forEach(function(ring){ring.forEach(function(q){var p=P(q[0],q[1]);if(!bb)bb=[p[0],p[1],p[0],p[1]];else{bb[0]=Math.min(bb[0],p[0]);bb[1]=Math.min(bb[1],p[1]);bb[2]=Math.max(bb[2],p[0]);bb[3]=Math.max(bb[3],p[1])}})});
-   if(bb&&bb[2]-bb[0]>=90&&bb[3]-bb[1]>=36)lc.push({k:zn.kind,t:z0[0],x:(bb[0]+bb[2])/2,y:(bb[1]+bb[3])/2,a:(bb[2]-bb[0])*(bb[3]-bb[1]),n:zn.name,id:zn.id})});
+   if(bb&&bb[2]-bb[0]>=90&&bb[3]-bb[1]>=36)lc.push({k:zn.kind,t:zoneText(zn),x:(bb[0]+bb[2])/2,y:(bb[1]+bb[3])/2,a:(bb[2]-bb[0])*(bb[3]-bb[1]),n:zn.name,id:zn.id})});
   var pinsXY=[].slice.call(mp.querySelectorAll('.dmActPin,.dmOverlay .marker')).map(function(m){return [parseFloat(m.style.left),parseFloat(m.style.top)]});var took=[];
-  lc.sort(function(a,b){return b.a-a.a}).forEach(function(L){if(took.length>=3)return;if(L.x<40||L.x>r.width-40||L.y<20||L.y>r.height-20)return;if(took.some(function(q){return Math.abs(q.x-L.x)<130&&Math.abs(q.y-L.y)<30||q.t===L.t&&Math.abs(q.x-L.x)<260&&Math.abs(q.y-L.y)<160}))return;if(pinsXY.some(function(q){return Math.abs(q[0]-L.x)<60&&Math.abs(q[1]-21-L.y)<30}))return;took.push(L);
+  lc.sort(function(a,b){var pa=a.k==='restricted'||a.k==='bathzone'?1:0,pb=b.k==='restricted'||b.k==='bathzone'?1:0;return pa-pb||b.a-a.a}).forEach(function(L){if(took.length>=3)return;if(L.x<40||L.x>r.width-40||L.y<20||L.y>r.height-20)return;if(took.some(function(q){return Math.abs(q.x-L.x)<130&&Math.abs(q.y-L.y)<30||q.t===L.t&&Math.abs(q.x-L.x)<260&&Math.abs(q.y-L.y)<160}))return;if(pinsXY.some(function(q){return Math.abs(q[0]-L.x)<60&&Math.abs(q[1]-21-L.y)<30}))return;took.push(L);
    labels+='<span class="dmZoneLbl '+L.k+'" style="left:'+L.x.toFixed(0)+'px;top:'+L.y.toFixed(0)+'px" title="'+E(L.t+(L.n?' — '+L.n:'')+' · OpenStreetMap '+L.id)+'">⦸ '+E(L.t)+'</span>'});
   if(svg._h!==h){svg._h=h;svg.innerHTML=h}
   var lay=mp.querySelector('.dmTempLayer');if(!lay){lay=document.createElement('div');lay.className='dmTempLayer';mp.appendChild(lay)}
@@ -5810,7 +5814,7 @@ window.DM_DIVE={
     else if(wt&&wt.c!=null)out+='<span class="dmTb '+tempCls(wt.c)+'" style="left:'+p[0].toFixed(0)+'px;top:'+(p[1]-30).toFixed(0)+'px" title="'+E(wt.how)+'">'+(wt.est?'≈':'')+wt.c+'°<small>'+(wt.est?'est.':'model')+'</small></span>'})}
   if(false)(window.DM_ICE_LAKES||[]).forEach(function(L){var p=P(L.lat,L.lon);if(p[0]<0||p[0]>r.width||p[1]<0||p[1]>r.height)return;out+='<span class="dmIceLbl ice-'+L.k+'" style="left:'+p[0].toFixed(0)+'px;top:'+(p[1]+18).toFixed(0)+'px" title="'+E(L.n+': '+(ICEK[L.k]||ICEK.contact)[0]+' — '+L.auth)+'">'+E(L.n.split(' (')[0].split(' / ')[0])+'<i>'+E((ICEK[L.k]||ICEK.contact)[0])+'</i></span>'});
   if(lay._h!==out){lay._h=out;lay.innerHTML=out}
-  var leg=mp.querySelector('.dmZoneLeg');var anyZ=svg.querySelector('polygon,circle');if(anyZ){if(!leg){leg=document.createElement('div');leg.className='dmZoneLeg';mp.appendChild(leg)}var kk=Object.keys(drawnK),red=kk.filter(function(k){return !/bathzone|protected/.test(k)}).map(function(k){return ZL[k][0].replace(' — keep out','')});var lh=(red.length?'<i></i>'+E(red.slice(0,2).join(' · ')):'')+(drawnK.bathzone?'<i class="b"></i>Bathing zones':'')+(drawnK.protected?'<i class="g"></i>Protected':'')+' <small>OpenStreetMap'+(mode==='dive'&&inZurichRule(state.center[0],state.center[1])?' · piers: Kanton Zürich':'')+'</small>';if(leg._h!==lh){leg._h=lh;leg.innerHTML=lh}}else if(leg)leg.remove()}
+  var leg=mp.querySelector('.dmZoneLeg');var anyZ=svg.querySelector('polygon,circle');if(anyZ){if(!leg){leg=document.createElement('div');leg.className='dmZoneLeg';mp.appendChild(leg)}var kk=Object.keys(drawnK),red=kk.filter(function(k){return !/bathzone|protected|restricted/.test(k)}).map(function(k){return ZL[k][0].replace(' — keep out','')});var lh=(red.length?'<i></i>'+E(red.slice(0,2).join(' · ')):'')+(drawnK.bathzone?'<i class="b"></i>Bathing zones':'')+(drawnK.protected?'<i class="g"></i>Protected':'')+(drawnK.restricted?'<i class="a"></i>Boat rules':'')+' <small>OpenStreetMap'+(mode==='dive'&&inZurichRule(state.center[0],state.center[1])?' · piers: Kanton Zürich':'')+'</small>';if(leg._h!==lh){leg._h=lh;leg.innerHTML=lh}}else if(leg)leg.remove()}
  function swimTempTags(){var mp=document.getElementById('map');if(!mp)return;var lay=mp.querySelector('.dmSwimT');if(A.mode!=='swim'||typeof dmDisplayWaterTemp!=='function'){if(lay)lay.remove();return}
   if(!lay){lay=document.createElement('div');lay.className='dmSwimT';mp.appendChild(lay)}var placed=[],h='';var byId={};(state.results||[]).forEach(function(x){byId[String(x.id)]=x});var mr=mp.getBoundingClientRect(),rlb=null;try{var rl=mp.querySelector('.radiusLabel');if(rl){var q=rl.getBoundingClientRect();if(q.width)rlb=[q.left-mr.left-26,q.top-mr.top-34,q.right-mr.left+26,q.bottom-mr.top+6]}}catch(e){}
   mp.querySelectorAll('.dmOverlay .marker[data-mid]').forEach(function(m){var v=byId[m.getAttribute('data-mid')];if(!v)return;var x=parseFloat(m.style.left),y=parseFloat(m.style.top);if(!isFinite(x)||!isFinite(y))return;
@@ -6127,6 +6131,32 @@ window.DM_DIVE={
    var inp=document.getElementById('gateDest');if(inp&&!inp.value)inp.focus({preventScroll:true})});
   /* keep the picker in step when the mode changes elsewhere */
   setInterval(function(){var m=A.mode||'swim';var on=wrap.querySelector('button.on');if(on&&on.dataset.a===m)return;wrap.querySelectorAll('button').forEach(function(x){var o=x.dataset.a===m;x.classList.toggle('on',o);x.setAttribute('aria-checked',String(o))})},1200)})();
+ /* ================= v23.8.2: the start page opens at the start of every visit =================
+    Returning visitors used to land straight in their last search (since 22.x), so the start page never appeared.
+    Now it opens every time the site is opened or reloaded; the last search keeps loading behind it and
+    "Continue with <place>" returns to it with one tap. Deep links (?lat=…, ?q=…, #place) open directly, as before. */
+ (function(){var KEY='dm_start_seen';
+  function deep(){return /[?&](lat|lon|q|name|spot|place)=/.test(location.search)||(location.hash&&location.hash.length>1&&!/^#(about|how)$/.test(location.hash))}
+  function seen(){try{return sessionStorage.getItem(KEY)==='1'}catch(e){return true}}
+  function mark(){try{sessionStorage.setItem(KEY,'1')}catch(e){}}
+  function gate(){return document.querySelector('.gate')}
+  function hidden(g){return !g||g.classList.contains('hidden')||getComputedStyle(g).display==='none'}
+  function placeName(){try{var l=(typeof placeLabel==='function'?placeLabel():'')||state.label||'';return String(l).split(',')[0].replace(/ swim culture$/i,'').trim()}catch(e){return ''}}
+  function addResume(g){var box=g.querySelector('.gateBox .actions');if(!box)return;var nm=placeName();var b=document.getElementById('dmGateResume');
+   if(!nm||!state.center){if(b)b.remove();return}
+   if(!b){b=document.createElement('button');b.type='button';b.id='dmGateResume';b.className='primary';box.insertBefore(b,box.firstChild);
+    b.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();var g2=gate();if(g2){g2.classList.add('hidden');g2.style.display='none'}try{scrollTo({top:0,behavior:'instant'})}catch(err){}})}
+   b.textContent='Continue with '+nm}
+  function open(){var g=gate();if(!g)return;if(!hidden(g)){mark();return}var br=document.querySelector('.topbar .brand');if(br){br.click()}else{g.classList.remove('hidden');g.style.display=''}addResume(g);mark()}
+  var touched=false;['pointerdown','keydown','touchstart'].forEach(function(ev){addEventListener(ev,function(e){if(e.target&&e.target.closest&&e.target.closest('#dmBoot,#dmSplash'))return;touched=true},{capture:true,passive:true})});
+  /* decided once, when the opening scene ends: a start page already on screen means a first visit (nothing to do);
+     a hidden start page means the app restored the last search -> open the start page over it, unless the visitor is already busy */
+  function go(){if(deep())return mark();var g=gate();if(!g||!hidden(g))return mark();var t0=Date.now();
+   (function wait(){if(touched)return mark();var g2=gate();if(!g2||!hidden(g2))return mark();if(state.center)return open();if(Date.now()-t0>15000)return mark();setTimeout(wait,200)})()}
+  if(window.__dmBootDone)setTimeout(go,50);else document.addEventListener('dmbootdone',function(){setTimeout(go,50)});
+  /* keep the resume button in step whenever the start page is opened from the logo */
+  document.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('.topbar .brand'))setTimeout(function(){var g=gate();if(g&&!hidden(g))addResume(g)},60)},true);
+ })();
 
 
  /* v23.7: specials with an approximate position are placed exactly in the background, one lookup every 1.2 s (Nominatim policy), and remembered */
