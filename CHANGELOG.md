@@ -2,6 +2,13 @@
 
 All notable changes to DipMapper (dipmapper.com). Newest first. Versions follow `major.minor.patch`; the live version is printed at the bottom of every page.
 
+## 23.8.1 — 11 October 2026 · Repairs after your phone check
+- **Fixed (phone):** the search card above the map and the map card had different widths, depending on phone size and mode (e.g. on a 430 px phone in Paddle the search card ended 41 px before the map; in Swim the map ended 20 px short on 390 px). The search card, the map and the lists below now share one left and right edge on every phone size and in every mode.
+- **Fixed:** the third interview photo was hidden behind "Read the full interview". The whole interview is now always open, so all three photos are visible.
+- **Changed:** the About photos load at the very end of the page, so the start screen arrives as early as before the About section was added.
+- **Checked:** the opening scene (sun, logo, "Where shall we swim today?") appears on phone and PC, on fast and slow connections, and when the file is opened on its own.
+- **Tests:** 63 checks. New: `align-phone-360`, `align-phone-430`, `opening-scene-phone`, `opening-scene-desktop`.
+
 ## 23.8.0 — 11 October 2026 · About DipMapper
 - **New:** "About DipMapper" section on the start page with the founder interview of Torsten Sauter (15 questions, the first 3 visible, the rest behind "Read the full interview") and three photos placed beside the matching questions. Visible on phone and PC; "About" button in the PC header.
 - **Photos inside the page:** the three photos are built into `index.html` (WebP, 26–86 KB each, hidden file data removed), so they show even when the HTML is opened or uploaded on its own. No extra files to upload.
