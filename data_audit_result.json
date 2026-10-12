@@ -1,0 +1,33 @@
+{
+ "files": {
+  "directory": 36,
+  "specials": 80,
+  "emergencyCountries": 46,
+  "rules": 86,
+  "iceLakes": 27,
+  "diveSites": 6
+ },
+ "issues": [],
+ "warnings": [
+  "supswiss-wollishofen: status flag — Unconfirmed: the SUPSWISS website now redirects to kiteswiss.ch — call before yo",
+  "bootsvermietung-seefeld: no hand-written explainer",
+  "zimi-sailing: no contact at all",
+  "kayakfun-mellingen: price without currency: on request / see website",
+  "kite-addicted: status flag — Unconfirmed: a 2024 canton of Uri list still names this school (Beckenried), but"
+ ],
+ "stats": {
+  "specialsByCategory": {
+   "wave": 12,
+   "floating": 14,
+   "river": 5,
+   "sauna": 4,
+   "thermal": 10,
+   "rooftop": 2,
+   "nature": 7,
+   "deep": 14,
+   "boat": 6,
+   "night": 6
+  },
+  "specialsApprox": 53
+ }
+}

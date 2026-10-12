@@ -1,1 +1,5 @@
-
+_site/
+results/
+node_modules/
+frames/
+*.png

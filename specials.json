@@ -1,0 +1,2084 @@
+[
+ {
+  "n": "Eisbach Wave (Eisbachwelle)",
+  "cat": "wave",
+  "lat": 48.1433,
+  "lon": 11.5877,
+  "cc": "DE",
+  "city": "Munich",
+  "what": "Watch, or as an experienced river surfer ride, the standing wave just below the bridge by the Haus der Kunst.",
+  "about": "The Eisbach is a two-kilometre side arm of the Isar that runs through the Englischer Garten, and its famous wave forms right after the bridge beside the Haus der Kunst on Prinzregentenstrasse. Surfers have ridden it since the early 1970s and it was officially permitted in 2010. The wave is about a metre high over water that can be only 40 cm deep, so it belongs to skilled surfers and playboaters, while everyone else watches from the bridge railing.",
+  "tip": "Tram 16 or bus 100 to Nationalmuseum/Haus der Kunst stops a few minutes from the wave; bikes should not be parked at the wave itself.",
+  "season": "year-round when the wave forms",
+  "access": "public free",
+  "warn": "Experts only. Reopened for surfing on 8 May 2026 under a city order: a self-releasing leash is mandatory, no surfing from 22:00, and the posted rules apply. Swimming is prohibited; a surfer died here in April 2025.",
+  "web": "https://www.muenchen.de/en/sights/attractions/eisbach-surferwelle",
+  "wiki": "https://en.wikipedia.org/wiki/Eisbach_(Isar)",
+  "src": [
+   "muenchen.de",
+   "https://www.muenchen.de/en/sights/attractions/eisbach-surferwelle"
+  ],
+  "src_more": [
+   [
+    "Wikipedia",
+    "https://en.wikipedia.org/wiki/Eisbach_(Isar)"
+   ],
+   [
+    "GPB/NPR Nov 2025",
+    "https://www.gpb.org/news/2025/11/20/surfs-down-munich-until-now-inland-surfing-hotspot-has-lost-its-biggest-wave"
+   ],
+   [
+    "Stadt München news",
+    "https://stadt.muenchen.de/news/eisbachwelle-wieder-zum-surfen-frei.html"
+   ]
+  ],
+  "geo": "exact",
+  "geo_src": "muenchen.de map embed",
+  "more": [
+   "https://stadt.muenchen.de/news/eisbachwelle-wieder-zum-surfen-frei.html"
+  ]
+ },
+ {
+  "n": "Flosslaende River Wave (Floßlände)",
+  "cat": "wave",
+  "lat": 48.0902,
+  "lon": 11.5451,
+  "cc": "DE",
+  "city": "Munich",
+  "what": "Learn river surfing on a smaller standing wave in a raft canal of the Isar at Thalkirchen.",
+  "about": "This is where Munich surfers learn before they try the Eisbach. The wave forms in a raft canal that branches off the Isar beside the Thalkirchen campsite on Zentralländstrasse, next to a small footbridge. It is lower and more forgiving than the city-centre wave, but flow depends on the river and on hydropower operation, so it is mainly a summer spot. Rocky walls on both sides and a shallow, stony bed teach you to fall flat.",
+  "tip": "Wear booties against sharp stones and check the Bavarian flow data for the Munich gauge before you go.",
+  "season": "May-Sep (flow dependent)",
+  "access": "public free",
+  "warn": "Shallow water with rock walls; for surfers, not a swimming spot.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Riverbreak",
+   "https://riverbreak.com/spots/flosslaende-river-surfing-munich/"
+  ],
+  "src_more": [
+   [
+    "munich.travel",
+    "https://www.munich.travel/en/pois/sports-leisure/flosslaende"
+   ]
+  ],
+  "geo": "exact",
+  "geo_src": "riverbreak.com page metadata"
+ },
+ {
+  "n": "Leinewelle (Leine River Wave)",
+  "cat": "wave",
+  "lat": 0,
+  "lon": 0,
+  "cc": "DE",
+  "city": "Hannover",
+  "what": "Surf an artificial standing wave on the Leine at the edge of Hannover's old town.",
+  "about": "Built by the Leinewelle association on the Altstadtufer, the western bank of the Leine near Schlossstrasse, this standing wave sits right in the city centre rather than on a remote river stretch. It went into test operation in January 2023 and is now used year-round by surfers, school classes and youth groups. In 2026 the German rapid surfing championships were held here during the Finals, and a temporary hub with changing rooms, toilets and seating was set up on the Schlossstrasse car park.",
+  "tip": "Changing rooms and toilets are in the Leinewelle hub on the Schlossstrasse car park (Klostergang 2).",
+  "season": "year-round",
+  "access": "public (operator: Leinewelle e.V.)",
+  "warn": "Open year-round according to the City of Hannover (June 2026), used by surfers, school classes and youth groups. A temporary 'Leinewelle hub' with changing rooms and toilets is being set up on the Schlossstraße car park for about three years. Confirm session rules with the operator (Leinewelle e.V.).",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "hannover.de",
+   "https://www.hannover.de/Service/Presse-Medien/Landeshauptstadt-Hannover/Aktuelle-Meldungen-und-Veranstaltungen/Leinewelle-Hub-entsteht-zu-den-Finals-2026"
+  ],
+  "src_more": [
+   [
+    "surf-magazin.de",
+    "https://www.surf-magazin.de/en/wingsurfing/scene-and-events/finals-2026-german-rapid-surfing-championships-to-kick-off-at-the-finals-in-hanover/"
+   ]
+  ],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Bremgarten Reuss Wave",
+  "cat": "wave",
+  "lat": 47.3511,
+  "lon": 8.3421,
+  "cc": "CH",
+  "city": "Bremgarten AG",
+  "what": "Surf the natural river wave on the Reuss at the old town of Bremgarten when snowmelt raises the flow.",
+  "about": "Bremgarten, a small walled town on the Reuss in the canton of Aargau about 23 km from Zurich, is often described as the heart of Swiss river surfing. When the river runs high in early summer, a natural wave forms near the old town and draws surfers from across the Zurich region, with spectators lining the bank. Surfertoday reports that surfers have ridden the spot for decades, calls it relatively beginner-friendly and puts the river surf season at roughly May to August.",
+  "tip": "Season depends entirely on snowmelt and Reuss discharge, so check current flow figures before you load the board.",
+  "season": "May-Aug (flow dependent)",
+  "access": "public free",
+  "warn": "Natural river: cold water and strong current; only go with river-surf experience or a local guide.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Surfertoday",
+   "https://www.surfertoday.com/surfing/the-swiss-landlocked-surfing-scene"
+  ],
+  "src_more": [
+   [
+    "latitude.to",
+    "https://latitude.to/map/ch/switzerland/cities/bremgarten"
+   ]
+  ],
+  "geo": "approx",
+  "geo_src": "town centre, latitude.to"
+ },
+ {
+  "n": "Thun Muehleplatz Aare Wave (Mühleplatz)",
+  "cat": "wave",
+  "lat": 0,
+  "lon": 0,
+  "cc": "CH",
+  "city": "Thun",
+  "what": "Watch surfers ride the Aare where it leaves Lake Thun through the sluices at the Mühleplatz in the old town.",
+  "about": "In Thun's old town the Aare flows out of Lake Thun through regulated sluices beside the Mühleplatz, a square of cafés and bars right on the water. When the gates are set to the right flow, a surfable wave forms in the middle of town, and Swissinfo has reported on surfers riding it in cold water in front of curious passers-by. It is a spot for experienced river surfers; for everyone else the bridges and terraces make good viewing points.",
+  "tip": "Surfability depends on how the sluices are set; ask the local surf community before making the trip.",
+  "season": "variable (regulation dependent)",
+  "access": "public free",
+  "warn": "Unverified details: wave timing and any local rules were not confirmed from an official source. Strong, cold current at the weir.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Swissinfo",
+   "https://www.swissinfo.ch/eng/board-games_surf-s-up-in-thun-temperature-s-down/43053332"
+  ],
+  "src_more": [],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Urbansurf Zurich",
+  "cat": "wave",
+  "lat": 0,
+  "lon": 0,
+  "cc": "CH",
+  "city": "Zurich",
+  "what": "Ride an artificial endless wave on a platform in Zurich-West, with instructors on hand.",
+  "about": "Next to Frau Gerolds Garten and a short walk from Hardbrücke station, Urbansurf runs an endless-wave platform at Geroldstrasse 11c in the middle of Zurich's former industrial district. Sessions are booked in 30-minute slots with up to six surfers at a time, and professional instructors are present, so it works for complete novices as well as experienced surfers. Padded walls and sufficient water depth are built in for safety, and watching from the platform costs nothing.",
+  "tip": "Book a slot online in advance on busy evenings; watching from the platform is free.",
+  "season": "check operator",
+  "access": "ticket",
+  "warn": "",
+  "web": "https://urbansurf.ch",
+  "wiki": "",
+  "src": [
+   "Zürich Tourism",
+   "https://www.zuerich.com/en/visit/sport/urbansurf-zurich"
+  ],
+  "src_more": [],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Alaia Bay (Alaïa Bay)",
+  "cat": "wave",
+  "lat": 0,
+  "lon": 0,
+  "cc": "CH",
+  "city": "Sion",
+  "what": "Surf machine-made ocean-style waves in Switzerland's first wave pool, in the Rhône valley below the Valais Alps.",
+  "about": "Alaïa Bay in Sion opened on 1 May 2021 as Switzerland's first wave pool, using Wavegarden technology to produce repeatable waves for beginners through to advanced surfers. The setting is what sets it apart: the pool lies on the floor of the Rhône valley in Valais, surrounded by high mountains, so you can surf in the morning and be in the Alps by afternoon. It was Wavegarden's fifth facility worldwide.",
+  "tip": "Sessions are graded by level, so pick the wave setting that matches your skills when booking.",
+  "season": "check operator",
+  "access": "ticket",
+  "warn": "",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Wavegarden",
+   "https://wavegarden.com/wavegarden-to-open-its-fifth-facility-at-alaia-bay-in-the-swiss-alps/"
+  ],
+  "src_more": [
+   [
+    "Wikipedia (Wavegarden)",
+    "https://en.wikipedia.org/wiki/Wavegarden"
+   ],
+   [
+    "Surfertoday",
+    "https://www.surfertoday.com/surfing/switzelands-alaia-bay-wave-pool-opens-spring-2021"
+   ]
+  ],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "O2 Surftown MUC",
+  "cat": "wave",
+  "lat": 0,
+  "lon": 0,
+  "cc": "DE",
+  "city": "Hallbergmoos (Munich)",
+  "what": "Surf a machine-made wave in Germany's first surf park, next to Munich Airport.",
+  "about": "O2 Surftown MUC in Hallbergmoos, beside Munich Airport, opened as Germany's first surf park and gives Bavarian surfers waves that do not depend on river levels or the state of the Eisbach. The pool was built by Myrtha Pools and the project attracted attention in architecture circles as well as in surf media. It suits beginners taking lessons as much as experienced surfers looking for consistent practice close to the city.",
+  "tip": "Getting there is easy by S-Bahn towards the airport, which makes it a realistic stopover before or after a flight.",
+  "season": "check operator",
+  "access": "ticket",
+  "warn": "",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Surftown press",
+   "https://cms.surftown.de/en/press/germanys-first-surf-park-just-opened"
+  ],
+  "src_more": [
+   [
+    "Myrtha Pools",
+    "https://www.myrthapools.com/am-en/projects/o2-surftown-muc/"
+   ]
+  ],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "The Wave Bristol",
+  "cat": "wave",
+  "lat": 51.5422,
+  "lon": -2.6056,
+  "cc": "GB",
+  "city": "Bristol",
+  "what": "Surf a 300-metre inland lake where machine-made waves break left and right.",
+  "about": "On farmland at Easter Compton on the northern edge of Bristol, The Wave opened in 2019 with a Wavegarden-built lake 300 m long, 100 m wide and 1.5 m deep. A central pier splits it into left and right breaks, and settings run from half-metre whitewater for first-timers to two-metre barrels. Up to 80 surfers can use it at once, and the site adds a clubhouse, restaurant, camping and woodland trails. Solar panels installed in 2023 help power the waves.",
+  "tip": "Waves range from gentle whitewater to two-metre barrels, so book the session that matches your level.",
+  "season": "year-round",
+  "access": "ticket",
+  "warn": "",
+  "web": "https://www.thewave.com",
+  "wiki": "https://en.wikipedia.org/wiki/The_Wave_(company)",
+  "src": [
+   "Wikipedia",
+   "https://en.wikipedia.org/wiki/The_Wave_(company)"
+  ],
+  "src_more": [],
+  "geo": "exact",
+  "geo_src": "Wikipedia"
+ },
+ {
+  "n": "URBNSURF Melbourne",
+  "cat": "wave",
+  "lat": 0,
+  "lon": 0,
+  "cc": "AU",
+  "city": "Melbourne (Tullamarine)",
+  "what": "Surf consistent Wavegarden waves in Australia's first surf park, near Melbourne Airport.",
+  "about": "URBNSURF in Tullamarine opened in 2020 as Australia's first full-sized surf park, a Wavegarden lagoon a short drive from Melbourne Airport. In a country famous for its ocean breaks, its appeal is reliability: the same wave every few seconds regardless of swell, wind or sharks, which makes it a place for structured coaching and for city surfers who cannot get to the coast. The park was designed to run on renewable energy.",
+  "tip": "Book lessons rather than open sessions if you are new; the lagoon is split by level.",
+  "season": "year-round",
+  "access": "ticket",
+  "warn": "",
+  "web": "https://urbnsurf.com",
+  "wiki": "",
+  "src": [
+   "Broadsheet",
+   "https://www.broadsheet.com.au/national/active/article/australias-new-surf-park-opens-today"
+  ],
+  "src_more": [
+   [
+    "Wikipedia (Wavegarden)",
+    "https://en.wikipedia.org/wiki/Wavegarden"
+   ],
+   [
+    "pv magazine",
+    "https://www.pv-magazine-australia.com/?p=3211"
+   ]
+  ],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Lost Shore Surf Resort",
+  "cat": "wave",
+  "lat": 0,
+  "lon": 0,
+  "cc": "GB",
+  "city": "Edinburgh",
+  "what": "Surf a Wavegarden lagoon on the edge of Scotland's capital.",
+  "about": "Lost Shore Surf Resort opened in 2024 near Edinburgh and brought machine-made surf to a city whose own coastline rarely produces rideable waves. It uses Wavegarden technology, the same Spanish system behind The Wave in Bristol and Alaïa Bay in Sion, so sessions can be set from beginner whitewater to advanced turns. For surfers in central Scotland it removes the long drive to the north and west coasts.",
+  "tip": "Bring a thick wetsuit outside summer; it is an outdoor lagoon in Scotland.",
+  "season": "year-round",
+  "access": "ticket",
+  "warn": "",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Wikipedia (Wavegarden)",
+   "https://en.wikipedia.org/wiki/Wavegarden"
+  ],
+  "src_more": [],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Wave Park Siheung",
+  "cat": "wave",
+  "lat": 0,
+  "lon": 0,
+  "cc": "KR",
+  "city": "Siheung",
+  "what": "Surf a Wavegarden lagoon on Turtle Island near Incheon Airport.",
+  "about": "Wave Park opened in 2020 in Siheung, on Turtle Island close to Incheon Airport, and was one of the early large Wavegarden lagoons outside Europe. It gives the Seoul metropolitan area a reliable surf spot within reach of the city, which matters in a country where ocean surf is seasonal and often small. Wave settings cover beginners through advanced riders, making it a practical stop on a layover or a city break.",
+  "tip": "Its position near Incheon Airport makes it workable for a long layover.",
+  "season": "check operator",
+  "access": "ticket",
+  "warn": "",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Wikipedia (Wavegarden)",
+   "https://en.wikipedia.org/wiki/Wavegarden"
+  ],
+  "src_more": [],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Badeschiff Berlin",
+  "cat": "floating",
+  "lat": 52.492,
+  "lon": 13.4522,
+  "cc": "DE",
+  "city": "Berlin",
+  "what": "Swim in a converted barge hull moored in the Spree, with the river and the Berlin skyline around you.",
+  "about": "The Badeschiff began in 2004 as an art project: the 8-by-32-metre hull of a barge was turned into a pool and moored in the Spree's East Harbour stretch next to the Arena in Treptow. Head architect Fernando Menis and artist Susanne Lorenz gave it a deep blue inspired by the sea off Tenerife. It lets you swim in the river setting without swimming in the river itself, and a bar with DJs sits by the entrance.",
+  "tip": "Go in the evening on a warm day; the bar outside the pool entrance often has DJs playing.",
+  "season": "summer (winter variant has been run)",
+  "access": "ticket",
+  "warn": "",
+  "web": "https://www.visitberlin.de/de/badeschiff-der-arena",
+  "wiki": "https://en.wikipedia.org/wiki/Badeschiff",
+  "src": [
+   "Wikipedia",
+   "https://en.wikipedia.org/wiki/Badeschiff"
+  ],
+  "src_more": [
+   [
+    "latitude.to",
+    "https://latitude.to/articles-by-country/de/germany/55629/badeschiff"
+   ],
+   [
+    "berlin.de",
+    "https://www.berlin.de/en/sports-leisure/swimming-pools/7643331-7642368-badeschiff.en.html"
+   ]
+  ],
+  "geo": "exact",
+  "geo_src": "latitude.to"
+ },
+ {
+  "n": "Islands Brygge Harbour Bath (Havnebadet Islands Brygge)",
+  "cat": "floating",
+  "lat": 55.6686,
+  "lon": 12.5776,
+  "cc": "DK",
+  "city": "Copenhagen",
+  "what": "Swim and dive in clean harbour water right across the bridge from Copenhagen's centre.",
+  "about": "Islands Brygge opened in 2002 as the first of Copenhagen's harbour baths and became proof that a working port could be clean enough to swim in. The permanent bath from 2003 has five pools, including two 50-metre lanes, two children's pools and a diving pool with three- and five-metre boards over water seven metres deep, with space for around 600 people. On summer evenings the quay lawns fill with locals coming straight from work.",
+  "tip": "The diving pool with 3 m and 5 m boards is the main draw; arrive early on hot days, as capacity is about 600.",
+  "season": "summer",
+  "access": "public free",
+  "warn": "",
+  "web": "",
+  "wiki": "https://en.wikipedia.org/wiki/Copenhagen_Harbour_Baths",
+  "src": [
+   "Wikipedia",
+   "https://en.wikipedia.org/wiki/Copenhagen_Harbour_Baths"
+  ],
+  "src_more": [
+   [
+    "Visit Copenhagen",
+    "https://www.visitcopenhagen.com/copenhagen/8-refreshing-baths-beaches"
+   ]
+  ],
+  "geo": "exact",
+  "geo_src": "Wikipedia"
+ },
+ {
+  "n": "Fisketorvet Harbour Bath (Copencabana)",
+  "cat": "floating",
+  "lat": 55.6627,
+  "lon": 12.564,
+  "cc": "DK",
+  "city": "Copenhagen",
+  "what": "Jump into the harbour from springboards beside the Fisketorvet shopping centre.",
+  "about": "Known locally as Copencabana, this 650-square-metre bath sits beside Fisketorvet shopping centre and Havneholmen in Vesterbro. It opened in 2003 when the original structure was moved here from Islands Brygge, and today it has three pools with one-, two- and three-metre springboards. It is smaller and calmer than Islands Brygge across the water, and handy if you want a swim between errands in the city.",
+  "tip": "It is right next to the Fisketorvet mall, so changing and a snack are easy to combine with a swim.",
+  "season": "summer",
+  "access": "public free",
+  "warn": "",
+  "web": "",
+  "wiki": "https://en.wikipedia.org/wiki/Copenhagen_Harbour_Baths",
+  "src": [
+   "Wikipedia",
+   "https://en.wikipedia.org/wiki/Copenhagen_Harbour_Baths"
+  ],
+  "src_more": [],
+  "geo": "exact",
+  "geo_src": "Wikipedia"
+ },
+ {
+  "n": "Sluseholmen Harbour Bath",
+  "cat": "floating",
+  "lat": 55.6465,
+  "lon": 12.5537,
+  "cc": "DK",
+  "city": "Copenhagen",
+  "what": "Swim in a small, sheltered harbour bath among the canals of the South Harbour.",
+  "about": "Sluseholmen, in Copenhagen's South Harbour, opened in December 2011 and is one of the newer harbour baths. It sits in a residential district of canals and modern apartment blocks, and Visit Copenhagen describes it as a small, well-designed area with a sheltered, lagoon-like swimming section. It feels more like a neighbourhood pool than a destination, which is exactly its appeal for a quiet swim away from the central crowds.",
+  "tip": "Choose it over Islands Brygge on hot weekends when you want a quieter swim.",
+  "season": "summer",
+  "access": "public free",
+  "warn": "",
+  "web": "",
+  "wiki": "https://en.wikipedia.org/wiki/Copenhagen_Harbour_Baths",
+  "src": [
+   "Wikipedia",
+   "https://en.wikipedia.org/wiki/Copenhagen_Harbour_Baths"
+  ],
+  "src_more": [
+   [
+    "Visit Copenhagen",
+    "https://www.visitcopenhagen.com/copenhagen/8-refreshing-baths-beaches"
+   ]
+  ],
+  "geo": "exact",
+  "geo_src": "Wikipedia"
+ },
+ {
+  "n": "Kalvebod Waves (Kalvebod Bølge)",
+  "cat": "floating",
+  "lat": 0,
+  "lon": 0,
+  "cc": "DK",
+  "city": "Copenhagen",
+  "what": "Walk, sit and swim off an undulating boardwalk that juts into the harbour at Kalvebod Brygge.",
+  "about": "Kalvebod Bølge turned a stretch of office waterfront along Kalvebod Brygge into a public space by pushing a rising and falling boardwalk out over the harbour. Visit Copenhagen lists it among the city's places to relax, play and get into the water, and it links naturally with the harbour baths nearby. It is less a pool than an urban promenade where the water is part of everyday life.",
+  "tip": "Combine it with a swim at nearby Fisketorvet, a short walk along the same side of the harbour.",
+  "season": "summer",
+  "access": "public free",
+  "warn": "Harbour water away from official baths: follow posted swim rules and water-quality flags.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Visit Copenhagen",
+   "https://www.visitcopenhagen.com/copenhagen/8-refreshing-baths-beaches"
+  ],
+  "src_more": [],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Sandkaj Bathing Zone",
+  "cat": "floating",
+  "lat": 0,
+  "lon": 0,
+  "cc": "DK",
+  "city": "Copenhagen (Nordhavn)",
+  "what": "Swim from a boardwalk with cafés behind you in the new Nordhavn district.",
+  "about": "Sandkaj is an official bathing zone in Nordhavn, Copenhagen's former industrial harbour that has been rebuilt as a residential quarter. A long boardwalk with steps into the water and cafés along the quay give it the feel of a beach without sand. It suits people who want a laid-back swim and coffee in a neighbourhood setting, and it shows how far the city has gone in opening its harbour for swimming.",
+  "tip": "Bring something to sit on; the boardwalk steps are where everyone settles in.",
+  "season": "summer",
+  "access": "public free",
+  "warn": "",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Visit Copenhagen",
+   "https://www.visitcopenhagen.com/copenhagen/8-refreshing-baths-beaches"
+  ],
+  "src_more": [],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Kastrup Sea Bath (Kastrup Søbad, 'the Snail')",
+  "cat": "floating",
+  "lat": 55.6358,
+  "lon": 12.6383,
+  "cc": "DK",
+  "city": "Kastrup",
+  "what": "Walk out along a curving wooden pier to swim and dive in the Øresund with Sweden on the horizon.",
+  "about": "Known as Sneglen, the Snail, Kastrup's sea bath is a curling wooden structure that leaves the beach as a long pier and spirals into a sheltered circle of water. Visit Copenhagen highlights its views of Saltholm island and across the sound to Sweden. It lies near Copenhagen Airport and the Øresund coast, and its sculptural form makes it as much a place to sit and watch the planes and ferries as a place to swim.",
+  "tip": "It is close to the airport, so it fits well into a last afternoon before an evening flight.",
+  "season": "summer",
+  "access": "public free",
+  "warn": "",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Visit Copenhagen",
+   "https://www.visitcopenhagen.com/copenhagen/8-refreshing-baths-beaches"
+  ],
+  "src_more": [
+   [
+    "latitude.to",
+    "https://latitude.to/articles-by-country/dk/denmark/36099/kastrup"
+   ]
+  ],
+  "geo": "approx",
+  "geo_src": "Kastrup town, latitude.to"
+ },
+ {
+  "n": "Svanemølle Beach (Svanemøllestranden)",
+  "cat": "floating",
+  "lat": 55.7201,
+  "lon": 12.5838,
+  "cc": "DK",
+  "city": "Copenhagen",
+  "what": "Swim off a 130-metre pier from a city beach in Østerbro.",
+  "about": "Opened in June 2010 on Svanemølle Bay in Østerbro, this 4,000-square-metre beach gives families shallow, sandy water while a 130-metre pier leads out to deeper water for real swimming. It sits between the marina and residential streets of the north side of the city, so locals use it before or after work. It is a good counterpoint to the concrete harbour baths: same clean water, but with sand.",
+  "tip": "Families should stay near the beach, where the water is shallow; swimmers head for the end of the pier.",
+  "season": "summer",
+  "access": "public free",
+  "warn": "",
+  "web": "",
+  "wiki": "https://en.wikipedia.org/wiki/Copenhagen_Harbour_Baths",
+  "src": [
+   "Wikipedia",
+   "https://en.wikipedia.org/wiki/Copenhagen_Harbour_Baths"
+  ],
+  "src_more": [],
+  "geo": "exact",
+  "geo_src": "Wikipedia"
+ },
+ {
+  "n": "Amager Helgoland Sea Bath",
+  "cat": "floating",
+  "lat": 0,
+  "lon": 0,
+  "cc": "DK",
+  "city": "Copenhagen",
+  "what": "Swim from a bathhouse at the north end of Amager Strand, in summer or with the winter-bathing crowd.",
+  "about": "Helgoland sits at the northern end of Amager Beach, Copenhagen's long artificial beach park, and is a bathhouse rather than a strip of sand. Visit Copenhagen notes that it serves summer swimmers and the city's winter bathers, which makes it one of the places where you can see Copenhagen's cold-water culture in action. Its piers give direct access to deeper water away from the shallow beach.",
+  "tip": "Outside summer, ask about winter-bathing access; Visit Copenhagen notes it caters for winter swimmers.",
+  "season": "summer; winter for winter bathers",
+  "access": "check operator",
+  "warn": "",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Visit Copenhagen",
+   "https://www.visitcopenhagen.com/copenhagen/8-refreshing-baths-beaches"
+  ],
+  "src_more": [],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Joséphine Baker Pool (Piscine Joséphine-Baker)",
+  "cat": "floating",
+  "lat": 0,
+  "lon": 0,
+  "cc": "FR",
+  "city": "Paris",
+  "what": "Swim in a pool built on a barge moored on the Seine in the 13th arrondissement.",
+  "about": "Opened in 2006, the Joséphine Baker pool floats on a barge on the Seine below the Bibliothèque François-Mitterrand in the 13th arrondissement and is the only floating pool in Paris. It lets you swim laps with the river and quays around you. Its days are numbered: the City of Paris has announced its permanent closure because the barge is deformed and the concrete walls are cracked, with a new aquatic centre planned at Parc Carpentier.",
+  "tip": "If it is still on your list, go soon and check the city's pool pages for the final closing date.",
+  "season": "until closure (end 2026 or spring 2027)",
+  "access": "ticket",
+  "warn": "Closing for good: the City of Paris said in April 2026 that the ageing floating pool will close; it may run until spring 2027 if the authorities allow. Check the city's pool page before you go.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Paris Zigzag",
+   "https://www.pariszigzag.fr/paris-au-quotidien/actualites-paris/piscine-josephine-baker-fermeture/"
+  ],
+  "src_more": [
+   [
+    "UPI 2006",
+    "https://www.upi.com/Top_News/2006/07/06/Floating-pool-opens-on-Seine/34861152163575/"
+   ]
+  ],
+  "geo": "none",
+  "geo_src": "",
+  "more": [
+   [
+    "Time Out Paris, 9 Apr 2026",
+    "https://www.timeout.fr/paris/actualites/liconique-piscine-flottante-josephine-baker-va-definitivement-fermer-ses-portes-040926"
+   ]
+  ]
+ },
+ {
+  "n": "Frauenbad Stadthausquai (Frauenbadi)",
+  "cat": "floating",
+  "lat": 47.3682,
+  "lon": 8.5419,
+  "cc": "CH",
+  "city": "Zurich",
+  "what": "Swim in an 1888 wooden river bath on the Limmat that is reserved for women by day and opens to all as a bar on some evenings.",
+  "about": "Moored on the Limmat at Bürkliplatz, just below the Quaibrücke, the Frauenbadi has stood since 1888 and is listed as a Swiss cultural property of national importance. Its curved corner turrets earned it the nickname Laubsägeli bath. The pool is about 40 m by 30 m and four metres deep, with a non-swimmer section. By day it is for women only; on certain summer evenings it turns into the Barfussbar, open to everyone.",
+  "tip": "On Wednesday, Thursday and Sunday evenings in summer it becomes the Barfussbar, the time for men to see inside.",
+  "season": "mid-May to mid-Sep",
+  "access": "ticket (women only by day)",
+  "warn": "Free swimming in the Limmat at this point is prohibited.",
+  "web": "https://www.barfussbar.ch",
+  "wiki": "https://en.wikipedia.org/wiki/Frauenbad_Stadthausquai",
+  "src": [
+   "Wikipedia",
+   "https://en.wikipedia.org/wiki/Frauenbad_Stadthausquai"
+  ],
+  "src_more": [
+   [
+    "Timeless Travels",
+    "https://www.timeless-travels.co.uk/post/zurich-s-urban-lido-culture"
+   ]
+  ],
+  "geo": "exact",
+  "geo_src": "Wikipedia"
+ },
+ {
+  "n": "Maennerbad Schanzengraben (Männerbadi)",
+  "cat": "floating",
+  "lat": 0,
+  "lon": 0,
+  "cc": "CH",
+  "city": "Zurich",
+  "what": "Swim in an 1864 men's bath in the old city moat, which becomes the Rimini Bar for everyone on summer evenings.",
+  "about": "Built in 1864 on the Schanzengraben, the man-made moat that once ringed Zurich's fortifications and is fed by Lake Zurich, the Männerbadi is reached from the Badweg below street level. An old bastion and an early-18th-century water tower stand nearby. By day it is for men only; on summer evenings it becomes the Rimini Bar and women are admitted, so the wooden decks fill with an after-work crowd.",
+  "tip": "Women can visit in the evening when it turns into the Rimini Bar.",
+  "season": "summer",
+  "access": "ticket (men only by day)",
+  "warn": "",
+  "web": "https://www.rimini.ch",
+  "wiki": "",
+  "src": [
+   "Timeless Travels",
+   "https://www.timeless-travels.co.uk/post/zurich-s-urban-lido-culture"
+  ],
+  "src_more": [
+   [
+    "ZVV",
+    "https://www.zvv.ch/de/freizeit-und-events/freizeittipps/sport-und-action/badis-in-der-stadt-zuerich.html"
+   ]
+  ],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Seebad Utoquai",
+  "cat": "floating",
+  "lat": 0,
+  "lon": 0,
+  "cc": "CH",
+  "city": "Zurich",
+  "what": "Swim in Lake Zurich from a historic wooden bathhouse on the Utoquai promenade.",
+  "about": "Seebad Utoquai dates from 1890 and stands on piles in the lake off the eastern shore promenade, a few minutes' walk from Bellevue and the Opera House. Its wooden decks and changing cabins give direct ladder access to deep lake water with views across to the Uetliberg. Compared with the livelier city baths it is a calmer place, popular with people who want a proper lake swim in the middle of town.",
+  "tip": "It is a short walk from Bellevue, so it is easy to fit a lunchtime swim into a city day.",
+  "season": "summer",
+  "access": "ticket",
+  "warn": "",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Timeless Travels",
+   "https://www.timeless-travels.co.uk/post/zurich-s-urban-lido-culture"
+  ],
+  "src_more": [
+   [
+    "ZVV",
+    "https://www.zvv.ch/de/freizeit-und-events/freizeittipps/sport-und-action/badis-in-der-stadt-zuerich.html"
+   ]
+  ],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Allas Sea Pool",
+  "cat": "floating",
+  "lat": 0,
+  "lon": 0,
+  "cc": "FI",
+  "city": "Helsinki",
+  "what": "Swim in a seawater pool and a warm pool on the harbour front in central Helsinki.",
+  "about": "Opened on 1 September 2016 on the Katajanokka waterfront in central Helsinki, Allas Sea Pool is a wooden deck complex with a children's pool, a warm pool and a pool filled with water from the Baltic. It sits in full view of the harbour, the ferries and the city skyline, and a sauna lets you alternate heat with the cold seawater pool. It was conceived as a spa that stays open through the year.",
+  "tip": "Alternate the sauna with the unheated seawater pool for the full Finnish experience.",
+  "season": "year-round (intended)",
+  "access": "ticket",
+  "warn": "",
+  "web": "https://www.allasseapool.fi",
+  "wiki": "https://en.wikipedia.org/wiki/Allas_Sea_Pool",
+  "src": [
+   "Wikipedia",
+   "https://en.wikipedia.org/wiki/Allas_Sea_Pool"
+  ],
+  "src_more": [
+   [
+    "MyHelsinki",
+    "https://www.myhelsinki.fi/en/see-and-do/activities/allas-sea-pool"
+   ]
+  ],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Rhine Swimming in Basel (Rheinschwimmen)",
+  "cat": "river",
+  "lat": 0,
+  "lon": 0,
+  "cc": "CH",
+  "city": "Basel",
+  "what": "Float down the Rhine through Basel's old town with your clothes packed in a waterproof Wickelfisch bag.",
+  "about": "Through the summer, people in Basel walk upstream along the Kleinbasel bank, pack their clothes into a fish-shaped waterproof bag called a Wickelfisch and let the current carry them past the old town and under the bridges. It is a daily after-work ritual rather than a tourist activity, and once a year the city holds an official organised Rhine swim. The Rhine is a busy shipping route, so the cantonal police publish rules for safe swimming.",
+  "tip": "The Tourist Information at Barfüsserplatz rents Wickelfisch bags from June to September; read the police flyer on Rhine swimming first.",
+  "season": "Jun-Sep",
+  "access": "public free",
+  "warn": "Strong current and commercial shipping; stay near the bank, keep clear of bridge piers and moored ships, and follow Basel police rules.",
+  "web": "https://www.basel.com/en/activities-excursions/swimming-rhine/wickelfisch",
+  "wiki": "",
+  "src": [
+   "Basel Tourism",
+   "https://www.basel.com/en/activities-excursions/swimming-rhine/wickelfisch"
+  ],
+  "src_more": [
+   [
+    "Basel-Stadt",
+    "https://www.bs.ch/en/events/official-basel-rhine-swim"
+   ]
+  ],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Aare Swimming at Marzili (Aareschwimmen)",
+  "cat": "river",
+  "lat": 0,
+  "lon": 0,
+  "cc": "CH",
+  "city": "Bern",
+  "what": "Walk upstream to Eichholz, jump into the Aare and let the current carry you back to the Marzili lido below the Federal Palace.",
+  "about": "The Marzili lies directly below the Federal Palace and is free to enter. The local routine is simple: walk upstream along the riverbank path to the Eichholz area, get into the green Aare and drift back down, then grab a rail and get out at the Marzili. Besides the river, there is a 50-metre pool, a diving pool, a children's pool, lawns and the women-only Paradiesli. On peak days more than 10,000 people come.",
+  "tip": "Use the swimming channel at the Marzili to get out; Bern's 'Aare You Safe' guidance explains the exits.",
+  "season": "summer (pools open once the Aare exceeds about 15 °C)",
+  "access": "public free",
+  "warn": "Aare swimming is recommended only for experienced swimmers: cold, fast water.",
+  "web": "https://bern.com/en/detail/marzili",
+  "wiki": "",
+  "src": [
+   "Bern Welcome",
+   "https://bern.com/en/detail/marzili"
+  ],
+  "src_more": [
+   [
+    "Swiss National Library",
+    "https://www.nb.admin.ch/en/aare-swimming-in-bern"
+   ]
+  ],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Flussbad Oberer Letten",
+  "cat": "river",
+  "lat": 0,
+  "lon": 0,
+  "cc": "CH",
+  "city": "Zurich",
+  "what": "Drift down the Limmat and climb out onto the long concrete decks of Zurich's busiest river bath.",
+  "about": "Built in 1952 in the Wipkingen district, the Oberer Letten is a concrete river bath along the Limmat below the old Letten railway viaduct. People jump in upstream, let the current carry them past the decks and climb out by ladders, then repeat. It is especially popular with young people, and on summer evenings the bars and the crowd along the riverbank make it one of the liveliest places in the city.",
+  "tip": "It is busiest on warm evenings; arrive in the afternoon if you want space on the decks.",
+  "season": "summer",
+  "access": "public free",
+  "warn": "Moving river water: know where the exit ladders are before you jump in.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Timeless Travels",
+   "https://www.timeless-travels.co.uk/post/zurich-s-urban-lido-culture"
+  ],
+  "src_more": [
+   [
+    "ZVV",
+    "https://www.zvv.ch/de/freizeit-und-events/freizeittipps/sport-und-action/badis-in-der-stadt-zuerich.html"
+   ]
+  ],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Flussbad Unterer Letten",
+  "cat": "river",
+  "lat": 0,
+  "lon": 0,
+  "cc": "CH",
+  "city": "Zurich",
+  "what": "Swim from a 1910 row of red-tiled wooden cabins with walkways over the Limmat.",
+  "about": "Locals call it 'de underi Lätte'. Built in 1910 on Wasserwerkstrasse in Wipkingen, just downstream of the Oberer Letten, it is a row of wooden cabins with red-tiled roofs and walkways that reach out over the Limmat. It keeps more of the old river-bath character than its concrete neighbour and is a good choice if you want the same current but a slightly calmer atmosphere.",
+  "tip": "Combine both Letten baths in one swim: they lie a short distance apart on the same stretch of river.",
+  "season": "summer",
+  "access": "public free",
+  "warn": "Moving river water: know where the exit ladders are before you jump in.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Timeless Travels",
+   "https://www.timeless-travels.co.uk/post/zurich-s-urban-lido-culture"
+  ],
+  "src_more": [],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Werdinsel River Bathing (Badeplatz Au-Höngg)",
+  "cat": "river",
+  "lat": 0,
+  "lon": 0,
+  "cc": "CH",
+  "city": "Zurich (Höngg)",
+  "what": "Swim in the Limmat from a green island on the western edge of Zurich.",
+  "about": "Downstream of the city centre, the Werdinsel is an island in the Limmat at Höngg where the river runs between meadows and trees rather than quays. The upstream part has the modest facilities of the Badeplatz Au-Höngg, while the downstream end has been a legal naturist area since 1983. It has a much more rural feel than the Letten baths and suits people who want a river swim without the city crowd.",
+  "tip": "Choose the upstream part of the island if you want facilities; the downstream end is a naturist area.",
+  "season": "summer",
+  "access": "public free",
+  "warn": "Moving river water; know your exit point before you get in.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Timeless Travels",
+   "https://www.timeless-travels.co.uk/post/zurich-s-urban-lido-culture"
+  ],
+  "src_more": [],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Löyly",
+  "cat": "sauna",
+  "lat": 60.1519,
+  "lon": 24.9301,
+  "cc": "FI",
+  "city": "Helsinki",
+  "what": "Take a public sauna by the sea in Hernesaari, then cool off on the terraces above the Baltic.",
+  "about": "Löyly opened in 2016 on the Hernesaari shore in Helsinki as a public sauna, restaurant and bar, owned by actor Jasper Pääkkönen. Avanto Architects wrapped the building in angled wooden slats so that it reads like a stone on the shoreline, and its roof terrace and lookout give views over the sea and city. It has won several architecture awards and appeared in Time's 2018 list of the World's 100 Greatest Places.",
+  "tip": "Climb to the roof terrace between sauna rounds; it is open to the public and looks out over the sea.",
+  "season": "year-round",
+  "access": "ticket",
+  "warn": "",
+  "web": "https://www.loylyhelsinki.fi",
+  "wiki": "https://en.wikipedia.org/wiki/L%C3%B6yly",
+  "src": [
+   "Wikipedia",
+   "https://en.wikipedia.org/wiki/L%C3%B6yly"
+  ],
+  "src_more": [
+   [
+    "MyHelsinki",
+    "https://www.myhelsinki.fi/places/loyly/"
+   ]
+  ],
+  "geo": "exact",
+  "geo_src": "Wikipedia"
+ },
+ {
+  "n": "KOK Floating Saunas Langkaia",
+  "cat": "sauna",
+  "lat": 59.9042,
+  "lon": 10.7522,
+  "cc": "NO",
+  "city": "Oslo",
+  "what": "Sweat in a wood-fired floating sauna by the Opera House, then jump into the Oslofjord.",
+  "about": "KOK runs five wood-fired floating saunas on a floating island called Saga at Langkaia, looking out at the Oslo Opera House and the Munch Museum in Bjørvika. You can book a shared sauna for up to ten people or take one privately; a sauna master explains the boat and keeps the stove going. Between rounds you climb down a ladder or jump straight into the fjord, then warm up again.",
+  "tip": "The fjord dip is optional; a ladder is there if you would rather lower yourself in than jump.",
+  "season": "year-round",
+  "access": "ticket",
+  "warn": "Shared sessions are alcohol-free.",
+  "web": "https://koknorge.no/en/",
+  "wiki": "",
+  "src": [
+   "KOK",
+   "https://koknorge.no/en/kok-besoket/"
+  ],
+  "src_more": [
+   [
+    "Visit Oslo",
+    "https://www.visitoslo.com/activity/kok-oslo"
+   ],
+   [
+    "latitude.to",
+    "https://latitude.to/articles-by-country/no/norway/11084/oslo-opera-house"
+   ]
+  ],
+  "geo": "approx",
+  "geo_src": "Oslo Opera House (adjacent), latitude.to"
+ },
+ {
+  "n": "KOK Sauna Cruise and Aker Brygge Saunas",
+  "cat": "sauna",
+  "lat": 0,
+  "lon": 0,
+  "cc": "NO",
+  "city": "Oslo",
+  "what": "Take a wood-fired sauna that sails out into the Oslofjord with a skipper, or use the saunas at Aker Brygge pier.",
+  "about": "Besides its Langkaia island, KOK operates four saunas on a pier at Aker Brygge, with views of the Oslo archipelago and Akershus Fortress. The standout option is the sauna cruise: a skipper takes the floating sauna out into the fjord on a route chosen by the day's wind and weather, and you swim from the boat between rounds. It suits groups, as private saunas and cruises are booked for your own party.",
+  "tip": "Private saunas and cruises can only be changed or cancelled with cancellation insurance, so book carefully.",
+  "season": "year-round",
+  "access": "ticket",
+  "warn": "",
+  "web": "https://koknorge.no/en/",
+  "wiki": "",
+  "src": [
+   "KOK",
+   "https://koknorge.no/en/kok-besoket/"
+  ],
+  "src_more": [],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Frihamnen Public Sauna (Jubileumsparken)",
+  "cat": "sauna",
+  "lat": 0,
+  "lon": 0,
+  "cc": "SE",
+  "city": "Gothenburg",
+  "what": "Use a public sauna made from recycled materials in the harbour park at Frihamnen.",
+  "about": "Across the Göta älv from central Gothenburg, the Berlin collective Raumlabor built this public sauna in the Frihamnen harbour as part of Jubileumsparken, the park created for the city's 400th anniversary. Its rusty steel shell is made entirely from recycled material and the changing-room walls contain 12,000 recycled glass bottles. A public pool sits alongside, so you can alternate heat and water in a former industrial harbour.",
+  "tip": "Book through the Jubileumsparken page on timecenter.se.",
+  "season": "check operator",
+  "access": "ticket",
+  "warn": "",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Visit Sweden",
+   "https://visitsweden.com/where-to-go/southern-sweden/goteborg/sauna-frihamnen-gothenburg/"
+  ],
+  "src_more": [
+   [
+    "Göteborg & Co",
+    "https://www.goteborg.com/en/guides/anniversary-initiatives-you-have-to-check-out"
+   ]
+  ],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Blue Lagoon",
+  "cat": "thermal",
+  "lat": 63.8747,
+  "lon": -22.4422,
+  "cc": "IS",
+  "city": "Grindavík",
+  "what": "Soak in milky-blue geothermal seawater in a lava field on the Reykjanes peninsula.",
+  "about": "Iceland's best-known lagoon sits in a black lava field on the Reykjanes peninsula near Grindavík, not far from Keflavík airport. Its milky blue colour comes from silica in geothermal seawater, and bathers smear the white mud on their faces while steam drifts across the water. It is the obvious stop on the way to or from a flight, and the contrast of pale water and dark lava is unlike any other bath.",
+  "tip": "Its position near Keflavík airport makes it a natural first or last stop on an Iceland trip; book a time slot ahead.",
+  "season": "year-round",
+  "access": "ticket",
+  "warn": "The Reykjanes peninsula has had repeated eruptions since 2023 and the lagoon has closed at times; check status before travelling.",
+  "web": "https://www.bluelagoon.com",
+  "wiki": "",
+  "src": [
+   "latitude.to",
+   "https://latitude.to/articles-by-country/is/iceland/2845/blue-lagoon-geothermal-spa/"
+  ],
+  "src_more": [
+   [
+    "Guide to Iceland",
+    "https://guidetoiceland.is/best-of-iceland/battle-of-the-spas-blue-lagoon-vs-sky-lagoon"
+   ]
+  ],
+  "geo": "exact",
+  "geo_src": "latitude.to"
+ },
+ {
+  "n": "Sky Lagoon",
+  "cat": "thermal",
+  "lat": 64.1165,
+  "lon": -21.9489,
+  "cc": "IS",
+  "city": "Kópavogur (Reykjavík)",
+  "what": "Soak in a geothermal infinity lagoon at the edge of the North Atlantic, with a cold plunge and turf-house buildings.",
+  "about": "Opened in 2021 at Kársnes Harbour in Kópavogur, a few minutes from central Reykjavík, Sky Lagoon is heated by geothermal energy to around 38-40 °C. Its design borrows from Icelandic landscape and building tradition, with turf walls, a turf house and a cave-like entrance tunnel, and on clear days you can see the Snæfellsjökull glacier and the Keilir volcano across the bay. A cold plunge sits beside the warm water.",
+  "tip": "On a clear day look out for Snæfellsjökull across the bay; the cold plunge is part of the circuit.",
+  "season": "year-round",
+  "access": "ticket",
+  "warn": "",
+  "web": "https://www.skylagoon.com",
+  "wiki": "https://en.wikipedia.org/wiki/Sky_Lagoon",
+  "src": [
+   "Wikipedia",
+   "https://en.wikipedia.org/wiki/Sky_Lagoon"
+  ],
+  "src_more": [],
+  "geo": "exact",
+  "geo_src": "Wikipedia"
+ },
+ {
+  "n": "Széchenyi Thermal Bath (Széchenyi gyógyfürdő)",
+  "cat": "thermal",
+  "lat": 47.5178,
+  "lon": 19.0758,
+  "cc": "HU",
+  "city": "Budapest",
+  "what": "Soak in steaming outdoor thermal pools in front of a neo-baroque palace in City Park.",
+  "about": "In the middle of Budapest's City Park, near Heroes' Square and Vajdahunyad Castle, Széchenyi is the largest spa complex in the city, with 18 medicinal water pools, a drinking hall and outdoor pools including an adventure pool with a current. The yellow neo-baroque buildings around the outdoor pools are the classic image, especially in winter when steam rises off the water. Locals play chess in the water while tourists float past.",
+  "tip": "Visit on a cold winter morning for the steam, or try one of the SPArty night events held on weekends from February to December.",
+  "season": "year-round",
+  "access": "ticket",
+  "warn": "",
+  "web": "https://www.szechenyibath.hu",
+  "wiki": "",
+  "src": [
+   "Ibusz",
+   "https://www.ibusz.hu/en/places-to-go/thermal-baths-and-spas"
+  ],
+  "src_more": [
+   [
+    "latitude.to",
+    "https://latitude.to/articles-by-country/hu/hungary/19506/szechenyi-thermal-bath"
+   ]
+  ],
+  "geo": "exact",
+  "geo_src": "latitude.to"
+ },
+ {
+  "n": "Lake Hévíz (Hévízi-tó)",
+  "cat": "thermal",
+  "lat": 46.7857,
+  "lon": 17.1892,
+  "cc": "HU",
+  "city": "Hévíz",
+  "what": "Swim in a natural warm lake fed by a thermal spring, from a historic bathhouse on stilts.",
+  "about": "Near the western end of Lake Balaton, Hévíz is a natural lake fed by a warm spring, warm enough to swim in through the winter, when mist hangs over the surface. A wooden bathhouse on stilts stands in the middle, and you swim out from it among floating rings. In summer water lilies cover parts of the lake. It is one of the few places in Europe where you can swim outdoors in a natural thermal lake all year.",
+  "tip": "Borrow or bring a swim ring: many bathers float rather than swim continuously in the mineral-rich water.",
+  "season": "year-round",
+  "access": "ticket",
+  "warn": "",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "latitude.to",
+   "https://latitude.to/articles-by-country/hu/hungary/22023/lake-heviz"
+  ],
+  "src_more": [
+   [
+    "Rick Steves blog",
+    "https://blog.ricksteves.com/cameron/?p=1738"
+   ]
+  ],
+  "geo": "exact",
+  "geo_src": "latitude.to"
+ },
+ {
+  "n": "Cascate del Mulino, Saturnia",
+  "cat": "thermal",
+  "lat": 42.6549,
+  "lon": 11.5097,
+  "cc": "IT",
+  "city": "Saturnia",
+  "what": "Sit in natural travertine pools of warm sulphurous water below an old mill in southern Tuscany.",
+  "about": "Below the hill village of Saturnia in the Maremma, warm sulphurous water spills over pale travertine terraces beside an old mill, forming a series of natural pools you can sit in for free. The spa resort of Terme di Saturnia lies upstream on the same spring, but the cascades are what draws people: open-air bathing in milky blue water among olive groves. Early morning and late evening are calmest.",
+  "tip": "Arrive early in the morning or after sunset to avoid the crowds that fill the pools at midday in summer.",
+  "season": "year-round",
+  "access": "public free",
+  "warn": "Sulphur smell and slippery travertine; wear water shoes.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "latitude.to",
+   "https://latitude.to/articles-by-country/it/italy/44425/terme-di-saturnia"
+  ],
+  "src_more": [],
+  "geo": "approx",
+  "geo_src": "Terme di Saturnia, latitude.to"
+ },
+ {
+  "n": "Pamukkale Travertines and Antique Pool",
+  "cat": "thermal",
+  "lat": 37.9205,
+  "lon": 29.121,
+  "cc": "TR",
+  "city": "Pamukkale",
+  "what": "Walk barefoot over white travertine terraces of warm water and swim among fallen Roman columns in the Antique Pool.",
+  "about": "Above the village of Pamukkale in Denizli province, mineral-rich warm water has built a cliff of white travertine terraces, part of a UNESCO site with the ruins of Roman Hierapolis on top. Visitors walk the terraces barefoot through shallow pools. At the top, the Antique Pool lets you swim in thermal water over sunken marble columns, said to have fallen in an earthquake. It suits travellers who want archaeology and bathing in one day.",
+  "tip": "Shoes are not allowed on the travertine, so bring a bag to carry them.",
+  "season": "year-round",
+  "access": "ticket",
+  "warn": "",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "latitude.to",
+   "https://latitude.to/articles-by-country/tr/turkey/1879/pamukkale"
+  ],
+  "src_more": [],
+  "geo": "exact",
+  "geo_src": "latitude.to"
+ },
+ {
+  "n": "Leukerbad Thermal Baths",
+  "cat": "thermal",
+  "lat": 0,
+  "lon": 0,
+  "cc": "CH",
+  "city": "Leukerbad",
+  "what": "Swim in outdoor thermal pools beneath the sheer rock walls of the Gemmi in Valais.",
+  "about": "Leukerbad, at the head of a side valley above the Rhône in Valais, is the largest thermal resort in the Alps, with hot springs feeding several public baths. Outdoor pools sit directly below the vertical cliffs of the Gemmi pass, so in winter you can lie in hot water while snow covers the slopes around you. It combines easily with hiking over the Gemmi or skiing on the Torrent.",
+  "tip": "Combine a bath with the cable car up the Gemmi for the view down onto the village.",
+  "season": "year-round",
+  "access": "ticket",
+  "warn": "",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Schneehoehen.de",
+   "https://www.schneehoehen.de/artikel/thermen-schweiz-3820"
+  ],
+  "src_more": [
+   [
+    "Freizeitmonster",
+    "https://freizeitmonster.de/blog/thermalbaeder-leuk"
+   ]
+  ],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Tamina Therme Bad Ragaz",
+  "cat": "thermal",
+  "lat": 47.006,
+  "lon": 9.5027,
+  "cc": "CH",
+  "city": "Bad Ragaz",
+  "what": "Swim in thermal water from the Tamina gorge in an indoor and outdoor public bath.",
+  "about": "Bad Ragaz in the St. Gallen Rhine valley has drawn bathers for centuries because of the warm water that rises in the Tamina gorge above Pfäfers and is piped down to the town. The Tamina Therme is the public bath of the resort, with indoor and outdoor pools of thermal water and views of the surrounding mountains. A walk up to the gorge where the spring emerges makes a good pairing with an afternoon in the water.",
+  "tip": "Walk or take the bus to the Tamina gorge to see where the thermal spring emerges.",
+  "season": "year-round",
+  "access": "ticket",
+  "warn": "",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "MySwitzerland",
+   "https://www.myswitzerland.com/en/experiences/tamina-therme-bad-ragaz-thermal-baths/"
+  ],
+  "src_more": [
+   [
+    "latitude.to",
+    "https://latitude.to/map/ch/switzerland/cities/bad-ragaz"
+   ]
+  ],
+  "geo": "approx",
+  "geo_src": "town centre, latitude.to"
+ },
+ {
+  "n": "Therme Vals",
+  "cat": "thermal",
+  "lat": 46.622,
+  "lon": 9.181,
+  "cc": "CH",
+  "city": "Vals",
+  "what": "Bathe in Peter Zumthor's stone thermal bath built from Valser quartzite in a Graubünden valley.",
+  "about": "Built in 1996 into the hillside of the village of Vals in Graubünden, Peter Zumthor's thermal bath is cut from layers of local Valser quartzite and is one of the most celebrated buildings in Switzerland. Light falls in through narrow slits onto pools of different temperatures, and an outdoor pool looks across the valley. It is a place for quiet: the architecture asks visitors to slow down and move from room to room.",
+  "tip": "Day access for non-hotel guests is limited; check availability with the hotel before driving up the valley.",
+  "season": "year-round",
+  "access": "day pass (limited) / hotel guests",
+  "warn": "Day-guest access is restricted and changes; confirm before travelling.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "latitude.to",
+   "https://latitude.to/articles-by-country/ch/switzerland/10714/therme-vals"
+  ],
+  "src_more": [],
+  "geo": "exact",
+  "geo_src": "latitude.to"
+ },
+ {
+  "n": "Banff Upper Hot Springs",
+  "cat": "thermal",
+  "lat": 51.1503,
+  "lon": -115.5565,
+  "cc": "CA",
+  "city": "Banff",
+  "what": "Soak in a hot spring pool on Sulphur Mountain with views across the Rockies.",
+  "about": "On the slopes of Sulphur Mountain above the town of Banff, this hot spring pool is run by Parks Canada inside Banff National Park. The outdoor pool looks across the Bow Valley to the peaks of the Rockies, and in winter snow piles up around the edges while you sit in the warm water. The historic bathhouse building adds to the setting, and it is easy to combine with the Banff Gondola nearby.",
+  "tip": "Pair it with the Banff Gondola, which starts close by on Sulphur Mountain.",
+  "season": "year-round",
+  "access": "ticket",
+  "warn": "",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "latitude.to",
+   "https://latitude.to/satellite-map/ca/canada/63852/banff-upper-hot-springs"
+  ],
+  "src_more": [],
+  "geo": "exact",
+  "geo_src": "latitude.to"
+ },
+ {
+  "n": "Hürlimannbad & Spa Zürich Rooftop Pool",
+  "cat": "rooftop",
+  "lat": 0,
+  "lon": 0,
+  "cc": "CH",
+  "city": "Zurich",
+  "what": "Swim in a rooftop infinity pool of thermal water above the city, after soaking in old brewery vaults.",
+  "about": "In the former Hürlimann brewery in Zurich's Enge district, the Hürlimannbad turned stone fermentation vaults into thermal baths and put an infinity pool on the roof. From the rooftop pool you look out over the city towards the lake and the Uetliberg, which makes it one of the few places in Zurich where you can swim at roof level as a day guest. Bath admission includes the rooftop pool.",
+  "tip": "Standard bath admission includes the infinity rooftop pool; book a breakfast bath for a quieter morning swim.",
+  "season": "year-round",
+  "access": "day pass",
+  "warn": "",
+  "web": "https://aqua-spa-resorts.ch/en/hurlimannbad-spa-zurich",
+  "wiki": "",
+  "src": [
+   "Aqua Spa Resorts",
+   "https://aqua-spa-resorts.ch/en/hurlimannbad-spa-zurich/Vouchers/bath-admission"
+  ],
+  "src_more": [],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Thermae Bath Spa Rooftop Pool",
+  "cat": "rooftop",
+  "lat": 0,
+  "lon": 0,
+  "cc": "GB",
+  "city": "Bath",
+  "what": "Swim in naturally warm spring water in an open-air rooftop pool above Bath's Georgian rooftops.",
+  "about": "Thermae Bath Spa reopened bathing in Bath's natural hot springs after a gap of about 25 years and is the only place in Britain where you can bathe in naturally warm thermal water. Its open-air rooftop pool sits above the city centre, with views over Georgian roofs to Bath Abbey and the surrounding hills, and is at its most atmospheric at dusk or in winter when steam rises. The Minerva Bath sits below.",
+  "tip": "Go at dusk for the view of Bath Abbey lit up from the rooftop pool.",
+  "season": "year-round",
+  "access": "ticket",
+  "warn": "",
+  "web": "https://www.thermaebathspa.com",
+  "wiki": "",
+  "src": [
+   "VisitEngland",
+   "https://www.visitengland.com/experience/relax-in-thermae-bath-spas-open-air-rooftop-pool"
+  ],
+  "src_more": [
+   [
+    "American Spa",
+    "https://www.americanspa.com/britains-only-thermal-spa-reopen-after-25-years"
+   ]
+  ],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Oeschinen Lake (Oeschinensee)",
+  "cat": "nature",
+  "lat": 46.4923,
+  "lon": 7.7228,
+  "cc": "CH",
+  "city": "Kandersteg",
+  "what": "Ride the gondola from Kandersteg and swim or row on a glacier-fed lake beneath 3,000-metre walls.",
+  "about": "Above Kandersteg in the Bernese Oberland, Oeschinen Lake lies in a basin ringed by the cliffs of the Blüemlisalp group, part of the Jungfrau-Aletsch UNESCO World Heritage region. A gondola from the village brings you within a short walk, and in summer you can hire a rowing boat or swim in the very cold, turquoise water. The panoramic trail above the north shore gives the classic view down onto the lake.",
+  "tip": "Walk the higher panoramic trail on the north side for the best view, then descend for a swim or a rowing boat.",
+  "season": "Jun-Oct",
+  "access": "public free (gondola ticket)",
+  "warn": "Very cold glacier water; rockfall danger near the cliffs, stay on marked paths.",
+  "web": "",
+  "wiki": "https://en.wikipedia.org/wiki/Oeschinen_Lake",
+  "src": [
+   "latitude.to",
+   "https://latitude.to/articles-by-country/ch/switzerland/68817/oeschinen-lake"
+  ],
+  "src_more": [],
+  "geo": "exact",
+  "geo_src": "latitude.to"
+ },
+ {
+  "n": "Lake Cauma (Caumasee)",
+  "cat": "nature",
+  "lat": 46.8188,
+  "lon": 9.2908,
+  "cc": "CH",
+  "city": "Flims",
+  "what": "Swim in a turquoise forest lake in the Flims landslide area.",
+  "about": "In the forest below Flims in Graubünden, the Caumasee lies in the landscape left by the great Flims rockslide, and its spring-fed water turns a striking turquoise in summer. A lift takes visitors down from the forest to the lido on the shore, where there is a beach, a small island and rowing boats. It warms more than most Alpine lakes, which makes it a family favourite for a summer swim.",
+  "tip": "In summer the lido charges entry and gets full on hot weekends, so arrive early.",
+  "season": "Jun-Sep",
+  "access": "ticket (summer lido)",
+  "warn": "",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "latitude.to",
+   "https://latitude.to/satellite-map/ch/switzerland/114293/caumasee"
+  ],
+  "src_more": [],
+  "geo": "exact",
+  "geo_src": "latitude.to"
+ },
+ {
+  "n": "Verzasca at Lavertezzo (Ponte dei Salti)",
+  "cat": "nature",
+  "lat": 46.2582,
+  "lon": 8.8351,
+  "cc": "CH",
+  "city": "Lavertezzo",
+  "what": "Swim in the clear green pools of the Verzasca below a two-arched stone bridge.",
+  "about": "The Verzasca valley in Ticino is known for emerald water running over smooth granite, and its best-known spot is the double-arched Ponte dei Salti at Lavertezzo. On summer days people sunbathe on the rocks and swim in the deep green pools around the bridge. The water is clear enough to see the bottom metres down, and cold. The valley can be reached by bus from Locarno and Tenero.",
+  "tip": "Take the bus from Locarno rather than driving; parking in the valley fills up quickly in summer.",
+  "season": "Jun-Sep",
+  "access": "public free",
+  "warn": "Dangerous: several drownings occur most summers. Currents, cold water and sudden rises in flow after storms; do not jump from the bridge.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Switzerland by Locals",
+   "https://switzerlandbylocals.com/en/lavertezzo-and-the-roman-bridge-ponte-dei-salti/"
+  ],
+  "src_more": [
+   [
+    "latitude.to",
+    "https://latitude.to/satellite-map/ch/switzerland/51404/valle-verzasca"
+   ]
+  ],
+  "geo": "approx",
+  "geo_src": "valley centre, latitude.to"
+ },
+ {
+  "n": "Lake Bled (Blejsko jezero)",
+  "cat": "nature",
+  "lat": 46.3587,
+  "lon": 14.0902,
+  "cc": "SI",
+  "city": "Bled",
+  "what": "Swim in an Alpine lake below a clifftop castle, with a church on an island in the middle.",
+  "about": "Lake Bled in the Julian Alps of Slovenia is framed by a medieval castle on a cliff and the only natural island in the country, topped by a pilgrimage church. In summer the lake warms enough for comfortable swimming, and the castle bathing area on the north shore gives easy access. Traditional pletna boats ferry visitors to the island, and strong swimmers sometimes make the crossing themselves.",
+  "tip": "Use the official bathing area below the castle for changing rooms and safe entry.",
+  "season": "Jun-Sep",
+  "access": "public free / ticket (bathing area)",
+  "warn": "Do not swim across boat lanes used by the pletna boats.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "latitude.to",
+   "https://latitude.to/articles-by-country/si/slovenia/6008/lake-bled"
+  ],
+  "src_more": [],
+  "geo": "exact",
+  "geo_src": "latitude.to"
+ },
+ {
+  "n": "Hamilton Pool Preserve",
+  "cat": "nature",
+  "lat": 30.3423,
+  "lon": -98.1269,
+  "cc": "US",
+  "city": "Dripping Springs (Texas)",
+  "what": "Swim in a jade-green pool under a collapsed limestone grotto with a waterfall pouring over the edge.",
+  "about": "West of Austin in the Texas Hill Country, Hamilton Pool formed when the dome of an underground river collapsed, leaving a half-open limestone grotto with a waterfall falling into a jade-green pool. Ferns and stalactites hang from the overhang. The preserve is managed by Travis County, and swimming depends on water quality and rockfall risk, so on some days you can only look.",
+  "tip": "Reservations are required; check whether swimming is open on your date before driving out.",
+  "season": "year-round (swimming varies)",
+  "access": "ticket (reservation)",
+  "warn": "Swimming is closed at times for bacteria levels or falling rock.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "latitude.to",
+   "https://latitude.to/articles-by-country/us/united-states/13288/hamilton-pool-preserve"
+  ],
+  "src_more": [],
+  "geo": "exact",
+  "geo_src": "latitude.to"
+ },
+ {
+  "n": "Dos Ojos Cenote",
+  "cat": "nature",
+  "lat": 20.3247,
+  "lon": -87.392,
+  "cc": "MX",
+  "city": "Tulum",
+  "what": "Snorkel or cavern-dive in two connected cenotes of very clear water in the Yucatán jungle.",
+  "about": "Between Tulum and Playa del Carmen, Dos Ojos is two cenotes connected through an underwater cave, part of the Sac Actun system, one of the longest underwater caves known. Snorkellers float above stalactites in very clear fresh water lit by beams of sunlight, while certified divers follow guided cavern routes between the 'eyes'. It is the classic introduction to the cenotes of Quintana Roo.",
+  "tip": "Bring a mask and fins; the stalactites and light beams are best seen from the surface in the late morning.",
+  "season": "year-round",
+  "access": "ticket",
+  "warn": "Cavern diving only with certified guides; never enter the cave system without training.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "latitude.to",
+   "https://latitude.to/articles-by-country/mx/mexico/27124/sistema-dos-ojos"
+  ],
+  "src_more": [],
+  "geo": "exact",
+  "geo_src": "latitude.to"
+ },
+ {
+  "n": "Gran Cenote",
+  "cat": "nature",
+  "lat": 20.2465,
+  "lon": -87.464,
+  "cc": "MX",
+  "city": "Tulum",
+  "what": "Snorkel among stalactites and turtles in an open cenote near Tulum.",
+  "about": "Just outside Tulum on the road towards Cobá, Gran Cenote is a partly open cenote with wooden walkways, swimming areas and cave sections hung with stalactites. It is part of the Sac Actun cave system, and the water is clear and fresh. Small turtles live in the pools, and snorkellers can follow the light into the shaded cavern sections. Its easy access makes it a popular first cenote.",
+  "tip": "Shower before entering; sunscreen is not allowed in cenotes, which protects the clear water.",
+  "season": "year-round",
+  "access": "ticket",
+  "warn": "",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "latitude.to",
+   "https://latitude.to/articles-by-country/mx/mexico/24472/sistema-sac-actun"
+  ],
+  "src_more": [],
+  "geo": "approx",
+  "geo_src": "Sac Actun system, latitude.to"
+ },
+ {
+  "n": "Silfra Fissure",
+  "cat": "deep",
+  "lat": 64.2548,
+  "lon": -21.1217,
+  "cc": "IS",
+  "city": "Þingvellir",
+  "what": "Snorkel or dry-suit dive in a fissure between the North American and Eurasian plates in water clear enough to see 100 m.",
+  "about": "Inside Þingvellir National Park, Silfra is a water-filled crack in the rift between the North American and Eurasian plates, fed by glacial meltwater filtered through lava rock. The water stays at 2-4 °C all year and is exceptionally clear. Routes run through the Silfra Hall, with caves to about 45 m, along the 100-metre Cathedral, and end in the shallow Lagoon, where snorkellers and divers exit.",
+  "tip": "A dry suit makes the 2-4 °C water manageable; snorkellers float the same route as divers.",
+  "season": "year-round",
+  "access": "guided only",
+  "warn": "Near-freezing water; deep sections need technical skills; headfirst entry through the 'toilet' tunnel is banned due to instability.",
+  "web": "",
+  "wiki": "https://en.wikipedia.org/wiki/Silfra",
+  "src": [
+   "Wikipedia",
+   "https://en.wikipedia.org/wiki/Silfra"
+  ],
+  "src_more": [
+   [
+    "latitude.to",
+    "https://latitude.to/articles-by-country/is/iceland/5351/thingvellir"
+   ],
+   [
+    "Dive Planner Pro",
+    "https://diveplannerpro.com/blog/best-dive-sites-world-top-20"
+   ]
+  ],
+  "geo": "approx",
+  "geo_src": "Þingvellir NP, latitude.to"
+ },
+ {
+  "n": "Blue Hole Dahab",
+  "cat": "deep",
+  "lat": 28.57,
+  "lon": 34.5358,
+  "cc": "EG",
+  "city": "Dahab",
+  "what": "Dive or snorkel the rim of a 130-metre sinkhole on the Sinai coast.",
+  "about": "North of Dahab on the Gulf of Aqaba, the Blue Hole is a deep sinkhole in the reef, often given as about 130 m deep. The classic dive enters through a 28-metre tunnel called the Bells, drifts along the reef wall and crosses the saddle into the blue bowl. The arch at depth has claimed many lives among divers who went too deep. The rim is also good snorkelling.",
+  "tip": "Snorkellers can enjoy the rim of the hole from shore; divers should do the Bells to Saddle route with a local guide.",
+  "season": "year-round",
+  "access": "public free / guided dive",
+  "warn": "The arch lies at technical-diving depth and has caused many deaths; stay within your certification.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "PADI",
+   "https://blog.padi.com/best-dive-sites-in-the-red-sea/"
+  ],
+  "src_more": [
+   [
+    "latitude.to",
+    "https://latitude.to/articles-by-country/eg/egypt/4249/blue-hole-red-sea"
+   ]
+  ],
+  "geo": "exact",
+  "geo_src": "latitude.to"
+ },
+ {
+  "n": "SS Thistlegorm",
+  "cat": "deep",
+  "lat": 27.8085,
+  "lon": 33.9187,
+  "cc": "EG",
+  "city": "Sharm El Sheikh",
+  "what": "Dive a Second World War cargo ship that still holds motorbikes, trucks and rifles.",
+  "about": "Sunk in 1941 in the Strait of Gubal, about 40 km from Sharm El Sheikh, the British supply ship Thistlegorm lies at around 30 m with its cargo still in the holds: motorbikes, trucks, armoured vehicles and rifles. Batfish, turtles, barracuda and crocodile fish live around the wreck. It is widely ranked among the best wreck dives in the world and needs two or three dives to see properly.",
+  "tip": "Plan at least two or three dives; a liveaboard lets you dive it before the day boats arrive.",
+  "season": "year-round",
+  "access": "guided only",
+  "warn": "Advanced divers only: depth and currents.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "PADI",
+   "https://blog.padi.com/best-dive-sites-in-the-red-sea/"
+  ],
+  "src_more": [
+   [
+    "latitude.to",
+    "https://latitude.to/articles-by-country/eg/egypt/18385/ss-thistlegorm"
+   ]
+  ],
+  "geo": "exact",
+  "geo_src": "latitude.to"
+ },
+ {
+  "n": "Shark and Yolanda Reef, Ras Mohammed",
+  "cat": "deep",
+  "lat": 0,
+  "lon": 0,
+  "cc": "EG",
+  "city": "Sharm El Sheikh",
+  "what": "Drift along two coral towers on an 800-metre wall at the southern tip of Sinai.",
+  "about": "Inside Ras Mohammed National Park at the southern tip of the Sinai, Shark and Yolanda Reef are two coral towers rising from a wall that drops about 800 m. Strong currents bring barracuda and snappers, and the dive ends near the scattered cargo of the Yolanda wreck, including toilets and bathtubs. Dive Planner Pro ranks it among the top dives in the world.",
+  "tip": "Expect strong currents; dive with an operator who times the entry for the tide.",
+  "season": "year-round",
+  "access": "guided only",
+  "warn": "Strong currents.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "PADI",
+   "https://blog.padi.com/best-dive-sites-in-the-red-sea/"
+  ],
+  "src_more": [
+   [
+    "Dive Planner Pro",
+    "https://diveplannerpro.com/blog/best-dive-sites-world-top-20"
+   ]
+  ],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Elphinstone Reef",
+  "cat": "deep",
+  "lat": 0,
+  "lon": 0,
+  "cc": "EG",
+  "city": "Marsa Alam",
+  "what": "Dive an offshore reef wall known for oceanic whitetip and hammerhead sharks.",
+  "about": "About 30 km from Marsa Alam, Elphinstone is a long reef with walls dropping hundreds of metres and plateaus at both ends. Oceanic whitetips and hammerhead sharks are often seen on the northern and southern plateaus, along with soft corals, gorgonians, tuna and barracuda. It is best dived early in the morning from a liveaboard, before day boats arrive.",
+  "tip": "Arrive early in the morning by liveaboard to dive it before the day boats.",
+  "season": "year-round",
+  "access": "guided only",
+  "warn": "Strong currents; shark etiquette briefings apply.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "PADI",
+   "https://blog.padi.com/best-dive-sites-in-the-red-sea/"
+  ],
+  "src_more": [],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Brothers Islands (El Akhawein)",
+  "cat": "deep",
+  "lat": 0,
+  "lon": 0,
+  "cc": "EG",
+  "city": "Red Sea (offshore)",
+  "what": "Dive two remote islets with coral-covered wrecks and deep-water sharks.",
+  "about": "Big Brother and Little Brother are two remote islets far offshore in the Egyptian Red Sea, reachable only by liveaboard. Big Brother has a Victorian lighthouse and the coral-covered wrecks of the Numidia and the Aida, while Little Brother's plateau draws silvertip and grey reef sharks and occasionally great hammerheads. It is a destination for experienced divers with a solid logbook.",
+  "tip": "Only reachable by liveaboard; operators usually require a substantial logbook.",
+  "season": "year-round",
+  "access": "guided only (liveaboard)",
+  "warn": "Advanced divers only: strong, unpredictable currents.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "PADI",
+   "https://blog.padi.com/best-dive-sites-in-the-red-sea/"
+  ],
+  "src_more": [],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Great Blue Hole",
+  "cat": "deep",
+  "lat": 17.3092,
+  "lon": -87.534,
+  "cc": "BZ",
+  "city": "Lighthouse Reef",
+  "what": "Dive into a circular marine sinkhole to see stalactites at about 40 metres.",
+  "about": "In the middle of Lighthouse Reef off Belize, the Great Blue Hole is a near-perfect circle of deep blue water in a shallow turquoise atoll, the collapsed roof of an old cave. The classic dive descends the wall to around 40 m, where stalactites hang from ledges formed when sea levels were lower. From the air it is one of the most recognisable sights in the Caribbean.",
+  "tip": "Many visitors combine the dive with a scenic flight to see the circle from above.",
+  "season": "year-round",
+  "access": "guided only",
+  "warn": "Deep dive to about 40 m: advanced certification required.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Dive Planner Pro",
+   "https://diveplannerpro.com/blog/best-dive-sites-world-top-20"
+  ],
+  "src_more": [
+   [
+    "latitude.to",
+    "https://latitude.to/articles-by-country/bz/belize/1039/great-blue-hole"
+   ]
+  ],
+  "geo": "exact",
+  "geo_src": "latitude.to"
+ },
+ {
+  "n": "Zenobia Wreck",
+  "cat": "deep",
+  "lat": 0,
+  "lon": 0,
+  "cc": "CY",
+  "city": "Larnaca",
+  "what": "Dive a large roll-on roll-off ferry lying on its side with lorries still in its holds.",
+  "about": "Off Larnaca in Cyprus, the Zenobia is a ferry of about 172 m that sank on her maiden voyage in 1980 and now lies on her side with lorries still in the vehicle decks. It is close to shore, protected from currents, and big enough for many dives, so it attracts divers of different levels. Dive Planner Pro ranks it second only to the Thistlegorm among its top dive sites.",
+  "tip": "Plan several dives: the wreck is too large to see in one.",
+  "season": "year-round",
+  "access": "guided only",
+  "warn": "Wreck penetration only with appropriate training.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Dive Planner Pro",
+   "https://diveplannerpro.com/blog/best-dive-sites-world-top-20"
+  ],
+  "src_more": [],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Chuuk Lagoon Wrecks (Fujikawa Maru)",
+  "cat": "deep",
+  "lat": 7.4167,
+  "lon": 151.7833,
+  "cc": "FM",
+  "city": "Chuuk",
+  "what": "Dive Second World War transport ships in a Pacific lagoon, including one with Zero fighter planes in its hold.",
+  "about": "Chuuk Lagoon in Micronesia was a Japanese naval base in the Second World War, and dozens of ships sank there in 1944. The best-known wreck, the Fujikawa Maru, still carries parts of Zero fighter planes in its holds, and coral now covers its masts and deck guns. The lagoon is remote and expensive to reach, which keeps it a pilgrimage for wreck divers.",
+  "tip": "Liveaboards and lagoon resorts are the only practical bases; book well ahead.",
+  "season": "year-round",
+  "access": "guided only",
+  "warn": "War graves: do not remove anything; deep wreck penetration needs training.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Dive Planner Pro",
+   "https://diveplannerpro.com/blog/best-dive-sites-world-top-20"
+  ],
+  "src_more": [
+   [
+    "latitude.to",
+    "https://latitude.to/articles-by-country/fm/micronesia/2894/chuuk-lagoon"
+   ]
+  ],
+  "geo": "approx",
+  "geo_src": "lagoon centre, latitude.to"
+ },
+ {
+  "n": "USAT Liberty Wreck, Tulamben",
+  "cat": "deep",
+  "lat": 0,
+  "lon": 0,
+  "cc": "ID",
+  "city": "Tulamben (Bali)",
+  "what": "Swim from a black-stone beach straight onto a coral-covered Second World War wreck.",
+  "about": "At Tulamben on Bali's north-east coast, the USAT Liberty lies just off a beach of black volcanic stones, so divers and even snorkellers walk in from shore. The wreck is now covered in coral and sponges, and Dive Planner Pro mentions bumphead parrotfish around it at dawn. Its easy access makes it one of the most popular wreck dives in Asia.",
+  "tip": "Go at dawn to see the bumphead parrotfish and avoid the mid-morning crowds.",
+  "season": "year-round",
+  "access": "public free / guided dive",
+  "warn": "",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Dive Planner Pro",
+   "https://diveplannerpro.com/blog/best-dive-sites-world-top-20"
+  ],
+  "src_more": [],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Cape Kri, Raja Ampat",
+  "cat": "deep",
+  "lat": 0,
+  "lon": 0,
+  "cc": "ID",
+  "city": "Raja Ampat",
+  "what": "Dive one of the most fish-rich reefs on record, in the Raja Ampat islands.",
+  "about": "Off Kri island in Raja Ampat, West Papua, Cape Kri is the reef where a record 374 fish species were counted on a single dive. Currents feed dense schools of fish over hard and soft corals, and every part of the reef seems to be moving. It sits in the heart of the Coral Triangle, the region with the greatest marine biodiversity on earth.",
+  "tip": "Time the dive with the current; operators on Kri island know the best slack windows.",
+  "season": "Oct-Apr (calmer season, typical)",
+  "access": "guided only",
+  "warn": "Currents.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Dive Planner Pro",
+   "https://diveplannerpro.com/blog/best-dive-sites-world-top-20"
+  ],
+  "src_more": [],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Blue Corner, Palau",
+  "cat": "deep",
+  "lat": 0,
+  "lon": 0,
+  "cc": "PW",
+  "city": "Palau",
+  "what": "Hook onto a reef edge in the current and watch grey reef sharks and Napoleon wrasse pass by.",
+  "about": "Blue Corner is a reef plateau at the edge of a wall in Palau where strong currents bring in grey reef sharks, schools of fish and Napoleon wrasse. Divers clip a reef hook to dead rock at the edge and hang in the current to watch the parade. It is one of the best-known current dives in the Pacific and is reached by boat from Koror.",
+  "tip": "Bring a reef hook and learn how to use it before the dive.",
+  "season": "year-round",
+  "access": "guided only",
+  "warn": "Strong currents: experienced divers.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Dive Planner Pro",
+   "https://diveplannerpro.com/blog/best-dive-sites-world-top-20"
+  ],
+  "src_more": [],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Tiputa Pass, Rangiroa",
+  "cat": "deep",
+  "lat": 0,
+  "lon": 0,
+  "cc": "PF",
+  "city": "Rangiroa",
+  "what": "Ride an incoming tide through an atoll pass with dolphins and hammerhead sharks.",
+  "about": "Rangiroa in French Polynesia is one of the largest atolls in the world, and the Tiputa Pass channels the ocean into its lagoon with every tide. On the incoming current divers drift through the pass at speed, often with bottlenose dolphins and, in season, great hammerheads. Dolphins can sometimes be seen from shore at the pass as well.",
+  "tip": "Dive on the incoming tide for the best visibility and wildlife.",
+  "season": "year-round",
+  "access": "guided only",
+  "warn": "Fast drift dive: experienced divers.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Dive Planner Pro",
+   "https://diveplannerpro.com/blog/best-dive-sites-world-top-20"
+  ],
+  "src_more": [],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Batu Bolong, Komodo",
+  "cat": "deep",
+  "lat": 0,
+  "lon": 0,
+  "cc": "ID",
+  "city": "Komodo National Park",
+  "what": "Dive a small pinnacle in the Komodo current, sheltered on the lee side, among dense reef life.",
+  "about": "Batu Bolong is a small rock pinnacle in Komodo National Park whose reef is densely covered in coral and fish. Currents of around three knots sweep past, so divers stay in the shelter of the down-current side and watch the life stream past; manta cleaning stations are found nearby. It is often ranked among the richest reef dives in Indonesia.",
+  "tip": "Stay on the sheltered side of the pinnacle and follow your guide's timing for slack water.",
+  "season": "year-round",
+  "access": "guided only",
+  "warn": "Strong currents and down-currents.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "Dive Planner Pro",
+   "https://diveplannerpro.com/blog/best-dive-sites-world-top-20"
+  ],
+  "src_more": [],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Lake Geneva Belle Époque Paddle Steamers (CGN)",
+  "cat": "boat",
+  "lat": 46.5042,
+  "lon": 6.6227,
+  "cc": "CH",
+  "city": "Lausanne-Ouchy",
+  "what": "Cruise Lake Geneva on a century-old paddle steamer between Swiss and French shores.",
+  "about": "The CGN runs one of the largest fleets of Belle Époque paddle steamers in the world on Lake Geneva. Boats such as the Montreux (1904), the Vevey (1907), the Savoie (1914) and the Simplon (1920) still sail regular routes, and the Lausanne of 1900 was the first paddle steamer powered by superheated steam. Through the polished engine room windows you can watch the pistons work while the Lavaux vineyards slide past.",
+  "tip": "Check the timetable for which sailings are operated by paddle steamers; the boats are named in the schedule.",
+  "season": "mainly Apr-Oct",
+  "access": "ticket",
+  "warn": "",
+  "web": "https://www.cgn.ch",
+  "wiki": "",
+  "src": [
+   "CGN",
+   "https://www.cgn.ch/en/background"
+  ],
+  "src_more": [
+   [
+    "latitude.to",
+    "https://latitude.to/articles-by-country/ch/switzerland/56646/ouchy"
+   ]
+  ],
+  "geo": "approx",
+  "geo_src": "Ouchy port, latitude.to"
+ },
+ {
+  "n": "Lake Lucerne Paddle Steamers (SGV)",
+  "cat": "boat",
+  "lat": 47.0427,
+  "lon": 8.3063,
+  "cc": "CH",
+  "city": "Lucerne",
+  "what": "Sail from Lucerne towards Flüelen on one of five historic paddle steamers.",
+  "about": "The Lake Lucerne Navigation Company keeps five paddle steamers in service: Uri (1901), Unterwalden (1902), Schiller (1906), Gallia (1913) and the flagship Stadt Luzern (1928). They leave from the landing stage right beside Lucerne station and sail into the fjord-like arms of the lake, past Vitznau, where the Rigi railway starts, towards Flüelen. The Lucerne-Flüelen leg forms part of the Gotthard Panorama Express route.",
+  "tip": "The company announces in advance which sailings use paddle steamers; check before you buy.",
+  "season": "mainly Apr-Oct",
+  "access": "ticket",
+  "warn": "",
+  "web": "https://www.lakelucerne.ch",
+  "wiki": "https://en.wikipedia.org/wiki/Lake_Lucerne_Navigation_Company",
+  "src": [
+   "Wikipedia",
+   "https://en.wikipedia.org/wiki/Lake_Lucerne_Navigation_Company"
+  ],
+  "src_more": [
+   [
+    "latitude.to",
+    "https://latitude.to/articles-by-country/ch/switzerland/48306/lucerne-railway-station"
+   ]
+  ],
+  "geo": "approx",
+  "geo_src": "Lucerne station (pier adjacent), latitude.to"
+ },
+ {
+  "n": "Rhine Falls Rock Boat",
+  "cat": "boat",
+  "lat": 47.6743,
+  "lon": 8.6098,
+  "cc": "CH",
+  "city": "Neuhausen am Rheinfall",
+  "what": "Take a small boat across the basin to the rock in the middle of Europe's largest waterfall and climb to its top.",
+  "about": "At the Rhine Falls near Schaffhausen, small boats cross the churning basin below the waterfall and land at the central rock, where steps lead to a viewing platform in the middle of the falls. Spray and noise surround you, and the castle of Laufen stands on the cliff above. Other boats circle the basin or cross between the banks. It is the closest anyone can get to the water.",
+  "tip": "Water levels are highest in early summer after snowmelt, when the falls are at their loudest.",
+  "season": "mainly Apr-Oct",
+  "access": "ticket",
+  "warn": "The rock boat may not run at high water.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "latitude.to",
+   "https://latitude.to/articles-by-country/ch/switzerland/9197/rhine-falls"
+  ],
+  "src_more": [],
+  "geo": "exact",
+  "geo_src": "latitude.to"
+ },
+ {
+  "n": "Lake Brienz to Giessbach Falls",
+  "cat": "boat",
+  "lat": 46.7349,
+  "lon": 8.0225,
+  "cc": "CH",
+  "city": "Brienz",
+  "what": "Take a lake steamer across Lake Brienz to Giessbach, then a historic funicular up to the waterfalls.",
+  "about": "On the southern shore of Lake Brienz in the Bernese Oberland, the Giessbach falls drop in a series of steps through the forest to the lake. Boats from Brienz and Interlaken stop at the Giessbach landing stage, where an old funicular climbs to the Grandhotel Giessbach and paths lead behind the cascades. The turquoise water of the lake on the way is part of the experience.",
+  "tip": "Ride the boat to Giessbach See and connect with the funicular up to the hotel and the falls.",
+  "season": "mainly Apr-Oct",
+  "access": "ticket",
+  "warn": "",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "latitude.to",
+   "https://latitude.to/articles-by-country/ch/switzerland/137002/giessbachbahn-funicular"
+  ],
+  "src_more": [],
+  "geo": "approx",
+  "geo_src": "Giessbachbahn funicular, latitude.to"
+ },
+ {
+  "n": "Hallstatt Lake Boats (Hallstätter See)",
+  "cat": "boat",
+  "lat": 47.5738,
+  "lon": 13.6563,
+  "cc": "AT",
+  "city": "Hallstatt",
+  "what": "Cross the Hallstätter See by boat for the view of Hallstatt's houses stacked along the shore.",
+  "about": "Hallstatt village clings to a narrow strip between the mountains and the Hallstätter See in the Salzkammergut, and the best view of it is from the water. A ferry links the village with the railway station on the opposite shore, and rowing boats and electric boats can be hired. Seen from the lake, the church spire and the houses rising up the slope make the scene that has made Hallstatt famous.",
+  "tip": "Arriving by train and taking the ferry across gives the classic first view of the village.",
+  "season": "year-round (ferry); boats mainly summer",
+  "access": "ticket",
+  "warn": "",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "latitude.to",
+   "https://latitude.to/articles-by-country/at/austria/69875/hallstatter-see"
+  ],
+  "src_more": [],
+  "geo": "approx",
+  "geo_src": "lake centre, latitude.to"
+ },
+ {
+  "n": "Königssee Electric Boats",
+  "cat": "boat",
+  "lat": 47.55,
+  "lon": 12.9667,
+  "cc": "DE",
+  "city": "Schönau am Königssee",
+  "what": "Glide silently across the Königssee to St. Bartholomä and hear the trumpet echo off the cliffs.",
+  "about": "In Berchtesgaden National Park, the Königssee is a long, narrow lake between steep mountain walls, and boats have run quietly on electric power for decades. Partway across, the boatman plays a trumpet to show off the echo from the Echowand. The boats call at St. Bartholomä, a church with red onion domes on a small peninsula, and continue to Salet for the walk to the Obersee.",
+  "tip": "Go to Salet and walk the short path to the Obersee for a quieter second lake.",
+  "season": "year-round (reduced in winter)",
+  "access": "ticket",
+  "warn": "Swimming and private boats are restricted on the lake; follow national park rules.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "latitude.to",
+   "https://latitude.to/satellite-map/de/germany/8792/konigssee"
+  ],
+  "src_more": [],
+  "geo": "approx",
+  "geo_src": "lake centre, latitude.to"
+ },
+ {
+  "n": "Mosquito Bay, Vieques",
+  "cat": "night",
+  "lat": 0,
+  "lon": 0,
+  "cc": "PR",
+  "city": "Vieques",
+  "what": "Kayak at night through one of the brightest bioluminescent bays in the world.",
+  "about": "On the island of Vieques, off the east coast of Puerto Rico, Mosquito Bay is often called the brightest of the island's three bioluminescent bays. Microscopic dinoflagellates emit blue light whenever the water moves, so every paddle stroke and every fish leaves a glowing trail. Access is by guided kayak or electric boat tour; swimming is not permitted, as AFAR notes La Parguera is the only Puerto Rican bay where it is.",
+  "tip": "Book a tour on a dark night near the new moon; bright moonlight drowns out the glow.",
+  "season": "year-round",
+  "access": "guided only",
+  "warn": "No swimming; no sunscreen or insect repellent in the water.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "AFAR",
+   "https://www.afar.com/magazine/what-is-bioluminescence-and-where-can-you-see-it"
+  ],
+  "src_more": [
+   [
+    "She Is Wanderlust",
+    "https://sheiswanderlust.com/destinations/the-caribbean-travel-guide/puerto-rico/attractions/mosquito-bay/"
+   ]
+  ],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Laguna Grande, Fajardo",
+  "cat": "night",
+  "lat": 18.3258,
+  "lon": -65.6524,
+  "cc": "PR",
+  "city": "Fajardo",
+  "what": "Paddle a mangrove channel at night into a lagoon that glows with every stroke.",
+  "about": "Laguna Grande in Fajardo is the closest of Puerto Rico's bioluminescent bays to San Juan, so it is the easiest to reach without a ferry or flight. Night tours paddle along a narrow mangrove channel before opening into the lagoon, where dinoflagellates light up the water around each kayak. It suits travellers based in San Juan who want the experience in a single evening.",
+  "tip": "Choose a night close to the new moon for the strongest glow.",
+  "season": "year-round",
+  "access": "guided only",
+  "warn": "Kayak tours only.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "AFAR",
+   "https://www.afar.com/magazine/what-is-bioluminescence-and-where-can-you-see-it"
+  ],
+  "src_more": [
+   [
+    "latitude.to",
+    "https://latitude.to/map/pr/puerto-rico/cities/fajardo"
+   ]
+  ],
+  "geo": "approx",
+  "geo_src": "Fajardo town, latitude.to"
+ },
+ {
+  "n": "La Parguera Bioluminescent Bay",
+  "cat": "night",
+  "lat": 0,
+  "lon": 0,
+  "cc": "PR",
+  "city": "Lajas",
+  "what": "Slip into glowing water from a boat at night, in the one Puerto Rican bio bay where swimming is allowed.",
+  "about": "In the town of Lajas on Puerto Rico's south-west corner, La Parguera is a bay of dinoflagellates that light up blue when disturbed. AFAR notes that it is the only one of the island's three bioluminescent bays where swimming is permitted, so you can see the glow trail along your own arms and legs. Boat tours leave from the fishing village of La Parguera after dark.",
+  "tip": "Its south-west location means it is a long drive from San Juan; combine it with a stay in the area.",
+  "season": "year-round",
+  "access": "guided only / boat tour",
+  "warn": "Some dinoflagellate blooms can be harmful; follow operator guidance.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "AFAR",
+   "https://www.afar.com/magazine/what-is-bioluminescence-and-where-can-you-see-it"
+  ],
+  "src_more": [],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Luminous Lagoon (Glistening Waters)",
+  "cat": "night",
+  "lat": 0,
+  "lon": 0,
+  "cc": "JM",
+  "city": "Falmouth",
+  "what": "Take a night boat trip on a lagoon near Falmouth where the water glows when stirred.",
+  "about": "Near Falmouth in Trelawny on Jamaica's north coast, the Luminous Lagoon is a bioluminescent lagoon where microorganisms light the water when it is disturbed. Evening boat trips leave from the Glistening Waters restaurant and marina, and cruise operators from resorts such as Ocho Rios run excursions. It is one of the best-known bioluminescent sites in the Caribbean and easy to combine with a stay on the north coast.",
+  "tip": "Evening tours start from the Glistening Waters marina; go on a dark, moonless night.",
+  "season": "year-round",
+  "access": "guided only / boat tour",
+  "warn": "Swimming rules not confirmed from an official source; follow the boat operator.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "AAA",
+   "https://www.aaa.com/tripcanvas/attraction/glistening-waters-luminous-lagoon-VA15118"
+  ],
+  "src_more": [
+   [
+    "TUI",
+    "https://www.tui.co.uk/things-to-do/ocho-rios/evening-cruise-on-the-luminous-lagoon-7-123661/"
+   ]
+  ],
+  "geo": "none",
+  "geo_src": ""
+ },
+ {
+  "n": "Waitomo Glowworm Caves",
+  "cat": "night",
+  "lat": -38.2564,
+  "lon": 175.102,
+  "cc": "NZ",
+  "city": "Waitomo",
+  "what": "Drift by boat through a dark cave ceiling lit by thousands of glowworms.",
+  "about": "In the limestone country of New Zealand's North Island, the Waitomo caves are home to glowworms, the larvae of a fungus gnat that hang glowing threads from the cave roof to catch insects. Tours walk through the cave chambers and then glide by boat in silence through the grotto, where the ceiling looks like a starry sky. Tours run all year.",
+  "tip": "Stay silent on the boat section; noise and light make the glowworms dim.",
+  "season": "year-round",
+  "access": "guided only",
+  "warn": "No photography in the glowworm grotto.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "AFAR",
+   "https://www.afar.com/magazine/what-is-bioluminescence-and-where-can-you-see-it"
+  ],
+  "src_more": [
+   [
+    "latitude.to",
+    "https://latitude.to/articles-by-country/nz/new-zealand/18047/waitomo-caves"
+   ]
+  ],
+  "geo": "exact",
+  "geo_src": "latitude.to"
+ },
+ {
+  "n": "Tomales Bay Bioluminescence Kayaking",
+  "cat": "night",
+  "lat": 0,
+  "lon": 0,
+  "cc": "US",
+  "city": "Point Reyes (California)",
+  "what": "Paddle a sheltered bay of Point Reyes at night while the water lights up around your kayak.",
+  "about": "About 40 miles north of San Francisco, Tomales Bay lies inside Point Reyes National Seashore, a long, sheltered inlet along the San Andreas fault. In late summer and autumn, dinoflagellates bloom and the water sparks blue around paddles and fish. Several companies run guided night kayak tours, which makes it the most accessible bioluminescence trip from the Bay Area.",
+  "tip": "Go in late summer or autumn, when the dinoflagellates are most abundant.",
+  "season": "late summer-autumn",
+  "access": "guided only",
+  "warn": "Cold water: dress for immersion.",
+  "web": "",
+  "wiki": "",
+  "src": [
+   "AFAR",
+   "https://www.afar.com/magazine/what-is-bioluminescence-and-where-can-you-see-it"
+  ],
+  "src_more": [],
+  "geo": "none",
+  "geo_src": ""
+ }
+]

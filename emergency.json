@@ -1,0 +1,483 @@
+{
+ "_about": "Emergency numbers for DipMapper. Source: Wikipedia \"List of emergency telephone numbers\" and \"Poison control center\", Switzerland also MySwitzerland (Switzerland Tourism). Checked 10 Oct 2026. Fields absent = not verified; the app then shows the general number.",
+ "checked": "2026-10-10",
+ "CH": {
+  "general": "112",
+  "police": "117",
+  "fire": "118",
+  "ambulance": "144",
+  "air": "1414",
+  "poison": "145",
+  "notes": "Lake police and water rescue are reached through the police (117). Rega air rescue 1414; in Valais also Air-Glaciers 1415.",
+  "src": [
+   "https://www.myswitzerland.com/en/planning/about-switzerland/general-facts/emergency/emergency-numbers/",
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "LI": {
+  "general": "112",
+  "police": "117",
+  "fire": "118",
+  "ambulance": "144",
+  "notes": "Swiss Rega air rescue also covers Liechtenstein.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "DE": {
+  "general": "112",
+  "police": "110",
+  "fire": "112",
+  "ambulance": "112",
+  "poison": "regional: area code + 19240",
+  "notes": "Poison centres are regional, e.g. Munich 089 19240, Berlin 030 19240, Freiburg 0761 19240; Erfurt 0361 730730.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers",
+   "https://en.wikipedia.org/wiki/Poison_control_center"
+  ]
+ },
+ "AT": {
+  "general": "112",
+  "police": "133",
+  "fire": "122",
+  "ambulance": "144",
+  "air": "140",
+  "poison": "01 406 43 43",
+  "notes": "Mountain rescue 140.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "FR": {
+  "general": "112",
+  "police": "17",
+  "fire": "18",
+  "ambulance": "15",
+  "sea": "196",
+  "notes": "Maritime rescue (CROSS) 196.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "IT": {
+  "general": "112",
+  "police": "112",
+  "fire": "112",
+  "ambulance": "112",
+  "sea": "1530",
+  "notes": "Coast guard 1530. Where 112 is not yet active (Veneto, Campania): police 113, fire 115, ambulance 118.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "ES": {
+  "general": "112",
+  "police": "112",
+  "fire": "112",
+  "ambulance": "112",
+  "notes": "112 covers every service, including maritime rescue. National Police 091, Civil Guard 062.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "PT": {
+  "general": "112",
+  "police": "112",
+  "fire": "112",
+  "ambulance": "112",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "NL": {
+  "general": "112",
+  "police": "112",
+  "fire": "112",
+  "ambulance": "112",
+  "notes": "Non-emergency police 0900 8844.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "BE": {
+  "general": "112",
+  "police": "101",
+  "fire": "112",
+  "ambulance": "112",
+  "poison": "070 245 245",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers",
+   "https://en.wikipedia.org/wiki/Poison_control_center"
+  ]
+ },
+ "LU": {
+  "general": "112",
+  "police": "113",
+  "fire": "112",
+  "ambulance": "112",
+  "poison": "8002 5500",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers",
+   "https://en.wikipedia.org/wiki/Poison_control_center"
+  ]
+ },
+ "DK": {
+  "general": "112",
+  "police": "112",
+  "fire": "112",
+  "ambulance": "112",
+  "notes": "Non-emergency police 114.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "SE": {
+  "general": "112",
+  "police": "112",
+  "fire": "112",
+  "ambulance": "112",
+  "notes": "Medical advice 1177.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "NO": {
+  "general": "112",
+  "police": "112",
+  "fire": "110",
+  "ambulance": "113",
+  "sea": "120",
+  "notes": "Emergency at sea 120.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "FI": {
+  "general": "112",
+  "police": "112",
+  "fire": "112",
+  "ambulance": "112",
+  "sea": "0294 1000",
+  "poison": "0800 147 111",
+  "notes": "Maritime rescue 0294 1000.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "IS": {
+  "general": "112",
+  "police": "112",
+  "fire": "112",
+  "ambulance": "112",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "IE": {
+  "general": "112",
+  "police": "112",
+  "fire": "112",
+  "ambulance": "112",
+  "notes": "999 works as well.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "GB": {
+  "general": "999",
+  "police": "999",
+  "fire": "999",
+  "ambulance": "999",
+  "notes": "112 also works. Coastguard: dial 999 and ask for the coastguard. Non-emergency medical 111.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "PL": {
+  "general": "112",
+  "police": "997",
+  "fire": "998",
+  "ambulance": "999",
+  "sea": "985",
+  "notes": "Lakes and rivers rescue (WOPR) 984 or +48 601 100 100; sea and mountains 985.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "CZ": {
+  "general": "112",
+  "police": "158",
+  "fire": "150",
+  "ambulance": "155",
+  "air": "1210",
+  "notes": "Mountain rescue 1210.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "SK": {
+  "general": "112",
+  "police": "158",
+  "fire": "150",
+  "ambulance": "155",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "HU": {
+  "general": "112",
+  "police": "107",
+  "fire": "105",
+  "ambulance": "104",
+  "sea": "1817",
+  "notes": "Water emergency 1817.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "SI": {
+  "general": "112",
+  "police": "113",
+  "fire": "112",
+  "ambulance": "112",
+  "sea": "080 18 00",
+  "notes": "Emergency at sea 080 18 00.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "HR": {
+  "general": "112",
+  "police": "192",
+  "fire": "193",
+  "ambulance": "194",
+  "sea": "195",
+  "notes": "Sea search and rescue 195.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "GR": {
+  "general": "112",
+  "police": "100",
+  "fire": "199",
+  "ambulance": "166",
+  "sea": "108",
+  "notes": "Coast guard 108.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "CY": {
+  "general": "112",
+  "police": "199",
+  "fire": "112",
+  "ambulance": "112",
+  "sea": "1441",
+  "poison": "1401",
+  "notes": "Air and sea rescue 1441.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "MT": {
+  "general": "112",
+  "police": "112",
+  "fire": "112",
+  "ambulance": "112",
+  "poison": "1774",
+  "notes": "Poisons centre 1774 (daily 8:00–20:00).",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers",
+   "https://en.wikipedia.org/wiki/Poison_control_center"
+  ]
+ },
+ "EE": {
+  "general": "112",
+  "police": "112",
+  "fire": "112",
+  "ambulance": "112",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "LV": {
+  "general": "112",
+  "police": "110",
+  "fire": "112",
+  "ambulance": "113",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "LT": {
+  "general": "112",
+  "police": "112",
+  "fire": "112",
+  "ambulance": "112",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "RO": {
+  "general": "112",
+  "police": "112",
+  "fire": "112",
+  "ambulance": "112",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "BG": {
+  "general": "112",
+  "police": "166",
+  "fire": "160",
+  "ambulance": "150",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "ME": {
+  "general": "112",
+  "police": "122",
+  "fire": "123",
+  "ambulance": "124",
+  "sea": "129",
+  "notes": "Emergency at sea 129.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "AL": {
+  "general": "112",
+  "police": "129",
+  "fire": "128",
+  "ambulance": "127",
+  "sea": "125",
+  "notes": "Emergency at sea 125.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "TR": {
+  "general": "112",
+  "police": "112",
+  "fire": "112",
+  "ambulance": "112",
+  "poison": "114",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "US": {
+  "general": "911",
+  "police": "911",
+  "fire": "911",
+  "ambulance": "911",
+  "poison": "1-800-222-1222",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers",
+   "https://en.wikipedia.org/wiki/Poison_control_center"
+  ]
+ },
+ "CA": {
+  "general": "911",
+  "police": "911",
+  "fire": "911",
+  "ambulance": "911",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "AU": {
+  "general": "000",
+  "police": "000",
+  "fire": "000",
+  "ambulance": "000",
+  "poison": "13 11 26",
+  "notes": "112 works from mobile phones.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers",
+   "https://en.wikipedia.org/wiki/Poison_control_center"
+  ]
+ },
+ "NZ": {
+  "general": "111",
+  "police": "111",
+  "fire": "111",
+  "ambulance": "111",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "MX": {
+  "general": "911",
+  "police": "911",
+  "fire": "911",
+  "ambulance": "911",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "TH": {
+  "general": "191",
+  "police": "191",
+  "fire": "199",
+  "ambulance": "1669",
+  "notes": "Tourist police 1155.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "ID": {
+  "general": "112",
+  "police": "110",
+  "fire": "113",
+  "ambulance": "118",
+  "sea": "115",
+  "notes": "Search and rescue 115.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "EG": {
+  "general": "112",
+  "police": "122",
+  "fire": "180",
+  "ambulance": "123",
+  "notes": "Tourist police 126.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "MA": {
+  "general": "112",
+  "police": "19",
+  "ambulance": "15",
+  "notes": "112 works from mobile phones; Royal Gendarmerie 177.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "ZA": {
+  "general": "112",
+  "police": "10111",
+  "fire": "112",
+  "ambulance": "10177",
+  "notes": "112 from mobile phones.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ },
+ "JP": {
+  "general": "110",
+  "police": "110",
+  "fire": "119",
+  "ambulance": "119",
+  "sea": "118",
+  "notes": "Coast guard 118.",
+  "src": [
+   "https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers"
+  ]
+ }
+}

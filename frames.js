@@ -1,0 +1,11 @@
+const chromium=require('./lib/chromium.js'),puppeteer=require('puppeteer-core'),fs=require('fs');const [,,url,tag,w,h,throttle]=process.argv;const PHOTO=fs.readFileSync(require('path').join(__dirname,'photo.jpg'));
+(async()=>{const b=await puppeteer.launch({args:chromium.args,executablePath:await chromium.executablePath(),headless:true});
+ const p=await b.newPage();await p.setViewport({width:+w,height:+h,deviceScaleFactor:1,isMobile:+w<800,hasTouch:+w<800});
+ const cdp=await p.target().createCDPSession();if(throttle)await cdp.send('Network.emulateNetworkConditions',{offline:false,latency:150,downloadThroughput:1.5e6/8*8,uploadThroughput:750e3/8});
+ await p.setRequestInterception(true);p.on('request',r=>{const u=r.url();if(u.startsWith('http://127.0.0.1')||u.startsWith('data:'))return r.continue();if(r.resourceType()==='image')return r.respond({status:200,contentType:'image/jpeg',body:PHOTO});if(u.includes('fonts.g'))return r.continue().catch(()=>{});r.abort()});
+ await p.tracing.start({categories:['disabled-by-default-devtools.screenshot'],screenshots:true});
+ const t0=Date.now();await p.goto(url,{waitUntil:'domcontentloaded'});await new Promise(r=>setTimeout(r,+(process.env.WAIT||3500)));
+ const buf=await p.tracing.stop();const tr=JSON.parse(Buffer.from(buf).toString("utf8"));const ev=(tr.traceEvents||tr).filter(e=>e.name==='Screenshot'&&e.args&&e.args.snapshot);
+ const ts0=ev.length?ev[0].ts:0;const dir='frames/'+tag;fs.rmSync(dir,{recursive:true,force:true});fs.mkdirSync(dir,{recursive:true});
+ const list=[];let last=-1e9;ev.forEach((e,i)=>{const ms=Math.round((e.ts-ts0)/1000);if(ms-last<60&&i!==ev.length-1)return;last=ms;const f=dir+'/'+String(ms).padStart(5,'0')+'.jpg';fs.writeFileSync(f,Buffer.from(e.args.snapshot,'base64'));list.push(ms)});
+ console.log(tag,'frames:',list.length,'at ms',list.slice(0,30).join(','));process.exit(0)})();

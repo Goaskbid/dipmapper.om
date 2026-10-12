@@ -1,0 +1,111 @@
+/* ================= v23.3: premium layer — icon system, photo-first cards, swim-card structure in the detail card ================= */
+.dmI{width:16px;height:16px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;vertical-align:-3px}
+/* premium placeholder: brand gradient, contour lines, one pictogram — never a cartoon */
+.dmPh{position:absolute;inset:0;overflow:hidden;background:radial-gradient(120% 90% at 18% 12%,rgba(255,255,255,.28),transparent 55%),radial-gradient(90% 80% at 100% 100%,rgba(255,196,110,.30),transparent 60%),linear-gradient(140deg,var(--ac,#0fb3a6) 0%,#0a6f6a 55%,#06343C 100%);display:grid;place-items:center}
+.dmPhLines{position:absolute;inset:0;width:100%;height:100%}.dmPhLines path{fill:none;stroke:rgba(255,255,255,.16);stroke-width:1.1}
+.dmPh .dmPhI{width:38%;height:38%;max-width:56px;max-height:56px;stroke:rgba(255,255,255,.92);stroke-width:1.4;filter:drop-shadow(0 6px 14px rgba(0,0,0,.18))}
+.dmPh.big{border-radius:16px}.dmPh.big .dmPhI{max-width:76px;max-height:76px;margin-top:-26px}
+.dmPhName{position:absolute;left:16px;right:16px;bottom:30px;color:#fff;font:800 20px/1.2 var(--font,system-ui);letter-spacing:-.01em;text-shadow:0 2px 12px rgba(0,0,0,.25)}
+.dmPhSub{position:absolute;left:16px;bottom:12px;color:rgba(255,255,255,.82);font-size:11.5px}
+.dmAcard .dmAth .dmPh{border-radius:14px}
+.dmAcard .dmAth img{z-index:1}
+/* card */
+.dmAmeta span:first-child{display:inline-flex;align-items:center;gap:5px}.dmAmeta .dmI{width:14px;height:14px;color:var(--ac,#0e8f7e)}
+.dmAmeta .dmRate{display:inline-flex;align-items:center;gap:2px}.dmAmeta .dmRate .dmI{width:12px;height:12px;fill:#e0a100;stroke:#e0a100}
+.dmAname{display:flex;align-items:center;gap:7px}
+.dmLogo{width:20px;height:20px;border-radius:6px;background:#fff;box-shadow:0 0 0 1px #e3efed;flex:0 0 auto;object-fit:contain;padding:2px}
+.dmLogo.big{width:28px;height:28px;border-radius:8px;vertical-align:-4px;margin-right:8px}
+.dmVer{display:inline-grid;color:#0a8f88}.dmVer .dmI{width:18px;height:18px;fill:#e6f7f4}
+.dmTeaser{margin:0;font-size:13.5px;line-height:1.45;color:#3a5d63;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.dmAstat .st .dmI{width:14px;height:14px}.dmAstat .pr{display:inline-flex;align-items:center;gap:4px}.dmAstat .pr .dmI{width:14px;height:14px;color:#5f8189}
+.dmAstat .wt{display:inline-flex;align-items:center;gap:2px}.dmAstat .wt .dmI{width:14px;height:14px}
+.dmHelpers{display:flex;flex-wrap:wrap;gap:5px}
+.dmHc{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:999px;background:#f4f8f8;border:1px solid #e2eeec;color:#33545b;font:600 11.5px/1.2 var(--font,system-ui);white-space:nowrap}
+.dmHc .dmI{width:13px;height:13px;color:var(--ac,#0e8f7e)}.dmHc.warn{background:#fff7e8;border-color:#f1dca9;color:#7a5a00}.dmHc.warn .dmI{color:#c98a00}.dmHc.ok{background:#ecf8f1;border-color:#c5e8d3;color:#0b6b3a}.dmHc.ok .dmI{color:#12a150}
+.dmAacts .dmAq{display:inline-flex;align-items:center;gap:5px}.dmAacts .dmAq .dmI{width:15px;height:15px;color:var(--ac,#0e8f7e)}.dmAacts .dmAq.ico{padding:0;width:32px;justify-content:center}.dmAacts .dmAq.ico .dmI{color:#c13584}
+.dmAfame .dmI{width:13px;height:13px;fill:#6b4a00;stroke:#6b4a00}
+/* butler */
+.dmBnow>span .dmI{width:14px;height:14px;color:var(--ac,#0e8f7e)}.dmTw .dmI{color:#fff!important}
+.dmBwin{display:inline-flex;align-items:center;gap:4px}.dmBwin .dmI{width:13px;height:13px}
+.dmBpick{grid-template-columns:56px 1fr 18px!important}
+.dmBimg{position:relative;width:56px;height:56px;border-radius:12px;overflow:hidden;background:#eef6f5}
+.dmBimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.dmBimg .dmPh .dmPhI{width:46%;height:46%}
+.dmBring2{position:absolute;right:-1px;bottom:-1px;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(closest-side,#fff 72%,transparent 74%),conic-gradient(var(--scc,#0FB3A6) calc(var(--p)*1%),#e6efee 0);box-shadow:0 2px 6px rgba(6,52,60,.2)}
+.dmBring2 b{font:800 10px/1 var(--font,system-ui);color:#06343C}
+.dmBpick .go{width:16px;height:16px;color:#9fb8bb}
+.dmBacts{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.dmBacts button,.dmBacts a{display:inline-flex;align-items:center;gap:6px;min-height:34px;padding:0 12px;border-radius:999px;border:1px solid #d6ebe7;background:#fff;color:#06343C;font:700 12.5px/1 var(--font,system-ui);text-decoration:none;cursor:pointer}
+.dmBacts .dmI{width:15px;height:15px;color:var(--ac,#0e8f7e)}.dmBacts .on{background:#06343C;color:#fff;border-color:#06343C}.dmBacts .on .dmI{color:#fff}
+.dmBring{list-style:none;margin:10px 0 0;padding:10px 12px;border-radius:14px;background:#fff;border:1px dashed #cfe5e1;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:6px 14px}
+.dmBring[hidden]{display:none}.dmBring li{display:flex;gap:7px;align-items:flex-start;font-size:13px;line-height:1.35;color:#1f464d}.dmBring li .dmI{color:#12a150;margin-top:1px}
+/* detail card — swim-card structure */
+.dmActSheet .gallery.dmGal2{margin:0 0 6px}
+.dmActSheet .gallery a.photo{display:block;text-decoration:none}
+.dmActSheet .gallery a.photo img{width:100%;height:100%;object-fit:cover;display:block;animation:dmFadeIn .45s ease both}
+.dmActSheet .gallery .dmGalPh0{grid-column:1/-1;height:220px;position:relative;border-radius:16px;overflow:hidden}
+.dmActSheet .gallery .photoTag{max-width:70%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-radius:999px}
+.dmGalNote{font-size:11.5px;margin:0 0 4px}
+.dmActSheet .story p{margin:0 0 10px;line-height:1.6}.dmActSheet .story p:last-child{margin-bottom:0}
+.dmTip{display:flex;gap:9px;align-items:flex-start;margin:10px 0 0!important;padding:10px 12px;border-radius:12px;background:#fff8ea;border:1px solid #f1e2bd;font-size:14px;color:#4a3b12}
+.dmTip .dmI{color:#c98a00;margin-top:2px;width:18px;height:18px}
+.dmActSheet .badges .badgeIcon{display:grid;place-items:center;overflow:hidden;color:var(--ac,#0e8f7e)}.dmActSheet .badges .badgeIcon img{width:100%;height:100%;object-fit:contain}
+.dmActSheet .badges .badgeIcon .dmI{width:20px;height:20px}.dmActSheet .badges small{display:block;font-size:11.5px;color:#5f8189}
+.dmActSheet .badges a{color:inherit;text-decoration:none;border-bottom:1px dotted currentColor}
+.dmActs2 .btn{display:inline-flex!important;align-items:center;gap:6px}.dmActs2 .btn .dmI{width:15px;height:15px}
+.dmActSheet .section>h3{display:flex;align-items:center;gap:8px}.dmActSheet .section>h3 .dmI{width:18px;height:18px;color:var(--ac,#0e8f7e)}
+.dmNow{border-radius:18px}
+.dmAmenL{list-style:none;margin:10px 0 4px;padding:0;display:grid;gap:4px}
+.dmAmenL li{display:grid;grid-template-columns:22px 1fr auto;gap:8px;align-items:center;padding:7px 10px;border-radius:12px;background:#f7fbfa;border:1px solid #e6f1ef;font-size:13.5px;color:#1f464d}
+.dmAmenL li .dmI{width:17px;height:17px;color:var(--ac,#0e8f7e)}.dmAmenL li i{font-style:normal;font-size:12px;font-weight:700;color:#0a6f6a;white-space:nowrap}.dmAmenL li em{font-style:normal;color:#7d969b;font-size:12px}
+.dmAddr{display:flex;gap:7px;align-items:flex-start}.dmAddr .dmI{margin-top:2px;color:var(--ac,#0e8f7e)}
+.dmActSheet .dmMini{margin-top:4px}
+.dmSafety{display:flex;gap:8px;align-items:flex-start}.dmSafety .dmI{margin-top:2px;flex:0 0 16px}
+.dmAbar .dmI{width:16px;height:16px}
+.dmAbtn .dmI{width:15px;height:15px}
+.dmWarnBox{display:flex;gap:8px;align-items:flex-start;flex-wrap:wrap}
+@media (min-width:761px){.dmActSheet .gallery .dmGalPh0{height:280px}.dmActSheet .gallery.dmGal2{grid-template-columns:1.6fr 1fr;grid-auto-rows:150px}.dmActSheet .gallery.dmGal2 a.photo:first-child{grid-row:span 2;height:auto}}
+@media (max-width:760px){.dmActSheet .gallery.dmGal2{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:8px;margin:0 -16px 6px;padding:0 16px;scrollbar-width:none}.dmActSheet .gallery.dmGal2::-webkit-scrollbar{display:none}.dmActSheet .gallery.dmGal2 a.photo{flex:0 0 86%;height:230px!important;scroll-snap-align:center;border-radius:16px;position:relative!important;opacity:1!important}.dmActSheet .gallery.dmGal2 a.photo:only-child{flex-basis:100%}.dmActSheet .gallery .dmGalPh0{flex:0 0 100%!important}}
+.dmActSheet .gallery.dmGal2 a.photo{height:auto;min-height:110px}
+
+.dmActSheet .section>h3>.dmI{display:none}
+.dmAcard .dmAth{align-self:start!important;height:auto!important;aspect-ratio:1/1.15;min-height:0!important}
+@media (min-width:761px){.dmAcard .dmAth{aspect-ratio:1/1}}
+/* phone: a real bottom sheet — dimmed page stays visible above it, tap there (or swipe down) to close */
+@media (max-width:760px){
+ html body .drawer.dmActSheet{top:56px!important;height:calc(100dvh - 56px)!important;border-radius:22px 22px 0 0;transform:translateY(105%)!important;border-left:0!important;box-shadow:0 -12px 40px rgba(6,52,60,.25)!important}
+ html body .drawer.dmActSheet.open{transform:none!important}
+ .dmActSheet .drawerHead{border-radius:22px 22px 0 0}
+ .dmActSheet::before{content:"";position:sticky;display:block;top:0;margin:8px auto -14px;width:44px;height:5px;border-radius:9px;background:#c8d9d6;z-index:6}
+}
+#dmActBack.open{cursor:pointer}
+#dmActBack.open{z-index:149!important;position:fixed;inset:0;background:rgba(6,30,36,.38);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);opacity:1;pointer-events:auto!important}
+
+/* ---------- bespoke activity pins: teardrop like the swim pins, coloured per activity, pictogram badge ---------- */
+html body #map .marker.dmActPin{pointer-events:auto!important;cursor:pointer;background:var(--pc,#0e8f7e)!important;color:#fff!important;border:2.5px solid #fff!important;box-shadow:0 6px 14px rgba(6,52,60,.32)!important}
+html body #map .marker.dmActPin.provider{background:#fff!important;border:3.5px solid var(--pc,#0e8f7e)!important}
+html body #map .marker.dmActPin.provider::before{color:var(--pc,#0e8f7e)!important}
+html body #map .marker.dmActPin .dmPinIc{position:absolute;right:-9px;top:-9px;width:17px;height:17px;border-radius:50%;background:#fff;display:grid;place-items:center;rotate:45deg;box-shadow:0 2px 5px rgba(6,52,60,.28);color:var(--pc,#0e8f7e)}
+html body #map .marker.dmActPin .dmPinIc .dmI{width:11px;height:11px;stroke-width:2.2}
+html body #map .marker.dmActPin.fame{background:linear-gradient(135deg,#ffd76a,#e0a100)!important;border-color:#fff!important}
+html body #map .marker.dmActPin.icep{background:linear-gradient(135deg,#eaf4ff,#b9dbfb)!important;border-color:#fff!important}html body #map .marker.dmActPin.icep::before{color:#1e4f80!important}
+html body #map .marker.dmActPin.icep.ice-ownrisk,html body #map .marker.dmActPin.icep.ice-contact,html body #map .marker.dmActPin.icep.ice-trails{background:linear-gradient(135deg,#f6f8f9,#d5dde0)!important}
+.dmActLegend .d.ring{background:#fff!important;border:2.5px solid #5f8189}.dmActLegend .dmLgNote{color:#7d969b}
+.dmActLegend span{display:inline-flex;align-items:center}
+/* ---------- each activity gets its own colour world: same family, different accent ---------- */
+html.dmActOn #map::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;border-radius:inherit;background:radial-gradient(120% 90% at 0% 0%,color-mix(in srgb,var(--ac2,#0fb3a6) 16%,transparent),transparent 55%),radial-gradient(100% 80% at 100% 100%,color-mix(in srgb,var(--ac2,#0fb3a6) 12%,transparent),transparent 60%)}
+html[data-act="paddle"]{--ac2:#f08a24}html[data-act="dive"]{--ac2:#4338ca}html[data-act="sail"]{--ac2:#2563eb}html[data-act="boat"]{--ac2:#0a8a72}html[data-act="raft"]{--ac2:#dc2626}html[data-act="ice"]{--ac2:#60a5fa}
+html[data-act="dive"] #map .tiles img,html[data-act="dive"] #map img.tile{filter:saturate(1.05) hue-rotate(-6deg) brightness(.97)}
+html[data-act="ice"] #map img{filter:saturate(.75) brightness(1.04)}
+#dmActPanel .dmActHead{position:relative;padding:12px 14px;border-radius:18px;margin-bottom:10px;background:linear-gradient(120deg,color-mix(in srgb,var(--ac) 14%,#fff),#fff 70%);border:1px solid color-mix(in srgb,var(--ac) 22%,#e3efed)}
+#dmActPanel .dmActHead::after{content:"";position:absolute;right:12px;top:10px;width:44px;height:44px;border-radius:14px;background:var(--ac);opacity:.12}
+#dmActPanel .dmActHead .eyebrow{color:var(--ac)!important}
+.dmButler{border-top:3px solid var(--ac,#0fb3a6)}
+.dmAcard{border-left:3px solid color-mix(in srgb,var(--ac) 55%,#fff)!important}
+.dmActSheet .drawerHead .eyebrow{color:var(--ac2,#0a8f88)}
+.dmActSheet .dmNow{border-top:3px solid var(--ac2,#0fb3a6)}
+.dmChip.on{background:var(--ac,#06343C)!important;border-color:var(--ac,#06343C)!important}
+html body #map .marker.dmActPin{border-radius:50% 50% 50% 4px!important;transform:translate(-50%,-50%) translate(0,-21px) rotate(-45deg)!important;font-size:0!important;position:absolute}
+html body #map .marker.dmActPin::before{content:attr(data-rank);position:absolute;inset:0;display:grid;place-items:center;rotate:45deg;font:800 12px/1 var(--font,system-ui);color:#fff}
+html body #map .marker.dmActPin.dmSel{transform:translate(-50%,-50%) translate(0,-25px) scale(1.18) rotate(-45deg)!important;z-index:9!important}
+html body #map .marker.dmActPin:hover{transform:translate(-50%,-50%) translate(0,-25px) scale(1.14) rotate(-45deg)!important;z-index:8!important}
+html body #map .dmTempLayer .dmTb{margin-top:-14px}

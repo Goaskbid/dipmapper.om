@@ -1,0 +1,9 @@
+const chromium=require('./lib/chromium.js'),puppeteer=require('puppeteer-core'),fs=require('fs');const [,,url,w,h]=process.argv;const PHOTO=fs.readFileSync(require('path').join(__dirname,'photo.jpg'));
+(async()=>{const b=await puppeteer.launch({args:chromium.args,executablePath:await chromium.executablePath(),headless:true});
+ const p=await b.newPage();await p.setViewport({width:+w,height:+h,isMobile:+w<800,hasTouch:+w<800});
+ const cdp=await p.target().createCDPSession();await cdp.send('Network.enable');await cdp.send('Network.emulateNetworkConditions',{offline:false,latency:150,downloadThroughput:(+process.env.KBPS||1600)*1000/8,uploadThroughput:750e3/8});
+ await cdp.send('Emulation.setCPUThrottlingRate',{rate:4});
+ await p.setRequestInterception(true);p.on('request',r=>{const u=r.url();if(u.startsWith('http://127.0.0.1')||u.startsWith('data:'))return r.continue();if(r.resourceType()==='image')return r.respond({status:200,contentType:'image/jpeg',body:PHOTO});r.abort()});
+ await p.evaluateOnNewDocument(()=>{window.__log=[];const t=()=>Math.round(performance.now());let seen=false,gone=false;(function poll(){const b=document.getElementById('dmBoot')||document.getElementById('dmSplash');const vis=b&&getComputedStyle(b).visibility==='visible'&&+getComputedStyle(b).opacity>0.5&&b.getBoundingClientRect().height>100;if(vis&&!seen){seen=true;__log.push('welcome shown '+t())}if(seen&&!vis&&!gone){gone=true;__log.push('welcome gone '+t())}const g=document.querySelector('.gate');if(g&&!window.__g&&getComputedStyle(document.body).visibility==='visible'&&g.getBoundingClientRect().height>100&&!vis){window.__g=1;__log.push('start screen visible '+t())}requestAnimationFrame(poll)})()});
+ await p.goto(url,{waitUntil:'domcontentloaded',timeout:60000});await new Promise(r=>setTimeout(r,9000));
+ console.log(url.slice(-6),await p.evaluate(()=>__log.join(' | ')));process.exit(0)})();

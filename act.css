@@ -1,0 +1,117 @@
+/* v23.0 water activities — same visual language as the radius control, cards, pins and drawer */
+#dmActBar{display:flex;align-items:stretch;gap:3px;padding:4px;border-radius:14px;background:#eef6f5;border:1px solid #d6ebe7;margin:0 0 8px}
+#dmActBar .lbl{align-self:center;font:700 12px/1 var(--font,system-ui);color:#5f8189;padding:0 6px 0 8px}
+#dmActBar button{flex:1 1 0;min-width:0;min-height:44px;border:0!important;border-radius:10px!important;background:transparent;color:#06343C;cursor:pointer;padding:3px 0!important;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;box-shadow:none!important;transition:background .15s ease,color .15s ease}
+#dmActBar button .i{font-size:18px;line-height:1}
+#dmActBar button .t{font:700 11.5px/1.1 var(--font,system-ui);white-space:nowrap}
+#dmActBar button:hover{background:#fff}
+#dmActBar button.on{background:#06343C;color:#fff;box-shadow:0 4px 12px rgba(6,52,60,.22)!important}
+@media (max-width:760px){#dmActBar .lbl{display:none}#dmActBar button .t{font-size:10.5px}}
+/* activity mode hides the swim list, swim selectors and swim pins; map, search, radius and weather stay */
+html.dmActOn body #filters,html.dmActOn body #dmFiltersBtn,html.dmActOn body .listHead,html.dmActOn body #listNote,html.dmActOn body #results,html.dmActOn body .dmBelowHead,html.dmActOn body #mapPanel .legend,html.dmActOn body #dmFab,html.dmActOn body #dmMoreFilters,
+html.dmActOn.dmSplit body #dmBelow #results,html.dmActOn.dmSplit body #resultsPanel .listHead,html.dmActOn.dmSplit body #resultsPanel #filters,html.dmActOn.dmSplit body #dmBelow .dmBelowHead,html.dmActOn.dmPhone body #dmBelow #results,html.dmActOn.dmPhone body #dmBelow>#filters,html.dmActOn.dmPhone body #dmBelow>#dmFiltersBtn,html.dmActOn.dmPhone body #dmBelow .listHead{display:none!important}
+html.dmActOn #map .dmOverlay .marker{display:none!important}
+.dmActLegend{display:none}
+html.dmActOn .dmActLegend{display:flex;gap:4px 14px;flex-wrap:wrap;align-items:center;padding:6px 10px;font-size:11.5px;color:#5f8189}
+.dmActLegend .d{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px;background:var(--ac,#0e8f7e)}
+.dmActLegend .d.pr{background:#fff;border:2.5px solid var(--ac,#0e8f7e);box-sizing:border-box}
+/* pins */
+html body #map .dmActPins{position:absolute;inset:0;z-index:31;pointer-events:none}
+html[data-act="paddle"]{--pin:#e07a24}html[data-act="dive"]{--pin:#5b4bd1}html[data-act="sail"]{--pin:#1c6fd3}html[data-act="boat"]{--pin:#0a8a72}html[data-act="raft"]{--pin:#c6443b}
+html[data-act="paddle"] .dmActLegend{--ac:#e07a24}html[data-act="dive"] .dmActLegend{--ac:#5b4bd1}html[data-act="sail"] .dmActLegend{--ac:#1c6fd3}html[data-act="boat"] .dmActLegend{--ac:#0a8a72}html[data-act="raft"] .dmActLegend{--ac:#c6443b}
+/* panel */
+#dmActPanel{margin:4px 0 0}
+#dmActPanel[hidden]{display:none!important}
+#dmActChips{display:flex;flex-wrap:wrap;align-content:flex-start;gap:5px;padding:2px 0 8px;min-height:79px}
+#dmActChips .dmChip.sk{width:84px;background:linear-gradient(90deg,#eef6f5,#f7fbfa,#eef6f5);background-size:200% 100%;border-color:#e3efed;animation:dmActSk 1.2s linear infinite}
+#dmActChips .dmChip{display:inline-flex;align-items:center;gap:5px;height:32px;padding:0 11px;border-radius:999px;border:1px solid #d6ebe7;background:#fff;color:#06343C;font:600 12.5px/1 var(--font,system-ui);cursor:pointer;white-space:nowrap;box-shadow:none}
+#dmActChips .dmChip b{font-weight:700;color:#5f8189;font-size:11px}
+#dmActChips .dmChip.on{background:#06343C;border-color:#06343C;color:#fff}
+#dmActChips .dmChip.on b{color:#bfe3dc}
+.dmActHead{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;flex-wrap:wrap;margin:4px 0 10px}
+.dmActHead h2{margin:2px 0 2px;font-size:20px;letter-spacing:-.02em;color:#06343C}
+.dmActHead .eyebrow{font:700 11px/1.2 var(--font,system-ui);letter-spacing:.06em;text-transform:uppercase;color:var(--pin,#0e8f7e)}
+#dmActWind{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:#eef6f5;border:1px solid #d6ebe7;font-size:12.5px;color:#06343C}
+#dmActWind[hidden]{display:none}
+#dmActWind small{color:#5f8189}
+#dmActWind .ar,.dmWxBig .ar{display:inline-block;font-weight:900;color:var(--pin,#0e8f7e)}
+.dmActNote{font-size:12.5px;color:#5f8189;background:#fffdf3;border:1px solid #efe6c4;border-radius:10px;padding:7px 10px;margin:0 0 8px}
+#dmActList{display:grid;gap:10px}
+.dmAcard{display:grid;grid-template-columns:72px 1fr;gap:12px;align-items:stretch;background:#fff;border:1px solid #d6ebe7;border-radius:16px;padding:10px;box-shadow:0 1px 2px rgba(7,52,59,.05),0 6px 18px rgba(7,52,59,.05)}
+@media (min-width:761px){.dmAcard{grid-template-columns:96px 1fr}}
+.dmAth{border-radius:12px;display:grid;place-items:center;font-size:30px;background:radial-gradient(120% 90% at 30% 20%,rgba(255,255,255,.55),transparent 55%),linear-gradient(150deg,var(--pin,#0e8f7e),#06343C);min-height:72px}
+.dmAcard.provider .dmAth{background:radial-gradient(120% 90% at 30% 20%,rgba(255,255,255,.7),transparent 55%),linear-gradient(150deg,#eef6f5,#d9ecea);border:2px solid var(--pin,#0e8f7e)}
+.dmAmain{display:flex;flex-direction:column;gap:5px;min-width:0}
+.dmAmeta{display:flex;justify-content:space-between;gap:8px;font-size:12px;color:#5f8189}
+.dmAmeta span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dmAname{font-weight:800;font-size:16.5px;line-height:1.25;color:#06343C;letter-spacing:-.01em}
+.dmAchips{display:flex;flex-wrap:wrap;gap:4px}
+.dmAchips .c{font-size:11px;padding:2px 7px;border-radius:999px;background:#f1f8f7;border:1px solid #d6ebe7;color:#06343C;white-space:nowrap}
+.dmAchips .c.pl{background:var(--pin,#0e8f7e);border-color:transparent;color:#fff;font-weight:700}
+.dmAchips .c.pr{background:#fff;border-color:var(--pin,#0e8f7e);color:var(--pin,#0e8f7e);font-weight:700}
+.dmAchips .c.warn{background:#fff8e6;border-color:#f0dca6;color:#7a5a00}
+.dmAopen{align-self:flex-start;margin-top:2px;min-height:32px;height:32px;padding:0 16px;border-radius:999px;border:0;background:#06343C;color:#fff;font:700 13px/1 var(--font,system-ui);cursor:pointer}
+.dmAopen:hover{background:#0b4b55}
+.dmActEmpty{padding:16px;border-radius:14px;background:#f3faf8;border:1px dashed #cfe5e1;color:#38575e;line-height:1.5}
+.dmActEmpty button{margin-top:10px;min-height:34px;padding:0 14px;border-radius:999px;border:1px solid #06343C;background:#06343C;color:#fff;font-weight:700;cursor:pointer}
+.dmActEmpty .dmActSwim{background:#fff;color:#06343C}
+.dmActFoot{font-size:11.5px;color:#7d969b;margin:12px 2px 4px;line-height:1.45}
+.dmAcard.dmSk .dmAth{background:linear-gradient(90deg,#eef6f5,#f7fbfa,#eef6f5);background-size:200% 100%;animation:dmActSk 1.2s linear infinite}
+.dmAcard.dmSk .dmAmain i{display:block;height:12px;border-radius:6px;background:#eef6f5;margin:4px 0}
+.dmAcard.dmSk .dmAmain i:nth-child(2){width:70%;height:16px}.dmAcard.dmSk .dmAmain i:nth-child(3){width:45%}
+@keyframes dmActSk{to{background-position:-200% 0}}
+@media (prefers-reduced-motion:reduce){.dmAcard.dmSk .dmAth{animation:none}}
+/* sheet (reuses the drawer look) */
+.dmActSheet .drawerBody h3{margin:18px 0 8px;font-size:15px;color:#06343C;letter-spacing:-.01em}
+.dmActSheet .small{font-size:12.5px}
+.dmAhero{display:flex;align-items:center;gap:14px;padding:16px;border-radius:16px;color:#fff;background:radial-gradient(120% 120% at 15% 10%,rgba(255,255,255,.28),transparent 55%),linear-gradient(135deg,var(--ac,#0e8f7e),#06343C)}
+.dmAhero .ic{display:flex;gap:4px;font-size:30px}
+.dmAhero .tx{display:flex;flex-direction:column;gap:2px}.dmAhero .tx b{font-size:17px}.dmAhero .tx span{font-size:12.5px;opacity:.9}
+.dmActTags{display:flex;flex-wrap:wrap;gap:6px}
+.dmActTag{padding:5px 10px;border-radius:999px;background:var(--pin,#0e8f7e);color:#fff;font-size:12.5px;font-weight:700}
+.dmActTag.soft{background:#fff;color:#06343C;border:1px dashed #9cc9c1;font-weight:600}
+.dmAfacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-top:10px}
+.dmAfacts .fact{border-radius:12px}
+.dmAbtns{display:flex;flex-wrap:wrap;gap:8px}
+.dmAbtn{display:inline-flex;align-items:center;min-height:38px;padding:0 14px;border-radius:999px;border:1px solid #cfe5e1;background:#fff;color:#06343C;font-weight:700;font-size:13.5px;text-decoration:none}
+.dmAbtn.primary{background:#06343C;border-color:#06343C;color:#fff}
+.dmActWx{border:1px solid #d6ebe7;border-radius:14px;padding:12px;background:#fbfefd}
+.dmWxRow{display:flex;align-items:center;gap:14px}
+.dmWxBig{display:flex;align-items:baseline;gap:4px;color:#06343C}.dmWxBig b{font-size:30px;letter-spacing:-.03em}.dmWxBig .ar{font-size:22px}
+.dmWxBars{display:flex;align-items:flex-end;gap:6px;height:70px;margin:12px 0 4px}
+.dmWxBars .b{position:relative;flex:1 1 0;height:100%;display:flex;align-items:flex-end;justify-content:center}
+.dmWxBars .b i{position:absolute;bottom:14px;left:20%;right:20%;border-radius:4px 4px 0 0;max-height:calc(100% - 14px)}
+.dmWxBars .b i.g{background:#cfe5e1}.dmWxBars .b i.w{background:var(--pin,#0e8f7e);left:32%;right:32%}
+.dmWxBars .b span{position:absolute;bottom:0;font-size:10px;color:#7d969b}
+.dmWxKey{font-size:11px;color:#7d969b}.dmWxKey i{display:inline-block;width:9px;height:9px;border-radius:2px;margin:0 3px 0 6px}.dmWxKey i.w{background:var(--pin,#0e8f7e)}.dmWxKey i.g{background:#cfe5e1}
+.dmWxSea{margin-top:10px;padding:8px 10px;border-radius:10px;background:#eef6fb;color:#0b3a5c;font-weight:600}
+.dmWxSrc{font-size:11.5px;color:#7d969b;margin:8px 0 0}
+.dmWxGuide{font-size:12.5px;color:#38575e;margin:6px 0 0}
+.dmNearGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.dmNearCol .k{font-size:12px;color:#5f8189;margin-bottom:4px}
+.dmNear{display:flex;flex-direction:column;align-items:flex-start;width:100%;text-align:left;padding:8px 10px;margin:0 0 6px;border-radius:12px;border:1px solid #d6ebe7;background:#fff;cursor:pointer}
+.dmNear b{font-size:13.5px;color:#06343C}.dmNear span{font-size:11.5px;color:#5f8189}
+.dmSafety{margin-top:16px;padding:10px 12px;border-radius:12px;background:#fff8e6;border:1px solid #f0dca6;color:#5c4400;font-size:12.5px;line-height:1.45}
+html body .dmAopen{min-height:34px!important;height:34px!important;padding:0 16px!important;font-size:13px!important;width:auto!important;line-height:1!important}
+html body .dmActEmpty button{min-height:36px!important;height:auto!important;width:auto!important}
+html body #dmActChips .dmChip{min-height:32px!important;height:32px!important;width:auto!important}
+/* v23.1 verified directory, prices, quick contact, local rules */
+.dmAchips .c.ok{background:#e7f6ef;border-color:#bfe3cf;color:#0b6b3a;font-weight:700}
+.dmAchips .c.price{background:#fff;border-color:#06343C;color:#06343C;font-weight:800}
+.dmAacts{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:2px}
+.dmAacts .dmAopen{margin-top:0}
+.dmAq{display:inline-flex;align-items:center;min-height:32px;height:32px;padding:0 12px;border-radius:999px;border:1px solid #cfe5e1;background:#fff;color:#06343C;font:700 12.5px/1 var(--font,system-ui);text-decoration:none;white-space:nowrap}
+.dmAq:hover{border-color:#06343C}
+.dmActRule{font-size:12.5px;line-height:1.45;color:#5a3d00;background:#fff8e6;border:1px solid #f0dca6;border-radius:10px;padding:8px 10px;margin:0 0 8px}
+.dmActRule summary{cursor:pointer;list-style:none;font-weight:600}.dmActRule summary::-webkit-details-marker{display:none}
+.dmActRule summary::after{content:' ▾';font-weight:800}.dmActRule[open] summary::after{content:' ▴'}
+.dmActRule summary b{font-weight:800}
+.dmActRule p{margin:6px 0 0}
+.dmActRule a{color:#5a3d00;font-weight:700;white-space:nowrap}
+.dmActNote .dmActRetry2{margin-left:6px;min-height:26px;padding:0 10px;border-radius:999px;border:1px solid #06343C;background:#fff;color:#06343C;font-weight:700;cursor:pointer}
+.dmAprices{width:100%;border-collapse:collapse;font-size:14px;margin:4px 0 2px}
+.dmAprices td{padding:7px 4px;border-bottom:1px solid #e3f0ee;vertical-align:top}
+.dmAprices td:last-child{text-align:right;font-weight:800;color:#06343C;white-space:nowrap;padding-left:12px}
+.dmActFoot a{color:#0e8f7e;font-weight:700}
+.dmActMore{margin:12px 0 4px;padding:12px;border-radius:14px;background:#f3faf8;border:1px solid #d6ebe7;font-size:13px;line-height:1.45;color:#38575e;display:flex;flex-direction:column;gap:8px}
+.dmActMore .dmAq{align-self:flex-start;height:auto;min-height:34px;padding:6px 12px;white-space:normal;line-height:1.3}

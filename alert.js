@@ -1,0 +1,20 @@
+const chromium=require('./lib/chromium.js'),puppeteer=require('puppeteer-core');
+(async()=>{const b=await puppeteer.launch({args:[...chromium.args,'--no-sandbox'],executablePath:await chromium.executablePath(),headless:true});
+ const p=await b.newPage();await p.setViewport({width:1440,height:900});await p.setRequestInterception(true);p.on('request',r=>r.url().startsWith('http://127.0.0.1')||r.url().startsWith('data:')?r.continue():r.abort());
+ const errs=[];p.on('pageerror',e=>errs.push(e.message));const U='http://127.0.0.1:8765/'+(process.argv[2]||'final.html')+'?lat=47.3582&lon=8.5361&name=Z%C3%BCrich';
+ await p.goto(U,{waitUntil:'domcontentloaded'});await p.waitForSelector('#results .result');await new Promise(r=>setTimeout(r,1500));
+ await p.evaluate(()=>{const c=document.querySelector('#results .result');localStorage.setItem('dmAlerts',JSON.stringify([{id:c.getAttribute('data-card-id'),name:c.querySelector('.resultName').textContent.split('·')[0].trim(),lat:0,lon:0,min:40,last:''}]))});
+ const out=[];for(const visit of [1,2]){await p.reload({waitUntil:'domcontentloaded'});await p.waitForSelector('#results .result');await new Promise(r=>setTimeout(r,3000));
+  out.push(await p.evaluate(()=>{const t=document.getElementById('dmAlertToast');return 'visit '+(window.__v=(window.__v||0)+1)+': '+(t?'TOAST "'+t.innerText.replace(/\s+/g,' ').slice(0,80)+'"':'no toast')}))}
+ await p.evaluate(()=>{const t=document.getElementById('dmAlertToast');});
+ const hi=await p.evaluate(()=>{localStorage.setItem('dmAlerts',JSON.stringify([{id:document.querySelector('#results .result').getAttribute('data-card-id'),name:'X',min:95,last:''}]));return 1});
+ await p.reload({waitUntil:'domcontentloaded'});await p.waitForSelector('#results .result');await new Promise(r=>setTimeout(r,3000));
+ out.push('threshold 95 (score below): '+await p.evaluate(()=>document.getElementById('dmAlertToast')?'TOAST (wrong)':'no toast (correct)'));
+ await p.evaluate(()=>localStorage.setItem('dmAlerts',JSON.stringify([{id:document.querySelector('#results .result').getAttribute('data-card-id'),name:'Seebad Enge',min:40,last:''}])));
+ await p.reload({waitUntil:'domcontentloaded'});await p.waitForSelector('#results .result');await new Promise(r=>setTimeout(r,3000));
+ await p.evaluate(()=>document.querySelector('#dmAlertToast .go').click());await new Promise(r=>setTimeout(r,900));
+ out.push('toast Open -> '+await p.evaluate(()=>document.getElementById('drawer').classList.contains('open')?'panel "'+document.getElementById('cardTitle').textContent.slice(0,24)+'"':'nothing'));
+ await p.evaluate(()=>{document.getElementById('close').click()});await new Promise(r=>setTimeout(r,300));await p.evaluate(()=>document.getElementById('dmSavedBtn').click());await new Promise(r=>setTimeout(r,300));
+ out.push('alerts listed in Saved sheet: '+await p.evaluate(()=>document.querySelectorAll('.dmSheet .dmAlList li').length));
+ await p.evaluate(()=>document.querySelector('.dmSheet .dmAlDel').click());out.push('after remove: '+await p.evaluate(()=>JSON.parse(localStorage.getItem('dmAlerts')).length)+' alerts');
+ console.log(out.join('\n'),'\npageerrors',errs.length);process.exit(0)})();

@@ -1,0 +1,10 @@
+const chromium=require('./lib/chromium.js'),puppeteer=require('puppeteer-core');
+(async()=>{const b=await puppeteer.launch({args:[...chromium.args,'--no-sandbox'],executablePath:await chromium.executablePath(),headless:true});
+ const p=await b.newPage();await p.setViewport({width:1440,height:900});await p.setRequestInterception(true);
+ p.on('request',r=>r.url().startsWith('http://127.0.0.1')||r.url().startsWith('data:')?r.continue():r.abort());
+ await p.goto('http://127.0.0.1:8765/final.html?lat=47.3582&lon=8.5361&name=Z%C3%BCrich',{waitUntil:'domcontentloaded'});await p.waitForSelector('#results .result');await new Promise(r=>setTimeout(r,1800));
+ const vis=()=>p.evaluate(()=>{const cards=[...document.querySelectorAll('#results .result')].filter(c=>{const r=c.getBoundingClientRect();return r.bottom>0&&r.top<innerHeight}).length;
+   const m=document.getElementById('map').getBoundingClientRect(),hd=document.querySelector('.mapHead').getBoundingClientRect(),tb=document.querySelector('.topbar').getBoundingClientRect();return {mapHeadTop:Math.round(hd.top),headerBottom:Math.round(tb.bottom),mapBottom:Math.round(m.bottom),cardsOnScreen:cards,mapTop:Math.round(m.top),mapOnScreen:m.top<innerHeight&&m.bottom>0,firstCardTop:Math.round(document.querySelector('#results .result').getBoundingClientRect().top)}});
+ const a=await vis(); await p.screenshot({path:'split_top.png'});
+ await p.mouse.move(240,700); for(let i=0;i<7;i++){await p.mouse.wheel({deltaY:200});await new Promise(r=>setTimeout(r,120));} await new Promise(r=>setTimeout(r,600)); console.log('scrollY', await p.evaluate(()=>scrollY)); const c=await vis(); await p.screenshot({path:'split_scrolled.png'});
+ console.log('top     ',JSON.stringify(a)); console.log('scrolled',JSON.stringify(c)); process.exit(0)})();

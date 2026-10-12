@@ -1,0 +1,14 @@
+ /* ---------- famous spots nearby: places with their own Wikipedia article (photo + short intro) ---------- */
+ var FAMEKW={paddle:/\b(lake|lac|lago|see|river|fluss|gorge|lagoon|canal|bay|fjord|reservoir|stausee|weiher|pond)\b/i,dive:/\b(dive|diving|wreck|shipwreck|reef|underwater|cave|cenote|grotto|marine (reserve|park)|snorkel)/i,
+  sail:/\b(surf|surfing|wave|kite|windsurf|sailing|regatta|bay|beach|lake|lac|lago|see)\b/i,boat:/\b(lake|lac|lago|see|ferry|steamship|paddle steamer|harbou?r|port|canal|island|fjord)\b/i,raft:/\b(gorge|canyon|rapids|whitewater|white water|schlucht|rafting)\b/i,ice:/\b(lake|lac|lago|see|pond|weiher|ice rink|skating)\b/i};
+ var FAMENOT=/\b(station|railway|school|church|museum|hotel|municipality|village|district|street|bridge|building|company|football|stadium|castle|airport|university|hospital|cemetery|tower)\b/i;
+ var FAME={};
+ function getFamous(c,mode){var k=mode+'|'+c[0].toFixed(2)+','+c[1].toFixed(2);if(FAME[k])return FAME[k];
+  var u='https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&generator=geosearch&ggscoord='+c[0].toFixed(4)+'|'+c[1].toFixed(4)+'&ggsradius=10000&ggslimit=40&prop=description|pageimages|coordinates|extracts|info&inprop=url&exintro=1&explaintext=1&exsentences=2&exlimit=20&piprop=thumbnail&pithumbsize=640';
+  var p=fetchJsonTimeout(u,{},8000).then(function(j){var pages=Object.values((j&&j.query&&j.query.pages)||{});var kw=FAMEKW[mode];if(!kw)return [];
+   return pages.filter(function(pg){var t=(pg.title||'')+' '+(pg.description||'');return pg.coordinates&&kw.test(t)&&!FAMENOT.test(pg.description||'')}).slice(0,5).map(function(pg){var co=pg.coordinates[0];
+    return {id:'wp-'+pg.pageid,osm:'',name:pg.title,generic:false,lat:co.lat,lon:co.lon,acts:{},type:'spot',kind:'place',ev:'wiki',famous:true,web:pg.fullurl||('https://en.wikipedia.org/?curid='+pg.pageid),book:'',phone:'',email:'',hours:'',season:'',operator:'',charge:'',fee:'',rent:[],wheel:'',
+     descr:String(pg.extract||'').slice(0,420),addr:'',edited:'',checked:'',prices:[],src:['Wikipedia',pg.fullurl||''],img:pg.thumbnail&&pg.thumbnail.source||'',ntags:40,wpdesc:pg.description||''}})}).catch(function(){return []});FAME[k]=p;return p}
+ function addFamous(c,key){if(A.mode==='swim'||A.mode==='ice'||!FAMEKW[A.mode])return;getFamous(c,A.mode).then(function(L){if(A.key!==key||!L.length)return;var ma={paddle:'kayak',dive:'dive',sail:'sail',boat:'tour',raft:'raft',ice:'skate'}[A.mode];var add=0;
+   L.forEach(function(f){var dup=A.items.some(function(v){return v.id===f.id||(N(v.name)===N(f.name))});if(dup)return;f.acts={};f.acts[ma]='wiki';f.dist=D(c[0],c[1],f.lat,f.lon);if(f.dist>(A.widened?A.widened/1000:(A.searched||15))+1)return;if(f.img)PH[f.id]={t:Date.now(),l:[{u:f.img,how:'wiki'}]};A.items.push(f);add++});
+   if(!add)return;A.items.sort(function(a,b){return rank(a)-rank(b)});rescore();chips();list();paint(true)})}

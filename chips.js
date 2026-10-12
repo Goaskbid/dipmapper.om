@@ -1,0 +1,12 @@
+const chromium=require('./lib/chromium.js'),puppeteer=require('puppeteer-core');const f=process.argv[2];
+(async()=>{const b=await puppeteer.launch({args:[...chromium.args,'--no-sandbox'],executablePath:await chromium.executablePath(),headless:true});const out=[];
+ for(const [w,h] of [[390,844],[360,740],[900,900],[1440,900]]){const p=await b.newPage();await p.setViewport({width:w,height:h});await p.setRequestInterception(true);p.on('request',r=>r.url().startsWith('http://127.0.0.1')||r.url().startsWith('data:')?r.continue():r.abort());
+  await p.goto('http://127.0.0.1:8765/'+f+'?lat=47.3582&lon=8.5361&name=Z%C3%BCrich',{waitUntil:'domcontentloaded'});await p.waitForSelector('#results .result');await new Promise(r=>setTimeout(r,2200));
+  const o=await p.evaluate(()=>{const fl=document.getElementById('filters'),fr=fl.getBoundingClientRect(),cs=getComputedStyle(fl);const ch=[...fl.querySelectorAll('.filter')];
+   const vis=ch.filter(c=>{const r=c.getBoundingClientRect();return r.width>0&&r.left>=fr.left-1&&r.right<=Math.min(fr.right,innerWidth)+1&&r.top>=fr.top-1&&r.bottom<=fr.bottom+1}).length;
+   const lastChip=ch[ch.length-1].getBoundingClientRect(),firstChip=ch[0].getBoundingClientRect();const nxt=[...document.querySelectorAll('#dmBelow .dmBelowHead,#results .result')].map(e=>e.getBoundingClientRect().top).filter(t=>t>-1e4);const prev=document.querySelector('.listHead').getBoundingClientRect();
+   const els=[...document.querySelectorAll('#map,.listHead,#dmBelow .dmBelowHead,#results .result:first-child')];let overl=0;ch.forEach(c=>{const r=c.getBoundingClientRect();els.forEach(e=>{const q=e.getBoundingClientRect();if(!(r.right<=q.left||r.left>=q.right||r.bottom<=q.top||r.top>=q.bottom))overl++})});
+   return {chips:ch.length,overlapsOtherContent:overl,boxHeight:Math.round(fr.height),fullyVisible:vis,rows:new Set(ch.map(c=>Math.round(c.getBoundingClientRect().top))).size,sidewaysScroll:fl.scrollWidth>fl.clientWidth+1,mask:cs.webkitMaskImage!=='none'&&cs.webkitMaskImage!==''?cs.webkitMaskImage.slice(0,20):'none',pageOverflowX:document.documentElement.scrollWidth>innerWidth}});
+  if(w===390){await p.evaluate(()=>document.getElementById('filters').scrollIntoView({block:'center'}));await new Promise(r=>setTimeout(r,300));await p.screenshot({path:'chips_390.png'})}
+  out.push(w+'px '+JSON.stringify(o));await p.close()}
+ console.log(out.join('\n'));process.exit(0)})();

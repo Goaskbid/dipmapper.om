@@ -1,0 +1,9 @@
+/* v23.7 dive-site facts for the "Under water" section — taken from the researched site descriptions (research/explainers.json, sources in each entry's xsrc). Never estimated. */
+window.DM_DIVE={
+"dive-wzt-tiefenbrunnen":{"max":30,"profile":"Entry to about 3 m, then a gentle slope to around 25 m","level":"All levels — a popular training and night-dive site","note":"Objects along the slope (pipes, sunken boats, a diving bell, statues) help with navigation."},
+"dive-herrliberg":{"max":30,"profile":"Stepped rock wall from about 5 m down to 30 m","level":"Good for first open-water dives with an instructor","life":"Seagrass meadows and plenty of fish in the shallows","note":"There can be some current; in summer you share the entry with swimmers."},
+"dive-au":{"max":52,"profile":"Wall from about 10 m down to 35–40 m; small caves at 18–20 m and 11 m","level":"Advanced divers only","life":"Burbot hide in the cracks of the wall","note":"Passenger boats dock at the pier (first summer arrival 10:32) — be out of the water before then."},
+"dive-richterswil-horn":{"max":10,"profile":"Stone, then silt and a seagrass meadow; training platform at about 5 m","level":"Beginner-level shore dive","note":"The platform belongs to a local dive school — register by phone before using it."},
+"dive-rueschlikon":{"maxTxt":"about 10 m (sunken boat)","profile":"Small stones out to about 5 m; a sunken boat at about 10 m","level":"Suits beginners and divers returning after a break","life":"Shoals of small fish in the weed beds at 5 m, the occasional pike"},
+"dive-maur":{"max":12,"profile":"Muddy bottom sloping very gently to about 12 m","level":"Good buoyancy needed","vis":"Usually just 1–2 m","life":"Roots, tree trunks and a few perch","note":"Diving on the Greifensee is allowed only at designated places; keep left of the harbour basin."}
+};

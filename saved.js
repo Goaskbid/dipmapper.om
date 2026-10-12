@@ -1,0 +1,17 @@
+const chromium=require('./lib/chromium.js'),puppeteer=require('puppeteer-core');
+(async()=>{const b=await puppeteer.launch({args:[...chromium.args,'--no-sandbox'],executablePath:await chromium.executablePath(),headless:true});
+ const p=await b.newPage();await p.setViewport({width:1440,height:900});await p.setRequestInterception(true);p.on('request',r=>r.url().startsWith('http://127.0.0.1')||r.url().startsWith('data:')?r.continue():r.abort());
+ const errs=[];p.on('pageerror',e=>errs.push(e.message));const U='http://127.0.0.1:8765/final.html?lat=47.3582&lon=8.5361&name=Z%C3%BCrich';
+ await p.goto(U,{waitUntil:'domcontentloaded'});await p.waitForSelector('#results .result');await new Promise(r=>setTimeout(r,2500));
+ const a=await p.evaluate(async()=>{const S=ms=>new Promise(r=>setTimeout(r,ms)),R={};try{R.hearts=document.querySelectorAll('#results .result>.dmHeart').length;R.savedBtn=!!document.getElementById('dmSavedBtn');
+  const c=document.querySelectorAll('#results .result')[1];const name=c.querySelector('.resultName').textContent;c.querySelector('.dmHeart').click();await S(200);
+  R.drawerOpenedByHeart=document.getElementById('drawer').classList.contains('open');R.stored=JSON.parse(localStorage.getItem('dmSaved')||'[]').map(x=>x.name);R.heartOn=c.querySelector('.dmHeart').dataset.on;R.badge=document.querySelector('#dmSavedBtn b').textContent;
+  document.querySelector('[data-filter="beach"]').click();await S(200);document.querySelector('[data-filter="all"]').click();await S(300);
+  R.heartSurvivesRerender=document.querySelectorAll('#results .result>.dmHeart[data-on="true"]').length;
+  document.querySelector('#results [data-open]').click();await S(700);const bs=document.querySelector('#cardBody .dmBarSave');R.drawerSaveBtn=bs?bs.textContent:null;bs.click();await S(150);R.afterDrawerSave=JSON.parse(localStorage.getItem('dmSaved')).length;document.getElementById('close').click();await S(300);
+  document.getElementById('dmSavedBtn').click();await S(200);R.sheetItems=document.querySelectorAll('.dmSheet .dmSvList li').length;
+  document.querySelector('.dmSheet .dmSvDel').click();await S(100);R.afterRemove=JSON.parse(localStorage.getItem('dmSaved')).length;
+  document.querySelector('.dmSheet .dmSvOpen').click();await S(800);R.openFromSaved=document.getElementById('drawer').classList.contains('open')?document.getElementById('cardTitle').textContent.slice(0,30):'no';}catch(e){R.ERROR=e.message;R.sheet=(document.querySelector('.dmSheet')||{}).innerHTML?document.querySelector('.dmSheet').innerText.slice(0,200):'no sheet';R.storedNow=localStorage.getItem('dmSaved')}return R});
+ await p.reload({waitUntil:'domcontentloaded'});await p.waitForSelector('#results .result');await new Promise(r=>setTimeout(r,2000));
+ const after=await p.evaluate(()=>({persistsAfterReload:JSON.parse(localStorage.getItem('dmSaved')||'[]').length,heartsOnAfterReload:document.querySelectorAll('#results .dmHeart[data-on="true"]').length}));
+ console.log(JSON.stringify(a),JSON.stringify(after),'| pageerrors',errs.length);process.exit(0)})();

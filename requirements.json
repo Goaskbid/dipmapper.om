@@ -1,0 +1,212 @@
+{
+ "_meta": {"compiled": "2026-10-10", "note": "Every rule is backed by a source URL that was opened (WebFetch) during research. Dates in brackets are the source page's own date or version where shown. Not legal advice; local rules can be stricter."},
+ "CH": {
+  "sup": [
+   {"t": "On lakes, carry a life jacket or 50 N buoyancy aid once you are more than 300 m from shore; on rivers, carry one at all times.", "src": ["vks Merkblatt Nr. 6 Stehpaddler (in force 1 May 2022)", "https://ocn.ch/sites/default/files/2022-10/Merkblatt_Stehpaddler_20220501.PDF"]},
+   {"t": "Every person on board needs a buoyancy aid of at least 50 N; beyond 300 m from shore on a lake it must be a suitable vest.", "src": ["Kanton Zürich – Sicherheit auf Gewässern", "https://www.zh.ch/de/sicherheit-justiz/sicher-unterwegs/sicherheit-auf-gewaessern.html"]},
+   {"t": "SUPs are not registered, but the owner's name and address must be clearly visible on the board.", "src": ["vks Merkblatt Nr. 6 Stehpaddler (2022)", "https://ocn.ch/sites/default/files/2022-10/Merkblatt_Stehpaddler_20220501.PDF"]},
+   {"t": "At night or in poor visibility, show a clearly visible white all-round light.", "src": ["vks Merkblatt Nr. 6 Stehpaddler (2022)", "https://ocn.ch/sites/default/files/2022-10/Merkblatt_Stehpaddler_20220501.PDF"]},
+   {"t": "SUPs may only be moved by paddle; motors and motor assistance are not allowed.", "src": ["vks Merkblatt Nr. 6 Stehpaddler (2022), Art. 121 Abs. 5 BSV", "https://ocn.ch/sites/default/files/2022-10/Merkblatt_Stehpaddler_20220501.PDF"]},
+   {"t": "Example: Strandbad Auslikon (Wetzikon) asks for an ID card as deposit for SUP rental; under-16s need a parent present to sign.", "src": ["Strandbad Auslikon – Stand Up Paddling (2021)", "https://wetzikon.webcloud7.ch/stadtleben/sport/sf/anlagen1/strandbad-auslikon/angebot/Stand%20Up%20Paddling%202021.pdf/at_download/file"]},
+   {"t": "On border lakes (Constance, Geneva, Lugano, Maggiore), carry ID: crossing the lake can mean entering another country.", "src": ["The Local Switzerland (3 Oct 2024)", "https://www.thelocal.ch/20241003/why-you-might-need-to-remember-your-passport-when-out-on-a-swiss-lake"]}
+  ],
+  "kayak": [
+   {"t": "No licence or registration for private canoes/kayaks, but the owner's name and address must be visible on the boat.", "src": ["Swiss Canoe – Rechtliches im Paddelsport (28 Jul 2022)", "https://www.swisscanoe.ch/download/pictures/ef/tu0ff468uk4vw2ptgjb5uisf5dcv2a/20220728_rechtliches_im_paddelsport.pdf"]},
+   {"t": "On rivers, and on lakes beyond the shore zones, carry a buoyancy aid (SN EN ISO 12402-5) that fits each paddler.", "src": ["Swiss Canoe – Rechtliches im Paddelsport (2022), Art. 134/134a BSV", "https://www.swisscanoe.ch/download/pictures/ef/tu0ff468uk4vw2ptgjb5uisf5dcv2a/20220728_rechtliches_im_paddelsport.pdf"]},
+   {"t": "The outer shore zone on Swiss lakes ends 300 m from the shore.", "src": ["Kanton Zürich – Sicherheit auf Gewässern", "https://www.zh.ch/de/sicherheit-justiz/sicher-unterwegs/sicherheit-auf-gewaessern.html"]},
+   {"t": "Show a white all-round light at night or in poor visibility.", "src": ["Swiss Canoe – Rechtliches im Paddelsport (2022), Art. 25 BSV", "https://www.swisscanoe.ch/download/pictures/ef/tu0ff468uk4vw2ptgjb5uisf5dcv2a/20220728_rechtliches_im_paddelsport.pdf"]},
+   {"t": "Paddle boats must give way to motorboats; keep about 25 m away from reeds and water-lily beds.", "src": ["Swiss Canoe – Rechtliches im Paddelsport (2022), Art. 44 and 53 BSV", "https://www.swisscanoe.ch/download/pictures/ef/tu0ff468uk4vw2ptgjb5uisf5dcv2a/20220728_rechtliches_im_paddelsport.pdf"]},
+   {"t": "Commercial white-water trips from grade III need a cantonal permit and a certified operator.", "src": ["Kanton Appenzell AR – Merkblatt Risikoaktivitäten (1 Jan 2019)", "https://www.AR.ch/fileadmin/user_upload/Departement_Bau_Volkswirtschaft/Amt_fuer_Wirtschaft_Arbeit/Risikoaktivitaeten/Merkblatt_Bewilligung_Risikoaktivitaeten_01.pdf"]},
+   {"t": "On Lake Constance, canoes and kayaks must carry a buoyancy aid outside the 300 m shore zone.", "src": ["Kantonspolizei Thurgau – BSO Hinweise (April 2022)", "https://kapo.tg.ch/public/upload/assets/131621/BSO22%20Hinweise.pdf?fp=1"]}
+  ],
+  "row": [
+   {"t": "Rowing boats need no licence and have no minimum age.", "src": ["Kanton Schwyz – Kategorien und Mindestalter", "https://www.sz.ch/baudepartement/verkehrsamt/schifffahrt/schiffsfuehrer/kategorien-und-mindestaler.html/8756-8758-8802-9276-9293-12546-12556-12561"]},
+   {"t": "Rowing boats on lakes need not carry rescue devices inside the shore zones (up to 300 m).", "src": ["Swiss Canoe – Rechtliches im Paddelsport (2022), Art. 134 Abs. 5 BSV", "https://www.swisscanoe.ch/download/pictures/ef/tu0ff468uk4vw2ptgjb5uisf5dcv2a/20220728_rechtliches_im_paddelsport.pdf"]}
+  ],
+  "pedal": [
+   {"t": "Example: Pedalo Luzern rents pedal boats from age 14, with a CHF 20 deposit, only in good weather.", "src": ["Luzern Tourismus – Pedalo Luzern", "https://www.luzern.com/de/package/pedalo-luzern"]}
+  ],
+  "boatrent": [
+   {"t": "Motorboats of 6 kW or less can be driven without a licence; the minimum age is 14.", "src": ["Kanton Schwyz – Kategorien und Mindestalter", "https://www.sz.ch/baudepartement/verkehrsamt/schifffahrt/schiffsfuehrer/kategorien-und-mindestaler.html/8756-8758-8802-9276-9293-12546-12556-12561"]},
+   {"t": "Example: Pedalo Luzern lets you drive its small motorboats (up to 8 people) without a licence.", "src": ["Luzern Tourismus – Pedalo Luzern", "https://www.luzern.com/de/package/pedalo-luzern"]},
+   {"t": "Example: s'Lüchttürmli boat rental (Lake Lucerne) needs no licence; you get a short introduction first.", "src": ["Luzern Tourismus – Lüchttürmli Bootsvermietung", "https://www.luzern.com/de/package/luechttuermli-bootsvermietung"]},
+   {"t": "Example: Strandbad Auslikon takes an ID card as rental deposit.", "src": ["Strandbad Auslikon – Stand Up Paddling (2021)", "https://wetzikon.webcloud7.ch/stadtleben/sport/sf/anlagen1/strandbad-auslikon/angebot/Stand%20Up%20Paddling%202021.pdf/at_download/file"]},
+   {"t": "On border lakes (Constance, Geneva, Lugano, Maggiore), carry ID in case of police or customs checks.", "src": ["The Local Switzerland (3 Oct 2024)", "https://www.thelocal.ch/20241003/why-you-might-need-to-remember-your-passport-when-out-on-a-swiss-lake"]}
+  ],
+  "motorboat": [
+   {"t": "Motorboats over 6 kW (8 PS) need a Category A licence; minimum age 18.", "src": ["Kanton Zürich – Schiffsführerprüfung", "https://www.zh.ch/de/mobilitaet/schifffahrt/schiffsfuehrerpruefung.html"]},
+   {"t": "Motorboats of 6 kW or less need no licence; minimum age 14.", "src": ["Kanton Schwyz – Kategorien und Mindestalter", "https://www.sz.ch/baudepartement/verkehrsamt/schifffahrt/schiffsfuehrer/kategorien-und-mindestaler.html/8756-8758-8802-9276-9293-12546-12556-12561"]},
+   {"t": "There is no learner's licence; practice drives need a licence holder of the same category on board.", "src": ["Kanton Zürich – Schiffsführerprüfung", "https://www.zh.ch/de/mobilitaet/schifffahrt/schiffsfuehrerpruefung.html"]},
+   {"t": "Category A and D licence holders need a medical check every two years from age 75.", "src": ["Kanton Schwyz – Kategorien und Mindestalter", "https://www.sz.ch/baudepartement/verkehrsamt/schifffahrt/schiffsfuehrer/kategorien-und-mindestaler.html/8756-8758-8802-9276-9293-12546-12556-12561"]},
+   {"t": "Maximum 10 km/h inside the shore zones (up to 300 m from shore).", "src": ["Kanton Luzern – Erläuterungen Vernehmlassung (24 Sep 2015), Art. 53 BSV", "https://www.lu.ch/-/media/Kanton/Dokumente/JSD/Vernehmlassungen/Erlaeuterungen_20150924.pdf?la=de-CH"]}
+  ],
+  "sail": [
+   {"t": "Sailing boats with more than 15 m² sail area need a Category D licence; minimum age 14.", "src": ["Kanton Zürich – Schiffsführerprüfung", "https://www.zh.ch/de/mobilitaet/schifffahrt/schiffsfuehrerpruefung.html"]},
+   {"t": "Sailing boats with 15 m² sail area or less need no licence and have no minimum age.", "src": ["Kanton Schwyz – Kategorien und Mindestalter", "https://www.sz.ch/baudepartement/verkehrsamt/schifffahrt/schiffsfuehrer/kategorien-und-mindestaler.html/8756-8758-8802-9276-9293-12546-12556-12561"]},
+   {"t": "A sailing boat with an engine over 6 kW also needs a Category A licence (can be limited to sailing boats); minimum age 18.", "src": ["Kanton Zürich – Schiffsführerprüfung", "https://www.zh.ch/de/mobilitaet/schifffahrt/schiffsfuehrerpruefung.html"]},
+   {"t": "On Lake Constance, sailing dinghies and multihulls must carry a buoyancy aid.", "src": ["Kantonspolizei Thurgau – BSO Hinweise (April 2022)", "https://kapo.tg.ch/public/upload/assets/131621/BSO22%20Hinweise.pdf?fp=1"]}
+  ],
+  "windsurf": [
+   {"t": "Windsurfers and kitesurfers must give way to all other vessels.", "src": ["Kantonspolizei Bern – Kitesurfing flyer (map 13 Jun 2022)", "https://police.be.ch/content/dam/police/dokumente/police-be-ch/d/gewaesserpolizei/flyer_kitesurfing_d.pdf"]},
+   {"t": "On Lake Constance, sailboards must carry a buoyancy aid and show the owner's name and address.", "src": ["Kantonspolizei Thurgau – BSO Hinweise (April 2022)", "https://kapo.tg.ch/public/upload/assets/131621/BSO22%20Hinweise.pdf?fp=1"]}
+  ],
+  "kite": [
+   {"t": "Kitesurfing is allowed on Swiss waters since 15 Feb 2016, unless a canton restricts or bans it locally.", "src": ["Kanton Luzern – Erläuterungen Vernehmlassung (24 Sep 2015)", "https://www.lu.ch/-/media/Kanton/Dokumente/JSD/Vernehmlassungen/Erlaeuterungen_20150924.pdf?la=de-CH"]},
+   {"t": "Kite only by day (08:00–21:00) and in clear visibility.", "src": ["Weblaw Wassersportkommentar – Kitesurfen, Art. 54 Abs. 1 BSV", "https://weblaw.ch/en/competence/editions_weblaw/online-kommentarwerke/wassersportkommentar/BT_kitesurfen.html"]},
+   {"t": "Liability insurance is mandatory for kiteboards (minimum cover CHF 750,000); many private policies exclude kiting.", "src": ["Weblaw Wassersportkommentar – Kitesurfen, Art. 153 Abs. 2bis and 155 BSV", "https://weblaw.ch/en/competence/editions_weblaw/online-kommentarwerke/wassersportkommentar/BT_kitesurfen.html"]},
+   {"t": "The board must show the owner's name and address; a phone number is recommended.", "src": ["Kantonspolizei Bern – Kitesurfing flyer (2022)", "https://police.be.ch/content/dam/police/dokumente/police-be-ch/d/gewaesserpolizei/flyer_kitesurfing_d.pdf"]},
+   {"t": "Inside the shore zones, cantons can restrict kiting to marked launch lanes.", "src": ["Kanton Luzern – Erläuterungen Vernehmlassung (2015), Art. 54 Abs. 2ter BSV", "https://www.lu.ch/-/media/Kanton/Dokumente/JSD/Vernehmlassungen/Erlaeuterungen_20150924.pdf?la=de-CH"]},
+   {"t": "Kiters must give way to everyone; in canton Bern keep 200 m from passenger ships and their piers.", "src": ["Kantonspolizei Bern – Kitesurfing flyer (2022)", "https://police.be.ch/content/dam/police/dokumente/police-be-ch/d/gewaesserpolizei/flyer_kitesurfing_d.pdf"]},
+   {"t": "Zurich: allowed on Lake Zurich (not the city basin, not within 150 m of piers, bathing areas or harbour mouths); banned on Greifensee, Pfäffikersee and Türlersee.", "src": ["Kanton Zürich – Sicherheit auf Gewässern", "https://www.zh.ch/de/sicherheit-justiz/sicher-unterwegs/sicherheit-auf-gewaessern.html"]},
+   {"t": "On Lake Constance, kiteboards must carry a buoyancy aid.", "src": ["Kantonspolizei Thurgau – BSO Hinweise (April 2022)", "https://kapo.tg.ch/public/upload/assets/131621/BSO22%20Hinweise.pdf?fp=1"]}
+  ],
+  "wing": [
+   {"t": "Swiss law does not yet clearly cover wingfoiling; the kiteboard definition doesn't mention it, so check local rules first.", "src": ["Weblaw Wassersportkommentar – Kitesurfen", "https://weblaw.ch/en/competence/editions_weblaw/online-kommentarwerke/wassersportkommentar/BT_kitesurfen.html"]}
+  ],
+  "surf": [
+   {"t": "River waves such as Thun need strong skills: getting from the bank into the wave in cold water takes experience.", "src": ["Newly Swissed – River surfing in Switzerland (2 May 2021, updated 7 Mar 2025)", "https://www.newlyswissed.com/rivers-and-pools-for-surfing-in-switzerland/"]},
+   {"t": "The Bremgarten wave (Reuss) works at water levels of about 1.8–2.6 m, mostly May to September.", "src": ["Newly Swissed – River surfing in Switzerland (2021/2025)", "https://www.newlyswissed.com/rivers-and-pools-for-surfing-in-switzerland/"]}
+  ],
+  "dive": [
+   {"t": "Lake Zurich: diving is allowed except in shipping lanes, narrow channels, harbour entrances, near official moorings and within 100 m of passenger-ship piers.", "src": ["Kanton Zürich – Sicherheit auf Gewässern", "https://www.zh.ch/de/sicherheit-justiz/sicher-unterwegs/sicherheit-auf-gewaessern.html"]},
+   {"t": "Most Swiss lakes count as altitude dives (from about 300 m above sea level); adjust your dive computer and plan, e.g. with an Altitude Diver course.", "src": ["PADI Blog – Altitude Diver in Swiss lakes", "https://blog.padi.com/de/padi-altitude-diver-eine-nuetzliche-specialty-fuer-das-tauchen-in-schweizer-seen/"]},
+   {"t": "Lake Constance: show the blue-and-white flag 'A' when diving from shore, and on the boat or a buoy when diving from the water.", "src": ["Bodensee-Schifffahrts-Ordnung Art. 3.13", "https://www.gesetze-bayern.de/Content/Pdf/BayBodSchO-NN33?all=False"]}
+  ],
+  "raft": [
+   {"t": "Commercial rafting from white-water grade III needs a cantonal permit; only certified companies get one.", "src": ["Kanton Appenzell AR – Merkblatt Risikoaktivitäten (1 Jan 2019), RiskG/RiskV", "https://www.AR.ch/fileadmin/user_upload/Departement_Bau_Volkswirtschaft/Amt_fuer_Wirtschaft_Arbeit/Risikoaktivitaeten/Merkblatt_Bewilligung_Risikoaktivitaeten_01.pdf"]},
+   {"t": "Example (Interlaken): minimum age 8 for family rafting, 10 on the Simme, 14 on the Lütschine; max 125 kg; swimming recommended but not always required.", "src": ["Interlaken Tourismus – River rafting", "https://www.interlaken.swiss/en/experiences/poi/river-rafting"]}
+  ],
+  "canyon": [
+   {"t": "Commercial canyoning needs a cantonal permit; only certified companies get one.", "src": ["Kanton Appenzell AR – Merkblatt Risikoaktivitäten (1 Jan 2019), RiskG/RiskV", "https://www.AR.ch/fileadmin/user_upload/Departement_Bau_Volkswirtschaft/Amt_fuer_Wirtschaft_Arbeit/Risikoaktivitaeten/Merkblatt_Bewilligung_Risikoaktivitaeten_01.pdf"]},
+   {"t": "Example (Outdoor Interlaken): minimum age 12, max weight 125 kg; no swim test, but you should be comfortable in water.", "src": ["Outdoor Interlaken – FAQ canyoning", "https://www.outdoor.ch/en/faq/what-is-the-minimum-age-for-canyoning-interlaken"]}
+  ],
+  "wake": [
+   {"t": "Lake Zurich: water-skiing only by day and in clear visibility, between 08:00 and 21:00; not allowed on other lakes in canton Zurich.", "src": ["Kanton Zürich – Sicherheit auf Gewässern", "https://www.zh.ch/de/sicherheit-justiz/sicher-unterwegs/sicherheit-auf-gewaessern.html"]},
+   {"t": "The towing boat's driver needs a Category A licence if the engine is over 6 kW.", "src": ["Kanton Zürich – Schiffsführerprüfung", "https://www.zh.ch/de/mobilitaet/schifffahrt/schiffsfuehrerpruefung.html"]},
+   {"t": "Lake Constance: a second person must watch the skier, max two skiers at once, keep 50 m from others, and stay out of the shore zone.", "src": ["Bodensee-Schifffahrts-Ordnung Art. 6.15", "https://www.gesetze-bayern.de/Content/Document/BayBodSchO-NN55"]}
+  ],
+  "fishing": [
+   {"t": "Graubünden: you need a fishing knowledge certificate (SaNa) to buy an annual or monthly fishing permit.", "src": ["Kanton Graubünden – Sachkundenachweis (21 Apr 2023)", "https://www.gr.ch/DE/institutionen/verwaltung/diem/ajf/fischerei/Fischen-in-Graubuenden/Seiten/Sachkundenachweis.aspx"]}
+  ]
+ },
+ "countries": {
+  "DE": {
+   "motorboat": [
+    {"t": "Motorboats over 15 PS (11.03 kW) need an official Sportbootführerschein (See or Binnen).", "src": ["YACHT – Sportbootführerscheine (12 Jul 2017)", "https://www.yacht.de/segelwissen/fuehrerschein/sportbootfuehrerscheine-welche-patente-es-gibt-und-wer-sie-benoetigt/"]},
+    {"t": "Minimum age for the sea licence (SBF See) is 16.", "src": ["YACHT – Sportbootführerscheine (2017)", "https://www.yacht.de/segelwissen/fuehrerschein/sportbootfuehrerscheine-welche-patente-es-gibt-und-wer-sie-benoetigt/"]},
+    {"t": "Exceptions: the Rhine needs a Rheinpatent, Lake Constance a Bodensee licence, and some Berlin waters need SBF Binnen for all craft.", "src": ["YACHT – Sportbootführerscheine (2017)", "https://www.yacht.de/segelwissen/fuehrerschein/sportbootfuehrerscheine-welche-patente-es-gibt-und-wer-sie-benoetigt/"]}
+   ],
+   "boatrent": [
+    {"t": "Boats up to 15 PS can be driven without a licence.", "src": ["YACHT – Sportbootführerscheine (2017)", "https://www.yacht.de/segelwissen/fuehrerschein/sportbootfuehrerscheine-welche-patente-es-gibt-und-wer-sie-benoetigt/"]}
+   ],
+   "wake": [
+    {"t": "Lake Constance (DE/AT/CH): an observer must be on board, max two skiers, 50 m from others, not in the shore zone.", "src": ["Bodensee-Schifffahrts-Ordnung Art. 6.15", "https://www.gesetze-bayern.de/Content/Document/BayBodSchO-NN55"]}
+   ]
+  },
+  "AT": {
+   "motorboat": [
+    {"t": "A boat licence (Patent) is generally required for motorboats; recreational boats under 4.4 kW are exempt.", "src": ["Land Burgenland – Infoblatt Schiffsführung", "https://www.burgenland.at/fileadmin/user_upload/Downloads/Abt._8/Verkehrsrecht/Infoblatt_Schiffsfuehrung_neu.pdf"]},
+    {"t": "Foreign licences and Lake Constance licences are accepted for recreational boating (not on official waterways for the latter).", "src": ["Land Burgenland – Infoblatt Schiffsführung, § 119 SchFG", "https://www.burgenland.at/fileadmin/user_upload/Downloads/Abt._8/Verkehrsrecht/Infoblatt_Schiffsfuehrung_neu.pdf"]}
+   ],
+   "boatrent": [
+    {"t": "Boats under 4.4 kW can be driven without a licence.", "src": ["Land Burgenland – Infoblatt Schiffsführung", "https://www.burgenland.at/fileadmin/user_upload/Downloads/Abt._8/Verkehrsrecht/Infoblatt_Schiffsfuehrung_neu.pdf"]}
+   ]
+  },
+  "IT": {
+   "motorboat": [
+    {"t": "A licence is needed for engines over 30 kW (about 40 hp), or for any boat more than 6 nautical miles offshore.", "src": ["ICOMIA – Italy, boat licensing (rule from July 2005)", "https://icomia.org/rrg-country/italy"]},
+    {"t": "Minimum licence age: 16 for boats up to 10 m, 18 for boats over 10 m.", "src": ["ICOMIA – Italy, boat licensing", "https://icomia.org/rrg-country/italy"]},
+    {"t": "Jet skis (PWC) always need a licence.", "src": ["ICOMIA – Italy, boat licensing", "https://icomia.org/rrg-country/italy"]}
+   ],
+   "sail": [
+    {"t": "Minimum age 14 to skipper a sailing boat with more than 4 m² of sail.", "src": ["ICOMIA – Italy, boat licensing", "https://icomia.org/rrg-country/italy"]}
+   ]
+  },
+  "FR": {
+   "motorboat": [
+    {"t": "A permis plaisance is required when the engine is over 4.5 kW (6 hp).", "src": ["mer.gouv.fr – Le permis plaisance (updated 19 Apr 2023)", "https://mer.gouv.fr/le-permis-plaisance-permis-de-conduire-les-bateaux-de-plaisance-moteur"]},
+    {"t": "The licence comes as 'côtière' (sea) or 'eaux intérieures' (rivers/lakes), with an offshore 'hauturière' extension.", "src": ["mer.gouv.fr – Le permis plaisance (2023)", "https://mer.gouv.fr/le-permis-plaisance-permis-de-conduire-les-bateaux-de-plaisance-moteur"]}
+   ],
+   "boatrent": [
+    {"t": "Boats with engines up to 6 hp can be rented without a licence.", "src": ["Click&Boat Help – licence to rent a boat (12 Apr 2023)", "https://help.clickandboat.com/hc/en-gb/articles/4426837957906-Do-I-need-a-licence-to-rent-a-boat-"]}
+   ]
+  },
+  "ES": {
+   "boatrent": [
+    {"t": "No licence needed for motorboats up to 5 m and 11.26 kW (15 hp), within 2 nautical miles of the coast; minimum age 18.", "src": ["Spain.info – Navegar: documentación", "https://www.spain.info/es/consejos-viaje/navegar-documentacion/"]},
+    {"t": "The same licence-free rule covers sailing boats up to 6 m.", "src": ["Spain.info – Navegar: documentación", "https://www.spain.info/es/consejos-viaje/navegar-documentacion/"]}
+   ],
+   "motorboat": [
+    {"t": "Bigger boats and jet skis need a nautical licence; foreign licences on rented boats need Harbour Master (Capitanía) authorisation, usually arranged by the rental firm.", "src": ["Spain.info – Navegar: documentación", "https://www.spain.info/es/consejos-viaje/navegar-documentacion/"]}
+   ]
+  },
+  "HR": {
+   "motorboat": [
+    {"t": "Croatia requires a boating licence even for small motorboats; as of Feb 2023 there was no licence-free rental category.", "src": ["Lider (4 Feb 2023)", "https://en.lider.media/2023/02/04/croatia-the-only-eu-country-where-you-need-a-license-for-small-boats-because-minister-butkovic-fears-jet-skis"]},
+    {"t": "A proposed exemption (rental boats ≤5 m, ≤5 kW, within 500 m of shore, age 18+) was not yet in force when reported.", "src": ["SeaHelp (22 Apr 2022)", "https://www.sea-help.eu/en/news-general/boat-driving-license-croatia-6-8-hp/"]}
+   ]
+  },
+  "GR": {
+   "boatrent": [
+    {"t": "Rental platforms report small motorboats up to 30 hp can be driven without a licence (some say 15 hp for outboards); minimum age 18.", "src": ["Borrow A Boat – Greece licence (updated 18 May 2026)", "https://www.borrowaboat.com/m/?p=15912"]}
+   ],
+   "charter": [
+    {"t": "Bareboat sailing charters need a recognised licence such as the ICC; many bases also want a second experienced crew member.", "src": ["Borrow A Boat – Greece licence (2026)", "https://www.borrowaboat.com/m/?p=15912"]}
+   ]
+  },
+  "PT": {
+   "motorboat": [
+    {"t": "The entry 'Principiante' licence (from age 8) covers boats up to 5 m and 4.5 kW, by day, within 1 nautical mile.", "src": ["Click&Boat Blog PT – cartas de marinheiro (Jan 2023)", "https://blog.clickandboat.com/pt/conheca-as-varias-cartas-de-marinheiro-que-existem-em-portugal"]},
+    {"t": "Jet skis need a 'Marinheiro' licence (age 16+): daytime only, within 1 nm and more than 300 m from beaches.", "src": ["Click&Boat Blog PT – cartas de marinheiro (2023)", "https://blog.clickandboat.com/pt/conheca-as-varias-cartas-de-marinheiro-que-existem-em-portugal"]}
+   ]
+  },
+  "NL": {
+   "motorboat": [
+    {"t": "You need a vaarbewijs if the boat can go faster than 20 km/h or is longer than 15 m; it can be used from age 18.", "src": ["Univé – Wanneer vaarbewijs nodig", "https://www.unive.nl/bootverzekering/vaarbewijs/wanneer-vaarbewijs-nodig"]}
+   ],
+   "boatrent": [
+    {"t": "Boats up to 15 m that cannot exceed 20 km/h need no licence.", "src": ["Univé – Wanneer vaarbewijs nodig", "https://www.unive.nl/bootverzekering/vaarbewijs/wanneer-vaarbewijs-nodig"]}
+   ]
+  },
+  "GB": {
+   "motorboat": [
+    {"t": "No licence or test is needed to drive a private boat in the UK.", "src": ["Aquavista – Do you need a licence for boating", "https://www.aquavista.com/all-things-boating/how-do-i-get-started-in-boating/do-you-need-a-licence-for-boating"]},
+    {"t": "On inland waterways the boat itself needs a licence/registration from the navigation authority (e.g. Canal & River Trust, Environment Agency, Broads Authority).", "src": ["Aquavista – Do you need a licence for boating", "https://www.aquavista.com/all-things-boating/how-do-i-get-started-in-boating/do-you-need-a-licence-for-boating"]}
+   ]
+  },
+  "US": {
+   "motorboat": [
+    {"t": "36 states require some boater education; rules and minimum ages vary by state.", "src": ["Boat-Ed – Boating law", "https://boat-ed.com/boating_law"]},
+    {"t": "States accept each other's NASBLA-approved boater education cards; carry it on board.", "src": ["Boat-Ed – Boating law", "https://boat-ed.com/boating_law"]}
+   ],
+   "sup": [
+    {"t": "Outside swimming/surfing areas a paddleboard is a vessel: carry a life jacket per person, a whistle, and a light after sunset.", "src": ["Boat-Ed – Requirements for paddleboards (USCG)", "https://www.boat-ed.com/hawaii/studyGuide/Requirements-for-Paddleboards/10101202_38509/"]}
+   ]
+  }
+ },
+ "generic": {
+  "sup": [
+   {"t": "Wear a buoyancy aid sized so you can climb back onto the board.", "src": ["RNLI – Stand up paddleboarding", "https://rnli.org/safety/choose-your-activity/stand-up-paddle-boarding"]},
+   {"t": "On rivers and flowing tidal water, use a quick-release waist leash, not an ankle leash.", "src": ["RNLI – Stand up paddleboarding", "https://rnli.org/safety/choose-your-activity/stand-up-paddle-boarding"]},
+   {"t": "Avoid offshore wind; check forecast and tides, carry a phone on your body, and tell someone your plan.", "src": ["RNLI – Stand up paddleboarding", "https://rnli.org/safety/choose-your-activity/stand-up-paddle-boarding"]}
+  ],
+  "kayak": [
+   {"t": "Wear a buoyancy aid, carry a way to call for help, check the weather, tell someone your plans, and paddle within your ability.", "src": ["RNLI & British Canoeing (31 Jul 2023)", "https://rnli.org/news-and-media/2023/july/31/rnli-and-british-canoeing-issue-safety-advice-after-rise-in-paddlesport-rescues"]}
+  ],
+  "dive": [
+   {"t": "To dive without a professional you need an Open Water certification (e.g. PADI/SSI); it allows dives to 18 m.", "src": ["PADI Blog – Diving restrictions (27 Feb 2024)", "https://blog.padi.com/padi-diving-restrictions/"]},
+   {"t": "Try dives (Discover Scuba) start at age 10, go to 12 m max, and are always with an instructor.", "src": ["PADI Blog – Diving restrictions (2024)", "https://blog.padi.com/padi-diving-restrictions/"]},
+   {"t": "Junior Open Water from age 10; ages 10–11 max 12 m with a pro or certified parent.", "src": ["PADI Blog – Certification rules (12 Feb 2024)", "https://blog.padi.com/padi-certification-rules/"]},
+   {"t": "The 'Scuba Diver' level only allows dives to 12 m under a professional's direct supervision.", "src": ["PADI Blog – Diving restrictions (2024)", "https://blog.padi.com/padi-diving-restrictions/"]},
+   {"t": "Fill in the Diver Medical Questionnaire (UHMS/DAN, June 2020); some 'yes' answers need a doctor's sign-off before diving.", "src": ["PADI Pros Blog – New medical screening (14 Jul 2020)", "https://pros-blog.padi.com/2020/07/14/new-medical-screening-system-for-divers/"]},
+   {"t": "Don't dive alone without proper training; solo diving is illegal in some areas and banned by many operators.", "src": ["PADI Blog – Certification rules (2024)", "https://blog.padi.com/padi-certification-rules/"]}
+  ],
+  "freedive": [
+   {"t": "PADI Freediver course: minimum age 15 (Basic Freediver 12).", "src": ["PADI – Freediving FAQ", "https://www.padi.com/help/freediving-faq"]},
+   {"t": "You must swim 200 m non-stop (or 300 m with mask, fins and snorkel) and complete a medical form.", "src": ["PADI – Freediving FAQ", "https://www.padi.com/help/freediving-faq"]}
+  ],
+  "charter": [
+   {"t": "European charter companies usually ask for an International Certificate of Competence (ICC) or equal licence.", "src": ["Noonsite – Obtaining an ICC (2018, updated)", "https://www.noonsite.com/report/cruising-regulations-obtaining-an-international-certificate-of-competence-icc/"]}
+  ]
+ }
+}

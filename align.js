@@ -1,0 +1,13 @@
+// v23.8.1: on phones, the search card, the map card and the lists below must share one left and right edge,
+// in Swim and in every activity. Prints the edges per mode and "misaligned" for any block that sticks out or falls short.
+const chromium=require('./lib/chromium.js'),puppeteer=require('puppeteer-core'),fs=require('fs'),path=require('path'),actmock=require('./lib/actmock.js');const PHOTO=fs.readFileSync(path.join(__dirname,'photo.jpg'));const [,,w,h]=process.argv;
+(async()=>{const b=await puppeteer.launch({args:chromium.args,executablePath:await chromium.executablePath(),headless:true});const p=await b.newPage();await p.setViewport({width:+w,height:+h,isMobile:true,hasTouch:true});
+ await p.setRequestInterception(true);p.on('request',r=>{const u=r.url();const J=(o,d)=>setTimeout(()=>r.respond({status:200,contentType:'application/json',headers:{'access-control-allow-origin':'*'},body:JSON.stringify(o)}).catch(()=>{}),d||100);if(actmock(u,J,{}))return;if(/interpreter|overpass/.test(u))return J({elements:[]});if(u.startsWith('http://127.0.0.1')||u.startsWith('data:'))return r.continue();if(r.resourceType()==='image')return r.respond({status:200,contentType:'image/jpeg',body:PHOTO}).catch(()=>{});r.abort()});
+ const errs=[];p.on('pageerror',e=>errs.push(e.message));const S=ms=>new Promise(r=>setTimeout(r,ms));
+ await p.goto('http://127.0.0.1:8765/final.html?lat=47.3582&lon=8.5361&name=Z%C3%BCrich',{waitUntil:'domcontentloaded'});await p.waitForFunction(()=>window.__dmBootDone,{timeout:15000}).catch(()=>{});await S(5000);
+ const q=()=>p.evaluate(()=>{const items=[];const walk=e=>{for(const c of e.children){const cs=getComputedStyle(c);if(cs.display==='contents'){walk(c);continue}if(cs.display==='none'||cs.position==='fixed'||cs.position==='absolute')continue;const r=c.getBoundingClientRect();if(r.height<20)continue;items.push({n:c.id||String(c.className).split(' ')[0]||c.tagName,l:Math.round(r.left),r:Math.round(r.right)})}};walk(document.querySelector('.shell'));
+  const L=Math.min(...items.map(i=>i.l)),R=Math.max(...items.map(i=>i.r));return {edges:[L,R],blocks:items.map(i=>i.n+'['+i.l+'-'+i.r+']'+(Math.abs(i.l-L)>1||Math.abs(i.r-R)>1?' misaligned':'')).join(' ')}});
+ const out={swim:await q()};
+ for(const m of ['paddle','dive','sail','boat','raft','special']){await p.evaluate(m=>document.querySelector('#dmActBar button[data-a="'+m+'"]').click(),m);await S(3500);out[m]=await q()}
+ await p.evaluate(()=>document.querySelector('#dmActBar button[data-a="swim"]').click());await S(2500);out.swimAgain=await q();
+ console.log(JSON.stringify(out,null,1),'\npageerrors',errs.length);await b.close()})();

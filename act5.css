@@ -1,0 +1,154 @@
+/* ================= v23.5: one design language — the activity lists use the swim list's components ================= */
+/* filter pills = swim .filter */
+html body #dmActChips{display:flex!important;flex-wrap:wrap!important;gap:6px!important;padding:4px 0 6px!important;margin:0!important;min-height:0!important;overflow:hidden!important;-webkit-mask-image:none!important;mask-image:none!important;width:auto!important}
+html body #dmActChips.dmCollapsed{max-height:74px!important}
+html body #dmActChips .dmChip{flex:0 0 auto;display:inline-flex!important;align-items:center;gap:6px;height:30px!important;min-height:30px!important;padding:0 11px!important;border-radius:999px!important;border:1px solid #dcebe8!important;background:#fff!important;color:#06343C!important;font:500 12.5px/1 system-ui,-apple-system,"Segoe UI",sans-serif!important;box-shadow:0 1px 2px rgba(7,52,59,.06),0 4px 14px rgba(7,52,59,.07)!important;white-space:nowrap;cursor:pointer;transition:background .15s,border-color .15s}
+html body #dmActChips .dmChip span{font-size:13px;line-height:1}
+html body #dmActChips .dmChip b{font-weight:700;font-size:11px;color:#6b8a90;margin-left:1px}
+html body #dmActChips .dmChip:hover{border-color:#a9d6cf!important}
+html body #dmActChips .dmChip.on{background:#06343C!important;border-color:#06343C!important;color:#fff!important}
+html body #dmActChips .dmChip.on b{color:#bfe9e3}
+#dmActChipsMore{display:inline-block;margin:0 0 8px;border:0;background:transparent;color:#0A8F88;font:700 13px/1.3 system-ui,-apple-system,"Segoe UI",sans-serif;cursor:pointer;padding:2px}
+#dmActChipsMore:hover{text-decoration:underline;text-underline-offset:3px}
+#dmActChipsMore[hidden]{display:none}
+html:not(.dmActOn) #dmActChipsMore{display:none}
+/* list header: quiet, like the swim panel heads */
+html body #dmActPanel .dmActHead{background:#fff!important;background-image:none!important;border:1px solid #E4EEF0!important;border-radius:16px!important;padding:12px 14px!important;box-shadow:0 1px 2px rgba(7,52,59,.06),0 4px 14px rgba(7,52,59,.07)!important;position:relative;overflow:hidden}
+html body #dmActPanel .dmActHead::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:4px;border-radius:0 4px 4px 0;background:var(--ac2,#0FB3A6)}
+html body #dmActPanel .dmActHead h2{font-size:20px!important;line-height:1.2!important;letter-spacing:-.01em;color:#0B2E35!important;margin:2px 0 3px!important}
+html body #dmActPanel .dmActHead .eyebrow{font-size:10.5px!important;font-weight:700!important;letter-spacing:.06em!important;text-transform:uppercase;color:var(--ac2,#0A8F88)!important}
+html body #dmActPanel .dmActHead .muted{font-size:12.5px!important;color:#5E7882!important}
+/* sort & quick filters = small swim pills */
+html body #dmActList .dmTools{display:flex!important;flex-wrap:wrap;gap:6px!important;margin:10px 0 8px!important;padding:0!important;background:none!important;border:0!important;box-shadow:none!important}
+html body #dmActList .dmTools button{height:30px!important;min-height:30px!important;padding:0 12px!important;border-radius:999px!important;border:1px solid #dcebe8!important;background:#fff!important;color:#06343C!important;font:600 12.5px/1 system-ui,-apple-system,"Segoe UI",sans-serif!important;box-shadow:0 1px 2px rgba(7,52,59,.05)!important;margin:0!important}
+html body #dmActList .dmTools button.on{background:#06343C!important;border-color:#06343C!important;color:#fff!important}
+html body #dmActList .dmTools .sep{width:1px;height:20px;background:#dcebe8;align-self:center;margin:0 2px}
+/* result cards = swim .result */
+html body #dmActList .dmAcard.dmRes{position:relative!important;display:grid!important;grid-template-columns:84px minmax(0,1fr)!important;gap:11px!important;align-items:start;padding:10px 10px 10px 13px!important;margin:0 0 8px!important;background:#FFFEFA!important;background-image:none!important;border:1px solid #E4EEF0!important;border-radius:14px!important;box-shadow:0 1px 2px rgba(7,52,59,.06),0 4px 14px rgba(7,52,59,.07)!important;overflow:visible!important}
+html body #dmActList .dmAcard.dmRes::before{content:""!important;position:absolute!important;left:0!important;top:14px!important;bottom:14px!important;width:4px!important;border-radius:0 4px 4px 0!important;background:var(--pc,#0FB3A6)!important;display:block!important}
+html body #dmActList .dmAcard.dmRes .dmAth{position:relative!important;width:84px!important;height:84px!important;min-height:84px!important;border-radius:12px!important;border:1px solid #E4EEF0!important;overflow:hidden!important;background:linear-gradient(135deg,#dff2ee,#cfeae4)!important;margin:0!important;aspect-ratio:auto!important}
+html body #dmActList .dmAcard.dmRes .dmAth img{position:absolute;inset:0;width:100%!important;height:100%!important;object-fit:cover;border-radius:0!important}
+html body #dmActList .dmAcard.dmRes .dmAth>svg,html body #dmActList .dmAcard.dmRes .dmAth .dmPh{width:100%;height:100%}
+/* rank: the swim lifebuoy */
+html body #dmActList .dmAcard.dmRes .dmArank{position:absolute!important;left:5px!important;top:5px!important;right:auto!important;bottom:auto!important;width:24px!important;height:24px!important;min-width:0!important;border-radius:50%!important;display:grid!important;place-items:center!important;font:800 11px/1 system-ui,sans-serif!important;color:#06343C!important;background:conic-gradient(#e5482f 0 25%,#fff 0 50%,#e5482f 0 75%,#fff 0)!important;box-shadow:0 3px 8px rgba(6,52,60,.28)!important;z-index:2;padding:0!important;border:0!important}
+html body #dmActList .dmAcard.dmRes .dmArank::after{content:"";position:absolute;inset:4px;border-radius:50%;background:#fff;z-index:-1}
+html body #dmActList .dmAcard.dmRes .dmArank{isolation:isolate}
+/* score: the swim score pill on the photo */
+html body #dmActList .dmAcard.dmRes .dmAscore{position:absolute!important;left:4px!important;right:auto!important;bottom:4px!important;top:auto!important;display:inline-flex!important;align-items:center;gap:3px;height:24px!important;padding:0 7px 0 2px!important;border-radius:999px!important;background:#fff!important;border:1px solid #E3EFED!important;box-shadow:0 3px 10px rgba(6,52,60,.10)!important;font:700 10.5px/1 system-ui,sans-serif!important;color:#33545B!important;max-width:76px;z-index:2;transform:none!important}
+html body #dmActList .dmAcard.dmRes .dmAscore b{width:20px!important;height:20px!important;border-radius:50%;display:grid!important;place-items:center;font:700 10px/1 system-ui,sans-serif!important;color:#06343C!important}
+html body #dmActList .dmAcard.dmRes .dmAscore i{font-style:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:46px}
+html body #dmActList .dmAcard.dmRes .dmAfame{position:absolute!important;right:5px!important;top:5px!important;left:auto!important;z-index:2}
+/* text */
+html body #dmActList .dmAcard.dmRes .dmAmain{min-width:0!important;padding:0!important;display:block!important}
+html body #dmActList .dmAcard.dmRes .dmAmeta{display:flex!important;justify-content:space-between;gap:8px;margin:0 0 2px!important;font:600 10.5px/1.4 system-ui,sans-serif!important;letter-spacing:.06em!important;text-transform:uppercase!important;color:#5E7882!important}
+html body #dmActList .dmAcard.dmRes .dmAmeta span{display:inline-flex;align-items:center;gap:4px;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+html body #dmActList .dmAcard.dmRes .dmAmeta span:last-child{flex:0 0 auto;color:#5E7882}
+html body #dmActList .dmAcard.dmRes .dmAmeta .dmI{width:12px;height:12px;color:var(--pc,#0A8F88)}
+html body #dmActList .dmAcard.dmRes .dmAname{display:flex!important;align-items:center;gap:6px;margin:0 0 3px!important;font:800 16px/1.22 system-ui,-apple-system,"Segoe UI",sans-serif!important;letter-spacing:-.01em!important;color:#0B2E35!important}
+html body #dmActList .dmAcard.dmRes .dmAname .dmLogo{width:18px;height:18px;border-radius:5px;flex:0 0 18px}
+html body #dmActList .dmAcard.dmRes .dmAname .dmVer .dmI{width:16px;height:16px}
+html body #dmActList .dmAcard.dmRes .dmTeaser{margin:0 0 6px!important;font-size:13px!important;line-height:1.45!important;color:#33545B!important;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+/* chips = swim .chip */
+html body #dmActList .dmAcard.dmRes .dmAstat,html body #dmActList .dmAcard.dmRes .dmHelpers{display:flex!important;flex-wrap:wrap!important;gap:4px!important;margin:0 0 6px!important;padding:0!important;border:0!important;background:none!important}
+html body #dmActList .dmAcard.dmRes .dmAstat>span,html body #dmActList .dmAcard.dmRes .dmHelpers>span,html body #dmActList .dmAcard.dmRes .dmHelpers .dmSp{display:inline-flex!important;align-items:center;gap:4px;height:auto!important;padding:2px 7px!important;border-radius:999px!important;border:1px solid #dceae7!important;background:#f7fbfa!important;color:#06343C!important;font:500 11px/1.35 system-ui,sans-serif!important;box-shadow:none!important;white-space:nowrap}
+html body #dmActList .dmAcard.dmRes .dmAstat>span .dmI,html body #dmActList .dmAcard.dmRes .dmHelpers .dmI{width:12px!important;height:12px!important}
+html body #dmActList .dmAcard.dmRes .dmAstat .star{background:linear-gradient(90deg,#fff6da,#ffe9a0)!important;border-color:#f0cf76!important;color:#7a5600!important;font-weight:600!important}
+html body #dmActList .dmAcard.dmRes .dmAstat .st i{width:7px;height:7px;border-radius:50%;background:#9fb3b6;display:inline-block}
+html body #dmActList .dmAcard.dmRes .dmAstat .st.open{background:#eaf7ef!important;border-color:#bfe3cf!important;color:#0b6b3a!important}.dmAcard.dmRes .dmAstat .st.open i{background:#12a150!important}
+html body #dmActList .dmAcard.dmRes .dmAstat .st.soon{background:#fff6e6!important;border-color:#f0d9a8!important;color:#8a5a12!important}.dmAcard.dmRes .dmAstat .st.soon i{background:#d68a00!important}
+html body #dmActList .dmAcard.dmRes .dmAstat .st.closed,html body #dmActList .dmAcard.dmRes .dmAstat .st.off{background:#fdeceb!important;border-color:#f0a9a5!important;color:#b01e1a!important}.dmAcard.dmRes .dmAstat .st.closed i,.dmAcard.dmRes .dmAstat .st.off i{background:#d0483c!important}
+html body #dmActList .dmAcard.dmRes .dmAstat .pr small{font-size:10px;color:#6b8a90;margin-left:1px}
+html body #dmActList .dmAcard.dmRes .dmAstat .wt{background:linear-gradient(90deg,#dceeff,#c4e2ff)!important;border-color:#9cc8f5!important;color:#174f86!important}
+html body #dmActList .dmAcard.dmRes .dmHelpers .dmSp{background:linear-gradient(90deg,#fff6da,#ffe9a0)!important;border-color:#f0cf76!important;color:#6b4a00!important;font-weight:600!important}
+html body #dmActList .dmAcard.dmRes .dmHelpers .warn{background:#fff3e0!important;border-color:#f2cfa8!important;color:#b25b17!important}
+/* buttons = swim Open + Directions/Share */
+html body #dmActList .dmAcard.dmRes .dmAbtns{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:2px}
+html body #dmActList .dmAcard.dmRes .dmAopen{flex:0 0 auto;width:auto!important;min-width:96px;height:32px!important;min-height:32px!important;margin:0!important;padding:0 16px!important;border:0!important;border-radius:11px!important;background:linear-gradient(#0FB3A6,#0A7D78)!important;color:#fff!important;font:700 13px/1 system-ui,sans-serif!important;box-shadow:0 10px 22px rgba(0,58,66,.12)!important;cursor:pointer}
+html body #dmActList .dmAcard.dmRes .dmAopen:hover{filter:brightness(1.05)}
+html body #dmActList .dmAcard.dmRes .dmAacts{display:flex!important;flex-wrap:wrap;gap:6px!important;margin:0!important;padding:0!important}
+html body #dmActList .dmAcard.dmRes .dmAq{display:inline-flex!important;align-items:center;gap:5px;height:32px!important;min-height:32px!important;padding:0 10px!important;border-radius:11px!important;border:1px solid #E4EEF0!important;background:#fff!important;color:#0B2E35!important;font:500 12.5px/1 system-ui,sans-serif!important;text-decoration:none!important;box-shadow:none!important}
+html body #dmActList .dmAcard.dmRes .dmAq .dmI{width:14px;height:14px;color:#0A8F88}
+html body #dmActList .dmAcard.dmRes .dmAq.ico{width:32px;padding:0!important;justify-content:center}
+html body #dmActList .dmAcard.dmRes .dmAq:hover{border-color:#a9d6cf!important}
+/* butler and notes: same card family */
+html body #dmActList .dmButler{background:#fff!important;border:1px solid #E4EEF0!important;border-top:3px solid var(--ac2,#0FB3A6)!important;border-radius:16px!important;box-shadow:0 1px 2px rgba(7,52,59,.06),0 4px 14px rgba(7,52,59,.07)!important}
+html body #dmActList .dmBacts a,html body #dmActList .dmBacts button{height:32px!important;min-height:32px!important;border-radius:11px!important;border:1px solid #E4EEF0!important;background:#fff!important;font:500 12.5px/1 system-ui,sans-serif!important;color:#0B2E35!important;padding:0 11px!important;box-shadow:none!important}
+@media (max-width:760px){
+ html body #dmActChips.dmCollapsed{max-height:72px!important}
+ html body #dmActChips .dmChip{height:30px!important;padding:0 10px!important;font-size:12.5px!important}
+ html body #dmActList .dmAcard.dmRes{grid-template-columns:84px minmax(0,1fr)!important;padding:9px 9px 9px 12px!important}
+ html body #dmActList .dmAcard.dmRes .dmAopen{min-width:84px;padding:0 14px!important}
+ html body #dmActList .dmAcard.dmRes .dmAq{padding:0 9px!important}
+}
+html body #dmActList .dmAcard.dmRes .dmAbtns{flex-wrap:nowrap}
+html body #dmActList .dmAcard.dmRes .dmAacts{flex-wrap:nowrap!important;min-width:0}
+@media (max-width:760px){
+ html body #dmActList .dmAcard.dmRes .dmAbtns{display:grid!important;grid-template-columns:1fr;gap:6px}
+ html body #dmActList .dmAcard.dmRes .dmAopen{width:100%!important}
+ html body #dmActList .dmAcard.dmRes .dmAacts{display:flex!important}
+ html body #dmActList .dmAcard.dmRes .dmAacts .dmAq:not(.ico){flex:1 1 0;justify-content:center;min-width:0}
+}
+html body #dmActWind[hidden],html body #dmActWind:empty{display:none!important}
+html body #dmActPanel .dmActHead::after{display:none!important;content:none!important}
+/* card title: logo inline with the name, not on its own line */
+html body #dmActName .dmLogo.big{display:inline-block!important;width:26px!important;height:26px!important;border-radius:7px;vertical-align:-4px;margin:0 8px 0 0!important;object-fit:contain;background:#fff}
+/* swim list (small fix): the save heart no longer covers the distance */
+html body #results .result .resultMeta{padding-right:40px}
+/* v23.6 card title: logo beside the name, the name wraps next to it */
+html body #dmActSheet #dmActName{display:flex!important;align-items:flex-start;gap:9px}
+html body #dmActSheet #dmActName img.dmLogo.big{flex:0 0 28px;width:28px!important;height:28px!important;margin:3px 0 0!important;display:block!important}
+html body #dmActSheet .dmRateRow{margin-top:12px!important;clear:both}
+/* map header: a long place name never pushes the zoom buttons off the screen */
+html body #mapPanel .mapHead>div:first-child{min-width:0;flex:1 1 auto}
+html body #mapPanel #mapSub{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+html body #mapPanel .mapHead .mapActions{flex:0 0 auto}
+html body #mapPanel .mapHead{display:flex!important;flex-wrap:nowrap!important;gap:8px}
+html body #mapPanel .mapHead>div:not(.mapActions){flex:1 1 0!important;min-width:0!important;overflow:hidden}
+html body #mapPanel .mapHead>.mapActions{flex:0 0 auto!important;display:flex;gap:6px}
+@media (max-width:760px){
+ html body #dmActSheet .drawerHead{flex-wrap:wrap!important}
+ html body #dmActSheet .drawerHead>div:first-child{flex:1 1 100%!important;min-width:0!important;max-width:100%!important}
+ html body #dmActSheet .drawerHead h2{max-width:none!important;overflow-wrap:break-word!important;word-break:normal!important;hyphens:auto}
+ html body #dmActSheet .drawerHead>div:last-child{flex:1 1 100%!important}
+ html body #dmActSheet .drawerHead>div:last-child button{flex:1 1 0}
+}
+/* v23.6 start screen: pick the activity first */
+#dmGateActs{margin:14px 0 4px;text-align:center}
+#dmGateActs .dmGateQ{margin:0 0 8px;font:700 12px/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#5E7882}
+#dmGateActs .dmGateRow{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+#dmGateActs button{display:inline-flex;align-items:center;gap:5px;height:32px;padding:0 11px;border-radius:999px;border:1px solid #dcebe8;background:#fff;color:#06343C;font:600 13px/1 system-ui,-apple-system,"Segoe UI",sans-serif;box-shadow:0 1px 2px rgba(7,52,59,.06);cursor:pointer}
+#dmGateActs button span{font-size:15px;line-height:1}
+#dmGateActs button.on{background:#06343C;border-color:#06343C;color:#fff;box-shadow:0 6px 16px rgba(6,52,60,.22)}
+#dmGateActs button:focus-visible{outline:3px solid rgba(0,174,168,.45);outline-offset:2px}
+.gate #gateHint{position:relative;z-index:2;margin-bottom:26px!important}
+@media (max-width:760px){#dmGateActs{margin:12px 0 6px}#dmGateActs button{height:34px;padding:0 10px;font-size:13px}}
+html body #gate #dmGateActs button{height:34px!important;min-height:34px!important;padding:0 12px!important;border-radius:999px!important;width:auto!important;flex:0 0 auto!important;margin:0!important;font:600 13px/1 system-ui,-apple-system,"Segoe UI",sans-serif!important;background:#fff!important;color:#06343C!important;border:1px solid #dcebe8!important;box-shadow:0 1px 2px rgba(7,52,59,.06)!important}
+html body #gate #dmGateActs button.on{background:#06343C!important;border-color:#06343C!important;color:#fff!important;box-shadow:0 6px 16px rgba(6,52,60,.22)!important}
+/* v23.6: the swim search progress box ("Spots ready …") is about swim spots — hide it while an activity is shown */
+html.dmActOn body .status{display:none!important}
+.dmZoneLbl.bathzone{border-color:rgba(37,99,235,.5)!important;color:#1d4ed8!important}
+.dmZoneLbl.protected{border-color:rgba(22,128,61,.5)!important;color:#166534!important}
+/* v23.7 under water (divers) */
+.dmDive h3 .dmI{color:#4338ca}
+.dmDvGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px}
+.dmDvT{display:flex;gap:11px;align-items:flex-start;padding:12px;border-radius:16px;background:#fff;border:1px solid #e3e7fb}
+.dmDvT .ic{flex:0 0 36px;width:36px;height:36px;border-radius:12px;display:grid;place-items:center;color:#fff;background:var(--dc,#4338ca)}
+.dmDvT .ic .dmI{width:19px;height:19px}
+.dmDvT.dep{--dc:#4338ca}.dmDvT.lake{--dc:#1d4ed8}.dmDvT.vis{--dc:#0e7490}.dmDvT.fish{--dc:#0a8f88}
+.dmDvT .tx{min-width:0}.dmDvT small{display:block;font-size:10.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--dc,#4338ca)}
+.dmDvT b{display:block;font-size:15px;line-height:1.35;color:#06343C;margin-top:1px}
+.dmDvT em{display:block;font-style:normal;font-size:12.5px;line-height:1.45;color:#3f5f66;margin-top:3px}
+.dmDvT .src{display:block;font-size:11px;color:#7d969b;margin-top:5px}.dmDvT .src a{color:#0a6f6a}
+.dmFishRow{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.dmFishC{display:inline-flex;flex-direction:column;padding:5px 8px;border-radius:10px;background:#f1f8f7;border:1px solid #dcebe8;font-size:12px;line-height:1.25}
+.dmFishC b{font-size:12.5px!important;margin:0!important}.dmFishC i{font-size:11px;color:#5f8189}.dmFishC small{font-size:10.5px!important;color:#7d969b!important;letter-spacing:0!important;text-transform:none!important;font-weight:600!important}
+.dmDvNote{display:flex;gap:8px;align-items:flex-start;margin:10px 0 0;font-size:13px;line-height:1.5;color:#1f464d}.dmDvNote .dmI{flex:0 0 16px;margin-top:2px;color:#4338ca}
+html body #dmActList .dmAcard.dmRes .dmAstat .dp{background:#eef0fe!important;border-color:#c9cff8!important;color:#3730a3!important}
+.dmFuelNow{margin:0;font-size:14px;line-height:1.55;color:#1f464d}
+html body #map .dmZoneLeg{gap:6px!important;flex-wrap:wrap;max-width:calc(100% - 20px)}
+html body #map .dmZoneLeg i.b{background:repeating-linear-gradient(45deg,rgba(37,99,235,.55) 0 2px,rgba(37,99,235,.1) 2px 5px)!important;border-color:rgba(37,99,235,.6)!important}
+html body #map .dmZoneLeg i.g{background:repeating-linear-gradient(45deg,rgba(22,128,61,.55) 0 2px,rgba(22,128,61,.1) 2px 5px)!important;border-color:rgba(22,128,61,.6)!important}
+html body #map .dmZoneLeg small{color:#7d969b;font-weight:600}
+/* v23.7: a long place name in the map header never widens the map panel beyond the screen */
+html body #mapPanel{min-width:0!important;max-width:100%!important}
+html body #map .dmZoneLeg{z-index:640!important;pointer-events:none!important}
