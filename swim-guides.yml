@@ -1,0 +1,49 @@
+name: Build swim guides
+
+on:
+  schedule:
+    - cron: '17 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: swim-guides
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install city dataset
+        run: pip install --quiet geonamescache
+      - name: Generate guides
+        env:
+          MIN_POP: '150000'
+          MIN_SPOTS: '8'
+          MAX_SPOTS: '60'
+          BATCH: '250'
+          RADIUS_M: '15000'
+          PAUSE_S: '1.6'
+          REFRESH_DAYS: '30'
+          AD_CLIENT: 'ca-pub-2870312071451207'
+          AD_TOP: ''
+          AD_MID: ''
+        run: python tools/build_guides.py
+      - name: Commit new and updated pages
+        run: |
+          git config user.name  "dipmapper-bot"
+          git config user.email "actions@github.com"
+          git add swim sitemap.xml tools/_cursor.json
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "swim guides: refresh $(date -u +%Y-%m-%d)"
+            git push
+          fi
