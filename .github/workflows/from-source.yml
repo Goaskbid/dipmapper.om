@@ -1,0 +1,30 @@
+name: Deploy 23.13.0 from the uploaded source zip
+on:
+  push:
+    paths: ['.github/workflows/from-source.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: deploy
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Copy the website folder from the source zip, remove leftovers, commit
+        run: |
+          set -euo pipefail
+          Z=DipMapper_source_23_13_0.zip
+          [ -f "$Z" ] || { echo "Source zip not found, nothing to do"; exit 0; }
+          rm -rf /tmp/src; mkdir -p /tmp/src
+          unzip -q "$Z" -d /tmp/src
+          W=/tmp/src/DipMapper_23_10_0_source/website
+          grep -q 'data-version="v23.13.0"' "$W/index.html" || { echo "Unexpected package, nothing deployed"; exit 1; }
+          cp -a "$W"/. .
+          git rm -q --ignore-unmatch -- "$Z" home.html about_section.html base_v22_22.html dipmapper_v20_7_0_standalone.html
+          git config user.name "dipmapper-deploy"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Deploy data-version=\"v23.13.0\"" || { echo "Nothing changed"; exit 0; }
+          git push
