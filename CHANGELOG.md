@@ -2,6 +2,14 @@
 
 All notable changes to DipMapper (dipmapper.com). Newest first. Versions follow `major.minor.patch`; the live version is printed at the bottom of every page.
 
+## 23.13.0 — 13 November 2026 · One look everywhere, photos and icons, new collections, near-me
+- **Changed:** one header on every page (Map · Rankings · Explore) – home, Explore, all ranking pages, the city and water-sports guides and the legal pages – and one bold browser-tab icon.
+- **Changed:** ranking pages (74) redesigned: hero with key facts and a ranking picker (one "Jump to a ranking" menu on phones), cards with an activity icon, a photo slot (Wikipedia photo when one is found within 40 km of the place, otherwise a large activity icon), rank badge, 12-month season strip, one-tap official site / booking / call / e-mail, folded details, "In season now" filter.
+- **New:** "When to go: the best for every month" (`/best-water-experiences-by-month`, 96 seasonal picks) and "Rainy-day water experiences" (`/rainy-day-water-experiences`, 40 aquariums, thermal baths and saunas); "Best right now" on `/rankings`.
+- **Changed:** Explore: the been-there globe is replaced by "Top attractions near you" (12 closest top picks, or the best in a country), with activity icons. Map popups show activity icons.
+- **Fixed:** internal research notes removed from all cards (131 sentences); plain-English prices and labels; no flag emoji.
+- **Removed:** old copies `home.html`, `about_section.html`, `base_v22_22.html`, `dipmapper_v20_7_0_standalone.html` (not linked anywhere).
+
 ## 23.11.0 — 13 November 2026 · Picks starred on the map, rankings by country and lake, clearer start
 - **New:** 458 DipMapper picks appear as ★ on the live map wherever you search, with a "picks near here" bar under the map. Tap a star for why to go, the season, the official site, phone or e-mail where published, and the full card. Stars mark the approximate area, not an entrance. Loaded only once the map shows (`picks.json`, 210 KB).
 - **New:** rankings by country (39 countries, e.g. `/water-experiences-switzerland`), by sea or region (17 pages, e.g. `/water-experiences-caribbean`) and one page for lakes (`/lake-water-experiences`): 54 new pages, all in the sitemap.
