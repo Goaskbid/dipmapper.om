@@ -2,6 +2,14 @@
 
 All notable changes to DipMapper (dipmapper.com). Newest first. Versions follow `major.minor.patch`; the live version is printed at the bottom of every page.
 
+## 23.10.0 — 13 November 2026 · Rankings on the site, SEO pages, your been-there globe
+- **New:** rankings section on the home page, right under the map: Top 200 water experiences, Top 100 public aquariums and 147 new discoveries (top 5 each, top 3 on phones), plus links to 17 more rankings (whale watching, diving, snorkelling, thermal baths, water parks, beaches, kayaking, Mediterranean, Phuket, Andaman Sea, aquariums in shopping malls …).
+- **New:** 21 search-engine pages: `/rankings` and 20 ranking pages under `/discover/` (e.g. `/discover/whale-watch`), each with full written cards, seasons, prices where published, official booking and contact links, canonical URL and ItemList structured data. All added to `sitemap.xml`. Approved for publication by the publisher on 13 November 2026.
+- **New:** your been-there globe at the top of Explore: tap countries to colour them in, or add small ones by name; countries of places you mark "Been there" colour in by themselves; counts of countries, share of the world, water experiences and wish list. Saved on this device only.
+- **Changed:** Explore is now open to search engines, at `/explore`.
+- **Changed:** founder interview folded away under "About DipMapper" at the end of the page (still readable and still in the page for search engines); "About" left the top menu, which now shows Rankings and Explore. The start screen link now leads to the rankings.
+- **Tests:** Explore 69 of 69 browser checks; home page, rankings page, ranking pages and globe checked on phone and PC with 0 page errors and no sideways scrolling.
+
 ## 23.9.0 — 12 November 2026 · Explore: 605 water experiences worldwide, founder interview update
 - **New:** `explore.html`, a separate Explore page with 605 curated water experiences in 87 countries and territories: the Top 200 water experiences, the Top 100 aquariums (161 aquarium profiles, 28 inside shopping malls) and 147 new desk-researched discoveries (aquariums, thermal baths, water parks, saunas, kayaking, cruises). Each card has its season or an open gap, practical limits and official sources. Filters, globe, comparison, day ideas and "My water" (want to go / been there; saved in a cookie only after you press Remember). The page loads only when you open it, so the map is exactly as fast as before.
 - **New:** "Explore" in the top menu, a link on the start screen under "What do you want to do?", and one in the water-sports guides.
