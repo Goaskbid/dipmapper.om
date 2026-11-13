@@ -2,6 +2,13 @@
 
 All notable changes to DipMapper (dipmapper.com). Newest first. Versions follow `major.minor.patch`; the live version is printed at the bottom of every page.
 
+## 23.11.0 — 13 November 2026 · Picks starred on the map, rankings by country and lake, clearer start
+- **New:** 458 DipMapper picks appear as ★ on the live map wherever you search, with a "picks near here" bar under the map. Tap a star for why to go, the season, the official site, phone or e-mail where published, and the full card. Stars mark the approximate area, not an entrance. Loaded only once the map shows (`picks.json`, 210 KB).
+- **New:** rankings by country (39 countries, e.g. `/water-experiences-switzerland`), by sea or region (17 pages, e.g. `/water-experiences-caribbean`) and one page for lakes (`/lake-water-experiences`): 54 new pages, all in the sitemap.
+- **Changed:** three clear routes. Top menu: Search · Rankings · Explore. Start screen: search first, then "or browse" with Rankings and Your globe. Home rankings section and `/rankings` get pickers by country, by sea/lake/region and by activity; every ranking page links to all others.
+- **Changed:** founder interview: shorter label "About DipMapper", refreshed "what has changed" note.
+- **Tests:** home (phone and PC), stars and popup, picks bar, country page, rankings pickers, Explore and globe: 0 page errors, no sideways scrolling; every internal link checked.
+
 ## 23.10.1 — 13 November 2026 · Ranking pages moved to the top level, swim guide restored
 - **Fixed:** the ranking pages now live at the top level (e.g. `/whale-watch`, `/best-public-aquariums`) so they can be uploaded without a folder. The swimming ranking is `/swimming-discoveries`.
 - **Fixed:** `swim.html` (the swim guides for Zürich, Meilen, Rhodes, Miami, Rostock and Palma) had been overwritten by the swimming ranking during the 23.10.0 upload; the original is restored.
