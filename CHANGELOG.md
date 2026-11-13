@@ -2,6 +2,10 @@
 
 All notable changes to DipMapper (dipmapper.com). Newest first. Versions follow `major.minor.patch`; the live version is printed at the bottom of every page.
 
+## 23.10.1 — 13 November 2026 · Ranking pages moved to the top level, swim guide restored
+- **Fixed:** the ranking pages now live at the top level (e.g. `/whale-watch`, `/best-public-aquariums`) so they can be uploaded without a folder. The swimming ranking is `/swimming-discoveries`.
+- **Fixed:** `swim.html` (the swim guides for Zürich, Meilen, Rhodes, Miami, Rostock and Palma) had been overwritten by the swimming ranking during the 23.10.0 upload; the original is restored.
+
 ## 23.10.0 — 13 November 2026 · Rankings on the site, SEO pages, your been-there globe
 - **New:** rankings section on the home page, right under the map: Top 200 water experiences, Top 100 public aquariums and 147 new discoveries (top 5 each, top 3 on phones), plus links to 17 more rankings (whale watching, diving, snorkelling, thermal baths, water parks, beaches, kayaking, Mediterranean, Phuket, Andaman Sea, aquariums in shopping malls …).
 - **New:** 21 search-engine pages: `/rankings` and 20 ranking pages under `/discover/` (e.g. `/discover/whale-watch`), each with full written cards, seasons, prices where published, official booking and contact links, canonical URL and ItemList structured data. All added to `sitemap.xml`. Approved for publication by the publisher on 13 November 2026.
