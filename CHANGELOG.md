@@ -2,6 +2,13 @@
 
 All notable changes to DipMapper (dipmapper.com). Newest first. Versions follow `major.minor.patch`; the live version is printed at the bottom of every page.
 
+## 23.9.0 — 12 November 2026 · Explore: 605 water experiences worldwide, founder interview update
+- **New:** `explore.html`, a separate Explore page with 605 curated water experiences in 87 countries and territories: the Top 200 water experiences, the Top 100 aquariums (161 aquarium profiles, 28 inside shopping malls) and 147 new desk-researched discoveries (aquariums, thermal baths, water parks, saunas, kayaking, cruises). Each card has its season or an open gap, practical limits and official sources. Filters, globe, comparison, day ideas and "My water" (want to go / been there; saved in a cookie only after you press Remember). The page loads only when you open it, so the map is exactly as fast as before.
+- **New:** "Explore" in the top menu, a link on the start screen under "What do you want to do?", and one in the water-sports guides.
+- **Changed:** founder interview — Stoffknacker added to the question about the other projects; the update note now mentions Explore; new box "More from the same team" with a one-line comment for each website.
+- **Unchanged:** everything else in `index.html` (checked line by line against 23.8.3). Explore is not indexed by Google yet (`noindex`) until the new entries are approved.
+- **Tests:** Explore 69 of 69 browser checks, 162 of 162 Node and 57 of 57 Python checks (from the research package, rerun here on the delivered file); start page, intro, nav and About checked on phone and PC with 0 page errors.
+
 ## 23.8.3 — 12 October 2026 · Zones in Swim, a picture for every venue, intro
 - **Fixed:** no-boat areas did not show in Swim. Since 23.7, Swim dropped its whole zone layer unless a "no entry" or "no swimming" zone was present, and in Swim the zones only loaded after an activity had been opened once. Both repaired: Swim now shows no-boat areas, bathing zones, protected areas and boat rules from the start.
 - **Changed:** zones are drawn bolder, and up to 6 labels (instead of 3) can show, also on smaller zones, so "No boats" and "No diving" are readable again. Piers in Dive get a "No diving" label where there is room.
