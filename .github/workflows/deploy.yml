@@ -1,0 +1,41 @@
+name: Deploy DipMapper upload
+on:
+  push:
+    paths: ['deploy-*.zip']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: deploy
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unpack upload, delete listed leftovers, commit
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          zips=(deploy-*.zip)
+          if [ ${#zips[@]} -eq 0 ]; then echo "No deploy zip found"; exit 0; fi
+          rm -rf /tmp/pkg; mkdir -p /tmp/pkg
+          for z in "${zips[@]}"; do
+            if unzip -Z1 "$z" | grep -qE '(^/|\.\./|^\.git/|^\.github/)'; then echo "Unsafe path in $z"; exit 1; fi
+            unzip -o -q "$z" -d /tmp/pkg
+            git rm -q -- "$z"
+          done
+          if [ -f /tmp/pkg/_delete.txt ]; then
+            while IFS= read -r f || [ -n "$f" ]; do
+              [ -z "$f" ] && continue
+              case "$f" in index.html|CNAME|.nojekyll|.github/*|*/*) echo "Refusing to delete $f"; continue;; esac
+              git rm -q --ignore-unmatch -- "$f"
+            done < /tmp/pkg/_delete.txt
+            rm /tmp/pkg/_delete.txt
+          fi
+          cp -a /tmp/pkg/. .
+          grep -q 'data-version=' index.html || { echo "index.html missing or broken, nothing deployed"; exit 1; }
+          git config user.name "dipmapper-deploy"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Deploy $(grep -o 'data-version="[^"]*"' index.html | head -1)" || { echo "Nothing changed"; exit 0; }
+          git push
