@@ -2,6 +2,11 @@
 
 All notable changes to DipMapper (dipmapper.com). Newest first. Versions follow `major.minor.patch`; the live version is printed at the bottom of every page.
 
+## 23.15.0 — 14 November 2026 · One logo everywhere, Global / Near-me toggle on every ranking
+- **Changed:** the DipMapper logo (the original illustrated logo) in the header of every page; the browser-tab icon is the logo's pin scene, cropped so it is readable at tab size. The separate pin icon from 23.12–23.14 is gone.
+- **New:** "🌍 Global / 📍 Near me" toggle on all ranking pages, the rankings overview, the wildlife calendar and the month page: near me sorts every list by distance from you and shows the kilometres; places without a map position go last; Global restores the ranking. The choice is remembered on the device.
+- **New:** the same toggle on the home page rankings: near me shows the 12 closest top picks with icon, flag and distance.
+
 ## 23.14.0 — 13 November 2026 · Wildlife calendar, clickable rankings with flags and icons, neutral selection
 - **New:** "Wildlife & underwater calendar" (`/wildlife-calendar`): 98 seasonal encounters in 23 groups – humpback, gray, right, minke, blue whales and orcas, whale sharks, mantas, turtles, manatees, seals, puffins, sardine run, coral spawning, bioluminescence, reef-diving seasons – with month strips and "right now".
 - **Changed:** home rankings section rebuilt: every pick is a link to its full card; activity icons and country flags (images, readable on Windows); "Under water & wildlife this month"; activity chips with icons; buttons for All rankings, Wildlife calendar and Near me. Start screen gets a third route "🐋 Wildlife".
