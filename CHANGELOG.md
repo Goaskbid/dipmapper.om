@@ -2,6 +2,12 @@
 
 All notable changes to DipMapper (dipmapper.com). Newest first. Versions follow `major.minor.patch`; the live version is printed at the bottom of every page.
 
+## 23.14.0 — 13 November 2026 · Wildlife calendar, clickable rankings with flags and icons, neutral selection
+- **New:** "Wildlife & underwater calendar" (`/wildlife-calendar`): 98 seasonal encounters in 23 groups – humpback, gray, right, minke, blue whales and orcas, whale sharks, mantas, turtles, manatees, seals, puffins, sardine run, coral spawning, bioluminescence, reef-diving seasons – with month strips and "right now".
+- **Changed:** home rankings section rebuilt: every pick is a link to its full card; activity icons and country flags (images, readable on Windows); "Under water & wildlife this month"; activity chips with icons; buttons for All rankings, Wildlife calendar and Near me. Start screen gets a third route "🐋 Wildlife".
+- **Changed:** neutral global selection: no regional chips (Phuket, Mediterranean, Andaman) on the home page; "new discoveries" shows the highest-rated pick per country instead of the research order.
+- **Changed:** flags next to every country on ranking cards, the rankings overview and the month and wildlife lists; overview rows are clickable.
+
 ## 23.13.0 — 13 November 2026 · One look everywhere, photos and icons, new collections, near-me
 - **Changed:** one header on every page (Map · Rankings · Explore) – home, Explore, all ranking pages, the city and water-sports guides and the legal pages – and one bold browser-tab icon.
 - **Changed:** ranking pages (74) redesigned: hero with key facts and a ranking picker (one "Jump to a ranking" menu on phones), cards with an activity icon, a photo slot (Wikipedia photo when one is found within 40 km of the place, otherwise a large activity icon), rank badge, 12-month season strip, one-tap official site / booking / call / e-mail, folded details, "In season now" filter.
