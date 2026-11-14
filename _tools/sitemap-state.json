@@ -1,0 +1,677 @@
+{
+ "https://dipmapper.com/": {
+  "file": "index.html",
+  "lastmod": "2026-11-14",
+  "sig": "dc0e13256d3382e074ae"
+ },
+ "https://dipmapper.com/activities.html": {
+  "file": "activities.html",
+  "lastmod": "2026-11-14",
+  "sig": "84893fce2fb3290f2f2f"
+ },
+ "https://dipmapper.com/advertising.html": {
+  "file": "advertising.html",
+  "lastmod": "2026-11-14",
+  "sig": "b93662030342ddcd76c5"
+ },
+ "https://dipmapper.com/andaman-sea": {
+  "file": "andaman-sea.html",
+  "lastmod": "2026-11-14",
+  "sig": "52802ea704d0be929e2f"
+ },
+ "https://dipmapper.com/aquariums-in-shopping-malls": {
+  "file": "aquariums-in-shopping-malls.html",
+  "lastmod": "2026-11-14",
+  "sig": "78d30696861c1e34cd16"
+ },
+ "https://dipmapper.com/beach": {
+  "file": "beach.html",
+  "lastmod": "2026-11-14",
+  "sig": "98bed2f7a0099593d539"
+ },
+ "https://dipmapper.com/beach-activities": {
+  "file": "beach-activities.html",
+  "lastmod": "2026-11-14",
+  "sig": "5d7fd19d28a7e7c4e59d"
+ },
+ "https://dipmapper.com/best-public-aquariums": {
+  "file": "best-public-aquariums.html",
+  "lastmod": "2026-11-14",
+  "sig": "f590d3f892491cda4d62"
+ },
+ "https://dipmapper.com/best-water-experiences-by-month": {
+  "file": "best-water-experiences-by-month.html",
+  "lastmod": "2026-11-14",
+  "sig": "2bf3842c7f3d8209eb82"
+ },
+ "https://dipmapper.com/boat-rental-lake-zurich.html": {
+  "file": "boat-rental-lake-zurich.html",
+  "lastmod": "2026-11-14",
+  "sig": "462d54bde2f9b5a1787d"
+ },
+ "https://dipmapper.com/cookies.html": {
+  "file": "cookies.html",
+  "lastmod": "2026-11-14",
+  "sig": "55c01971323718990f85"
+ },
+ "https://dipmapper.com/disclaimer.html": {
+  "file": "disclaimer.html",
+  "lastmod": "2026-11-14",
+  "sig": "3d99a8a57549deeeb7d7"
+ },
+ "https://dipmapper.com/diving-lake-zurich.html": {
+  "file": "diving-lake-zurich.html",
+  "lastmod": "2026-11-14",
+  "sig": "e19519fba0e1077cfbfb"
+ },
+ "https://dipmapper.com/explore": {
+  "file": "explore.html",
+  "lastmod": "2026-11-14",
+  "sig": "822acd480f1963633bc3"
+ },
+ "https://dipmapper.com/ferry": {
+  "file": "ferry.html",
+  "lastmod": "2026-11-14",
+  "sig": "e7703f2f79702e0165bb"
+ },
+ "https://dipmapper.com/imprint.html": {
+  "file": "imprint.html",
+  "lastmod": "2026-11-14",
+  "sig": "ac8396a05c5ccf1f9683"
+ },
+ "https://dipmapper.com/kayak": {
+  "file": "kayak.html",
+  "lastmod": "2026-11-14",
+  "sig": "8736a86552a4f9a78ba1"
+ },
+ "https://dipmapper.com/kitesurfing-switzerland.html": {
+  "file": "kitesurfing-switzerland.html",
+  "lastmod": "2026-11-14",
+  "sig": "5fd9625101e4bd8673d9"
+ },
+ "https://dipmapper.com/lake-water-experiences": {
+  "file": "lake-water-experiences.html",
+  "lastmod": "2026-11-14",
+  "sig": "8780618ee722a440c3b9"
+ },
+ "https://dipmapper.com/mediterranean": {
+  "file": "mediterranean.html",
+  "lastmod": "2026-11-14",
+  "sig": "16083142805157c88574"
+ },
+ "https://dipmapper.com/meilen.html": {
+  "file": "meilen.html",
+  "lastmod": "2026-11-14",
+  "sig": "da1b3f85e2f9f9082cd5"
+ },
+ "https://dipmapper.com/miami.html": {
+  "file": "miami.html",
+  "lastmod": "2026-11-14",
+  "sig": "8cbd6d6bf1d79d937ecd"
+ },
+ "https://dipmapper.com/new-curated-discoveries": {
+  "file": "new-curated-discoveries.html",
+  "lastmod": "2026-11-14",
+  "sig": "e43a534ec09948c4163d"
+ },
+ "https://dipmapper.com/palma.html": {
+  "file": "palma.html",
+  "lastmod": "2026-11-14",
+  "sig": "7d8db49dfb3bdd2806b0"
+ },
+ "https://dipmapper.com/phuket": {
+  "file": "phuket.html",
+  "lastmod": "2026-11-14",
+  "sig": "55f802bb4f53e6795292"
+ },
+ "https://dipmapper.com/privacy.html": {
+  "file": "privacy.html",
+  "lastmod": "2026-11-14",
+  "sig": "cde2fa88fdd9f1067b79"
+ },
+ "https://dipmapper.com/rafting": {
+  "file": "rafting.html",
+  "lastmod": "2026-11-14",
+  "sig": "f05573d0133f26609472"
+ },
+ "https://dipmapper.com/rainy-day-water-experiences": {
+  "file": "rainy-day-water-experiences.html",
+  "lastmod": "2026-11-14",
+  "sig": "6ba335a0e31b88dea616"
+ },
+ "https://dipmapper.com/rankings": {
+  "file": "rankings.html",
+  "lastmod": "2026-11-14",
+  "sig": "cb5a0221d312284464eb"
+ },
+ "https://dipmapper.com/rhodes.html": {
+  "file": "rhodes.html",
+  "lastmod": "2026-11-14",
+  "sig": "696498d6f6877d495672"
+ },
+ "https://dipmapper.com/rostock.html": {
+  "file": "rostock.html",
+  "lastmod": "2026-11-14",
+  "sig": "2a1c69e8773ce20a6c43"
+ },
+ "https://dipmapper.com/safety.html": {
+  "file": "safety.html",
+  "lastmod": "2026-11-14",
+  "sig": "6c95f97d97b1e2f26c24"
+ },
+ "https://dipmapper.com/sailing-lake-zurich.html": {
+  "file": "sailing-lake-zurich.html",
+  "lastmod": "2026-11-14",
+  "sig": "05cc195c6f5bea6bde5c"
+ },
+ "https://dipmapper.com/sauna-swim": {
+  "file": "sauna-swim.html",
+  "lastmod": "2026-11-14",
+  "sig": "52ad6ae6f7aa8f73fddf"
+ },
+ "https://dipmapper.com/scenic-cruise": {
+  "file": "scenic-cruise.html",
+  "lastmod": "2026-11-14",
+  "sig": "955f8dca0b3891a58758"
+ },
+ "https://dipmapper.com/scuba": {
+  "file": "scuba.html",
+  "lastmod": "2026-11-14",
+  "sig": "a7353a15b5f5657c7b8b"
+ },
+ "https://dipmapper.com/sea-risk-calendar": {
+  "file": "sea-risk-calendar.html",
+  "lastmod": "2026-11-14",
+  "sig": "ccfc67e042942bd3cfdc"
+ },
+ "https://dipmapper.com/snorkel": {
+  "file": "snorkel.html",
+  "lastmod": "2026-11-14",
+  "sig": "ae818450ea7a78c5a185"
+ },
+ "https://dipmapper.com/snorkel-excursion": {
+  "file": "snorkel-excursion.html",
+  "lastmod": "2026-11-14",
+  "sig": "88f0d919d6b6afd390a1"
+ },
+ "https://dipmapper.com/sources.html": {
+  "file": "sources.html",
+  "lastmod": "2026-11-14",
+  "sig": "7eb6944b34cdaed1cb15"
+ },
+ "https://dipmapper.com/sup-lake-zurich.html": {
+  "file": "sup-lake-zurich.html",
+  "lastmod": "2026-11-14",
+  "sig": "ed63fdaf8107f3e92b1e"
+ },
+ "https://dipmapper.com/surfing-switzerland.html": {
+  "file": "surfing-switzerland.html",
+  "lastmod": "2026-11-14",
+  "sig": "eda469a14e397e79ae1e"
+ },
+ "https://dipmapper.com/swim.html": {
+  "file": "swim.html",
+  "lastmod": "2026-11-14",
+  "sig": "4ac9b79256cb776dfcdc"
+ },
+ "https://dipmapper.com/swimming-discoveries": {
+  "file": "swimming-discoveries.html",
+  "lastmod": "2026-11-14",
+  "sig": "f50bdff18d0963e77109"
+ },
+ "https://dipmapper.com/terms.html": {
+  "file": "terms.html",
+  "lastmod": "2026-11-14",
+  "sig": "79c8f63e2e428210536e"
+ },
+ "https://dipmapper.com/thermal-bath": {
+  "file": "thermal-bath.html",
+  "lastmod": "2026-11-14",
+  "sig": "14b54a760b61f5fde77e"
+ },
+ "https://dipmapper.com/top-water-experiences": {
+  "file": "top-water-experiences.html",
+  "lastmod": "2026-11-14",
+  "sig": "88c62a77a8df8c2ea271"
+ },
+ "https://dipmapper.com/town-albufeira": {
+  "file": "town-albufeira.html",
+  "lastmod": "2026-11-14",
+  "sig": "49c5c56379470cdbd559"
+ },
+ "https://dipmapper.com/town-ao-nang": {
+  "file": "town-ao-nang.html",
+  "lastmod": "2026-11-14",
+  "sig": "39b97125be6922849975"
+ },
+ "https://dipmapper.com/town-arenal": {
+  "file": "town-arenal.html",
+  "lastmod": "2026-11-14",
+  "sig": "08619f8eca364f409a04"
+ },
+ "https://dipmapper.com/town-benoa": {
+  "file": "town-benoa.html",
+  "lastmod": "2026-11-14",
+  "sig": "db1fdf4d463d16f3ce5d"
+ },
+ "https://dipmapper.com/town-bondi": {
+  "file": "town-bondi.html",
+  "lastmod": "2026-11-14",
+  "sig": "67983076dedf95b90b9b"
+ },
+ "https://dipmapper.com/town-boracay": {
+  "file": "town-boracay.html",
+  "lastmod": "2026-11-14",
+  "sig": "fd4f6e59a41d59bac008"
+ },
+ "https://dipmapper.com/town-cairns": {
+  "file": "town-cairns.html",
+  "lastmod": "2026-11-14",
+  "sig": "bd7a14ce7b421bdd553d"
+ },
+ "https://dipmapper.com/town-cala-major": {
+  "file": "town-cala-major.html",
+  "lastmod": "2026-11-14",
+  "sig": "500b612baebbe120313b"
+ },
+ "https://dipmapper.com/town-can-pastilla": {
+  "file": "town-can-pastilla.html",
+  "lastmod": "2026-11-14",
+  "sig": "a0e0df7bbe8eaf49cff6"
+ },
+ "https://dipmapper.com/town-cascais": {
+  "file": "town-cascais.html",
+  "lastmod": "2026-11-14",
+  "sig": "03dfbca2d3cc7f4c07d8"
+ },
+ "https://dipmapper.com/town-da-nang": {
+  "file": "town-da-nang.html",
+  "lastmod": "2026-11-14",
+  "sig": "8e5bb9e7b99b02956893"
+ },
+ "https://dipmapper.com/town-heiligendamm": {
+  "file": "town-heiligendamm.html",
+  "lastmod": "2026-11-14",
+  "sig": "ff3738fe4fa15e76baf1"
+ },
+ "https://dipmapper.com/town-hua-hin": {
+  "file": "town-hua-hin.html",
+  "lastmod": "2026-11-14",
+  "sig": "c602000cbd3382a1847e"
+ },
+ "https://dipmapper.com/town-jomtien": {
+  "file": "town-jomtien.html",
+  "lastmod": "2026-11-14",
+  "sig": "551862443e04768fe73a"
+ },
+ "https://dipmapper.com/town-kata": {
+  "file": "town-kata.html",
+  "lastmod": "2026-11-14",
+  "sig": "c8dd6c9bb0db9c74235a"
+ },
+ "https://dipmapper.com/town-molinar": {
+  "file": "town-molinar.html",
+  "lastmod": "2026-11-14",
+  "sig": "e14593d33dbc24c8786e"
+ },
+ "https://dipmapper.com/town-muizenberg": {
+  "file": "town-muizenberg.html",
+  "lastmod": "2026-11-14",
+  "sig": "2003b8d66360e5d5db00"
+ },
+ "https://dipmapper.com/town-nha-trang": {
+  "file": "town-nha-trang.html",
+  "lastmod": "2026-11-14",
+  "sig": "09c60b1ae4f97f13be9a"
+ },
+ "https://dipmapper.com/town-palma": {
+  "file": "town-palma.html",
+  "lastmod": "2026-11-14",
+  "sig": "6557dd3c2afbe57bfecd"
+ },
+ "https://dipmapper.com/town-patong": {
+  "file": "town-patong.html",
+  "lastmod": "2026-11-14",
+  "sig": "44405760407a143b0ffd"
+ },
+ "https://dipmapper.com/town-pattaya": {
+  "file": "town-pattaya.html",
+  "lastmod": "2026-11-14",
+  "sig": "c78dd2e8be88ac1a20f3"
+ },
+ "https://dipmapper.com/town-perranporth": {
+  "file": "town-perranporth.html",
+  "lastmod": "2026-11-14",
+  "sig": "06e42b240e049876e0d3"
+ },
+ "https://dipmapper.com/town-riva": {
+  "file": "town-riva.html",
+  "lastmod": "2026-11-14",
+  "sig": "5e0c4c045ff33d9453a6"
+ },
+ "https://dipmapper.com/town-sanur": {
+  "file": "town-sanur.html",
+  "lastmod": "2026-11-14",
+  "sig": "2ecc0929dae0146d7940"
+ },
+ "https://dipmapper.com/town-sharm": {
+  "file": "town-sharm.html",
+  "lastmod": "2026-11-14",
+  "sig": "9e4bcd8f8e3895b688e2"
+ },
+ "https://dipmapper.com/town-waikiki": {
+  "file": "town-waikiki.html",
+  "lastmod": "2026-11-14",
+  "sig": "dcd1b4e93a1e0c53258f"
+ },
+ "https://dipmapper.com/town-warnemuende": {
+  "file": "town-warnemuende.html",
+  "lastmod": "2026-11-14",
+  "sig": "1aaaaad099b9fcb0b68f"
+ },
+ "https://dipmapper.com/town-westerland": {
+  "file": "town-westerland.html",
+  "lastmod": "2026-11-14",
+  "sig": "8c5ac06bcc4103e03847"
+ },
+ "https://dipmapper.com/unique-water-experiences.html": {
+  "file": "unique-water-experiences.html",
+  "lastmod": "2026-11-14",
+  "sig": "164f0148c2b9b81bd883"
+ },
+ "https://dipmapper.com/water-experiences-australia": {
+  "file": "water-experiences-australia.html",
+  "lastmod": "2026-11-14",
+  "sig": "6a51755b8334a6c7b536"
+ },
+ "https://dipmapper.com/water-experiences-austria": {
+  "file": "water-experiences-austria.html",
+  "lastmod": "2026-11-14",
+  "sig": "446556678cdf64b2adc5"
+ },
+ "https://dipmapper.com/water-experiences-balearic-sea": {
+  "file": "water-experiences-balearic-sea.html",
+  "lastmod": "2026-11-14",
+  "sig": "e53c8b659dd7de8d27f0"
+ },
+ "https://dipmapper.com/water-experiences-brazil": {
+  "file": "water-experiences-brazil.html",
+  "lastmod": "2026-11-14",
+  "sig": "4027c37761f63301e0a1"
+ },
+ "https://dipmapper.com/water-experiences-cairns-port-douglas": {
+  "file": "water-experiences-cairns-port-douglas.html",
+  "lastmod": "2026-11-14",
+  "sig": "26b954a930dc95e0a9f1"
+ },
+ "https://dipmapper.com/water-experiences-canada": {
+  "file": "water-experiences-canada.html",
+  "lastmod": "2026-11-14",
+  "sig": "5b3a7d31e22c447ff63b"
+ },
+ "https://dipmapper.com/water-experiences-caribbean": {
+  "file": "water-experiences-caribbean.html",
+  "lastmod": "2026-11-14",
+  "sig": "53022d4398416df25a04"
+ },
+ "https://dipmapper.com/water-experiences-chile": {
+  "file": "water-experiences-chile.html",
+  "lastmod": "2026-11-14",
+  "sig": "d89862b3ea2953b44072"
+ },
+ "https://dipmapper.com/water-experiences-coral-sea": {
+  "file": "water-experiences-coral-sea.html",
+  "lastmod": "2026-11-14",
+  "sig": "ff981307fb1ab7afe66b"
+ },
+ "https://dipmapper.com/water-experiences-costa-rica": {
+  "file": "water-experiences-costa-rica.html",
+  "lastmod": "2026-11-14",
+  "sig": "f179d1285cf81560bbeb"
+ },
+ "https://dipmapper.com/water-experiences-denmark": {
+  "file": "water-experiences-denmark.html",
+  "lastmod": "2026-11-14",
+  "sig": "da3848a55acc501ec492"
+ },
+ "https://dipmapper.com/water-experiences-fiji": {
+  "file": "water-experiences-fiji.html",
+  "lastmod": "2026-11-14",
+  "sig": "0a78c0aa3bfc96793fbe"
+ },
+ "https://dipmapper.com/water-experiences-finland": {
+  "file": "water-experiences-finland.html",
+  "lastmod": "2026-11-14",
+  "sig": "365a24974d4f97b01099"
+ },
+ "https://dipmapper.com/water-experiences-france": {
+  "file": "water-experiences-france.html",
+  "lastmod": "2026-11-14",
+  "sig": "bebbeda99a8054ba6250"
+ },
+ "https://dipmapper.com/water-experiences-french-polynesia": {
+  "file": "water-experiences-french-polynesia.html",
+  "lastmod": "2026-11-14",
+  "sig": "66766f25633ef4ce1bf3"
+ },
+ "https://dipmapper.com/water-experiences-germany": {
+  "file": "water-experiences-germany.html",
+  "lastmod": "2026-11-14",
+  "sig": "e90230602c3f59b8cbae"
+ },
+ "https://dipmapper.com/water-experiences-great-ocean-road": {
+  "file": "water-experiences-great-ocean-road.html",
+  "lastmod": "2026-11-14",
+  "sig": "ce877840770acc65fde5"
+ },
+ "https://dipmapper.com/water-experiences-greece": {
+  "file": "water-experiences-greece.html",
+  "lastmod": "2026-11-14",
+  "sig": "c6eebaba26674460f99d"
+ },
+ "https://dipmapper.com/water-experiences-iceland": {
+  "file": "water-experiences-iceland.html",
+  "lastmod": "2026-11-14",
+  "sig": "eef73441e948251ac598"
+ },
+ "https://dipmapper.com/water-experiences-india": {
+  "file": "water-experiences-india.html",
+  "lastmod": "2026-11-14",
+  "sig": "e4691e9ff1788232454f"
+ },
+ "https://dipmapper.com/water-experiences-indian-ocean": {
+  "file": "water-experiences-indian-ocean.html",
+  "lastmod": "2026-11-14",
+  "sig": "e36a42da8da4389019a2"
+ },
+ "https://dipmapper.com/water-experiences-indonesia": {
+  "file": "water-experiences-indonesia.html",
+  "lastmod": "2026-11-14",
+  "sig": "bafba704ec72a0e28d55"
+ },
+ "https://dipmapper.com/water-experiences-italy": {
+  "file": "water-experiences-italy.html",
+  "lastmod": "2026-11-14",
+  "sig": "520ce5c142c966660599"
+ },
+ "https://dipmapper.com/water-experiences-japan": {
+  "file": "water-experiences-japan.html",
+  "lastmod": "2026-11-14",
+  "sig": "426d0b266ae170d9b4b3"
+ },
+ "https://dipmapper.com/water-experiences-malaysia": {
+  "file": "water-experiences-malaysia.html",
+  "lastmod": "2026-11-14",
+  "sig": "98dc3d0c843576bd6ab5"
+ },
+ "https://dipmapper.com/water-experiences-mauritius": {
+  "file": "water-experiences-mauritius.html",
+  "lastmod": "2026-11-14",
+  "sig": "6f0e0cfbbc87b3d06be2"
+ },
+ "https://dipmapper.com/water-experiences-mexico": {
+  "file": "water-experiences-mexico.html",
+  "lastmod": "2026-11-14",
+  "sig": "56530973320f064aef6d"
+ },
+ "https://dipmapper.com/water-experiences-netherlands": {
+  "file": "water-experiences-netherlands.html",
+  "lastmod": "2026-11-14",
+  "sig": "01f7932fde29a7fa22e7"
+ },
+ "https://dipmapper.com/water-experiences-new-zealand": {
+  "file": "water-experiences-new-zealand.html",
+  "lastmod": "2026-11-14",
+  "sig": "984917cd3fcbf53bc956"
+ },
+ "https://dipmapper.com/water-experiences-north-atlantic": {
+  "file": "water-experiences-north-atlantic.html",
+  "lastmod": "2026-11-14",
+  "sig": "77a076d215e7fb5ff76e"
+ },
+ "https://dipmapper.com/water-experiences-north-pacific": {
+  "file": "water-experiences-north-pacific.html",
+  "lastmod": "2026-11-14",
+  "sig": "4ae0c2beb07cce5626c3"
+ },
+ "https://dipmapper.com/water-experiences-norway": {
+  "file": "water-experiences-norway.html",
+  "lastmod": "2026-11-14",
+  "sig": "2f99aa47250326fc6598"
+ },
+ "https://dipmapper.com/water-experiences-phang-nga": {
+  "file": "water-experiences-phang-nga.html",
+  "lastmod": "2026-11-14",
+  "sig": "4be6165a8d388a168a95"
+ },
+ "https://dipmapper.com/water-experiences-philippines": {
+  "file": "water-experiences-philippines.html",
+  "lastmod": "2026-11-14",
+  "sig": "ea3abed556ca4d2c27bc"
+ },
+ "https://dipmapper.com/water-experiences-portugal": {
+  "file": "water-experiences-portugal.html",
+  "lastmod": "2026-11-14",
+  "sig": "43c412681b75014a3088"
+ },
+ "https://dipmapper.com/water-experiences-seychelles": {
+  "file": "water-experiences-seychelles.html",
+  "lastmod": "2026-11-14",
+  "sig": "5532e8403471d8868f7d"
+ },
+ "https://dipmapper.com/water-experiences-society-islands": {
+  "file": "water-experiences-society-islands.html",
+  "lastmod": "2026-11-14",
+  "sig": "28205b0335a4c6b72e37"
+ },
+ "https://dipmapper.com/water-experiences-south-africa": {
+  "file": "water-experiences-south-africa.html",
+  "lastmod": "2026-11-14",
+  "sig": "94fe7de4f435ba6a2756"
+ },
+ "https://dipmapper.com/water-experiences-south-atlantic": {
+  "file": "water-experiences-south-atlantic.html",
+  "lastmod": "2026-11-14",
+  "sig": "5faf0518cac305824d2e"
+ },
+ "https://dipmapper.com/water-experiences-south-korea": {
+  "file": "water-experiences-south-korea.html",
+  "lastmod": "2026-11-14",
+  "sig": "99c5838118b44d59bbac"
+ },
+ "https://dipmapper.com/water-experiences-south-pacific": {
+  "file": "water-experiences-south-pacific.html",
+  "lastmod": "2026-11-14",
+  "sig": "f63d47bfbc5c5203242c"
+ },
+ "https://dipmapper.com/water-experiences-southern-ocean": {
+  "file": "water-experiences-southern-ocean.html",
+  "lastmod": "2026-11-14",
+  "sig": "4a319487f2c7c29d7db3"
+ },
+ "https://dipmapper.com/water-experiences-spain": {
+  "file": "water-experiences-spain.html",
+  "lastmod": "2026-11-14",
+  "sig": "89ea647647188433c77f"
+ },
+ "https://dipmapper.com/water-experiences-sunshine-coast": {
+  "file": "water-experiences-sunshine-coast.html",
+  "lastmod": "2026-11-14",
+  "sig": "e572bf06b3acfd5fe966"
+ },
+ "https://dipmapper.com/water-experiences-sweden": {
+  "file": "water-experiences-sweden.html",
+  "lastmod": "2026-11-14",
+  "sig": "bab155061621494bb87e"
+ },
+ "https://dipmapper.com/water-experiences-switzerland": {
+  "file": "water-experiences-switzerland.html",
+  "lastmod": "2026-11-14",
+  "sig": "c54565c80cb1f475fccb"
+ },
+ "https://dipmapper.com/water-experiences-taiwan": {
+  "file": "water-experiences-taiwan.html",
+  "lastmod": "2026-11-14",
+  "sig": "40f310de658ba8ccfa88"
+ },
+ "https://dipmapper.com/water-experiences-thailand": {
+  "file": "water-experiences-thailand.html",
+  "lastmod": "2026-11-14",
+  "sig": "c2cd1dc7f70721fb5b8b"
+ },
+ "https://dipmapper.com/water-experiences-turkiye": {
+  "file": "water-experiences-turkiye.html",
+  "lastmod": "2026-11-14",
+  "sig": "44d5aef750073e771f72"
+ },
+ "https://dipmapper.com/water-experiences-united-arab-emirates": {
+  "file": "water-experiences-united-arab-emirates.html",
+  "lastmod": "2026-11-14",
+  "sig": "f5de301c7b7fe406322d"
+ },
+ "https://dipmapper.com/water-experiences-united-kingdom": {
+  "file": "water-experiences-united-kingdom.html",
+  "lastmod": "2026-11-14",
+  "sig": "5c04af87b987483c5723"
+ },
+ "https://dipmapper.com/water-experiences-united-states": {
+  "file": "water-experiences-united-states.html",
+  "lastmod": "2026-11-14",
+  "sig": "5d747da292480641e669"
+ },
+ "https://dipmapper.com/water-experiences-viet-nam": {
+  "file": "water-experiences-viet-nam.html",
+  "lastmod": "2026-11-14",
+  "sig": "6e604e235eac86c5ba6f"
+ },
+ "https://dipmapper.com/water-park": {
+  "file": "water-park.html",
+  "lastmod": "2026-11-14",
+  "sig": "10cb73566d42cb7e58db"
+ },
+ "https://dipmapper.com/water-sports-lake-zurich.html": {
+  "file": "water-sports-lake-zurich.html",
+  "lastmod": "2026-11-14",
+  "sig": "a2bb93d09afda2c3ac15"
+ },
+ "https://dipmapper.com/waterfront-towns": {
+  "file": "waterfront-towns.html",
+  "lastmod": "2026-11-14",
+  "sig": "c50e10a8750a32783e0e"
+ },
+ "https://dipmapper.com/whale-watch": {
+  "file": "whale-watch.html",
+  "lastmod": "2026-11-14",
+  "sig": "c4774f22d774b9d1e2ad"
+ },
+ "https://dipmapper.com/wildlife-calendar": {
+  "file": "wildlife-calendar.html",
+  "lastmod": "2026-11-14",
+  "sig": "2ae5303e6643fdb19113"
+ },
+ "https://dipmapper.com/zurich.html": {
+  "file": "zurich.html",
+  "lastmod": "2026-11-14",
+  "sig": "3a06fba35cd106c30dc7"
+ }
+}
