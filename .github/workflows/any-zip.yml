@@ -1,0 +1,40 @@
+name: Deploy any uploaded DipMapper zip
+on:
+  push:
+    paths: ['*.zip', '.github/workflows/any-zip.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: deploy
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unpack the newest zip (deploy or records package), remove leftovers, commit
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          Z=$(ls -t *.zip 2>/dev/null | head -1 || true)
+          [ -n "$Z" ] || { echo "No zip in the repository, nothing to do"; exit 0; }
+          if unzip -Z1 "$Z" | grep -qE '(^/|\.\./|^\.git/|^\.github/)'; then echo "Unsafe path in $Z"; exit 1; fi
+          rm -rf /tmp/pkg; mkdir -p /tmp/pkg; unzip -q -o "$Z" -d /tmp/pkg
+          if [ -f /tmp/pkg/index.html ]; then SRC=/tmp/pkg
+          else SRC=$(dirname "$(find /tmp/pkg -path '*/website/index.html' | head -1)"); fi
+          [ -n "$SRC" ] && [ -f "$SRC/index.html" ] && grep -q 'data-version=' "$SRC/index.html" || { echo "No website inside $Z, nothing deployed"; exit 1; }
+          if [ -f "$SRC/_delete.txt" ]; then
+            while IFS= read -r f || [ -n "$f" ]; do
+              [ -z "$f" ] && continue
+              case "$f" in index.html|CNAME|.nojekyll|.github/*|*/*) continue;; esac
+              git rm -q --ignore-unmatch -- "$f"
+            done < "$SRC/_delete.txt"
+            rm "$SRC/_delete.txt"
+          fi
+          cp -a "$SRC"/. .
+          for z in *.zip; do git rm -q --ignore-unmatch -- "$z"; rm -f -- "$z"; done
+          git config user.name "dipmapper-deploy"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Deploy $(grep -o 'data-version="[^"]*"' index.html | head -1)" || { echo "Nothing changed"; exit 0; }
+          git push
