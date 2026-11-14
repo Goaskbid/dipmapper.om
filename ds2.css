@@ -68,3 +68,4 @@ main.page{padding-top:18px}
 .dmTHg a .tp{position:absolute;left:0;right:0;top:0;height:106px;background:linear-gradient(135deg,#0b5f68,#12a39d);display:flex;align-items:center;justify-content:center;font-size:40px}
 .dmTHg a .tp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s}.dmTHg a .tp img.on{opacity:1}
 .dmTHg a .f{position:absolute;left:10px;top:10px;z-index:2}
+@media (min-width:1200px){#mapPanel.mapPanel{position:sticky;top:96px;align-self:start}}
