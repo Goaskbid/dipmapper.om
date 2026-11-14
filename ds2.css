@@ -1,0 +1,70 @@
+/* DipMapper Design System 2 (v23.25) – one look across the app and all guide pages */
+:root{--ds-ink:#0b2a33;--ds-muted:#58737c;--ds-line:#e1ebe9;--ds-brand:#0a8f88;--ds-brand2:#0b6f78;--ds-deep:#06343c;--ds-accent:#ff7a59;--ds-sun:#ffbf3c;--ds-bg:#f3f8f7;--ds-card:#fff;--ds-r:22px;--ds-sh:0 1px 2px rgba(11,42,51,.04),0 12px 32px rgba(11,42,51,.07);--ds-sh2:0 2px 4px rgba(11,42,51,.06),0 20px 44px rgba(11,42,51,.12)}
+html{-webkit-text-size-adjust:100%}
+body{font-family:Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif!important;color:var(--ds-ink);background:radial-gradient(1200px 600px at 10% -10%,#dff3ef 0,transparent 60%),radial-gradient(900px 500px at 100% 0,#e6f0fb 0,transparent 55%),var(--ds-bg)!important;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+h1,h2,h3{letter-spacing:-.02em}
+a{text-underline-offset:3px}
+::selection{background:#bfeee8}
+/* buttons & chips */
+button,.btn,a.chip2,.acts a,.xa a{transition:transform .15s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease}
+button:active,.acts a:active,.xa a:active{transform:scale(.97)}
+:focus-visible{outline:3px solid #7fd6cf;outline-offset:2px;border-radius:10px}
+/* cards everywhere */
+.card,.tbox,.xc,.chart,.rk,.dmHxCard,.dmHxNow,.dmTHg a,.tcards a{border-radius:var(--ds-r)!important;border:1px solid var(--ds-line)!important;box-shadow:var(--ds-sh)!important;background:var(--ds-card)}
+.card:hover,.xc:hover,.dmTHg a:hover,.tcards a:hover{box-shadow:var(--ds-sh2)!important;transform:translateY(-2px)}
+.card,.xc,.dmTHg a,.tcards a{transition:transform .2s ease,box-shadow .25s ease}
+/* header bar on guide pages */
+header.bar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86)!important;-webkit-backdrop-filter:saturate(1.6) blur(14px);backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid rgba(11,42,51,.07)!important;box-shadow:0 6px 24px rgba(11,42,51,.05)}
+header.bar .nav a{border-radius:999px!important;font-weight:800!important}
+header.bar .nav a.on{background:var(--ds-deep)!important;color:#fff!important;border-color:var(--ds-deep)!important}
+/* heroes */
+.thero,.xhero,.hero{position:relative;overflow:hidden}
+.thero:not(.img),.xhero{background:radial-gradient(900px 400px at 85% -20%,rgba(255,191,60,.28),transparent 60%),radial-gradient(700px 380px at 0% 120%,rgba(17,163,160,.55),transparent 60%),linear-gradient(135deg,#052e35,#0a5f68 55%,#0e8f8a)!important}
+.thero::after,.xhero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:38px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'><path d='M0 30 C 240 70 480 0 720 26 C 960 52 1200 8 1440 30 L1440 60 L0 60 Z' fill='%23f3f8f7'/></svg>") bottom/100% 100% no-repeat;pointer-events:none}
+.thero h1,.xhero h1{font-weight:800;text-shadow:0 2px 18px rgba(0,0,0,.18)}
+/* footers */
+footer{color:var(--ds-muted)}
+/* tab bar */
+.dmTab{border-top:1px solid rgba(11,42,51,.06)!important;box-shadow:0 -10px 30px rgba(11,42,51,.08)!important}
+.dmTab a.on{background:linear-gradient(180deg,#e2f6f2,#d3f0ea)!important}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media (max-width:760px){.dmTab a{font-size:10px!important;white-space:nowrap;letter-spacing:0}.dmTab a .i{font-size:19px}}
+
+/* app (index) specific */
+.topbar{background:rgba(255,255,255,.88)!important;-webkit-backdrop-filter:saturate(1.6) blur(14px);backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid rgba(11,42,51,.07)!important;box-shadow:0 8px 30px rgba(11,42,51,.05)!important}
+.topbar .nav a,.topbar .nav button,a.dmNavExplore{border-radius:999px!important;font-weight:800!important;border:1px solid var(--ds-line)!important;background:#fff!important;color:var(--ds-ink)!important;box-shadow:0 1px 2px rgba(11,42,51,.05)}
+a.dmNavExplore.dmNavSearch{background:var(--ds-deep)!important;color:#fff!important;border-color:var(--ds-deep)!important}
+.topbar .nav a:hover,a.dmNavExplore:hover{border-color:var(--ds-brand)!important;transform:translateY(-1px)}
+.topbar a.ad{opacity:.75}
+main.page{padding-top:18px}
+.shell{gap:18px!important}
+#resultsPanel.panel,#mapPanel.mapPanel{border-radius:26px!important;border:1px solid var(--ds-line)!important;box-shadow:var(--ds-sh2)!important;background:#fff!important;overflow:hidden}
+#resultsPanel .pad,#filters,.mapHead,.legend,.explainer,.guides,.exGrid>div{background:#fff!important}
+#resultsPanel .pad{border-bottom:1px solid var(--ds-line)}
+.mapHead h2,.mapHead b,.listHead h2{font-weight:800!important;letter-spacing:-.02em}
+#map{border-radius:20px!important;box-shadow:inset 0 0 0 1px rgba(11,42,51,.06)}
+.legend{border-top:1px solid var(--ds-line);font-weight:600;color:var(--ds-muted)}
+#filters button,.dmHxChips a,.dmHxTog button{border-radius:999px!important}
+/* sections below the app */
+.dmTH,.dmHx,.explainer,.guides{max-width:1240px;margin-left:auto!important;margin-right:auto!important}
+.dmTH h2,.dmHx h2,#dmTopRT,.explainer h2,.guides h2{font-size:clamp(24px,3vw,34px)!important;font-weight:800!important;letter-spacing:-.025em!important;line-height:1.15}
+.dmHx{background:linear-gradient(180deg,#fff,#f6fbfa)!important;border:1px solid var(--ds-line)!important;box-shadow:var(--ds-sh)!important;border-radius:30px!important}
+.dmHxCard ol li,.dmHxNow ol li{padding:8px 6px!important;border-radius:12px;transition:background .15s}
+.dmHxCard ol li:hover,.dmHxNow ol li:hover{background:#f0f8f6}
+.dmHxCard li:nth-child(1) .n{color:#c98a00!important}.dmHxCard li:nth-child(2) .n{color:#7d8b93!important}.dmHxCard li:nth-child(3) .n{color:#b06a33!important}.dmHxCard .n{font-size:15px}
+.dmTHg a{padding:16px!important}
+.dmTHg a b{font-size:17px!important}
+.explainer,.guides{border-radius:28px!important;border:1px solid var(--ds-line)!important;box-shadow:var(--ds-sh)!important;padding:28px!important}
+.exGrid>div{border-radius:18px!important;border:1px solid var(--ds-line)!important;padding:16px!important}
+/* start screen: living ocean background on large screens */
+#gate{background:radial-gradient(1000px 500px at 80% 0%,rgba(255,191,60,.22),transparent 60%),radial-gradient(900px 600px at 0% 100%,rgba(14,143,138,.55),transparent 60%),linear-gradient(160deg,#03252b,#06434b 50%,#0a6c70)!important}
+#gate::before,#gate::after{content:"";position:fixed;left:-10%;right:-10%;bottom:-20px;height:180px;pointer-events:none;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 180' preserveAspectRatio='none'><path d='M0 90 C 240 140 480 40 720 90 C 960 140 1200 40 1440 90 L1440 180 L0 180 Z' fill='rgba(255,255,255,0.06)'/></svg>") bottom/100% 100% no-repeat;animation:dmWave 14s ease-in-out infinite alternate}
+#gate::after{height:120px;opacity:.9;animation-duration:9s;animation-direction:alternate-reverse}
+@keyframes dmWave{from{transform:translateX(-4%)}to{transform:translateX(4%)}}
+#gate .gateBox{box-shadow:0 30px 80px rgba(0,0,0,.35)!important;border-radius:30px!important}
+@media (max-width:760px){#resultsPanel.panel,#mapPanel.mapPanel{border-radius:22px!important}.dmHx{border-radius:24px!important}.explainer,.guides{padding:20px!important}}
+
+.dmTHg a{position:relative;overflow:hidden;padding-top:118px!important;background:#fff}
+.dmTHg a .tp{position:absolute;left:0;right:0;top:0;height:106px;background:linear-gradient(135deg,#0b5f68,#12a39d);display:flex;align-items:center;justify-content:center;font-size:40px}
+.dmTHg a .tp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s}.dmTHg a .tp img.on{opacity:1}
+.dmTHg a .f{position:absolute;left:10px;top:10px;z-index:2}
