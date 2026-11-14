@@ -1,0 +1,60 @@
+name: Link check
+on:
+  push:
+    paths: ['.github/workflows/link-check.yml', 'picks.json']
+  workflow_dispatch:
+  schedule:
+    - cron: '17 3 * * 1'
+permissions:
+  contents: write
+concurrency: { group: link-check, cancel-in-progress: true }
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check every outbound link
+        run: |
+          python3 - <<'PY'
+          import re, glob, json, urllib.request, urllib.error, ssl, concurrent.futures, datetime
+          SKIP = ('google.com/maps', 'flagcdn.com', 'fonts.g', 'unpkg.com', 'openfreemap', 'openstreetmap.org/copyright', 'googlesyndication', 'wikipedia.org/w/api', 'openmaptiles')
+          urls = {}
+          for f in glob.glob('*.html'):
+              for u in re.findall(r'href="(https?://[^"#]+)', open(f, encoding='utf8', errors='ignore').read()):
+                  u = u.replace('&amp;', '&')
+                  if not any(s in u for s in SKIP): urls.setdefault(u, set()).add(f)
+          try:
+              for p in json.load(open('picks.json', encoding='utf8')):
+                  if p.get('u'): urls.setdefault(p['u'], set()).add('picks.json#' + p['id'])
+          except Exception: pass
+          UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36'
+          ctx = ssl.create_default_context()
+          def get(u):
+              last = None
+              for m in ('HEAD', 'GET'):
+                  try:
+                      r = urllib.request.urlopen(urllib.request.Request(u, method=m, headers={'User-Agent': UA, 'Accept': 'text/html,*/*', 'Accept-Language': 'en'}), timeout=25, context=ctx)
+                      return {'url': u, 'status': r.status, 'final': r.geturl()}
+                  except urllib.error.HTTPError as e:
+                      last = {'url': u, 'status': e.code}
+                      if e.code not in (403, 405, 400, 429, 501): return last
+                  except Exception as e:
+                      last = {'url': u, 'status': 0, 'error': type(e).__name__ + ': ' + str(e)[:120]}
+              return last
+          with concurrent.futures.ThreadPoolExecutor(24) as ex:
+              res = list(ex.map(get, sorted(urls)))
+          for r in res: r['pages'] = sorted(urls[r['url']])[:5]
+          bad = [r for r in res if not (200 <= r['status'] < 400)]
+          out = {'checked_at': datetime.datetime.utcnow().isoformat(timespec='seconds') + 'Z', 'total': len(res), 'ok': len(res) - len(bad), 'problems': sorted(bad, key=lambda r: (r['status'], r['url'])), 'all': res}
+          json.dump(out, open('linkcheck.json', 'w'), indent=1)
+          print('checked', len(res), 'problems', len(bad))
+          PY
+      - name: Save report
+        run: |
+          git config user.name "dipmapper-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add linkcheck.json
+          git commit -m "Link check report" || echo "no change"
+          git pull --rebase -q || true
+          git push
