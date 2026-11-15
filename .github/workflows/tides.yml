@@ -1,0 +1,62 @@
+name: Tides (EOT20)
+on:
+  workflow_run:
+    workflows: ['Deploy any uploaded DipMapper zip']
+    types: [completed]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: { group: tides, cancel-in-progress: false }
+jobs:
+  tides:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - name: Skip if tides are already up to date
+        id: chk
+        run: |
+          python3 - <<'PY'
+          import json, hashlib, os
+          pts = json.load(open('tide-points.json'))['points']
+          h = hashlib.sha1(json.dumps(pts, sort_keys=True).encode()).hexdigest()
+          old = ''
+          if os.path.exists('tide-hc.json') and os.path.exists('tides/index.json'):
+              old = json.load(open('tide-hc.json')).get('points_hash', '')
+          open(os.environ['GITHUB_OUTPUT'], 'a').write('run=%s\n' % ('no' if old == h else 'yes'))
+          print('points hash', h, 'existing', old)
+          PY
+      - uses: actions/setup-python@v5
+        if: steps.chk.outputs.run == 'yes'
+        with: { python-version: '3.12' }
+      - name: Install netCDF reader
+        if: steps.chk.outputs.run == 'yes'
+        run: pip install -q numpy netCDF4
+      - name: Cache EOT20 model (CC BY 4.0, DGFI-TUM)
+        if: steps.chk.outputs.run == 'yes'
+        uses: actions/cache@v4
+        with: { path: /tmp/eot20.zip, key: eot20-seanoe-85762 }
+      - name: Download and unpack EOT20
+        if: steps.chk.outputs.run == 'yes'
+        run: |
+          [ -s /tmp/eot20.zip ] || curl -fL --retry 5 --retry-delay 20 -o /tmp/eot20.zip https://www.seanoe.org/data/00683/79489/data/85762.zip
+          mkdir -p /tmp/eot20 && cd /tmp/eot20 && unzip -q -o /tmp/eot20.zip
+          for i in 1 2 3; do for z in $(find . -name '*.zip'); do unzip -q -o "$z" -d "$(dirname "$z")" && rm -f "$z"; done; done
+          find . -name '*.nc' | head -40
+      - name: Extract constituents at DipMapper points and coastal tiles
+        if: steps.chk.outputs.run == 'yes'
+        run: |
+          rm -rf tides && python3 _tools/tides_extract.py /tmp/eot20 tide-points.json tide-hc.json tides
+          du -sh tides tide-hc.json
+      - name: Publish
+        if: steps.chk.outputs.run == 'yes'
+        run: |
+          git config user.name "dipmapper-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add tide-hc.json tides
+          git diff --cached --quiet && { echo "unchanged"; exit 0; }
+          git commit -q -m "Update tide constituents (EOT20)"
+          git pull --rebase -q || true
+          git push
