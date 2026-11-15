@@ -1,0 +1,63 @@
+name: Tides v2 (EOT20, self-reporting)
+on:
+  workflow_run:
+    workflows: ['Deploy any uploaded DipMapper zip']
+    types: [completed]
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: { group: tides-v2, cancel-in-progress: false }
+jobs:
+  tides:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - name: Need a run?
+        id: chk
+        run: |
+          python3 - <<'PY'
+          import json, hashlib, os
+          pts = json.load(open('tide-points.json'))['points']
+          h = hashlib.sha1(json.dumps(pts, sort_keys=True).encode()).hexdigest()
+          old = json.load(open('tide-hc.json')).get('points_hash', '') if os.path.exists('tide-hc.json') and os.path.exists('tides/index.json') else ''
+          open(os.environ['GITHUB_OUTPUT'], 'a').write('run=%s\n' % ('no' if old == h else 'yes'))
+          PY
+      - uses: actions/setup-python@v5
+        if: steps.chk.outputs.run == 'yes'
+        with: { python-version: '3.12' }
+      - name: Work
+        id: work
+        if: steps.chk.outputs.run == 'yes'
+        run: |
+          set -o pipefail
+          exec > >(tee -a /tmp/tides.log) 2>&1
+          pip install -q numpy netCDF4
+          mkdir -p /tmp/eot20 && cd /tmp/eot20
+          curl -fL --retry 5 --retry-delay 30 --connect-timeout 60 --max-time 3000 -A "Mozilla/5.0 dipmapper-tides" -o /tmp/eot20.zip "https://www.seanoe.org/data/00683/79489/data/85762.zip"
+          ls -la /tmp/eot20.zip; file /tmp/eot20.zip
+          unzip -q -o /tmp/eot20.zip
+          for i in 1 2 3; do for z in $(find . -name '*.zip'); do unzip -q -o "$z" -d "$(dirname "$z")" && rm -f "$z"; done; done
+          echo "NC files:"; find . -name '*.nc' | head -60
+          cd "$GITHUB_WORKSPACE"
+          rm -rf tides && python3 _tools/tides_extract.py /tmp/eot20 tide-points.json tide-hc.json tides
+          du -sh tides tide-hc.json
+      - name: Publish result or diagnosis
+        if: always() && steps.chk.outputs.run == 'yes'
+        run: |
+          python3 - <<'PY'
+          import json, os, datetime
+          log = open('/tmp/tides.log').read()[-6000:] if os.path.exists('/tmp/tides.log') else 'no log'
+          ok = os.path.exists('tide-hc.json') and os.path.exists('tides/index.json')
+          json.dump({'ok': ok, 'when': datetime.datetime.utcnow().isoformat() + 'Z', 'log_tail': log}, open('tides-status.json', 'w'), indent=1)
+          PY
+          git config user.name "dipmapper-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add tides-status.json
+          [ -f tide-hc.json ] && git add tide-hc.json tides || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Tides: $(python3 -c "import json;print('published' if json.load(open('tides-status.json'))['ok'] else 'diagnosis')")"
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 10; done
