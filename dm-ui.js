@@ -146,10 +146,10 @@
     if (e.target.closest('.dmStar,.dmPoi,.dmTown,.dmStarPop,.dmPoiPop,button,a,input,select,.marker,.leaflet-marker-icon,.maplibregl-marker')) return;
     closeAll();
   }, true);
-  var MAPI = { '🌊': 'wave', '🏖️': 'beach', '🏊': 'swim', '♨️': 'spa', '🏞️': 'leaf', '🏠': 'city', '☀️': 'sunrise', '🆓': 'tag', '🕘': 'calendar', '🤫': 'moon', '🅿️': 'pin', '👨‍👩‍👧': 'star', '🛟': 'lifebuoy', '♀️': 'shield', '🍴': 'bowl', '🚻': 'drop', '♿': 'shield', '🐕': 'heart', '🚿': 'drop' };
+  var MAPI = { '🧖': 'spa', '💧': 'drop', '🏊‍♀️': 'swim', '🏊‍♂️': 'swim', '🌊': 'wave', '🏖️': 'beach', '🏊': 'swim', '♨️': 'spa', '🏞️': 'leaf', '🏠': 'city', '☀️': 'sunrise', '🆓': 'tag', '🕘': 'calendar', '🤫': 'moon', '🅿️': 'pin', '👨‍👩‍👧': 'star', '🛟': 'lifebuoy', '♀️': 'shield', '🍴': 'bowl', '🚻': 'drop', '♿': 'shield', '🐕': 'heart', '🚿': 'drop' };
   function iconChips(f) {
     f.querySelectorAll('.filter').forEach(function (b) {
-      if (b.__dmI) return; var t = b.textContent.trim();
+      if (b.querySelector('svg')) return; var t = b.textContent.trim().replace(/^\uFE0F/, '');
       for (var k in MAPI) { if (t.indexOf(k) === 0) { b.innerHTML = '<svg class="ic" aria-hidden="true"><use href="/icons.svg#i-' + MAPI[k] + '"/></svg>' + t.slice(k.length).trim().replace(/[&<>]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; }); b.__dmI = 1; break; } }
     });
   }
@@ -197,4 +197,19 @@
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
   window.addEventListener('load', run); document.addEventListener('dmbootdone', run); setTimeout(run, 1500); setTimeout(run, 4000);
+})();
+/* 23.34: species photo gallery from Wikimedia Commons (free licences, credited) */
+(function () {
+  function run() {
+    document.querySelectorAll('.dmSpGal[data-q]:not(.done)').forEach(function (g) {
+      g.classList.add('done');
+      var u = 'https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrnamespace=6&gsrlimit=24&gsrsearch=' + encodeURIComponent(g.dataset.q + ' filetype:bitmap') + '&prop=imageinfo&iiprop=url|size|mime&iiurlwidth=480';
+      fetch(u).then(function (r) { return r.json(); }).then(function (j) {
+        var ps = j.query && j.query.pages ? Object.keys(j.query.pages).map(function (k) { return j.query.pages[k]; }).sort(function (a, b) { return a.index - b.index; }) : [], out = [];
+        ps.forEach(function (p) { var ii = p.imageinfo && p.imageinfo[0]; if (!ii || !ii.thumburl || out.length >= 8) return; if (!/jpe?g/i.test(ii.mime || '') || ii.width < 900 || ii.height > ii.width * 1.4) return; if (/(map|distribution|range|skeleton|skull|stamp|drawing|illustration|diagram|plate|museum|specimen|chart|logo)/i.test(p.title)) return; out.push('<a href="' + ii.descriptionurl + '" target="_blank" rel="noopener" title="' + p.title.replace(/^File:/, '').replace(/"/g, '') + '"><img src="' + ii.thumburl + '" alt="' + g.dataset.q.replace(/"/g, '') + ' photo" loading="lazy"></a>'); });
+        if (out.length >= 2) g.innerHTML = '<div class="dmSpGalG">' + out.join('') + '</div><p class="dmSpGalC">Photos: Wikimedia Commons (free licences) – tap a photo for author and licence.</p>';
+      }).catch(function () {});
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
 })();

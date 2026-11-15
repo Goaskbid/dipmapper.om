@@ -53,7 +53,7 @@
     var la = +el.dataset.la, lo = +el.dataset.lo, tz = el.dataset.tz || undefined;
     el.classList.add('done');
     forPoint(la, lo, function (r) {
-      if (!r) { el.innerHTML = el.dataset.empty || ''; return; }
+      if (!r) { el.innerHTML = (H && H.points && Object.keys(H.points).length) ? (el.dataset.empty || '') : '<p class="note">Tide predictions for this coast are being calculated right now – check back shortly.</p>'; return; }
       var now = Date.now(), t0 = now - 3 * 36e5, t1 = now + 27 * 36e5, s = series(r.hc, t0, t1, 15), ev = extremes(r.hc, now, now + 48 * 36e5);
       var hs = s.map(function (x) { return x[1]; }), mx = Math.max.apply(0, hs), mn = Math.min.apply(0, hs), rg = Math.max(mx - mn, 0.05);
       var W = 320, Hh = 90, X = function (t) { return (t - t0) / (t1 - t0) * W; }, Y = function (h) { return 8 + (mx - h) / rg * (Hh - 22); };
