@@ -137,3 +137,64 @@
   }
   renderSaved(); badge();
 })();
+/* 23.33: map cards close on Escape / tap on empty map; swim-type chips under the map with our icons */
+(function () {
+  function closeAll() { document.querySelectorAll('.dmStarPop .x,.dmPoiPop .x').forEach(function (x) { x.click(); }); }
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAll(); });
+  document.addEventListener('click', function (e) {
+    var m = document.getElementById('map'); if (!m || !m.contains(e.target)) return;
+    if (e.target.closest('.dmStar,.dmPoi,.dmTown,.dmStarPop,.dmPoiPop,button,a,input,select,.marker,.leaflet-marker-icon,.maplibregl-marker')) return;
+    closeAll();
+  }, true);
+  var MAPI = { '🌊': 'wave', '🏖️': 'beach', '🏊': 'swim', '♨️': 'spa', '🏞️': 'leaf', '🏠': 'city', '☀️': 'sunrise', '🆓': 'tag', '🕘': 'calendar', '🤫': 'moon', '🅿️': 'pin', '👨‍👩‍👧': 'star', '🛟': 'lifebuoy', '♀️': 'shield', '🍴': 'bowl', '🚻': 'drop', '♿': 'shield', '🐕': 'heart', '🚿': 'drop' };
+  function iconChips(f) {
+    f.querySelectorAll('.filter').forEach(function (b) {
+      if (b.__dmI) return; var t = b.textContent.trim();
+      for (var k in MAPI) { if (t.indexOf(k) === 0) { b.innerHTML = '<svg class="ic" aria-hidden="true"><use href="/icons.svg#i-' + MAPI[k] + '"/></svg>' + t.slice(k.length).trim().replace(/[&<>]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; }); b.__dmI = 1; break; } }
+    });
+  }
+  function moveFilters() {
+    var f = document.getElementById('filters'), m = document.getElementById('map'), p = document.getElementById('mapPanel');
+    if (!f || !m || !p) return;
+    if (f.parentElement !== p) { m.insertAdjacentElement('afterend', f); f.classList.remove('dmCollapsed'); }
+    iconChips(f);
+  }
+  var moves = 0;
+  function go() {
+    moveFilters();
+    ['load', 'dmbootdone'].forEach(function (ev) { (ev === 'load' ? window : document).addEventListener(ev, function () { moveFilters(); setTimeout(moveFilters, 300); }); });
+    var db = document.getElementById('dmBelow');
+    if (db && window.MutationObserver) new MutationObserver(function () { var f = document.getElementById('filters'); if (f && f.parentElement === db && moves++ < 30) moveFilters(); }).observe(db, { childList: true });
+    var t0 = Date.now(), iv = setInterval(function () { moveFilters(); if (Date.now() - t0 > 8000) clearInterval(iv); }, 500);
+    var f = document.getElementById('filters');
+    if (f && window.MutationObserver) new MutationObserver(function () { iconChips(f); if (f.classList.contains('dmCollapsed') && f.parentElement && f.parentElement.id === 'mapPanel') f.classList.remove('dmCollapsed'); }).observe(f, { childList: true, subtree: true, attributes: true, attributeFilter: ['class'] });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', go); else go();
+})();
+/* 23.33: multi-point distance (species cards: nearest place) */
+(function () {
+  function km(a, b, c, d) { var r = Math.PI / 180, x = Math.sin((c - a) * r / 2), y = Math.sin((d - b) * r / 2); return 12742 * Math.asin(Math.sqrt(x * x + Math.cos(a * r) * Math.cos(c * r) * y * y)); }
+  function run() {
+    var L = window.DMUI && DMUI.loc(); if (!L) return;
+    document.querySelectorAll('.dmCards').forEach(function (g) {
+      var li = [].slice.call(g.querySelectorAll(':scope > li[data-pts]')); if (!li.length) return;
+      li.forEach(function (l) { var best = 1e9; l.dataset.pts.split(';').forEach(function (p) { var q = p.split(','); if (q.length === 2) best = Math.min(best, km(L.la, L.lo, +q[0], +q[1])); }); l._d = best; var s = l.querySelector('.dmDist'); if (s) s.textContent = best < 1000 ? Math.round(best) + ' km' : (Math.round(best / 100) / 10) + 'k km'; });
+      li.sort(function (a, b) { return a._d - b._d; }).forEach(function (l) { g.appendChild(l); });
+    });
+  }
+  var o = window.DMUI && DMUI.apply; if (o) DMUI.apply = function () { o(); run(); };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
+})();
+/* 23.34: activity bar with our own icons */
+(function () {
+  var M = { swim: 'swim', paddle: 'kayak', dive: 'mask', sail: 'boat', boat: 'ship', raft: 'wave', special: 'sparkle', surf: 'surf', fish: 'fish' };
+  function run() {
+    document.querySelectorAll('#dmActBar button[data-a] .i').forEach(function (i) {
+      if (i.__dm) return; var a = i.parentElement.dataset.a || '', n = 'wave';
+      for (var k in M) if (a.indexOf(k) === 0) { n = M[k]; break; }
+      i.innerHTML = '<svg class="ic" aria-hidden="true"><use href="/icons.svg#i-' + n + '"/></svg>'; i.__dm = 1;
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
+  window.addEventListener('load', run); document.addEventListener('dmbootdone', run); setTimeout(run, 1500); setTimeout(run, 4000);
+})();

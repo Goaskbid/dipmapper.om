@@ -238,3 +238,81 @@ main .dmSave,.wrap>.dmActs .dmSave{border-color:var(--ds-line,#e1ebe9)}
 .row .ic.dmRi svg.ic{width:19px;height:19px;vertical-align:0}
 .dmNewTag{display:inline-block;margin-left:6px;padding:2px 8px;border-radius:999px;background:#ff7a59;color:#fff;font:700 11px/1.4 system-ui,sans-serif;vertical-align:1px}
 li.dmNewProj{border-left:3px solid #ff7a59;padding-left:10px}
+/* 23.32 insider box */
+.dmIns{background:linear-gradient(180deg,#fff,#fbf7ef)!important;border-color:#f0e2c4!important}
+.dmIns .dmI{background:linear-gradient(135deg,#ff9a5a,#e0563b)}
+.dmInsG{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-top:8px}
+.dmInsR{display:flex;gap:10px;align-items:flex-start}
+.dmInsR .dmI.s{background:#fff2e6;color:#c24a2c;box-shadow:none;margin-top:2px}
+.dmInsR b{display:block;font-size:15px;margin-bottom:2px}
+.dmInsR p{margin:0;font-size:14.5px;line-height:1.5;color:#2b3f45}
+/* 23.32 tides */
+.dmTideNow{font-size:15px;margin:2px 0 6px}.dmTideNow b{color:#0a6f69}
+.dmTideSvg{width:100%;height:110px;display:block;overflow:visible}
+.dmTideSvg .a{fill:rgba(10,143,136,.14)}.dmTideSvg .l{fill:none;stroke:#0a8f88;stroke-width:2.2}
+.dmTideSvg line{stroke:#e0563b;stroke-width:1.5;stroke-dasharray:3 3}
+.dmTideSvg circle{fill:#06343c}.dmTideSvg text{font:600 10px system-ui,sans-serif;fill:#06343c}
+.dmTideEv{list-style:none;padding:0;margin:8px 0;display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.dmTideEv li{background:#f3f9f8;border-radius:10px;padding:7px 10px;font-size:13.5px}
+.dmTideEv li.hi b{color:#0a6f69}.dmTideEv li.lo b{color:#8a5a12}.dmTideEv span{float:right;color:#58737c}
+.dmTideFeel{margin:6px 0;font-weight:600}
+.dmTideSrc{font-size:12px;color:#58737c;margin:4px 0 0}
+.dmTideMore{margin-top:8px;font-size:13px}.dmTideMore summary{cursor:pointer;color:#0b6f78}
+/* 23.33 map place cards: bottom sheet on phones, always closable */
+@media (max-width:760px){
+ html body .dmStarPop,html body .dmPoiPop{position:fixed!important;left:8px!important;right:8px!important;top:auto!important;bottom:calc(70px + env(safe-area-inset-bottom))!important;max-width:none!important;width:auto!important;max-height:56vh!important;overflow-y:auto!important;z-index:1500!important;border-radius:20px!important;padding:46px 16px 14px!important;box-shadow:0 -10px 34px rgba(0,0,0,.28)!important;transform:none!important;animation:dmUp .18s ease-out}
+ html body .dmStarPop::before,html body .dmPoiPop::before{content:"";position:absolute;top:8px;left:50%;width:40px;height:4px;margin-left:-20px;border-radius:2px;background:#cfdcdc}
+}
+@keyframes dmUp{from{transform:translateY(24px);opacity:.4}to{transform:none;opacity:1}}
+html body .dmStarPop{max-height:calc(100% - 24px);overflow-y:auto}
+html body .dmStarPop .x,html body .dmPoiPop .x{position:absolute!important;top:6px!important;right:6px!important;width:40px!important;height:40px!important;min-height:0!important;border-radius:50%!important;border:0!important;background:#eef3f3!important;color:#06343c!important;font:400 26px/40px system-ui,sans-serif!important;padding:0!important;text-align:center;cursor:pointer;z-index:2}
+html body .dmStarPop h4{margin-right:40px}
+/* swim-type chips: directly under the map, one scrollable row, never collapsing */
+html body #mapPanel>#filters{display:flex!important;flex-wrap:nowrap!important;overflow-x:auto!important;gap:8px;padding:10px 2px 8px!important;margin:0!important;max-height:none!important;height:auto!important;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 92%,transparent)}
+html body #mapPanel>#filters::-webkit-scrollbar{display:none}
+html body #mapPanel>#filters .filter{flex:0 0 auto;display:inline-flex!important;align-items:center;gap:6px;min-height:40px;padding:0 14px;border-radius:999px;white-space:nowrap}
+html body #mapPanel>#filters .filter svg.ic{width:17px;height:17px}
+html body #mapPanel>#filters .dmMoreF,html body #mapPanel>#filters .moreFilters{flex:0 0 auto}
+/* 23.33 species gallery */
+.dmGal{max-width:1180px;margin:24px auto;padding:22px;background:linear-gradient(180deg,#fff,#f3faf9);border:1px solid var(--ds-line,#e1ebe9);border-radius:24px;box-shadow:var(--ds-sh)}
+.dmGh{display:flex;gap:16px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap}
+.dmGh h2{margin:4px 0 6px;font-size:clamp(22px,3vw,30px)}.dmGh p{margin:0;color:var(--ds-muted,#58737c)}
+.dmGh .e{display:flex;align-items:center;gap:6px;font:700 12px/1 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#0b6f78}
+.dmGf{margin-top:14px;display:grid;gap:8px}
+.dmChipRow{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}.dmChipRow::-webkit-scrollbar{display:none}
+.dmChipRow button{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;min-height:38px;padding:0 13px;border-radius:999px;border:1px solid #d5e9e5;background:#fff;color:#0a4f55;font:700 13.5px system-ui,sans-serif;cursor:pointer}
+.dmChipRow button.on{background:#06343c;color:#fff;border-color:#06343c}
+.dmGalL{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.dmSp .dmPh{aspect-ratio:4/3}
+.dmMs{display:flex;gap:2px;margin-top:8px}.dmMs i{flex:1;text-align:center;font:700 10px/18px system-ui,sans-serif;font-style:normal;border-radius:4px;background:#eef3f3;color:#9db3b7}.dmMs i.y{background:#0a8f88;color:#fff}
+.dmSp p{font-style:italic}
+@media (max-width:760px){.dmGal{margin:16px 0;padding:16px;border-radius:20px}}
+/* 23.33b: swim-type chips sit directly below the map in the flex column */
+html body #mapPanel>*{order:6}
+html body #mapPanel>.mapHead{order:0!important}
+html body #mapPanel>#map{order:1!important}
+html body #mapPanel>#filters{order:2!important}
+html body #mapPanel>.legend{order:3!important}
+html body #mapPanel>#dmPicksBar{order:4!important}
+html body #mapPanel>.dmActLegend{order:5!important}
+/* hide the floating menu button while a place card is open */
+html body:has(.dmStarPop) #dmFab,html body:has(.dmPoiPop) #dmFab{display:none!important}
+/* compact example label on phones */
+@media (max-width:760px){html body .dmEx{max-width:72%!important;font-size:12px!important;padding:8px 36px 8px 10px!important}html body .dmEx p,html body .dmEx br+*{display:none}}
+/* 23.34 BOOM polish */
+#dmActBar button .i svg.ic{width:24px;height:24px;color:#0a6f69}
+#dmActBar button.on .i svg.ic{color:#fff}
+html body .status.dmDone{display:none!important}
+.dmHomeHero{margin:0 0 12px;padding:14px 16px;border-radius:18px;background:linear-gradient(135deg,#0a8f88,#06343c);color:#fff;box-shadow:0 10px 24px rgba(6,52,60,.22)}
+.dmHomeHero .dmHomeT{margin:0;font:800 clamp(21px,5vw,26px)/1.15 var(--ds-font,system-ui),sans-serif;letter-spacing:-.02em}
+.dmHomeHero p{margin:6px 0 10px;font-size:14px;line-height:1.45;opacity:.92}
+.dmHomeS{display:flex;flex-wrap:wrap;gap:6px}
+.dmHomeS a{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.15);color:#fff;text-decoration:none;font:700 12.5px/1 system-ui,sans-serif}
+.dmHomeS a:hover{background:rgba(255,255,255,.25)}
+table.p{display:block;max-width:100%;overflow-x:auto}table.p td{overflow-wrap:anywhere}
+@media (max-width:760px){html body .dmEx{max-width:66%!important;font-size:11.5px!important;line-height:1.3!important;padding:7px 34px 7px 10px!important}html body .dmEx b{font-size:12.5px}html body .dmEx>*:not(b):not(button){display:none!important}}
+.dmSpHero{aspect-ratio:16/7;border-radius:20px;margin:12px 0 18px;background:linear-gradient(135deg,#0fa39a,#06343c);background-size:cover;background-position:center;display:grid;place-items:center;color:rgba(255,255,255,.6);box-shadow:var(--ds-sh)}
+.dmSpHero svg{width:64px;height:64px}.dmSpHero.hasPh svg{display:none}
+html body .dmHomeHero .dmHomeS{display:flex!important;flex-wrap:wrap;gap:6px}
+html body .dmHomeHero .dmHomeS a{display:inline-flex!important;width:auto!important;flex:0 0 auto;margin:0!important;padding:5px 9px!important;font-size:12px!important}
+@media (max-width:760px){html body .dmHomeHero{padding:12px 14px;margin-bottom:10px}html body .dmHomeHero p:not(.dmHomeT){font-size:13px;margin:4px 0 8px}}

@@ -2,7 +2,7 @@
  "https://dipmapper.com/": {
   "file": "index.html",
   "lastmod": "2026-11-15",
-  "sig": "d7b8cb5e47bebdf1a216"
+  "sig": "39b71309cbf04470030e"
  },
  "https://dipmapper.com/activities.html": {
   "file": "activities.html",
@@ -237,477 +237,707 @@
  "https://dipmapper.com/town-albufeira": {
   "file": "town-albufeira.html",
   "lastmod": "2026-11-15",
-  "sig": "17454fb4dd632da312f8"
+  "sig": "941a71ebc8bcfc244953"
  },
  "https://dipmapper.com/town-amsterdam": {
   "file": "town-amsterdam.html",
   "lastmod": "2026-11-15",
-  "sig": "7789c3e7443cfbcaa253"
+  "sig": "811e05407249ce6a369f"
  },
  "https://dipmapper.com/town-ao-nang": {
   "file": "town-ao-nang.html",
   "lastmod": "2026-11-15",
-  "sig": "7095557adb2e742237c9"
+  "sig": "d9df8b8659c301270afd"
  },
  "https://dipmapper.com/town-arenal": {
   "file": "town-arenal.html",
   "lastmod": "2026-11-15",
-  "sig": "587113093b63cee6013d"
+  "sig": "6f358fe3c2db50484709"
  },
  "https://dipmapper.com/town-auckland": {
   "file": "town-auckland.html",
   "lastmod": "2026-11-15",
-  "sig": "d0834d162a094e7e0fe7"
+  "sig": "f49a2886341ce304511f"
  },
  "https://dipmapper.com/town-barcelona": {
   "file": "town-barcelona.html",
   "lastmod": "2026-11-15",
-  "sig": "bd9b97a52be3ca04ce02"
+  "sig": "25b55044890d3012e379"
+ },
+ "https://dipmapper.com/town-benidorm": {
+  "file": "town-benidorm.html",
+  "lastmod": "2026-11-15",
+  "sig": "15f9b42ff18a5039c84d"
  },
  "https://dipmapper.com/town-benoa": {
   "file": "town-benoa.html",
   "lastmod": "2026-11-15",
-  "sig": "6d0a5ccad28afeb0cb83"
+  "sig": "b9e7fcd8f6db4ac4f1a0"
  },
  "https://dipmapper.com/town-bergen": {
   "file": "town-bergen.html",
   "lastmod": "2026-11-15",
-  "sig": "c0d6012e0cdcb0c86f8e"
+  "sig": "66e664555c74cf88af0d"
+ },
+ "https://dipmapper.com/town-biarritz": {
+  "file": "town-biarritz.html",
+  "lastmod": "2026-11-15",
+  "sig": "8a0ab3e3df10a8a25a16"
+ },
+ "https://dipmapper.com/town-binz": {
+  "file": "town-binz.html",
+  "lastmod": "2026-11-15",
+  "sig": "e4bf564211219541ec50"
  },
  "https://dipmapper.com/town-bondi": {
   "file": "town-bondi.html",
   "lastmod": "2026-11-15",
-  "sig": "6667aadceb23c4f703f2"
+  "sig": "403a8f87db3d7261cee4"
  },
  "https://dipmapper.com/town-boracay": {
   "file": "town-boracay.html",
   "lastmod": "2026-11-15",
-  "sig": "3a52230de6c282c5c03b"
+  "sig": "9f92da7c7883bc8c5bae"
+ },
+ "https://dipmapper.com/town-borkum": {
+  "file": "town-borkum.html",
+  "lastmod": "2026-11-15",
+  "sig": "03dd466390a56a9ca055"
  },
  "https://dipmapper.com/town-bridgetown": {
   "file": "town-bridgetown.html",
   "lastmod": "2026-11-15",
-  "sig": "2a2d46c33255e8b54818"
+  "sig": "ab77252c7f22e0cf396c"
+ },
+ "https://dipmapper.com/town-brighton": {
+  "file": "town-brighton.html",
+  "lastmod": "2026-11-15",
+  "sig": "d14588cd7dc3cb660897"
  },
  "https://dipmapper.com/town-cabo-san-lucas": {
   "file": "town-cabo-san-lucas.html",
   "lastmod": "2026-11-15",
-  "sig": "af71c86b6c6be7cefb62"
+  "sig": "bf4063280b23bdf9caee"
  },
  "https://dipmapper.com/town-cairns": {
   "file": "town-cairns.html",
   "lastmod": "2026-11-15",
-  "sig": "9473b040dd243538455e"
+  "sig": "b0be3d2cf29597a564d3"
  },
  "https://dipmapper.com/town-cala-major": {
   "file": "town-cala-major.html",
   "lastmod": "2026-11-15",
-  "sig": "f08ceac3d98aaed35066"
+  "sig": "5e3c197cb90b5becf8cd"
  },
  "https://dipmapper.com/town-can-pastilla": {
   "file": "town-can-pastilla.html",
   "lastmod": "2026-11-15",
-  "sig": "b2f861ffb35b7d90cd2d"
+  "sig": "4c0bc0fa74444b13965c"
+ },
+ "https://dipmapper.com/town-cancun": {
+  "file": "town-cancun.html",
+  "lastmod": "2026-11-15",
+  "sig": "fae69c51d53157f03bc7"
+ },
+ "https://dipmapper.com/town-canggu": {
+  "file": "town-canggu.html",
+  "lastmod": "2026-11-15",
+  "sig": "b8ce3cb0fb434af9d20f"
  },
  "https://dipmapper.com/town-cascais": {
   "file": "town-cascais.html",
   "lastmod": "2026-11-15",
-  "sig": "23d3d42b4735cd077792"
+  "sig": "47a0693842dfa50b3837"
  },
  "https://dipmapper.com/town-castries": {
   "file": "town-castries.html",
   "lastmod": "2026-11-15",
-  "sig": "d0c3cece927137bcc4ee"
+  "sig": "5a294495cf2867aca2fe"
+ },
+ "https://dipmapper.com/town-chaweng": {
+  "file": "town-chaweng.html",
+  "lastmod": "2026-11-15",
+  "sig": "73f5d1d7f0bf641d2643"
  },
  "https://dipmapper.com/town-civitavecchia": {
   "file": "town-civitavecchia.html",
   "lastmod": "2026-11-15",
-  "sig": "d8f2ecc9a02144b9630b"
+  "sig": "6616bbe5a84ced111abf"
+ },
+ "https://dipmapper.com/town-copacabana": {
+  "file": "town-copacabana.html",
+  "lastmod": "2026-11-15",
+  "sig": "981dd45ef701c83782c8"
  },
  "https://dipmapper.com/town-copenhagen": {
   "file": "town-copenhagen.html",
   "lastmod": "2026-11-15",
-  "sig": "ac569fe8b27983581a0c"
+  "sig": "45b5a549b3a2dc0664b6"
  },
  "https://dipmapper.com/town-costa-maya": {
   "file": "town-costa-maya.html",
   "lastmod": "2026-11-15",
-  "sig": "b205f610cc7da6401ce7"
+  "sig": "7bf924b4f440a8cbb852"
  },
  "https://dipmapper.com/town-cozumel": {
   "file": "town-cozumel.html",
   "lastmod": "2026-11-15",
-  "sig": "a7c2f955d8e9f75577c8"
+  "sig": "36ecfc80abe22f3d02f1"
  },
  "https://dipmapper.com/town-da-nang": {
   "file": "town-da-nang.html",
   "lastmod": "2026-11-15",
-  "sig": "6c17a55bafa021b6ec6d"
+  "sig": "970b013eced0b27e6ec9"
  },
  "https://dipmapper.com/town-dubai": {
   "file": "town-dubai.html",
   "lastmod": "2026-11-15",
-  "sig": "21434aefaa2a4ccece06"
+  "sig": "667e786ba57656c3d203"
  },
  "https://dipmapper.com/town-dubrovnik": {
   "file": "town-dubrovnik.html",
   "lastmod": "2026-11-15",
-  "sig": "17f7e2987678d81abbb7"
+  "sig": "f5c65dcd966344e454c7"
  },
  "https://dipmapper.com/town-falmouth": {
   "file": "town-falmouth.html",
   "lastmod": "2026-11-15",
-  "sig": "2ff305905fd3a54c3426"
+  "sig": "0c8d20844dd24f042b39"
  },
  "https://dipmapper.com/town-fort-lauderdale": {
   "file": "town-fort-lauderdale.html",
   "lastmod": "2026-11-15",
-  "sig": "629826f1768274909780"
+  "sig": "334edb4aa95952a7ac88"
  },
  "https://dipmapper.com/town-funchal": {
   "file": "town-funchal.html",
   "lastmod": "2026-11-15",
-  "sig": "b585505f2b5dc0162e44"
+  "sig": "d51359d3391eabd9809e"
  },
  "https://dipmapper.com/town-galveston": {
   "file": "town-galveston.html",
   "lastmod": "2026-11-15",
-  "sig": "3ad88cbb7e48c92e3bf1"
+  "sig": "b98bd7a0f7a4c7765dc4"
  },
  "https://dipmapper.com/town-geiranger": {
   "file": "town-geiranger.html",
   "lastmod": "2026-11-15",
-  "sig": "3d68f9adb9be75c1b4a8"
+  "sig": "0725cdfd99b6ce81ecc2"
  },
  "https://dipmapper.com/town-genoa": {
   "file": "town-genoa.html",
   "lastmod": "2026-11-15",
-  "sig": "72cde5506320f609336c"
+  "sig": "866e85befc6bb591ccd7"
  },
  "https://dipmapper.com/town-george-town": {
   "file": "town-george-town.html",
   "lastmod": "2026-11-15",
-  "sig": "869949d2caf7cb666c1e"
+  "sig": "0bf7c0c3cf99729da389"
  },
  "https://dipmapper.com/town-hamburg": {
   "file": "town-hamburg.html",
   "lastmod": "2026-11-15",
-  "sig": "014c91054dd655118583"
+  "sig": "410141522345b9bc8f9d"
  },
  "https://dipmapper.com/town-heiligendamm": {
   "file": "town-heiligendamm.html",
   "lastmod": "2026-11-15",
-  "sig": "2fc4339cc5f193bbd39d"
+  "sig": "1ac7273e5e33c5eec156"
  },
  "https://dipmapper.com/town-helsinki": {
   "file": "town-helsinki.html",
   "lastmod": "2026-11-15",
-  "sig": "a1dbc39104b0031c5365"
+  "sig": "788ef35cf6593d291371"
+ },
+ "https://dipmapper.com/town-heringsdorf": {
+  "file": "town-heringsdorf.html",
+  "lastmod": "2026-11-15",
+  "sig": "81fa6676013471ad4f1f"
  },
  "https://dipmapper.com/town-hong-kong": {
   "file": "town-hong-kong.html",
   "lastmod": "2026-11-15",
-  "sig": "d1bb149084661c4ced0a"
+  "sig": "c9d31fea86ec00a61288"
  },
  "https://dipmapper.com/town-hua-hin": {
   "file": "town-hua-hin.html",
   "lastmod": "2026-11-15",
-  "sig": "69ea4e7c82a8a4f37d87"
+  "sig": "b9358eecdf56fe460c7f"
+ },
+ "https://dipmapper.com/town-ibiza": {
+  "file": "town-ibiza.html",
+  "lastmod": "2026-11-15",
+  "sig": "3e595cd49251f0a14d79"
  },
  "https://dipmapper.com/town-istanbul": {
   "file": "town-istanbul.html",
   "lastmod": "2026-11-15",
-  "sig": "f58e55629ea4cf19548d"
+  "sig": "8264ae0a720507ba6a4c"
+ },
+ "https://dipmapper.com/town-jesolo": {
+  "file": "town-jesolo.html",
+  "lastmod": "2026-11-15",
+  "sig": "c90cf5bc480f09278d73"
  },
  "https://dipmapper.com/town-jomtien": {
   "file": "town-jomtien.html",
   "lastmod": "2026-11-15",
-  "sig": "e0b7e2fd13ffbe4cf102"
+  "sig": "e683e62f9ad67f8e3885"
  },
  "https://dipmapper.com/town-juneau": {
   "file": "town-juneau.html",
   "lastmod": "2026-11-15",
-  "sig": "db1d87607256bfbaefa3"
+  "sig": "3f691f67657d672af2ac"
  },
  "https://dipmapper.com/town-kata": {
   "file": "town-kata.html",
   "lastmod": "2026-11-15",
-  "sig": "3bad46b260235e6fa4a2"
+  "sig": "47f8d6e2e5706e8dffa5"
  },
  "https://dipmapper.com/town-ketchikan": {
   "file": "town-ketchikan.html",
   "lastmod": "2026-11-15",
-  "sig": "ae203754d589294f95f8"
+  "sig": "492c17b9f67c51f8be75"
  },
  "https://dipmapper.com/town-key-west": {
   "file": "town-key-west.html",
   "lastmod": "2026-11-15",
-  "sig": "91d9d1f4bf9d4f721273"
+  "sig": "0f648a95ab5df1f74283"
  },
  "https://dipmapper.com/town-kiel": {
   "file": "town-kiel.html",
   "lastmod": "2026-11-15",
-  "sig": "1951fef8967086d99e06"
+  "sig": "818727984187360beb5a"
+ },
+ "https://dipmapper.com/town-knokke": {
+  "file": "town-knokke.html",
+  "lastmod": "2026-11-15",
+  "sig": "2001e7426f0f1e8ae410"
+ },
+ "https://dipmapper.com/town-ko-phangan": {
+  "file": "town-ko-phangan.html",
+  "lastmod": "2026-11-15",
+  "sig": "a23631551d7d88c1ccf6"
+ },
+ "https://dipmapper.com/town-ko-tao": {
+  "file": "town-ko-tao.html",
+  "lastmod": "2026-11-15",
+  "sig": "1a89d986ad8aebb988db"
  },
  "https://dipmapper.com/town-kotor": {
   "file": "town-kotor.html",
   "lastmod": "2026-11-15",
-  "sig": "b34f9c65b8c25d55acbd"
+  "sig": "4bcb64e89b721311b6f7"
+ },
+ "https://dipmapper.com/town-kuehlungsborn": {
+  "file": "town-kuehlungsborn.html",
+  "lastmod": "2026-11-15",
+  "sig": "657bd91c8595673c8263"
  },
  "https://dipmapper.com/town-kusadasi": {
   "file": "town-kusadasi.html",
   "lastmod": "2026-11-15",
-  "sig": "82b5f24a8cfe9c2275b1"
+  "sig": "a140699adcab46375c4c"
+ },
+ "https://dipmapper.com/town-kuta-bali": {
+  "file": "town-kuta-bali.html",
+  "lastmod": "2026-11-15",
+  "sig": "890bc38e49139f69ee45"
+ },
+ "https://dipmapper.com/town-lagos": {
+  "file": "town-lagos.html",
+  "lastmod": "2026-11-15",
+  "sig": "3e8134d95d01d5a5a28f"
  },
  "https://dipmapper.com/town-lisbon": {
   "file": "town-lisbon.html",
   "lastmod": "2026-11-15",
-  "sig": "584bdb3767dc497c7bb3"
+  "sig": "91e4d3104409bea13e16"
  },
  "https://dipmapper.com/town-livorno": {
   "file": "town-livorno.html",
   "lastmod": "2026-11-15",
-  "sig": "8da589f614c9cd07b9ba"
+  "sig": "9f1f2b8942873b8fb100"
+ },
+ "https://dipmapper.com/town-lloret": {
+  "file": "town-lloret.html",
+  "lastmod": "2026-11-15",
+  "sig": "a99b89d974191e64869d"
+ },
+ "https://dipmapper.com/town-maafushi": {
+  "file": "town-maafushi.html",
+  "lastmod": "2026-11-15",
+  "sig": "20fc833f853bbcf835a6"
+ },
+ "https://dipmapper.com/town-makarska": {
+  "file": "town-makarska.html",
+  "lastmod": "2026-11-15",
+  "sig": "c32dc74cca98f55404bd"
  },
  "https://dipmapper.com/town-malaga": {
   "file": "town-malaga.html",
   "lastmod": "2026-11-15",
-  "sig": "9666195eb5f4d3dc747a"
+  "sig": "652f3c847788ee10a2e7"
+ },
+ "https://dipmapper.com/town-marbella": {
+  "file": "town-marbella.html",
+  "lastmod": "2026-11-15",
+  "sig": "736d50990bcf3bc9d62b"
  },
  "https://dipmapper.com/town-marseille": {
   "file": "town-marseille.html",
   "lastmod": "2026-11-15",
-  "sig": "b7eda1f9eedc792d42ab"
+  "sig": "0b5425075cb8ab8affc9"
  },
  "https://dipmapper.com/town-miami": {
   "file": "town-miami.html",
   "lastmod": "2026-11-15",
-  "sig": "f8e344d6fd0f1b8cc353"
+  "sig": "daadd0a41ddac81481a9"
+ },
+ "https://dipmapper.com/town-mirissa": {
+  "file": "town-mirissa.html",
+  "lastmod": "2026-11-15",
+  "sig": "b3e232c3d6081a882189"
  },
  "https://dipmapper.com/town-molinar": {
   "file": "town-molinar.html",
   "lastmod": "2026-11-15",
-  "sig": "a11dc5bad848d1297fec"
+  "sig": "745a726e4c946515c87a"
  },
  "https://dipmapper.com/town-monaco": {
   "file": "town-monaco.html",
   "lastmod": "2026-11-15",
-  "sig": "abf286671930d128ad6a"
+  "sig": "6c2ef3d6ada6c0ca1ab2"
  },
  "https://dipmapper.com/town-muizenberg": {
   "file": "town-muizenberg.html",
   "lastmod": "2026-11-15",
-  "sig": "20356115b2216b6fa06b"
+  "sig": "58faef6981db71ffe1d6"
  },
  "https://dipmapper.com/town-mykonos": {
   "file": "town-mykonos.html",
   "lastmod": "2026-11-15",
-  "sig": "3725ae4f2bda18eb6166"
+  "sig": "66475b2593fcceff7c02"
+ },
+ "https://dipmapper.com/town-myrtle-beach": {
+  "file": "town-myrtle-beach.html",
+  "lastmod": "2026-11-15",
+  "sig": "2e2e6b12d10cb46499bf"
  },
  "https://dipmapper.com/town-naples": {
   "file": "town-naples.html",
   "lastmod": "2026-11-15",
-  "sig": "124fae8bf5af99d13fb3"
+  "sig": "f993d8df0dcc34d605c6"
  },
  "https://dipmapper.com/town-nassau": {
   "file": "town-nassau.html",
   "lastmod": "2026-11-15",
-  "sig": "4129eb846556e8219146"
+  "sig": "a2cc472d3a7eecaa7e76"
  },
  "https://dipmapper.com/town-new-york": {
   "file": "town-new-york.html",
   "lastmod": "2026-11-15",
-  "sig": "a0460268b36b64e75e25"
+  "sig": "753593dffcde818c8493"
+ },
+ "https://dipmapper.com/town-newquay": {
+  "file": "town-newquay.html",
+  "lastmod": "2026-11-15",
+  "sig": "edf1eba622f38c16017f"
  },
  "https://dipmapper.com/town-nha-trang": {
   "file": "town-nha-trang.html",
   "lastmod": "2026-11-15",
-  "sig": "cba908b2742da2a218ec"
+  "sig": "6aaa577d63985a5e602c"
+ },
+ "https://dipmapper.com/town-nice": {
+  "file": "town-nice.html",
+  "lastmod": "2026-11-15",
+  "sig": "3d91c34be99e03d6733f"
+ },
+ "https://dipmapper.com/town-norderney": {
+  "file": "town-norderney.html",
+  "lastmod": "2026-11-15",
+  "sig": "83d6039cd6b83f94f296"
  },
  "https://dipmapper.com/town-ocho-rios": {
   "file": "town-ocho-rios.html",
   "lastmod": "2026-11-15",
-  "sig": "1b9a44dbb0e3a18a8403"
+  "sig": "779d0c166fedb052a9b5"
  },
  "https://dipmapper.com/town-oranjestad": {
   "file": "town-oranjestad.html",
   "lastmod": "2026-11-15",
-  "sig": "482976c35d0f32bf400f"
+  "sig": "f686af63703f2ff02e30"
+ },
+ "https://dipmapper.com/town-ostend": {
+  "file": "town-ostend.html",
+  "lastmod": "2026-11-15",
+  "sig": "0b70ccd08131c42d6085"
  },
  "https://dipmapper.com/town-palma": {
   "file": "town-palma.html",
   "lastmod": "2026-11-15",
-  "sig": "80a976f6b5c331e8ae83"
+  "sig": "505307cbcec214720f98"
  },
  "https://dipmapper.com/town-patong": {
   "file": "town-patong.html",
   "lastmod": "2026-11-15",
-  "sig": "6590103d200ec5ba96fa"
+  "sig": "3742e3e82a377539c9a0"
  },
  "https://dipmapper.com/town-pattaya": {
   "file": "town-pattaya.html",
   "lastmod": "2026-11-15",
-  "sig": "2acd42d1df3aed454203"
+  "sig": "b4a42439b6379b2a271b"
  },
  "https://dipmapper.com/town-penang": {
   "file": "town-penang.html",
   "lastmod": "2026-11-15",
-  "sig": "06e253ed90b6ba691f20"
+  "sig": "c83d591b0a28b3b1156a"
  },
  "https://dipmapper.com/town-perranporth": {
   "file": "town-perranporth.html",
   "lastmod": "2026-11-15",
-  "sig": "66f1da8b2f4ca550b89f"
+  "sig": "c0ee7f56251c921b1eca"
  },
  "https://dipmapper.com/town-piraeus": {
   "file": "town-piraeus.html",
   "lastmod": "2026-11-15",
-  "sig": "1caadbd9861cf5077705"
+  "sig": "18e043b0c0d2aad5d467"
+ },
+ "https://dipmapper.com/town-playa-del-carmen": {
+  "file": "town-playa-del-carmen.html",
+  "lastmod": "2026-11-15",
+  "sig": "4e4331bf0d0f5299db23"
  },
  "https://dipmapper.com/town-port-canaveral": {
   "file": "town-port-canaveral.html",
   "lastmod": "2026-11-15",
-  "sig": "3ffcebf07fd7f2d77aeb"
+  "sig": "929175ff9cc049422755"
+ },
+ "https://dipmapper.com/town-positano": {
+  "file": "town-positano.html",
+  "lastmod": "2026-11-15",
+  "sig": "7aab38c77fa476962cdd"
+ },
+ "https://dipmapper.com/town-prerow": {
+  "file": "town-prerow.html",
+  "lastmod": "2026-11-15",
+  "sig": "b30b719f65cc5c9e21bd"
  },
  "https://dipmapper.com/town-puerto-vallarta": {
   "file": "town-puerto-vallarta.html",
   "lastmod": "2026-11-15",
-  "sig": "0636f8928efb3438676c"
+  "sig": "4832d95a4f3588ff0a76"
  },
  "https://dipmapper.com/town-reykjavik": {
   "file": "town-reykjavik.html",
   "lastmod": "2026-11-15",
-  "sig": "52248113450674a301ce"
+  "sig": "1e92f447795d7e8fe1e8"
+ },
+ "https://dipmapper.com/town-rimini": {
+  "file": "town-rimini.html",
+  "lastmod": "2026-11-15",
+  "sig": "57b2adf08f0214f0d5cf"
  },
  "https://dipmapper.com/town-riva": {
   "file": "town-riva.html",
   "lastmod": "2026-11-15",
-  "sig": "5e32dae297d7a57cc9e3"
+  "sig": "2c4d4c8078b780ab6e0f"
  },
  "https://dipmapper.com/town-roatan": {
   "file": "town-roatan.html",
   "lastmod": "2026-11-15",
-  "sig": "afa522053e7f3f87f1dd"
+  "sig": "8d5501915e5be58b1ad2"
+ },
+ "https://dipmapper.com/town-saint-tropez": {
+  "file": "town-saint-tropez.html",
+  "lastmod": "2026-11-15",
+  "sig": "9a4cbd21e90e62f4f5bc"
+ },
+ "https://dipmapper.com/town-san-diego": {
+  "file": "town-san-diego.html",
+  "lastmod": "2026-11-15",
+  "sig": "517c7124d4ae3f97fa0e"
  },
  "https://dipmapper.com/town-san-juan": {
   "file": "town-san-juan.html",
   "lastmod": "2026-11-15",
-  "sig": "d6a3d5a5e561d11d47fd"
+  "sig": "a35a2731321e9f72aa5e"
+ },
+ "https://dipmapper.com/town-santa-monica": {
+  "file": "town-santa-monica.html",
+  "lastmod": "2026-11-15",
+  "sig": "7dab30e167c5421a2429"
  },
  "https://dipmapper.com/town-santorini": {
   "file": "town-santorini.html",
   "lastmod": "2026-11-15",
-  "sig": "9fe40e17dca8c5b0d27a"
+  "sig": "5d63277b2061a4bd141f"
  },
  "https://dipmapper.com/town-sanur": {
   "file": "town-sanur.html",
   "lastmod": "2026-11-15",
-  "sig": "2fe8dc1586c282c54258"
+  "sig": "dcef474ef4a61a3c7851"
+ },
+ "https://dipmapper.com/town-scheveningen": {
+  "file": "town-scheveningen.html",
+  "lastmod": "2026-11-15",
+  "sig": "c07a774bc12ad6bc88f5"
  },
  "https://dipmapper.com/town-seattle": {
   "file": "town-seattle.html",
   "lastmod": "2026-11-15",
-  "sig": "3da32f3eef71374686fb"
+  "sig": "6ae923d3ed99d8ac52e2"
+ },
+ "https://dipmapper.com/town-sellin": {
+  "file": "town-sellin.html",
+  "lastmod": "2026-11-15",
+  "sig": "e60830fb134ddb0d9718"
+ },
+ "https://dipmapper.com/town-seminyak": {
+  "file": "town-seminyak.html",
+  "lastmod": "2026-11-15",
+  "sig": "ef7c29a6808b3c401a87"
  },
  "https://dipmapper.com/town-sharm": {
   "file": "town-sharm.html",
   "lastmod": "2026-11-15",
-  "sig": "8f5df78d24d7ad69ad6d"
+  "sig": "3e33278d5fc423145333"
  },
  "https://dipmapper.com/town-singapore": {
   "file": "town-singapore.html",
   "lastmod": "2026-11-15",
-  "sig": "18db7d0939136143f073"
+  "sig": "b1e62bb7422f3926eaea"
+ },
+ "https://dipmapper.com/town-sitges": {
+  "file": "town-sitges.html",
+  "lastmod": "2026-11-15",
+  "sig": "92b1daab60599c8bfca9"
  },
  "https://dipmapper.com/town-skagway": {
   "file": "town-skagway.html",
   "lastmod": "2026-11-15",
-  "sig": "052df2648c6174417178"
+  "sig": "89aecb17d8a574bbcc80"
  },
  "https://dipmapper.com/town-southampton": {
   "file": "town-southampton.html",
   "lastmod": "2026-11-15",
-  "sig": "5d64da7786c91182b22b"
+  "sig": "f3a95c3b3bb708fd7847"
  },
  "https://dipmapper.com/town-split": {
   "file": "town-split.html",
   "lastmod": "2026-11-15",
-  "sig": "e0b8692aa930cb5d5c0c"
+  "sig": "2c596ae7dae9ef1a9b60"
  },
  "https://dipmapper.com/town-st-maarten": {
   "file": "town-st-maarten.html",
   "lastmod": "2026-11-15",
-  "sig": "beec771ae4b05df610c1"
+  "sig": "61e9474243c01ee8d792"
+ },
+ "https://dipmapper.com/town-st-peter-ording": {
+  "file": "town-st-peter-ording.html",
+  "lastmod": "2026-11-15",
+  "sig": "6c3c461eca6aad1280fd"
  },
  "https://dipmapper.com/town-st-thomas": {
   "file": "town-st-thomas.html",
   "lastmod": "2026-11-15",
-  "sig": "d1b536433a3796ad1077"
+  "sig": "f25b154d47504ef1e8f1"
  },
  "https://dipmapper.com/town-stockholm": {
   "file": "town-stockholm.html",
   "lastmod": "2026-11-15",
-  "sig": "1130b98a8b4c60a8fb9e"
+  "sig": "8aa1ca4b26a49132d30d"
  },
  "https://dipmapper.com/town-sydney": {
   "file": "town-sydney.html",
   "lastmod": "2026-11-15",
-  "sig": "c343375af2c83d7710eb"
+  "sig": "74740b5b220793f2491c"
  },
  "https://dipmapper.com/town-tallinn": {
   "file": "town-tallinn.html",
   "lastmod": "2026-11-15",
-  "sig": "25655c6cdb2093fe291c"
+  "sig": "ff30c010ef0dc5638cc5"
+ },
+ "https://dipmapper.com/town-taormina": {
+  "file": "town-taormina.html",
+  "lastmod": "2026-11-15",
+  "sig": "47ee53aa3bf354e164a1"
  },
  "https://dipmapper.com/town-tenerife": {
   "file": "town-tenerife.html",
   "lastmod": "2026-11-15",
-  "sig": "b821ed1f870aeaf517e1"
+  "sig": "6a1af26fd5fe5f25d216"
+ },
+ "https://dipmapper.com/town-timmendorfer-strand": {
+  "file": "town-timmendorfer-strand.html",
+  "lastmod": "2026-11-15",
+  "sig": "2af1d9c7927d9249a04a"
+ },
+ "https://dipmapper.com/town-travemuende": {
+  "file": "town-travemuende.html",
+  "lastmod": "2026-11-15",
+  "sig": "ea92e6cd1f29c8c1929b"
+ },
+ "https://dipmapper.com/town-tulum": {
+  "file": "town-tulum.html",
+  "lastmod": "2026-11-15",
+  "sig": "aea4e543c588716030ad"
  },
  "https://dipmapper.com/town-valletta": {
   "file": "town-valletta.html",
   "lastmod": "2026-11-15",
-  "sig": "f0e95e4dd99643a247c6"
+  "sig": "8bbad394ed9a16578531"
  },
  "https://dipmapper.com/town-vancouver": {
   "file": "town-vancouver.html",
   "lastmod": "2026-11-15",
-  "sig": "d51b67afdc9022630ced"
+  "sig": "6f0a2c599945599512ce"
  },
  "https://dipmapper.com/town-venice": {
   "file": "town-venice.html",
   "lastmod": "2026-11-15",
-  "sig": "1571d89e9f61dfe89a5d"
+  "sig": "1a016220f36d108be4c9"
  },
  "https://dipmapper.com/town-villefranche": {
   "file": "town-villefranche.html",
   "lastmod": "2026-11-15",
-  "sig": "5b0e5c0704795d82a7d8"
+  "sig": "3ff673208334a36626d7"
  },
  "https://dipmapper.com/town-waikiki": {
   "file": "town-waikiki.html",
   "lastmod": "2026-11-15",
-  "sig": "4da3b53cce2019ec9f23"
+  "sig": "7041e757ef34af8bed64"
  },
  "https://dipmapper.com/town-warnemuende": {
   "file": "town-warnemuende.html",
   "lastmod": "2026-11-15",
-  "sig": "a5e1b83e86c4638b10b4"
+  "sig": "b5ade39f4120de87f824"
  },
  "https://dipmapper.com/town-westerland": {
   "file": "town-westerland.html",
   "lastmod": "2026-11-15",
-  "sig": "10d3c5e1dd88a737c4d0"
+  "sig": "5b8ac771c7bd7354b3a0"
  },
  "https://dipmapper.com/town-willemstad": {
   "file": "town-willemstad.html",
   "lastmod": "2026-11-15",
-  "sig": "358e2077c5d57ff256b9"
+  "sig": "e45b1fc50ef816ee8cd8"
  },
  "https://dipmapper.com/town-yokohama": {
   "file": "town-yokohama.html",
   "lastmod": "2026-11-15",
-  "sig": "d9b878945649c0b8b8b8"
+  "sig": "cbce6831ef87a541962d"
+ },
+ "https://dipmapper.com/town-zandvoort": {
+  "file": "town-zandvoort.html",
+  "lastmod": "2026-11-15",
+  "sig": "afb71a7c314d720d0702"
+ },
+ "https://dipmapper.com/town-zingst": {
+  "file": "town-zingst.html",
+  "lastmod": "2026-11-15",
+  "sig": "ee8f5142956f4a632cba"
  },
  "https://dipmapper.com/unique-water-experiences.html": {
   "file": "unique-water-experiences.html",
@@ -992,7 +1222,7 @@
  "https://dipmapper.com/waterfront-towns": {
   "file": "waterfront-towns.html",
   "lastmod": "2026-11-15",
-  "sig": "14f24b6a77c7460c0648"
+  "sig": "24dcf903eb20665018d2"
  },
  "https://dipmapper.com/whale-watch": {
   "file": "whale-watch.html",
@@ -1002,7 +1232,7 @@
  "https://dipmapper.com/wildlife-calendar": {
   "file": "wildlife-calendar.html",
   "lastmod": "2026-11-15",
-  "sig": "2cdac570f6711530f4d4"
+  "sig": "d43e5f47541a711947ee"
  },
  "https://dipmapper.com/wildlife-knowledge": {
   "file": "wildlife-knowledge.html",
