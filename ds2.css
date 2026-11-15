@@ -219,3 +219,22 @@ html body .dmTown:hover em{display:block!important;position:absolute;left:24px;t
 html body #map .dmPoi,html body #mapPanel .dmPoi{min-height:0!important;height:26px!important;width:26px!important;min-width:0!important;padding:0!important;border-radius:8px!important;font-size:0!important}
 html body #map .dmPoi.c{height:22px!important;width:22px!important}
 html body #map .dmTown{min-height:0!important}
+/* 23.31 save / share / recent */
+.dmActs{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 4px}
+.dmSave{display:inline-flex;align-items:center;gap:7px;min-height:40px;padding:0 14px;border-radius:12px;border:1px solid rgba(255,255,255,.55);background:rgba(255,255,255,.14);color:inherit;font:700 14px/1 system-ui,sans-serif;cursor:pointer;backdrop-filter:blur(4px)}
+main .dmSave,.wrap>.dmActs .dmSave{border-color:var(--ds-line,#e1ebe9)}
+.dmSave.on svg{fill:currentColor}
+.dmSave.on{background:#fff;color:#d6334a;border-color:#fff}
+.dmHeart{position:absolute;right:10px;top:10px;z-index:3;width:36px;height:36px;border-radius:50%;border:0;background:rgba(255,255,255,.95);color:#0b2a33;display:grid;place-items:center;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15);padding:0}
+.dmHeart svg{width:18px;height:18px}
+.dmHeart.on{color:#d6334a}.dmHeart.on svg{fill:currentColor}
+.dmToast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom));transform:translate(-50%,20px);opacity:0;background:#06343c;color:#fff;padding:10px 16px;border-radius:12px;font:600 14px/1.3 system-ui,sans-serif;z-index:9999;transition:all .25s ease;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.dmToast.on{opacity:1;transform:translate(-50%,0)}
+.dmTab a .i{position:relative}
+.dmBadge{position:absolute;top:-4px;right:-10px;min-width:17px;height:17px;padding:0 4px;border-radius:9px;background:#d6334a;color:#fff;font:700 10.5px/17px system-ui,sans-serif;text-align:center}
+.dmReviewed{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--ds-muted,#58737c);margin:6px 0 0}
+.dmPoi.ph{background:#1a9b5a}.dmPoi.lg{background:#f2a20c}
+.row .ic.dmRi{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:10px;background:#eef7f5;color:#0a6f69;flex:none}
+.row .ic.dmRi svg.ic{width:19px;height:19px;vertical-align:0}
+.dmNewTag{display:inline-block;margin-left:6px;padding:2px 8px;border-radius:999px;background:#ff7a59;color:#fff;font:700 11px/1.4 system-ui,sans-serif;vertical-align:1px}
+li.dmNewProj{border-left:3px solid #ff7a59;padding-left:10px}

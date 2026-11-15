@@ -90,3 +90,50 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', apply); else apply();
   window.DMUI = { apply: apply, loc: loc };
 })();
+/* 23.31: save (favourites), recently viewed, share – peers: Swim Guide bookmarks, AllTrails "Saved", Windy favourites */
+(function () {
+  'use strict';
+  function rd(k) { try { return JSON.parse(localStorage.getItem(k) || '[]') || []; } catch (e) { return []; } }
+  function wr(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+  function ic(n) { return '<svg class="ic" aria-hidden="true"><use href="/icons.svg#i-' + n + '"/></svg>'; }
+  function isSaved(id) { return rd('dm_saved').some(function (x) { return x.id === id; }); }
+  function toggle(it) { var s = rd('dm_saved'), i = s.findIndex(function (x) { return x.id === it.id; }); if (i >= 0) s.splice(i, 1); else s.unshift(it); wr('dm_saved', s.slice(0, 200)); badge(); return i < 0; }
+  function toast(m) { var t = document.createElement('div'); t.className = 'dmToast'; t.textContent = m; document.body.appendChild(t); setTimeout(function () { t.classList.add('on'); }, 10); setTimeout(function () { t.remove(); }, 2200); }
+  function heart(it, cls) {
+    var b = document.createElement('button'); b.type = 'button'; b.className = cls || 'dmSave';
+    function upd() { var on = isSaved(it.id); b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); b.innerHTML = ic('heart') + (cls ? '' : '<span>' + (on ? 'Saved' : 'Save') + '</span>'); b.title = on ? 'Remove from saved' : 'Save for later'; }
+    b.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); var on = toggle(it); upd(); toast(on ? 'Saved – find it under Saved' : 'Removed from saved'); });
+    upd(); return b;
+  }
+  function share(t) {
+    var b = document.createElement('button'); b.type = 'button'; b.className = 'dmSave'; b.innerHTML = ic('share') + '<span>Share</span>';
+    b.addEventListener('click', function () { var u = location.href.split('#')[0]; if (navigator.share) navigator.share({ title: t, url: u }).catch(function () {}); else if (navigator.clipboard) navigator.clipboard.writeText(u).then(function () { toast('Link copied'); }); });
+    return b;
+  }
+  function badge() { var n = rd('dm_saved').length; document.querySelectorAll('.dmTab a[href="/saved"] .i').forEach(function (i) { var s = i.querySelector('.dmBadge'); if (!s) { s = document.createElement('b'); s.className = 'dmBadge'; i.appendChild(s); } s.textContent = n; s.hidden = !n; }); }
+  var p = location.pathname.replace(/\.html$/, ''), h1 = document.querySelector('main h1, h1'), it = null;
+  var you = document.querySelector('.dmYou');
+  if (/^\/town-/.test(p) && h1) it = { id: p, t: h1.textContent.trim(), u: p, k: 'town', wp: you && you.dataset.wp || '', cc: you && you.dataset.cc || '' };
+  else if (/^\/wildlife-species-/.test(p) && h1) it = { id: p, t: h1.textContent.trim(), u: p, k: 'wild' };
+  if (it) {
+    var r = rd('dm_recent').filter(function (x) { return x.id !== it.id; }); r.unshift(it); wr('dm_recent', r.slice(0, 12));
+    var bar = document.createElement('div'); bar.className = 'dmActs'; bar.appendChild(heart(it)); bar.appendChild(share(it.t)); h1.insertAdjacentElement('afterend', bar);
+  }
+  document.querySelectorAll('li.card[id]').forEach(function (c) {
+    var h = c.querySelector('h2,h3'); if (!h || c.querySelector('.dmHeart')) return;
+    var fl = c.querySelector('img.fl'), cc = fl ? (fl.src.match(/\/([a-z]{2})\.png/) || [])[1] : '';
+    c.style.position = c.style.position || 'relative';
+    c.appendChild(heart({ id: p + '#' + c.id, t: h.textContent.trim(), u: p + '#' + c.id, k: 'spot', cc: (cc || '').toUpperCase() }, 'dmHeart'));
+  });
+  // Saved page
+  var S = document.getElementById('dmSavedList'), R = document.getElementById('dmRecentList');
+  function row(x) { var k = x.k === 'town' ? 'city' : x.k === 'wild' ? 'whale' : 'swim'; return '<li class="dmCard"><a href="' + x.u + '"><div class="dmPh"' + (x.wp ? ' data-wp="' + x.wp.replace(/"/g, '&quot;') + '"' : '') + '><svg class="dmPhI" aria-hidden="true"><use href="/icons.svg#i-' + k + '"/></svg>' + (x.cc ? '<span class="dmPhF"><img class="fl" src="https://flagcdn.com/w40/' + x.cc.toLowerCase() + '.png" width="20" height="15" alt=""></span>' : '') + '</div><div class="dmBd"><span class="dmCn">' + (x.k === 'town' ? 'Town' : x.k === 'wild' ? 'Wildlife' : 'Water experience') + '</span><b>' + x.t.replace(/</g, '&lt;') + '</b></div></a></li>'; }
+  function renderSaved() {
+    if (!S) return; var s = rd('dm_saved'), r = rd('dm_recent');
+    S.innerHTML = s.map(row).join(''); document.getElementById('dmSavedEmpty').hidden = !!s.length;
+    if (R) { R.innerHTML = r.map(row).join(''); document.getElementById('dmRecentBox').hidden = !r.length; }
+    var c = document.getElementById('dmSavedClear'); if (c) { c.hidden = !s.length; c.onclick = function () { wr('dm_saved', []); renderSaved(); badge(); }; }
+    if (window.DMUI) window.DMUI.apply();
+  }
+  renderSaved(); badge();
+})();
