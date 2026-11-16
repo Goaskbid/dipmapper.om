@@ -1,5 +1,5 @@
 {
  "ok": true,
- "when": "2026-11-16T03:11:35.121026Z",
+ "when": "2026-11-16T13:10:01.053015Z",
  "log_tail": "service https://marine.discomap.eea.europa.eu/arcgis/rest/services/BathingWater/BathingWater_Dyna_WM_2025/MapServer layer 3 season 2025\nsites listed 22289\nsites fetched 22289 values {'Poor': 1293, 'Sufficient': 1956, 'Good': 7513, 'Excellent': 74910, 'Not classified': 2241, '': 1243}\ntiles 215 by class {'P': 356, 'S': 516, 'G': 1990, 'E': 18810, 'N': 617}\n"
 }
