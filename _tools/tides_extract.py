@@ -12,7 +12,7 @@ pts = json.load(open(pts_f))['points']  # {id: [lat, lon]}
 files = []
 for r, _, fs in os.walk(src):
     for f in fs:
-        if f.endswith('.nc'): files.append(os.path.join(r, f))
+        if f.endswith('.nc') and not f.startswith('._') and '__MACOSX' not in r: files.append(os.path.join(r, f))
 oc = [f for f in files if 'ocean' in f.lower() and 'load' not in os.path.basename(f).lower()]
 files = sorted(oc or [f for f in files if 'load' not in f.lower()])
 if not files: sys.exit('no EOT20 NetCDF files found under ' + src)

@@ -41,7 +41,7 @@
       var cc = t[0] && t[0][0] < 400 ? t[0][1][2] : '', cn = cc && j.cn[cc] ? j.cn[cc] : '';
       var T = document.getElementById('dmNearTitle'), S = document.getElementById('dmNearSub'), K = document.getElementById('dmNearKick');
       if (T) T.textContent = cn ? 'Near you in ' + cn : 'Closest to you';
-      if (K && cc) K.innerHTML = '<img class="fl" src="https://flagcdn.com/w40/' + cc.toLowerCase() + '.png" width="20" height="15" alt=""> Your area';
+      if (K && cc) K.innerHTML = '<img class="fl" src="/flags/' + cc.toLowerCase() + '.png" width="20" height="15" alt=""> Your area';
       if (S) S.innerHTML = 'Sorted by distance from you. Nearest town: <a href="/' + t[0][1][0] + '">' + t[0][1][1] + '</a> (' + fmt(t[0][0]) + ')' + (cc ? ' · <a href="/' + t[0][1][0] + '#kbyg">what is allowed here</a>' : '') + '.';
       var b = box.querySelector('[data-dm-locate]'); if (b) b.innerHTML = '<svg class="ic" aria-hidden="true"><use href="/icons.svg#i-locate"/></svg> Update location';
       var m = new Date().getMonth() + 1, W = document.getElementById('dmNearWild'), WB = document.getElementById('dmNearWildBox');
@@ -49,7 +49,7 @@
         var w = j.wild.filter(function (x) { return x[4].indexOf(m) >= 0; }).map(function (x) { return [km(L.la, L.lo, x[2], x[3]), x]; }).sort(function (a, b) { return a[0] - b[0]; }).slice(0, 6);
         var mn = new Date().toLocaleString('en', { month: 'long' });
         document.getElementById('dmNearWildT').textContent = 'Wildlife in season in ' + mn + ', nearest first';
-        W.innerHTML = w.map(function (e) { var x = e[1]; return '<li><a href="' + x[6] + '"><span class="dmI s"><svg class="ic" aria-hidden="true"><use href="/icons.svg#i-' + wi(x[5] + ' ' + x[0]) + '"/></svg></span><span><b>' + esc(x[0]) + '</b><small>' + (x[1] ? '<img class="fl" src="https://flagcdn.com/w40/' + x[1].toLowerCase() + '.png" width="16" height="12" alt=""> ' : '') + fmt(e[0]) + '</small></span></a></li>'; }).join('');
+        W.innerHTML = w.map(function (e) { var x = e[1]; return '<li><a href="' + x[6] + '"><span class="dmI s"><svg class="ic" aria-hidden="true"><use href="/icons.svg#i-' + wi(x[5] + ' ' + x[0]) + '"/></svg></span><span><b>' + esc(x[0]) + '</b><small>' + (x[1] ? '<img class="fl" src="/flags/' + x[1].toLowerCase() + '.png" width="16" height="12" alt=""> ' : '') + fmt(e[0]) + '</small></span></a></li>'; }).join('');
         WB.hidden = !w.length;
       }
     });
@@ -127,7 +127,7 @@
   });
   // Saved page
   var S = document.getElementById('dmSavedList'), R = document.getElementById('dmRecentList');
-  function row(x) { var k = x.k === 'town' ? 'city' : x.k === 'wild' ? 'whale' : 'swim'; return '<li class="dmCard"><a href="' + x.u + '"><div class="dmPh"' + (x.wp ? ' data-wp="' + x.wp.replace(/"/g, '&quot;') + '"' : '') + '><svg class="dmPhI" aria-hidden="true"><use href="/icons.svg#i-' + k + '"/></svg>' + (x.cc ? '<span class="dmPhF"><img class="fl" src="https://flagcdn.com/w40/' + x.cc.toLowerCase() + '.png" width="20" height="15" alt=""></span>' : '') + '</div><div class="dmBd"><span class="dmCn">' + (x.k === 'town' ? 'Town' : x.k === 'wild' ? 'Wildlife' : 'Water experience') + '</span><b>' + x.t.replace(/</g, '&lt;') + '</b></div></a></li>'; }
+  function row(x) { var k = x.k === 'town' ? 'city' : x.k === 'wild' ? 'whale' : 'swim'; return '<li class="dmCard"><a href="' + x.u + '"><div class="dmPh"' + (x.wp ? ' data-wp="' + x.wp.replace(/"/g, '&quot;') + '"' : '') + '><svg class="dmPhI" aria-hidden="true"><use href="/icons.svg#i-' + k + '"/></svg>' + (x.cc ? '<span class="dmPhF"><img class="fl" src="/flags/' + x.cc.toLowerCase() + '.png" width="20" height="15" alt=""></span>' : '') + '</div><div class="dmBd"><span class="dmCn">' + (x.k === 'town' ? 'Town' : x.k === 'wild' ? 'Wildlife' : 'Water experience') + '</span><b>' + x.t.replace(/</g, '&lt;') + '</b></div></a></li>'; }
   function renderSaved() {
     if (!S) return; var s = rd('dm_saved'), r = rd('dm_recent');
     S.innerHTML = s.map(row).join(''); document.getElementById('dmSavedEmpty').hidden = !!s.length;
@@ -212,4 +212,70 @@
     });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
+})();
+/* 23.36: author + licence credit on every Wikimedia photo (CC BY / BY-SA attribution) */
+(function () {
+  var CR = {}, pend = {}, timer = 0;
+  try { CR = JSON.parse(sessionStorage.getItem('dm_cr') || '{}'); } catch (e) {}
+  function fileOf(u) {
+    var m = String(u).match(/upload\.wikimedia\.org\/wikipedia\/[^/]+\/(?:thumb\/)?[0-9a-f]\/[0-9a-f]{2}\/([^/?#]+)/i);
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function strip(h) { var d = document.createElement('div'); d.innerHTML = h || ''; return (d.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 60); }
+  function label(c) { return c ? ('Photo: ' + (c.a || 'Wikimedia Commons') + (c.l ? ' · ' + c.l : '')) : ''; }
+  function apply(el, file) {
+    var c = CR[file]; if (!c) return;
+    var host = el.tagName === 'IMG' ? el.parentElement : el; if (!host || host.querySelector(':scope > .dmCr')) return;
+    if (getComputedStyle(host).position === 'static') host.style.position = 'relative';
+    var s = document.createElement('span'); s.className = 'dmCr'; s.textContent = label(c); s.title = label(c) + ' – Wikimedia Commons';
+    host.appendChild(s);
+  }
+  function scan() {
+    var need = [];
+    document.querySelectorAll('img[src*="upload.wikimedia.org"],[style*="upload.wikimedia.org"]').forEach(function (el) {
+      if (el.__cr) return;
+      var src = el.tagName === 'IMG' ? el.src : (el.style.backgroundImage || ''), f = fileOf(src); if (!f) return;
+      el.__cr = 1; (pend[f] = pend[f] || []).push(el);
+      if (CR[f]) apply(el, f); else if (need.indexOf(f) < 0) need.push(f);
+    });
+    for (var i = 0; i < need.length; i += 40) query(need.slice(i, i + 40));
+  }
+  function query(files) {
+    var u = 'https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&prop=imageinfo&iiprop=extmetadata&iiextmetadatafilter=Artist|LicenseShortName&titles=' + encodeURIComponent(files.map(function (f) { return 'File:' + f; }).join('|'));
+    fetch(u).then(function (r) { return r.json(); }).then(function (j) {
+      var q = j.query || {}, nm = {};
+      (q.normalized || []).forEach(function (n) { nm[n.to] = n.from; });
+      Object.keys(q.pages || {}).forEach(function (k) {
+        var p = q.pages[k], t = (nm[p.title] || p.title).replace(/^File:/, ''), md = p.imageinfo && p.imageinfo[0] && p.imageinfo[0].extmetadata || {};
+        var key = files.filter(function (f) { return f.replace(/_/g, ' ') === t.replace(/_/g, ' '); })[0] || t;
+        CR[key] = { a: strip(md.Artist && md.Artist.value), l: strip(md.LicenseShortName && md.LicenseShortName.value) };
+      });
+      try { sessionStorage.setItem('dm_cr', JSON.stringify(CR)); } catch (e) {}
+      files.forEach(function (f) { (pend[f] || []).forEach(function (el) { apply(el, f); }); });
+    }).catch(function () {});
+  }
+  function later() { clearTimeout(timer); timer = setTimeout(scan, 400); }
+  if (window.MutationObserver) new MutationObserver(later).observe(document.documentElement, { subtree: true, childList: true, attributes: true, attributeFilter: ['src', 'style', 'class'] });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', later); else later();
+})();
+
+/* 23.37 offline app on every page: verified service worker, manifest, saved places cached for offline, offline notice */
+(function () {
+  if (typeof window === 'undefined' || location.protocol === 'file:') return;
+  try {
+    if (!document.querySelector('link[rel="manifest"]')) { var l = document.createElement('link'); l.rel = 'manifest'; l.href = '/manifest.webmanifest'; document.head.appendChild(l); }
+    if ('serviceWorker' in navigator && !window.__dmBooted) {
+      fetch('/sw.js', { cache: 'no-store' }).then(function (r) { return r.ok ? r.text() : ''; }).then(function (t) {
+        if (t.indexOf('DIPMAPPER_SW_V23') >= 0) navigator.serviceWorker.register('/sw.js', { scope: '/' }).catch(function () {});
+      }).catch(function () {});
+    }
+  } catch (e) {}
+  function cachePage(u) { try { if (window.caches) caches.open('dipmapper-pages').then(function (c) { return c.add(u); }).catch(function () {}); } catch (e) {} }
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('.dmSave,[data-save]'); if (!b) return;
+    setTimeout(function () { if (b.getAttribute('aria-pressed') === 'true' || b.classList.contains('on')) cachePage(location.pathname); }, 50);
+  }, true);
+  try { (JSON.parse(localStorage.getItem('dm_saved') || '[]')).slice(0, 60).forEach(function (x) { var u = x && x.u && String(x.u).split('#')[0]; if (u && u.charAt(0) === '/') cachePage(u); }); } catch (e) {}
+  function net() { var n = document.getElementById('dmOffline'); if (navigator.onLine) { if (n) n.remove(); return; } if (n) return; n = document.createElement('div'); n.id = 'dmOffline'; n.setAttribute('role', 'status'); n.textContent = 'You are offline – showing your saved copy. Live weather, tides refresh and maps come back with signal.'; document.body.appendChild(n); }
+  addEventListener('online', net); addEventListener('offline', net); if (document.readyState !== 'loading') net(); else document.addEventListener('DOMContentLoaded', net);
 })();
