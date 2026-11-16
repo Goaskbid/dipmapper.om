@@ -41,11 +41,16 @@ for f in files:
     scale = 0.01 if 'cm' in u or (not u and np.nanmax(A) > 20) else (0.001 if 'mm' in u else 1.0)
     Z = A * scale * np.exp(-1j * np.radians(P))  # complex harmonic
     Z[~np.isfinite(Z)] = np.nan
-    lon360 = lon % 360; order = np.argsort(lon360); lon360 = lon360[order]; Z = Z[:, order]
-    dlat = abs(lat[1] - lat[0]); dlon = lon360[1] - lon360[0]
+    if lat.ndim > 1: lat = lat[:, 0]
+    if lon.ndim > 1: lon = lon[0, :]
+    if A.shape != (lat.size, lon.size): print('shape check', con, A.shape, lat.shape, lon.shape, list(ds.variables), flush=True)
+    if lat.size > 1 and lat[1] < lat[0]: lat = lat[::-1]; Z = Z[::-1, :]
+    lon360 = np.round(lon % 360, 6); lon360, keep = np.unique(lon360, return_index=True); Z = Z[:, keep]  # drops the duplicate 0/360 column
+    dlat = float(np.median(np.diff(lat))); dlon = float(np.median(np.diff(lon360)))
+    if not (dlat > 0 and dlon > 0): sys.exit('bad grid in %s: dlat=%s dlon=%s vars=%s' % (f, dlat, dlon, list(ds.variables)))
     if tiles_dir: ZALL[con] = Z.astype(np.complex64); GRID = (lat, lon360)
     for k, (pla, plo) in pts.items():
-        i0 = int(round((pla - lat[0]) / (lat[1] - lat[0]))); j0 = int(round(((plo % 360) - lon360[0]) / dlon))
+        i0 = int(round((pla - lat[0]) / dlat)); j0 = int(round(((plo % 360) - lon360[0]) / dlon))
         for rad in (1, 2):
             ii = np.arange(i0 - rad, i0 + rad + 1); jj = np.arange(j0 - rad, j0 + rad + 1) % lon360.size
             ii = ii[(ii >= 0) & (ii < lat.size)]
