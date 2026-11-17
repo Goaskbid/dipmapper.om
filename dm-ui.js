@@ -38,6 +38,18 @@
     var box = document.getElementById('dmNear');
     if (box && L) nearIndex(function (j) {
       var t = j.towns.map(function (x) { return [km(L.la, L.lo, x[3], x[4]), x]; }).sort(function (a, b) { return a[0] - b[0]; });
+      (function (g) { /* 23.40: homepage ships 12 town cards; the nearest ones are built from near-index.json */
+        if (!g) return; var have = {}; [].forEach.call(g.querySelectorAll(':scope > li[data-la] a'), function (x) { have[x.getAttribute('href')] = 1; });
+        var add = 0;
+        t.slice(0, +g.dataset.limit || 8).forEach(function (p) { var x = p[1], h = '/' + x[0]; if (have[h]) return;
+          var li = document.createElement('li'); li.className = 'dmCard'; li.dataset.cc = x[2]; li.dataset.la = x[3]; li.dataset.lo = x[4];
+          var e = function (v) { return String(v || '').replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+          li.innerHTML = '<a href="' + h + '"><div class="dmPh" data-wp="' + e(x[6]) + '"><svg class="dmPhI" aria-hidden="true" focusable="false"><use href="/icons.svg#i-' + e(x[7] || 'wave') + '"/></svg><span class="dmPhF"><img class="fl" src="/flags/' + String(x[2]).toLowerCase() + '.png" width="20" height="15" alt="" loading="lazy"></span><span class="dmDist tgD"></span></div><div class="dmBd"><b>' + e(x[1]) + '</b><p>' + e(x[5]) + '</p></div></a>';
+          g.appendChild(li); add++; });
+        if (add) { var li2 = [].slice.call(g.querySelectorAll(':scope > li[data-la]')); li2.forEach(function (l) { l._d = km(L.la, L.lo, +l.dataset.la, +l.dataset.lo); var s2 = l.querySelector('.dmDist'); if (s2) s2.textContent = fmt(l._d); });
+          li2.sort(function (a2, b2) { return a2._d - b2._d; }).forEach(function (l, i) { g.appendChild(l); l.hidden = i >= (+g.dataset.limit || 8); });
+          try { photos(); } catch (er) {} }
+      })(document.getElementById('dmNearTowns'));
       var cc = t[0] && t[0][0] < 400 ? t[0][1][2] : '', cn = cc && j.cn[cc] ? j.cn[cc] : '';
       var T = document.getElementById('dmNearTitle'), S = document.getElementById('dmNearSub'), K = document.getElementById('dmNearKick');
       if (T) T.textContent = cn ? 'Near you in ' + cn : 'Closest to you';
@@ -200,6 +212,12 @@
 })();
 /* 23.34: species photo gallery from Wikimedia Commons (free licences, credited) */
 (function () {
+  function fileKey(u) { var m = /\/(?:thumb\/)?[0-9a-f]\/[0-9a-f]{2}\/([^\/?]+)/.exec(u || ''); return m ? decodeURIComponent(m[1]).toLowerCase() : ''; }
+  function dedupeHero(g) {
+    var h = document.querySelector('.dmSpHero'); if (!h) return; var hk = fileKey((h.style.backgroundImage || '').replace(/^url\(["']?|["']?\)$/g, '')); if (!hk) return;
+    [].forEach.call(g.querySelectorAll('.dmSpGalG a'), function (a) { var i = a.querySelector('img'); if (i && fileKey(i.src) === hk) a.remove(); });
+    if (g.querySelectorAll('.dmSpGalG a').length < 2) g.innerHTML = '';
+  }
   function run() {
     document.querySelectorAll('.dmSpGal[data-q]:not(.done)').forEach(function (g) {
       g.classList.add('done');
@@ -207,7 +225,8 @@
       fetch(u).then(function (r) { return r.json(); }).then(function (j) {
         var ps = j.query && j.query.pages ? Object.keys(j.query.pages).map(function (k) { return j.query.pages[k]; }).sort(function (a, b) { return a.index - b.index; }) : [], out = [];
         ps.forEach(function (p) { var ii = p.imageinfo && p.imageinfo[0]; if (!ii || !ii.thumburl || out.length >= 8) return; if (!/jpe?g/i.test(ii.mime || '') || ii.width < 900 || ii.height > ii.width * 1.4) return; if (/(map|distribution|range|skeleton|skull|stamp|drawing|illustration|diagram|plate|museum|specimen|chart|logo)/i.test(p.title)) return; out.push('<a href="' + ii.descriptionurl + '" target="_blank" rel="noopener" title="' + p.title.replace(/^File:/, '').replace(/"/g, '') + '"><img src="' + ii.thumburl + '" alt="' + g.dataset.q.replace(/"/g, '') + ' photo" loading="lazy"></a>'); });
-        if (out.length >= 2) g.innerHTML = '<div class="dmSpGalG">' + out.join('') + '</div><p class="dmSpGalC">Photos: Wikimedia Commons (free licences) – tap a photo for author and licence.</p>';
+        var seen = {}; out = out.filter(function (h) { var k = (/title="([^"]+)"/.exec(h) || [])[1] || h; k = k.toLowerCase().replace(/[^a-z0-9]/g, ''); if (seen[k]) return false; seen[k] = 1; return true; });
+        if (out.length >= 2) { g.innerHTML = '<div class="dmSpGalG">' + out.join('') + '</div><p class="dmSpGalC">More photos: Wikimedia Commons (free licences) – tap a photo for author and licence.</p>'; dedupeHero(g); setTimeout(function () { dedupeHero(g); }, 2500); setTimeout(function () { dedupeHero(g); }, 6000); }
       }).catch(function () {});
     });
   }
@@ -287,4 +306,128 @@
   try { (JSON.parse(localStorage.getItem('dm_saved') || '[]')).slice(0, 60).forEach(function (x) { var u = x && x.u && String(x.u).split('#')[0]; if (u && u.charAt(0) === '/') cachePage(u); }); } catch (e) {}
   function net() { var n = document.getElementById('dmOffline'); if (navigator.onLine) { if (n) n.remove(); return; } if (n) return; n = document.createElement('div'); n.id = 'dmOffline'; n.setAttribute('role', 'status'); n.textContent = 'You are offline – showing your saved copy. Live weather, tides refresh and maps come back with signal.'; document.body.appendChild(n); }
   addEventListener('online', net); addEventListener('offline', net); if (document.readyState !== 'loading') net(); else document.addEventListener('DOMContentLoaded', net);
+})();
+
+/* 23.41: trip context (your location + your dates), season colours (best / shoulder / off) with sea-risk months, visa & entry by passport */
+(function () {
+  var MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  /* sea-risk zones from the DipMapper sea-risk calendar (official sources listed there); pk = peak, on = possible */
+  var RZ = [
+    { n: 'Atlantic hurricane season', b: [8, 45, -100, -55], on: [6, 7, 11], pk: [8, 9, 10] },
+    { n: 'Eastern Pacific hurricane season', b: [5, 30, -120, -85], on: [5, 6, 10, 11], pk: [7, 8, 9] },
+    { n: 'Hawaii hurricane season', b: [15, 25, -165, -150], on: [6, 7, 10, 11], pk: [8, 9] },
+    { n: 'Australian cyclone season', b: [-25, -10, 110, 155], on: [4, 11, 12], pk: [1, 2, 3] },
+    { n: 'Marine stingers (box jellyfish, Irukandji)', b: [-24, -10, 142, 154], on: [3, 4, 5, 11], pk: [1, 2, 12] },
+    { n: 'South Pacific cyclone season', b: [-25, -10, 160, 200], on: [3, 4, 11, 12], pk: [1, 2] },
+    { n: 'South-west Indian Ocean cyclone season', b: [-26, -10, 40, 65], on: [4, 11, 12], pk: [1, 2, 3] },
+    { n: 'Typhoon season', b: [5, 35, 105, 150], on: [6, 11, 12], pk: [7, 8, 9, 10] },
+    { n: 'Andaman Sea monsoon – red flags, rough sea', b: [5, 15, 92, 99], on: [5, 10], pk: [6, 7, 8, 9] },
+    { n: 'Sargassum seaweed (Caribbean)', b: [10, 27, -90, -59], on: [4, 5, 8, 9], pk: [6, 7] },
+    { n: 'North Indian Ocean cyclone seasons', b: [0, 23, 70, 95], on: [4, 6, 10, 12], pk: [5, 11] },
+    { n: 'Box jellyfish (Northern Territory)', b: [-16, -10, 129, 137], on: [4, 5, 10], pk: [1, 2, 3, 11, 12] }
+  ];
+  function risks(la, lo) {
+    if (la == null || lo == null || isNaN(la)) return [];
+    var L = lo < 0 && lo < -150 ? lo + 360 : lo;
+    return RZ.filter(function (z) { var b = z.b, x = b[3] > 180 ? (lo < 0 ? lo + 360 : lo) : lo; return la >= b[0] && la <= b[1] && x >= b[2] && x <= b[3]; });
+  }
+  function status(ms, m) {
+    if (!ms || !ms.length) return 'unk';
+    if (ms.indexOf(m) >= 0) return 'best';
+    var p = m === 1 ? 12 : m - 1, n = m === 12 ? 1 : m + 1;
+    return (ms.indexOf(p) >= 0 || ms.indexOf(n) >= 0) && ms.length < 12 ? 'shoulder' : 'off';
+  }
+  function riskAt(rz, m) { var hi = [], md = []; rz.forEach(function (z) { if (z.pk.indexOf(m) >= 0) hi.push(z.n); else if (z.on.indexOf(m) >= 0) md.push(z.n); }); return { hi: hi, md: md }; }
+  function trip() { var t = {}; try { t = JSON.parse(localStorage.getItem('dm_trip') || '{}'); } catch (e) {} var d = t.date ? new Date(t.date + 'T12:00:00') : new Date(); if (isNaN(d)) d = new Date(); return { date: d, iso: t.date || '', m: d.getMonth() + 1 }; }
+  function loc() { try { var l = JSON.parse(localStorage.getItem('dm_loc') || 'null'); if (l && isFinite(l.la)) return l; } catch (e) {} return null; }
+  function km(a, b, c, d) { var r = Math.PI / 180, x = Math.sin((c - a) * r / 2), y = Math.sin((d - b) * r / 2); return 12742 * Math.asin(Math.sqrt(x * x + Math.cos(a * r) * Math.cos(c * r) * y * y)); }
+  function strip(ms, la, lo, sel) {
+    var rz = risks(la, lo), out = '';
+    for (var i = 1; i <= 12; i++) {
+      var s = status(ms, i), r = riskAt(rz, i), t = MON[i - 1] + ': ' + ({ best: 'best season', shoulder: 'shoulder season', off: 'off season', unk: 'season not published' })[s] + (r.hi.length ? ' · high risk: ' + r.hi.join(', ') : r.md.length ? ' · possible: ' + r.md.join(', ') : '');
+      out += '<i class="s-' + s + (r.hi.length ? ' r-hi' : r.md.length ? ' r-md' : '') + (i === sel ? ' sel' : '') + '" title="' + t + '">' + MON[i - 1][0] + '</i>';
+    }
+    return '<span class="dmMs2" role="img" aria-label="Season by month">' + out + '</span>';
+  }
+  var LEG = '<span class="dmLeg"><i class="s-best"></i>Best <i class="s-shoulder"></i>Shoulder <i class="s-off"></i>Off <i class="r-md"></i>Possible risk <i class="r-hi"></i>High risk</span>';
+  window.DMSeason = { status: status, risks: risks, riskAt: riskAt, strip: strip, legend: LEG, trip: trip };
+
+  function badge(ms, la, lo, m) {
+    var s = status(ms, m), r = riskAt(risks(la, lo), m), lab = { best: 'Best season', shoulder: 'Shoulder season', off: 'Off season', unk: 'Season not published' }[s];
+    return '<span class="dmTB s-' + s + '">' + lab + ' in ' + MON[m - 1] + '</span>' + (r.hi.length ? '<span class="dmTB r-hi" title="' + r.hi.join(', ') + '">⚠ ' + r.hi[0] + '</span>' : r.md.length ? '<span class="dmTB r-md" title="' + r.md.join(', ') + '">' + r.md[0] + ' possible</span>' : '');
+  }
+  function apply() {
+    var T = trip(), L = loc(), m = T.m;
+    document.querySelectorAll('[data-ms]').forEach(function (el) {
+      var ms = (el.dataset.ms || '').split(',').filter(Boolean).map(Number), la = parseFloat(el.dataset.la), lo = parseFloat(el.dataset.lo);
+      var st = el.querySelector('.dmStrip'); if (st) st.innerHTML = strip(ms, isNaN(la) ? null : la, isNaN(lo) ? null : lo, m);
+      var b = el.querySelector('.dmTripBadge'); if (b) b.innerHTML = badge(ms, isNaN(la) ? null : la, isNaN(lo) ? null : lo, m);
+      var d = el.querySelector('.dmTripDist'); el._d = 1e9;
+      if (L && !isNaN(la)) { el._d = km(L.la, L.lo, la, lo); if (d) d.textContent = el._d < 10 ? 'right near you' : (el._d < 1000 ? Math.round(el._d) : (Math.round(el._d / 100) / 10) + 'k') + ' km from you'; } else if (d) d.textContent = '';
+      el._s = { best: 0, shoulder: 1, unk: 2, off: 3 }[status(ms, m)] + (riskAt(risks(la, lo), m).hi.length ? 1.5 : 0);
+    });
+    document.querySelectorAll('[data-trip-sort]').forEach(function (g) {
+      var it = [].slice.call(g.children).filter(function (c) { return c.dataset && c.dataset.ms !== undefined; });
+      it.sort(function (a, b) { return (a._s - b._s) || (a._d - b._d); }).forEach(function (c) { g.appendChild(c); });
+    });
+    document.querySelectorAll('.dmTripBar').forEach(function (bar) {
+      if (!bar.__dm) {
+        bar.__dm = 1;
+        bar.innerHTML = '<span class="dmTripL"><svg class="ic" aria-hidden="true"><use href="/icons.svg#i-pin"/></svg><b class="dmTripWhere"></b> <button type="button" class="dmTripLoc" data-dm-locate>Use my location</button></span>' +
+          '<label class="dmTripD"><svg class="ic" aria-hidden="true"><use href="/icons.svg#i-calendar"/></svg><span>Your date</span> <input type="date" class="dmTripDate"></label>' + LEG;
+        var inp = bar.querySelector('.dmTripDate');
+        inp.addEventListener('change', function () { try { var t = JSON.parse(localStorage.getItem('dm_trip') || '{}'); t.date = inp.value; localStorage.setItem('dm_trip', JSON.stringify(t)); } catch (e) {} apply(); syncCal(); document.dispatchEvent(new CustomEvent('dmtrip')); });
+      }
+      var i2 = bar.querySelector('.dmTripDate'); var T2 = trip(); i2.value = T2.iso || new Date().toISOString().slice(0, 10);
+      var w = bar.querySelector('.dmTripWhere'); w.textContent = L ? (L.name || 'Sorted by distance from you') : 'Set your location to sort by distance';
+    });
+  }
+  function syncCal() { var s = document.getElementById('month'); if (!s || /[?&]month=/.test(location.search)) return; var m = String(trip().m); if (s.value !== m && [].some.call(s.options, function (o) { return o.value === m; })) { s.value = m; s.dispatchEvent(new Event('change', { bubbles: true })); s.dispatchEvent(new Event('input', { bubbles: true })); } }
+  window.DMTrip = { apply: apply };
+  function boot() { apply(); setTimeout(syncCal, 600); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
+  window.addEventListener('storage', apply); document.addEventListener('dmlocation', apply); setInterval(function () { var l = localStorage.getItem('dm_loc'); if (l !== window.__dmLocSeen) { window.__dmLocSeen = l; apply(); } }, 2000);
+})();
+(function () {
+  /* visa & entry widget: <div class="dmVisa" data-cc="TH" data-name="Thailand"></div> */
+  var IX = null, NAMES = null;
+  function nm(cc) { try { NAMES = NAMES || new Intl.DisplayNames(['en'], { type: 'region' }); return NAMES.of(cc) || cc; } catch (e) { return cc; } }
+  function E(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function guess() { try { var p = localStorage.getItem('dm_passport'); if (p) return p; } catch (e) {} var l = (navigator.languages && navigator.languages[0]) || navigator.language || ''; var m = /-([A-Z]{2})$/i.exec(l); return m ? m[1].toUpperCase() : 'US'; }
+  var LAB = { vf: ['Visa-free', 'g'], voa: ['Visa on arrival', 'g'], eta: ['Online travel authorisation needed', 'y'], ev: ['e-Visa needed before you fly', 'y'], vr: ['Visa needed from an embassy', 'r'], na: ['Entry not possible right now', 'r'], own: ['Your own country', 'g'], unk: ['Not in our data', 'n'] };
+  function idx() { if (!IX) IX = fetch('/visa/index.json').then(function (r) { return r.json(); }); return IX; }
+  function render(box) {
+    var cc = box.dataset.cc, P = guess();
+    Promise.all([idx(), fetch('/visa/d-' + cc.toLowerCase() + '.json').then(function (r) { if (!r.ok) throw 0; return r.json(); })]).then(function (x) {
+      var ix = x[0], d = x[1], v = d.r[P] || ['unk', null], lab = LAB[v[0]] || LAB.unk, eu = ix.eu.indexOf(P) >= 0, info = d.info || {};
+      var opts = ix.passports.map(function (p) { return [p, nm(p)]; }).sort(function (a, b) { return a[1].localeCompare(b[1]); }).map(function (p) { return '<option value="' + p[0] + '"' + (p[0] === P ? ' selected' : '') + '>' + E(p[1]) + '</option>'; }).join('');
+      var steps = (info.steps || []).filter(function (s) {
+        if (s.who === 'all') return true; if (s.who === 'nonEU') return !eu; if (s.who === 'nonEUvf') return !eu && (v[0] === 'vf' || v[0] === 'eta');
+        return s.who === v[0];
+      });
+      var head = v[0] === 'vf' && v[1] ? 'Visa-free for ' + v[1] + ' days' : lab[0];
+      box.innerHTML = '<div class="dmVisaTop"><label>Your passport <select class="dmVisaSel">' + opts + '</select></label></div>' +
+        '<div class="dmVisaRes v-' + lab[1] + '"><b>' + E(head) + '</b><span>' + E(nm(P)) + ' passport → ' + E(box.dataset.name || nm(cc)) + '</span></div>' +
+        (d.note ? '<p class="dmVisaNote">' + E(d.note) + '</p>' : '') +
+        (steps.length ? '<h3>Before you go</h3><ol class="dmVisaSteps">' + steps.map(function (s) { return '<li><b>' + E(s.t) + '</b><span><i>When:</i> ' + E(s.when) + '</span><span><i>Cost:</i> ' + E(s.cost) + '</span>' + (s.tip ? '<span class="tip">' + E(s.tip) + '</span>' : '') + '<a href="' + E(s.url) + '" target="_blank" rel="noopener">Official site</a></li>'; }).join('') + '</ol>' : '') +
+        (info.facts ? '<p>' + E(info.facts) + '</p>' : '') +
+        (v[0] === 'vr' || v[0] === 'ev' ? '<p>Apply through the official government site or the destination’s embassy – never through lookalike agents that add fees.</p>' : '') +
+        '<p class="dmVisaSrc">Passport rules: Passport Index Data (MIT licence), updated ' + E(ix.updated) + '; arrival cards, fees and recent changes checked by DipMapper on ' + E(ix.checked) + ' against official sites' + ((info.official || []).length ? ': ' + info.official.map(function (o) { return '<a href="' + E(o[1]) + '" target="_blank" rel="noopener">' + E(o[0]) + '</a>'; }).join(', ') : '') + '.</p>' +
+        '<p class="dmVisaDisc">Not legal advice. Rules change at short notice and also depend on passport validity, onward tickets, the purpose of your trip and your own history. Always confirm with the official site or embassy before you book and again before you fly.</p>';
+      box.querySelector('.dmVisaSel').addEventListener('change', function (e) { try { localStorage.setItem('dm_passport', e.target.value); } catch (er) {} document.querySelectorAll('.dmVisa').forEach(render); });
+    }).catch(function () { box.innerHTML = '<p>Entry rules couldn’t load right now. Check the destination’s official immigration site.</p>'; });
+  }
+  function hub() {
+    var h = document.getElementById('dmVisaHub'); if (!h) return; var P = guess();
+    Promise.all([idx(), fetch('/visa/p-' + P.toLowerCase() + '.json').then(function (r) { return r.json(); })]).then(function (x) {
+      var ix = x[0], m = x[1], opts = ix.passports.map(function (p) { return [p, nm(p)]; }).sort(function (a, b) { return a[1].localeCompare(b[1]); }).map(function (p) { return '<option value="' + p[0] + '"' + (p[0] === P ? ' selected' : '') + '>' + E(p[1]) + '</option>'; }).join('');
+      var rows = [].slice.call(h.querySelectorAll('li[data-cc]'));
+      rows.forEach(function (li) { var v = m[li.dataset.cc] || ['unk', null], lab = LAB[v[0]] || LAB.unk; var s = li.querySelector('.dmVisaTag'); s.className = 'dmVisaTag v-' + lab[1]; s.textContent = v[0] === 'vf' && v[1] ? 'Visa-free ' + v[1] + ' days' : lab[0]; li.dataset.k = { g: 0, y: 1, n: 2, r: 3 }[lab[1]]; });
+      var sel = document.getElementById('dmVisaHubSel'); if (sel && !sel.__dm) { sel.__dm = 1; sel.innerHTML = opts; sel.addEventListener('change', function () { try { localStorage.setItem('dm_passport', sel.value); } catch (e) {} hub(); }); } else if (sel) sel.value = P;
+      var c = { g: 0, y: 0, r: 0 }; rows.forEach(function (li) { var k = li.querySelector('.dmVisaTag').className.split('v-')[1]; if (c[k] != null) c[k]++; });
+      var sm = document.getElementById('dmVisaHubSum'); if (sm) sm.innerHTML = '<b>' + E(nm(P)) + ' passport:</b> ' + c.g + ' beach and dive destinations without a visa in advance, ' + c.y + ' with an online form or e-visa, ' + c.r + ' need a visa from an embassy.';
+    });
+  }
+  function run() { document.querySelectorAll('.dmVisa[data-cc]:not(.done)').forEach(function (b) { b.classList.add('done'); render(b); }); hub(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
 })();

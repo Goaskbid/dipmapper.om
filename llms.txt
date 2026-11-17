@@ -1,0 +1,15 @@
+# DipMapper
+
+> DipMapper (dipmapper.com) finds swim spots and water trips anywhere: beaches, lake baths, pools, thermal baths and wild swims near you, with live tides, official EU bathing-water quality, a swim-window forecast, webcams and a wildlife calendar. Free, no account.
+
+## Key pages
+- [Swim spots near you (map)](https://dipmapper.com/): live map of swim spots around any location.
+- [Waterfront towns](https://dipmapper.com/waterfront-towns): 141 beach towns and cruise ports with beaches, tides, water quality and local tips.
+- [Top 200 water experiences](https://dipmapper.com/top-water-experiences): ranked beaches, dives, boat trips and wildlife encounters with best months.
+- [Water experience guides](https://dipmapper.com/water-experience-guides): detailed pages per experience.
+- [100 best public aquariums](https://dipmapper.com/best-public-aquariums)
+- [Wildlife calendar](https://dipmapper.com/wildlife-calendar): where and when to see whales, dolphins, turtles, seals and more, with sources.
+- [Sea-risk calendar](https://dipmapper.com/sea-risk-calendar): jellyfish, storm and rough-sea months by region.
+- [Sources and licences](https://dipmapper.com/sources)
+- [Cite and reuse](https://dipmapper.com/cite)
+- [About and founder interview](https://dipmapper.com/about)
