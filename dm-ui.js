@@ -223,8 +223,16 @@
   }
   function strip(h) { var d = document.createElement('div'); d.innerHTML = h || ''; return (d.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 60); }
   function label(c) { return c ? ('Photo: ' + (c.a || 'Wikimedia Commons') + (c.l ? ' · ' + c.l : '')) : ''; }
+  var FREE = /(^|\b)(cc[ -]?(by|0|zero|pd)|public domain|pd[- ]|gfdl|no restrictions|attribution|copyrighted free use|free art|ogl|mit|apache|bsd)/i;
+  function ok(c) { return c && !c.miss && FREE.test(c.l || ''); }
+  function hide(el) {
+    if (el.tagName === 'IMG') { el.removeAttribute('srcset'); el.src = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='; el.alt = ''; el.style.visibility = 'hidden'; }
+    else el.style.backgroundImage = 'none';
+    el.setAttribute('data-dm-unlicensed', '1');
+  }
   function apply(el, file) {
     var c = CR[file]; if (!c) return;
+    if (!ok(c)) { hide(el); return; }
     var host = el.tagName === 'IMG' ? el.parentElement : el; if (!host || host.querySelector(':scope > .dmCr')) return;
     if (getComputedStyle(host).position === 'static') host.style.position = 'relative';
     var s = document.createElement('span'); s.className = 'dmCr'; s.textContent = label(c); s.title = label(c) + ' – Wikimedia Commons';
@@ -235,7 +243,8 @@
     document.querySelectorAll('img[src*="upload.wikimedia.org"],[style*="upload.wikimedia.org"]').forEach(function (el) {
       if (el.__cr) return;
       var src = el.tagName === 'IMG' ? el.src : (el.style.backgroundImage || ''), f = fileOf(src); if (!f) return;
-      el.__cr = 1; (pend[f] = pend[f] || []).push(el);
+      el.__cr = 1; if (/upload\.wikimedia\.org\/wikipedia\/(?!commons\/)/.test(src)) { hide(el); return; }
+      (pend[f] = pend[f] || []).push(el);
       if (CR[f]) apply(el, f); else if (need.indexOf(f) < 0) need.push(f);
     });
     for (var i = 0; i < need.length; i += 40) query(need.slice(i, i + 40));
@@ -248,7 +257,7 @@
       Object.keys(q.pages || {}).forEach(function (k) {
         var p = q.pages[k], t = (nm[p.title] || p.title).replace(/^File:/, ''), md = p.imageinfo && p.imageinfo[0] && p.imageinfo[0].extmetadata || {};
         var key = files.filter(function (f) { return f.replace(/_/g, ' ') === t.replace(/_/g, ' '); })[0] || t;
-        CR[key] = { a: strip(md.Artist && md.Artist.value), l: strip(md.LicenseShortName && md.LicenseShortName.value) };
+        CR[key] = { a: strip(md.Artist && md.Artist.value), l: strip(md.LicenseShortName && md.LicenseShortName.value), miss: !!(p.missing !== undefined && !p.imageinfo) };
       });
       try { sessionStorage.setItem('dm_cr', JSON.stringify(CR)); } catch (e) {}
       files.forEach(function (f) { (pend[f] || []).forEach(function (el) { apply(el, f); }); });

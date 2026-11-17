@@ -91,7 +91,7 @@ if tiles_dir and ZALL:
         row = [round(la_, 3), round(lo_, 3)]
         for c_ in cons_sorted:
             z = ZALL[c_][i, j]
-            row += [int(round(abs(z) * 1000)), int(round(np.degrees(-np.angle(z)) % 360))] if np.isfinite(z.real) else [0, 0]
+            row += [int(round(abs(z) * 1000)), int(round(np.degrees(-np.angle(z)) % 360))] if np.isfinite(z.real) else [None, None]
         tiles.setdefault(key, []).append(row)
     for key, rows in tiles.items():
         json.dump({'c': cons_sorted, 'u': 'amp mm, phase deg', 'p': rows}, open(os.path.join(tiles_dir, 't_' + key + '.json'), 'w'), separators=(',', ':'))

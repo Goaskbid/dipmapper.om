@@ -352,3 +352,10 @@ html body .dmHomeHero .dmHomeS a{display:inline-flex!important;width:auto!import
 .dmCams{list-style:none;padding:0;margin:0;display:grid;gap:8px}.dmCams a{display:flex;gap:10px;align-items:center;padding:10px;border-radius:12px;background:rgba(107,79,216,.07);text-decoration:none;color:inherit}.dmCams b{display:block}.dmCams small{display:block;opacity:.7}.dmCams span:nth-child(2){flex:1;min-width:0}.dmCams em{font-style:normal;font-weight:700;color:#6b4fd8;white-space:nowrap}
 .dmCamI{width:36px;height:36px;border-radius:10px;background:#6b4fd8;display:grid;place-items:center;flex:none}.dmCamI svg{width:20px;height:20px;fill:#fff;color:#fff}
 .dmCamSearch{margin:10px 0 0}
+
+/* 23.39 seasons tables */
+.dmSeasT{overflow-x:auto;margin:8px 0}.dmSeasT table{width:100%;border-collapse:collapse;font-size:.88rem}.dmSeasT th,.dmSeasT td{text-align:left;vertical-align:top;padding:8px 6px;border-bottom:1px solid rgba(13,43,51,.1)}.dmSeasT td small{display:block;opacity:.7;margin-top:2px}.dmSeasT td b{white-space:nowrap}.dmSeasT .fl{vertical-align:-2px;border-radius:2px}
+.dmMs{display:inline-flex;gap:2px}.dmMs i{display:inline-grid;place-items:center;width:15px;height:18px;border-radius:4px;background:rgba(13,43,51,.08);font-style:normal;font-size:.62rem;color:rgba(13,43,51,.55)}.dmMs i.y{background:#0A8F88;color:#fff}
+.dmSeasAll details{border:1px solid rgba(13,43,51,.12);border-radius:12px;margin:8px 0;padding:4px 12px}.dmSeasAll summary{cursor:pointer;padding:8px 0;font-weight:700}.dmSeasAll summary small{opacity:.6;font-weight:400;margin-left:6px}
+.dmCards{grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr))}.dmGalL{grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr))}.dmCard{min-width:0;overflow-wrap:anywhere}#gallery,.dmSeasAll{min-width:0;max-width:100%}
+@media (max-width:600px){.dmSeasT th:nth-child(4),.dmSeasT td:nth-child(4){display:none}.dmMs i{width:12px}}

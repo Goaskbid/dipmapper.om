@@ -42,7 +42,7 @@
         var best = null, bd = 1e9, cl = Math.cos(la * Math.PI / 180);
         t.p.forEach(function (r) { var dy = r[0] - la, dx = (r[1] - lo) * cl, d = dx * dx + dy * dy; if (d < bd) { bd = d; best = r; } });
         var km = Math.sqrt(bd) * 111; if (!best || km > 35) return cb(null);
-        var hc = {}; t.c.forEach(function (c, i) { hc[c] = [best[2 + 2 * i] / 1000, best[3 + 2 * i]]; });
+        var hc = {}; t.c.forEach(function (c, i) { if (best[2 + 2 * i] != null) hc[c] = [best[2 + 2 * i] / 1000, best[3 + 2 * i]]; });
         cb({ hc: hc, km: Math.round(km), src: 'grid' });
       });
     });
