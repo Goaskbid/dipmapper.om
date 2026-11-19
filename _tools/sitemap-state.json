@@ -7,7 +7,7 @@
  "https://dipmapper.com/about": {
   "file": "about.html",
   "lastmod": "2026-11-19",
-  "sig": "e410d794a94236632bfd"
+  "sig": "cc4be53c908d1a8eb68c"
  },
  "https://dipmapper.com/activities": {
   "file": "activities.html",
@@ -37,7 +37,7 @@
  "https://dipmapper.com/best-public-aquariums": {
   "file": "best-public-aquariums.html",
   "lastmod": "2026-11-19",
-  "sig": "735c9963fbcfbf501b31"
+  "sig": "5c416c989c747ea69108"
  },
  "https://dipmapper.com/best-water-experiences-by-month": {
   "file": "best-water-experiences-by-month.html",
@@ -314,6 +314,11 @@
   "lastmod": "2026-11-19",
   "sig": "4ce9807296939e6edc41"
  },
+ "https://dipmapper.com/pick-aquarium-sea-life-konstanz": {
+  "file": "pick-aquarium-sea-life-konstanz.html",
+  "lastmod": "2026-11-19",
+  "sig": "8b0561975dacfbcb9613"
+ },
  "https://dipmapper.com/pick-aquarium-seattle": {
   "file": "pick-aquarium-seattle.html",
   "lastmod": "2026-11-19",
@@ -423,6 +428,11 @@
   "file": "pick-beach-ses-illetes.html",
   "lastmod": "2026-11-19",
   "sig": "9e9e9d65c493cf6be831"
+ },
+ "https://dipmapper.com/pick-beach-zurich-mythenquai": {
+  "file": "pick-beach-zurich-mythenquai.html",
+  "lastmod": "2026-11-19",
+  "sig": "51511576a7b6484e21d5"
  },
  "https://dipmapper.com/pick-birds-lunga": {
   "file": "pick-birds-lunga.html",
@@ -549,10 +559,20 @@
   "lastmod": "2026-11-19",
   "sig": "2a406d4eee55cbb77be8"
  },
+ "https://dipmapper.com/pick-raft-simme-boltigen": {
+  "file": "pick-raft-simme-boltigen.html",
+  "lastmod": "2026-11-19",
+  "sig": "319430462ba8af654da9"
+ },
  "https://dipmapper.com/pick-raft-soca": {
   "file": "pick-raft-soca.html",
   "lastmod": "2026-11-19",
   "sig": "5edf54dae5f12cb5afbc"
+ },
+ "https://dipmapper.com/pick-raft-vorderrhein-ilanz": {
+  "file": "pick-raft-vorderrhein-ilanz.html",
+  "lastmod": "2026-11-19",
+  "sig": "d7068b36e86a3d6da988"
  },
  "https://dipmapper.com/pick-reef-agincourt": {
   "file": "pick-reef-agincourt.html",
@@ -667,7 +687,7 @@
  "https://dipmapper.com/rafting": {
   "file": "rafting.html",
   "lastmod": "2026-11-19",
-  "sig": "9dacb2dbdf490d1ae9ae"
+  "sig": "6c8ba70f56c277accac4"
  },
  "https://dipmapper.com/rainy-day-water-experiences": {
   "file": "rainy-day-water-experiences.html",
@@ -677,7 +697,7 @@
  "https://dipmapper.com/rankings": {
   "file": "rankings.html",
   "lastmod": "2026-11-19",
-  "sig": "1848f22a114c1cb3a3fe"
+  "sig": "e21602fa529e8f46e22a"
  },
  "https://dipmapper.com/rhodes": {
   "file": "rhodes.html",
@@ -732,7 +752,7 @@
  "https://dipmapper.com/spots": {
   "file": "spots.html",
   "lastmod": "2026-11-19",
-  "sig": "3af2fb39406edc5bb11f"
+  "sig": "97d1c304b9337f2c93c2"
  },
  "https://dipmapper.com/sup-lake-zurich": {
   "file": "sup-lake-zurich.html",
@@ -1562,7 +1582,7 @@
  "https://dipmapper.com/water-experiences-germany": {
   "file": "water-experiences-germany.html",
   "lastmod": "2026-11-19",
-  "sig": "83f808bf1c49153e6253"
+  "sig": "acb078982cc70738b7f1"
  },
  "https://dipmapper.com/water-experiences-great-ocean-road": {
   "file": "water-experiences-great-ocean-road.html",
@@ -1712,7 +1732,7 @@
  "https://dipmapper.com/water-experiences-switzerland": {
   "file": "water-experiences-switzerland.html",
   "lastmod": "2026-11-19",
-  "sig": "373c61e94731ab808e42"
+  "sig": "c6b98a3c83fe357adf43"
  },
  "https://dipmapper.com/water-experiences-taiwan": {
   "file": "water-experiences-taiwan.html",
