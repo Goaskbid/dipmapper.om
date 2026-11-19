@@ -436,14 +436,14 @@
 (function () {
   var h = document.querySelector('.dmPick .dmSpHero'), f = document.querySelector('.dmFacts[data-la]');
   if (!h || !f || !window.fetch) return;
-  var id = location.pathname.replace(/^\/pick-/, '').replace(/\.html$/, ''), k = 'dm_ph3_' + id, la = +f.dataset.la, lo = +f.dataset.lo, tries = 0;
+  var id = location.pathname.replace(/^\/pick-/, '').replace(/\.html$/, ''), k = 'dm_ph4_' + id, la = +f.dataset.la, lo = +f.dataset.lo, tries = 0;
   function km(a, b, c, d) { var r = Math.PI / 180, x = Math.sin((c - a) * r / 2), y = Math.sin((d - b) * r / 2); return 12742 * Math.asin(Math.sqrt(x * x + Math.cos(a * r) * Math.cos(c * r) * y * y)); }
   function okPh(p, d, q) { if (d >= 40) return false; if (/map|flag|logo|locator|coat.of.arms|\.svg|diagram|chart|icon/i.test(p.thumbnail.source + ' ' + p.title)) return false; var G = /^(the|and|of|de|la|el|island|islands|bay|beach|park|national|lake|river|reef|tour|trip|boat|day|dive|diving|snorkelling|snorkeling|whale|watching|cruise|kayak|kayaking|seasonal|excursion|scenic|water|experience|discovery|outing|aquarium|thermal|bath|baths|sea)$/; var w = String(q).toLowerCase().split(/[^a-z0-9À-ɏ]+/).filter(function (x) { return x.length > 2 && !G.test(x); }), t = String(p.title).toLowerCase(); return d < 3 || w.some(function (x) { return t.indexOf(x) >= 0; }); }
   function set(d) { if (!d || !d.u || h.classList.contains('hasPh')) return; var i = new Image(); i.onload = function () { if (h.classList.contains('hasPh')) return; h.style.backgroundImage = 'url("' + d.u + '")'; h.classList.add('hasPh'); }; i.src = d.u; }
   function commons() {
     fetch('https://commons.wikimedia.org/w/api.php?action=query&generator=geosearch&ggscoord=' + la + '|' + lo + '&ggsradius=3000&ggslimit=12&ggsnamespace=6&prop=imageinfo&iiprop=url|size&iiurlwidth=1280&format=json&origin=*').then(function (r) { return r.json(); }).then(function (j) {
       var ps = j.query && j.query.pages ? Object.keys(j.query.pages).map(function (x) { return j.query.pages[x]; }) : [], best = null;
-      ps.forEach(function (p) { var ii = p.imageinfo && p.imageinfo[0]; if (best || !ii || !ii.thumburl) return; if (/\.(svg|png|gif|tiff?|pdf)$/i.test(p.title) || /(map|plan|logo|diagram|flag|coat|sign|chart|scan|document)/i.test(p.title) || ii.width < 800 || ii.height > ii.width * 1.3) return; best = { u: ii.thumburl, p: ii.descriptionurl }; });
+      ps.forEach(function (p) { var ii = p.imageinfo && p.imageinfo[0]; if (best || !ii || !ii.thumburl) return; if (/\.(svg|png|gif|tiff?|pdf)$/i.test(p.title) || /(map|plan|logo|diagram|flag|coat|sign|chart|scan|document|night|nacht|notte|nuit|stars|milky|sky|moon|luna|aurora|astro|comet|eclipse|portrait|selfie|interior|screenshot|panorama_360)/i.test(p.title) || ii.width < 800 || ii.height > ii.width * 1.3) return; best = { u: ii.thumburl, p: ii.descriptionurl }; });
       try { localStorage.setItem(k, JSON.stringify(best || {})); } catch (e) {} set(best);
     }).catch(function () {});
   }
