@@ -567,3 +567,5 @@
  /* Sticky header gets a shadow once you scroll */
  (function(){var q=false,on=null;addEventListener('scroll',function(){if(q)return;q=true;requestAnimationFrame(function(){q=false;var v=scrollY>8;if(v!==on){on=v;document.documentElement.classList.toggle('dmScrolled',v)}})},{passive:true})})();
 })();
+
+;(function(){try{if(window.__dmSwReload||!('serviceWorker' in navigator)||!navigator.serviceWorker.controller)return;window.__dmSwReload=1;var d=0;navigator.serviceWorker.addEventListener('controllerchange',function(){if(d)return;d=1;location.reload()})}catch(e){}})();

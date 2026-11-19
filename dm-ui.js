@@ -460,3 +460,5 @@
   }
   setTimeout(go, 600);
 })();
+
+;(function(){try{if(window.__dmSwReload||!('serviceWorker' in navigator)||!navigator.serviceWorker.controller)return;window.__dmSwReload=1;var d=0;navigator.serviceWorker.addEventListener('controllerchange',function(){if(d)return;d=1;location.reload()})}catch(e){}})();
