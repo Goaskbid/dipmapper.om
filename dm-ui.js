@@ -3,7 +3,7 @@
   'use strict';
   var KEY = 'dm_loc', MAXAGE = 12 * 3600e3;
   function store(la, lo) { try { localStorage.setItem(KEY, JSON.stringify({ la: la, lo: lo, t: Date.now() })); } catch (e) {} }
-  function loc() { try { var s = JSON.parse(localStorage.getItem(KEY) || 'null'); if (s && isFinite(s.la) && Date.now() - s.t < MAXAGE) return s; } catch (e) {} return null; }
+  function loc() { try { var s = JSON.parse(localStorage.getItem(KEY) || 'null'); if (s && isFinite(s.la) && isFinite(s.lo) && Math.abs(s.la) <= 90 && Math.abs(s.lo) <= 180 && s.t <= Date.now() + 6e4 && Date.now() - s.t < MAXAGE) return s; } catch (e) {} return null; }
   // remember any position the visitor shares anywhere on the site
   var G = navigator.geolocation;
   if (G && !G.__dm) {
@@ -105,7 +105,7 @@
 /* 23.31: save (favourites), recently viewed, share – peers: Swim Guide bookmarks, AllTrails "Saved", Windy favourites */
 (function () {
   'use strict';
-  function rd(k) { try { return JSON.parse(localStorage.getItem(k) || '[]') || []; } catch (e) { return []; } }
+  function rd(k) { try { var v = JSON.parse(localStorage.getItem(k) || '[]'); return Array.isArray(v) ? v.filter(function (x) { return x && typeof x === 'object' && typeof x.id === 'string'; }).slice(0, 300) : []; } catch (e) { return []; } }
   function wr(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
   function ic(n) { return '<svg class="ic" aria-hidden="true"><use href="/icons.svg#i-' + n + '"/></svg>'; }
   function isSaved(id) { return rd('dm_saved').some(function (x) { return x.id === id; }); }
@@ -139,7 +139,7 @@
   });
   // Saved page
   var S = document.getElementById('dmSavedList'), R = document.getElementById('dmRecentList');
-  function row(x) { var k = x.k === 'town' ? 'city' : x.k === 'wild' ? 'whale' : 'swim'; return '<li class="dmCard"><a href="' + x.u + '"><div class="dmPh"' + (x.wp ? ' data-wp="' + x.wp.replace(/"/g, '&quot;') + '"' : '') + '><svg class="dmPhI" aria-hidden="true"><use href="/icons.svg#i-' + k + '"/></svg>' + (x.cc ? '<span class="dmPhF"><img class="fl" src="/flags/' + x.cc.toLowerCase() + '.png" width="20" height="15" alt=""></span>' : '') + '</div><div class="dmBd"><span class="dmCn">' + (x.k === 'town' ? 'Town' : x.k === 'wild' ? 'Wildlife' : 'Water experience') + '</span><b>' + x.t.replace(/</g, '&lt;') + '</b></div></a></li>'; }
+  function row(x) { x = { id: String(x.id), k: x.k, u: (typeof x.u === 'string' && /^\/(?!\/)[\w\-\/#.]*$/.test(x.u)) ? x.u : '/saved', t: String(x.t || '').replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }).slice(0, 160), wp: typeof x.wp === 'string' ? x.wp.slice(0, 200).replace(/[<>&]/g, '') : '', cc: /^[a-z]{2}$/i.test(x.cc || '') ? x.cc : '' }; var k = x.k === 'town' ? 'city' : x.k === 'wild' ? 'whale' : 'swim'; return '<li class="dmCard"><a href="' + x.u + '"><div class="dmPh"' + (x.wp ? ' data-wp="' + x.wp.replace(/"/g, '&quot;') + '"' : '') + '><svg class="dmPhI" aria-hidden="true"><use href="/icons.svg#i-' + k + '"/></svg>' + (x.cc ? '<span class="dmPhF"><img class="fl" src="/flags/' + x.cc.toLowerCase() + '.png" width="20" height="15" alt=""></span>' : '') + '</div><div class="dmBd"><span class="dmCn">' + (x.k === 'town' ? 'Town' : x.k === 'wild' ? 'Wildlife' : 'Water experience') + '</span><b>' + x.t.replace(/</g, '&lt;') + '</b></div></a></li>'; }
   function renderSaved() {
     if (!S) return; var s = rd('dm_saved'), r = rd('dm_recent');
     S.innerHTML = s.map(row).join(''); document.getElementById('dmSavedEmpty').hidden = !!s.length;
@@ -339,7 +339,7 @@
   }
   function riskAt(rz, m) { var hi = [], md = []; rz.forEach(function (z) { if (z.pk.indexOf(m) >= 0) hi.push(z.n); else if (z.on.indexOf(m) >= 0) md.push(z.n); }); return { hi: hi, md: md }; }
   function trip() { var t = {}; try { t = JSON.parse(localStorage.getItem('dm_trip') || '{}'); } catch (e) {} var d = t.date ? new Date(t.date + 'T12:00:00') : new Date(); if (isNaN(d)) d = new Date(); return { date: d, iso: t.date || '', m: d.getMonth() + 1 }; }
-  function loc() { try { var l = JSON.parse(localStorage.getItem('dm_loc') || 'null'); if (l && isFinite(l.la)) return l; } catch (e) {} return null; }
+  function loc() { try { var l = JSON.parse(localStorage.getItem('dm_loc') || 'null'); if (l && isFinite(l.la) && isFinite(l.lo) && Math.abs(l.la) <= 90 && Math.abs(l.lo) <= 180) return l; } catch (e) {} return null; }
   function km(a, b, c, d) { var r = Math.PI / 180, x = Math.sin((c - a) * r / 2), y = Math.sin((d - b) * r / 2); return 12742 * Math.asin(Math.sqrt(x * x + Math.cos(a * r) * Math.cos(c * r) * y * y)); }
   function strip(ms, la, lo, sel) {
     var rz = risks(la, lo), out = '';
@@ -462,3 +462,8 @@
 })();
 
 ;(function(){try{if(window.__dmSwReload||!('serviceWorker' in navigator)||!navigator.serviceWorker.controller)return;window.__dmSwReload=1;var d=0;navigator.serviceWorker.addEventListener('controllerchange',function(){if(d)return;d=1;location.reload()})}catch(e){}})();
+
+;(function(){if(window.__dmRelChk)return;window.__dmRelChk=1;var _sv=document.querySelector('script[src*="dm-ui.js?v="],script[src*="app-boot.js?v="]'),cur=(_sv&&(_sv.getAttribute('src').match(/v=([0-9.]+)/)||[])[1])||((document.body&&document.body.getAttribute('data-version'))||'').replace(/^v/,''),last=0;
+ function chk(){var n=Date.now();if(n-last<120000)return;last=n;try{navigator.serviceWorker&&navigator.serviceWorker.getRegistration&&navigator.serviceWorker.getRegistration().then(function(r){r&&r.update()}).catch(function(){})}catch(e){}
+  fetch('/version.txt?t='+n,{cache:'no-store'}).then(function(r){return r.ok?r.text():''}).then(function(v){v=(v||'').trim();if(!v||!cur||v===cur)return;var k='dm_rel_reload_'+v;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1')}catch(e){}location.reload()}).catch(function(){})}
+ setTimeout(chk,1500);document.addEventListener('visibilitychange',function(){if(document.visibilityState==='visible')chk()});setInterval(chk,600000)})();

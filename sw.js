@@ -14,7 +14,7 @@ self.addEventListener('install', e => {
 });
 self.addEventListener('activate', e => {
   e.waitUntil(caches.keys()
-    .then(ks => Promise.all(ks.filter(k => !KEEP.includes(k)).map(k => caches.delete(k))))
+    .then(ks => Promise.all(ks.filter(k => k.indexOf('dipmapper') === 0 && !KEEP.includes(k)).map(k => caches.delete(k))))
     .then(() => self.clients.claim()));
 });
 function trim(name, max) {

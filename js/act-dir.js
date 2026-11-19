@@ -1496,7 +1496,7 @@ window.DM_DIVE={
  window.dmAerialUrl=dmAerialUrl;
  function aerialItem(v){return {u:dmAerialUrl(v.lat,v.lon,17),how:'aerial',t:'Map view',alt:[dmAerialUrl(v.lat,v.lon,16)]}}
  /* swim cards: same fallback, in the swim engine's photo format */
- window.dmAerialPhoto=function(v){if(!v||v.lat==null)return null;var nm='';try{nm=plainName(v)}catch(e){nm=v.name||''}return {url:dmAerialUrl(+v.lat,+v.lon,17),label:'map view',credit:'\u00a9 OpenStreetMap contributors',caption:nm+' · map view (\u00a9 OpenStreetMap contributors)',confidence:40,aerial:true}};
+ window.dmAerialPhoto=function(v){return null;var nm='';try{nm=plainName(v)}catch(e){nm=v.name||''}return {url:dmAerialUrl(+v.lat,+v.lon,17),label:'map view',credit:'\u00a9 OpenStreetMap contributors',caption:nm+' · map view (\u00a9 OpenStreetMap contributors)',confidence:40,aerial:true}};
 
  /* ================= v23.5 emergency & help nearby: numbers per country (sourced), nearest police, hospital, fire station,
     lifeguard, defibrillator, life ring, pharmacy (OpenStreetMap). Used in the activity card and in the swim card. ================= */
@@ -1858,8 +1858,8 @@ window.DM_DIVE={
     var dd=D(lat,lon,la,lo);var nm=t.name||'';if(c==='parking'&&!nm)nm=t.access==='customers'?'Customer parking':(t.fee==='yes'?'Paid car park':t.fee==='no'?'Free parking':'Car park');if(!B[c]||dd<B[c].d)B[c]={d:dd,n:nm,c:c,cuisine:t.cuisine||'',kind:t.amenity||''}});return B}).catch(function(){return null});AMEN[k]=p;return p}
  /* ---------- detail card (replaces 23.2 version) ---------- */
  function minimap(v){var z=15,W=256*Math.pow(2,z),px=(+v.lon+180)/360*W,lr=(+v.lat)*Math.PI/180,py=(1-Math.log(Math.tan(lr)+1/Math.cos(lr))/Math.PI)/2*W;var ch=170,cw=Math.max(300,Math.min(760,(document.getElementById('dmActBody')||{}).clientWidth-34||340)),tx=Math.floor(px/256),ty=Math.floor(py/256),h='';
-  for(var dx=-3;dx<=3;dx++)for(var dy=-1;dy<=1;dy++){var x=tx+dx,y=ty+dy;var l=Math.round(cw/2-(px-x*256)),t=Math.round(ch/2-(py-y*256));if(l>cw||t>ch||l<-256||t<-256)continue;var u;try{u=dmTileUrl(z,x,y)}catch(e){u='https://tile.openstreetmap.org/'+z+'/'+x+'/'+y+'.png'}h+='<img src="'+u+'" alt="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" style="left:'+l+'px;top:'+t+'px">'}
-  return '<div class="dmMini" style="height:'+ch+'px"><div class="dmMiniTiles">'+h+'</div><span class="dmMiniPin" aria-hidden="true"></span></div>'}
+  for(var dx=-3;dx<=3;dx++)for(var dy=-1;dy<=1;dy++){var x=tx+dx,y=ty+dy;var l=Math.round(cw/2-(px-x*256)),t=Math.round(ch/2-(py-y*256));if(l>cw||t>ch||l<-256||t<-256)continue;void 0}
+  return '<div class="dmMini" style="height:'+ch+'px"><div class="dmMiniTiles" data-la="'+(+v.lat)+'" data-lo="'+(+v.lon)+'"></div><span class="dmMiniPin" aria-hidden="true"></span></div>'}
  function openSheet(id){var v=find(id);if(!v)return;A.sel=id;var m=MODE[A.mode],ac=m.col;
   document.getElementById('dmActMeta').textContent=(m.long+' · '+typeLabel(v)+' · '+km(v.dist)).toUpperCase();document.getElementById('dmActName').innerHTML=(v.web?'<img class="dmLogo big" src="'+E(logo(v.web))+'" alt="" onerror="this.remove()">':'')+E(v.name);
   var a=A.as[v.id];var gm='https://www.google.com/maps/dir/?api=1&destination='+v.lat+','+v.lon,tr='https://www.google.com/maps/dir/?api=1&travelmode=transit&destination='+v.lat+','+v.lon;

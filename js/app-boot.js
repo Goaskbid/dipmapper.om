@@ -294,8 +294,8 @@
   var after=body.querySelector('.dmWqSec')||body.querySelector('.dmScSec');if(after&&after.nextSibling)body.insertBefore(sec,after.nextSibling);else{var f0=body.querySelector('.section');if(f0)body.insertBefore(sec,f0);else body.appendChild(sec)}
   var cw=Math.max(240,sec.querySelector('.dmMini').clientWidth||body.clientWidth-40,(document.getElementById('drawer')||{}).clientWidth-40||0);
   for(var dx=-4;dx<=4;dx++)for(var dy=-1;dy<=1;dy++){var x=tx+dx,y=ty+dy;var l=Math.round(cw/2-(px-x*256)),t=Math.round(ch/2-(py-y*256));if(l>cw||t>ch||l<-256||t<-256)continue;
-   var u;try{u=dmTileUrl(z,x,y)}catch(e){u='https://tile.openstreetmap.org/'+z+'/'+x+'/'+y+'.png'}h+='<img src="'+u+'" alt="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" style="left:'+l+'px;top:'+t+'px">'}
-  sec.querySelector('.dmMiniTiles').innerHTML=h}
+   void 0}
+  var _mt=sec.querySelector('.dmMiniTiles');_mt.dataset.la=+v.lat;_mt.dataset.lo=+v.lon}
  (function(){var cb=document.getElementById('cardBody');if(cb)new MutationObserver(function(){dmMinimap()}).observe(cb,{childList:true})})();
  /* ================= v22.10 mobile release ================= */
  /* (6) soft refreshes may never reopen a closed card; bursts merge into one */
@@ -569,3 +569,16 @@
 })();
 
 ;(function(){try{if(window.__dmSwReload||!('serviceWorker' in navigator)||!navigator.serviceWorker.controller)return;window.__dmSwReload=1;var d=0;navigator.serviceWorker.addEventListener('controllerchange',function(){if(d)return;d=1;location.reload()})}catch(e){}})();
+
+;(function(){if(window.__dmMiniGL)return;window.__dmMiniGL=1;var L=[],q=0;
+ function mount(el){if(el.__gl)return;var la=+el.dataset.la,lo=+el.dataset.lo;if(!isFinite(la)||!isFinite(lo))return;el.__gl=1;
+  function go(){try{L=L.filter(function(m){if(document.body.contains(m.getContainer()))return true;m.remove();return false});
+   L.push(new maplibregl.Map({container:el,style:'https://tiles.openfreemap.org/styles/liberty',center:[lo,la],zoom:14.5,interactive:false,attributionControl:{compact:true}}))}catch(e){}}
+  if(window.maplibregl)go();else{var n=0,t=setInterval(function(){if(window.maplibregl||++n>40){clearInterval(t);if(window.maplibregl)go()}},250)}}
+ function scan(){q=0;document.querySelectorAll('.dmMiniTiles[data-la]').forEach(mount)}
+ new MutationObserver(function(){if(!q){q=1;requestAnimationFrame(scan)}}).observe(document.documentElement,{childList:true,subtree:true});scan()})();
+
+;(function(){if(window.__dmRelChk)return;window.__dmRelChk=1;var _sv=document.querySelector('script[src*="dm-ui.js?v="],script[src*="app-boot.js?v="]'),cur=(_sv&&(_sv.getAttribute('src').match(/v=([0-9.]+)/)||[])[1])||((document.body&&document.body.getAttribute('data-version'))||'').replace(/^v/,''),last=0;
+ function chk(){var n=Date.now();if(n-last<120000)return;last=n;try{navigator.serviceWorker&&navigator.serviceWorker.getRegistration&&navigator.serviceWorker.getRegistration().then(function(r){r&&r.update()}).catch(function(){})}catch(e){}
+  fetch('/version.txt?t='+n,{cache:'no-store'}).then(function(r){return r.ok?r.text():''}).then(function(v){v=(v||'').trim();if(!v||!cur||v===cur)return;var k='dm_rel_reload_'+v;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1')}catch(e){}location.reload()}).catch(function(){})}
+ setTimeout(chk,1500);document.addEventListener('visibilitychange',function(){if(document.visibilityState==='visible')chk()});setInterval(chk,600000)})();
