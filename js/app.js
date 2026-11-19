@@ -125,7 +125,7 @@ const MEILEN_SEEDS=[
  {id:'seed-strandbad-dorfmeilen',name:'Strandbad Dorfmeilen',lat:47.2698,lon:8.6452,cat:'bath',address:'Seestrasse 720, 8706 Meilen',free:false,price:{adult:8},water:{temp:null},facilities:['Lawn','Kiosk','Restaurant','Toilets','Beach volleyball','Table tennis','Children\u2019s paddling pool','Water slide','Playground','Kneipp pool','Parking','Showers'],highlights:['family','supervised'],hours:'May\u2013Sep',source:'meilen.ch'},
  {id:'seed-strandbad-feldmeilen',name:'Strandbad Feldmeilen',lat:47.2775,lon:8.6320,cat:'bath',address:'Seestrasse 236, 8706 Meilen',free:false,price:{adult:8},water:{temp:null},facilities:['3 m diving board','Non-swimmer area','Restaurant','Toilets','Lawn','Showers'],highlights:['family'],hours:'May\u2013Sep',source:'meilen.ch'}
 ];
-function seedMeilen(){try{if(!state.center)return;if(dist(state.center[0],state.center[1],47.2706,8.6437)>10)return;if(state.results.some(v=>v.id==='seed-strandbad-dorfmeilen'))return;merge(MEILEN_SEEDS);}catch(e){}}
+function seedMeilen(){try{if(!state.center)return;if(dist(state.center[0],state.center[1],47.2706,8.6437)>10)return;if(state.results.some(v=>v.id==='seed-strandbad-dorfmeilen'))return;var _k=state.center[0].toFixed(3)+','+state.center[1].toFixed(3);if(seedMeilen.busy||seedMeilen.k===_k)return;seedMeilen.k=_k;seedMeilen.busy=1;try{merge(MEILEN_SEEDS)}finally{seedMeilen.busy=0}}catch(e){}}
 function renderWeatherWarn(warn){try{var mp=document.getElementById('map');if(!mp)return;var el=mp.querySelector('.dmWeatherWarn');if(!warn){if(el)el.remove();return;}if(!el){el=document.createElement('div');el.className='dmWeatherWarn';mp.appendChild(el);}el.innerHTML='<span class="dmwIcon">'+warn.icon+'</span><span class="dmwTxt"><b>'+warn.label+'</b>from '+warn.time+'</span>';}catch(e){}}
 async function loadCurrentWeather(scanId=state.scanId){
  if(!state.center||state.weatherBusy)return;state.weatherBusy=true;const [lat,lon]=state.center;
@@ -329,7 +329,7 @@ var DM_TILE_SRC={
 var DM_TILE=(location.protocol==='file:')?'esri':'osm';
 function dmTileUrl(z,x,y){return DM_TILE_SRC[DM_TILE].u(z,x,y)}
 function dmAttrPaint(){try{var m=els&&els.map;if(!m)return;var a=m.querySelector('.dmAttr');
- if(!a){a=document.createElement('div');a.className='dmAttr';m.appendChild(a)}a.innerHTML=DM_TILE_SRC[DM_TILE].a}catch(e){}}
+ if(!a){a=document.createElement('div');a.className='dmAttr';m.appendChild(a)}if(!(window.__dmVec&&window.__dmVec.ok))a.innerHTML=DM_TILE_SRC[DM_TILE].a}catch(e){}}
 function dmTileSwitch(p){if(DM_TILE===p||!DM_TILE_SRC[p])return;DM_TILE=p;try{state._tileSig=null;drawMap()}catch(e){}dmAttrPaint()}
 function dmTileProbe(){if(dmTileProbe.done||DM_TILE!=='osm')return;dmTileProbe.done=1;
  }
