@@ -25,7 +25,7 @@
  /* Install button: appears only when the browser says the app is installable */
  var deferred=null;
  addEventListener('beforeinstallprompt',function(e){e.preventDefault();deferred=e;
-  var nav=document.querySelector('.topbar .nav');if(!nav||document.getElementById('dmInstall'))return;
+  return;var nav=document.querySelector('.topbar .nav');if(!nav||document.getElementById('dmInstall'))return;
   var b=document.createElement('button');b.id='dmInstall';b.type='button';b.textContent='Install app';
   b.onclick=function(){if(!deferred)return;deferred.prompt();deferred.userChoice.finally(function(){deferred=null;b.remove()})};
   nav.insertBefore(b,nav.firstChild);

@@ -1,4 +1,4 @@
-/* DIPMAPPER_SW_V24 (23.44; supersedes DIPMAPPER_SW_V23 and V22) — always the latest site, offline copy of what you opened or saved.
+/* DIPMAPPER_SW_V24 (23.46 images instant; supersedes DIPMAPPER_SW_V23 and V22) — always the latest site, offline copy of what you opened or saved.
    Pages and data: always asked fresh from the server (no 10-minute browser cache); the saved copy is used only when offline.
    Versioned scripts and styles (?v=…): served from cache – a new release changes the version, so they can never be stale.
    Never touches other websites: map tiles, photos, weather and ads always go straight to the network. */
@@ -6,7 +6,7 @@ const SHELL_CACHE = 'dipmapper-v24-shell';
 const ASSET_CACHE = 'dipmapper-v24-assets';
 const PAGE_CACHE = 'dipmapper-pages'; // also filled by the Save button (saved places work offline)
 const KEEP = [SHELL_CACHE, ASSET_CACHE, PAGE_CACHE];
-const SHELL = ['/', '/saved.html', '/offline.html', '/ds2.css', '/fonts.css', '/icons.svg', '/icon-192.png'];
+const SHELL = ['/', '/spots', '/saved.html', '/offline.html', '/ds2.css', '/fonts.css', '/icons.svg', '/icon-192.png'];
 const MAX_ASSETS = 400;
 
 self.addEventListener('install', e => {
@@ -42,6 +42,8 @@ self.addEventListener('fetch', e => {
     const versioned = /(^|&)v=/.test(url.search.slice(1)) || /\.woff2$/.test(url.pathname);
     if (versioned) {
       e.respondWith(caches.open(ASSET_CACHE).then(c => c.match(req).then(hit => hit || fresh(req, ASSET_CACHE, req).catch(() => caches.match(req, { ignoreSearch: true })))));
+    } else if (/\.(png|webp|jpg|svg)$/.test(url.pathname)) {
+      e.respondWith(caches.open(ASSET_CACHE).then(c => c.match(req).then(hit => { const net = fresh(req, ASSET_CACHE, req).catch(() => hit); return hit || net; })));
     } else {
       e.respondWith(fresh(req, ASSET_CACHE, req).catch(() => caches.match(req, { ignoreSearch: true })));
     }
