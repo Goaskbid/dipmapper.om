@@ -13,3 +13,6 @@
 - [Sources and licences](https://dipmapper.com/sources)
 - [Cite and reuse](https://dipmapper.com/cite)
 - [About and founder interview](https://dipmapper.com/about)
+
+## Terms
+- Content © 2026 DipMapper.com, Torsten Sauter. All rights reserved. You may quote short passages with a link to the page. Bulk extraction, scraping and use for AI training are not permitted: https://dipmapper.com/terms#rights

@@ -473,3 +473,6 @@ html body #sort{height:auto!important;min-height:44px!important;padding:8px 12px
 /* 23.45 thumbs + minimap */
 .dmMiniTiles[data-la]{position:absolute;inset:0}.dmMiniTiles .maplibregl-ctrl-attrib{font-size:10px}.dmMiniPin{z-index:2}
 .waterThumb.dmTh{background:radial-gradient(160px 90px at 85% 0%,rgba(240,180,67,.35),transparent 62%),linear-gradient(160deg,#082c38,#0b5a63 55%,#119089)!important;color:#fff;font-size:0}.waterThumb.dmTh:after{display:none}.waterThumb.dmTh svg.ic{width:30px;height:30px;opacity:.9}
+
+/* 23.47 audit */
+#dmSavedClear[hidden]{display:none!important}.dmCards.dmRow{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain}

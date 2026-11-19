@@ -50,10 +50,10 @@
           li2.sort(function (a2, b2) { return a2._d - b2._d; }).forEach(function (l, i) { g.appendChild(l); l.hidden = i >= (+g.dataset.limit || 8); });
           try { photos(); } catch (er) {} }
       })(document.getElementById('dmNearTowns'));
-      var cc = t[0] && t[0][0] < 400 ? t[0][1][2] : '', cn = cc && j.cn[cc] ? j.cn[cc] : '';
+      var cc = t[0] && t[0][0] < 40 ? t[0][1][2] : '', cn = cc && j.cn[cc] ? j.cn[cc] : '';
       var T = document.getElementById('dmNearTitle'), S = document.getElementById('dmNearSub'), K = document.getElementById('dmNearKick');
-      if (T) T.textContent = cn ? 'Near you in ' + cn : 'Closest to you';
-      if (K && cc) K.innerHTML = '<img class="fl" src="/flags/' + cc.toLowerCase() + '.png" width="20" height="15" alt=""> Your area';
+      if (T) T.textContent = cn ? 'Near you in ' + cn : 'Beach towns closest to you';
+      if (K && !cc) K.textContent = 'Your next beach trip'; if (K && cc) K.innerHTML = '<img class="fl" src="/flags/' + cc.toLowerCase() + '.png" width="20" height="15" alt=""> Your area';
       if (S) S.innerHTML = 'Sorted by distance from you. Nearest town: <a href="/' + t[0][1][0] + '">' + t[0][1][1] + '</a> (' + fmt(t[0][0]) + ')' + (cc ? ' · <a href="/' + t[0][1][0] + '#kbyg">what is allowed here</a>' : '') + '.';
       var b = box.querySelector('[data-dm-locate]'); if (b) b.innerHTML = '<svg class="ic" aria-hidden="true"><use href="/icons.svg#i-locate"/></svg> Update location';
       var m = new Date().getMonth() + 1, W = document.getElementById('dmNearWild'), WB = document.getElementById('dmNearWildBox');
@@ -379,7 +379,7 @@
         inp.addEventListener('change', function () { try { var t = JSON.parse(localStorage.getItem('dm_trip') || '{}'); t.date = inp.value; localStorage.setItem('dm_trip', JSON.stringify(t)); } catch (e) {} apply(); syncCal(); document.dispatchEvent(new CustomEvent('dmtrip')); });
       }
       var i2 = bar.querySelector('.dmTripDate'); var T2 = trip(); i2.value = T2.iso || new Date().toISOString().slice(0, 10);
-      var w = bar.querySelector('.dmTripWhere'); w.textContent = L ? (L.name || 'Sorted by distance from you') : 'Set your location to sort by distance';
+      var w = bar.querySelector('.dmTripWhere'); w.textContent = L ? (L.name || 'Sorted by distance from you') : 'Set your location to sort by distance'; var lb = bar.querySelector('.dmTripLoc'); if (lb) lb.textContent = L ? 'Update' : 'Use my location'; if (L) w.textContent = 'Your location' + (L.name ? ': ' + L.name : '') + (document.querySelector('[data-trip-sort]') ? ' · nearest first' : ''); var fl = document.getElementById('filters'); if (fl && /wildlife-calendar/.test(location.pathname) && bar.nextElementSibling !== fl && !bar.__mv) { bar.__mv = 1; fl.parentNode.insertBefore(bar, fl); }
     });
   }
   function syncCal() { var s = document.getElementById('month'); if (!s || /[?&]month=/.test(location.search)) return; var m = String(trip().m); if (s.value !== m && [].some.call(s.options, function (o) { return o.value === m; })) { s.value = m; s.dispatchEvent(new Event('change', { bubbles: true })); s.dispatchEvent(new Event('input', { bubbles: true })); } }
