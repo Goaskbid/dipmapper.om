@@ -1,0 +1,11 @@
+{
+  // DipMapper fact refresh: one run a day, 4 official pages per run, ~once a year per source.
+  // Inactive until deployed with the owner's approval (uses Cloudflare D1, included in Workers Paid).
+  "name": "dipmapper-refresh",
+  "main": "src/index.js",
+  "compatibility_date": "2025-10-01",
+  "workers_dev": false,
+  "triggers": { "crons": ["17 3 * * *"] },
+  "vars": { "SOURCES_URL": "https://dipmapper.com/picks.json" },
+  "d1_databases": [ { "binding": "DB", "database_name": "dipmapper-refresh", "database_id": "00000000-0000-0000-0000-000000000000" } ]
+}

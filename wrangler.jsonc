@@ -1,0 +1,11 @@
+{
+  // DipMapper on Cloudflare: static assets only, no Worker code runs for page views.
+  // Build: python3 _tools/cf_public.py   Deploy: npx wrangler@4.156.0 deploy
+  "name": "dipmapper",
+  "compatibility_date": "2025-10-01",
+  "assets": {
+    "directory": "./public",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}

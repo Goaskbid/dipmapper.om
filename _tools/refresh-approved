@@ -1,0 +1,1 @@
+Yearly fact refresh approved by the owner (21 Nov 2026). Runs only after the Cloudflare secrets exist; caps in _tools/refresh/src/index.js.
