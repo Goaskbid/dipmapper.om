@@ -463,7 +463,7 @@
 
 ;(function(){try{if(window.__dmSwReload||!('serviceWorker' in navigator)||!navigator.serviceWorker.controller)return;window.__dmSwReload=1;var d=0;navigator.serviceWorker.addEventListener('controllerchange',function(){if(d)return;d=1;location.reload()})}catch(e){}})();
 
-;(function(){if(window.__dmRelChk)return;window.__dmRelChk=1;var _sv=document.querySelector('script[src*="dm-ui.js?v="],script[src*="app-boot.js?v="]'),cur=(_sv&&(_sv.getAttribute('src').match(/v=([0-9.]+)/)||[])[1])||((document.body&&document.body.getAttribute('data-version'))||'').replace(/^v/,''),last=0;
- function chk(){var n=Date.now();if(n-last<120000)return;last=n;try{navigator.serviceWorker&&navigator.serviceWorker.getRegistration&&navigator.serviceWorker.getRegistration().then(function(r){r&&r.update()}).catch(function(){})}catch(e){}
-  fetch('/version.txt?t='+n,{cache:'no-store'}).then(function(r){return r.ok?r.text():''}).then(function(v){v=(v||'').trim();if(!v||!cur||v===cur)return;var k='dm_rel_reload_'+v;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1')}catch(e){}location.reload()}).catch(function(){})}
- setTimeout(chk,1500);document.addEventListener('visibilitychange',function(){if(document.visibilityState==='visible')chk()});setInterval(chk,600000)})();
+;(function(){if(window.__dmRelChk)return;window.__dmRelChk=1;var _sv=document.querySelector('script[src*="dm-ui.js?v="],script[src*="app-boot.js?v="]'),cur='',last=0;
+ function chk(f){var n=Date.now();if(!f&&n-last<120000)return;last=n;try{navigator.serviceWorker&&navigator.serviceWorker.getRegistration&&navigator.serviceWorker.getRegistration().then(function(r){r&&r.update()}).catch(function(){})}catch(e){}
+  fetch('/version.txt?t='+n,{cache:'no-store'}).then(function(r){return r.ok?r.text():''}).then(function(v){v=(v||'').trim();if(!v)return;if(!cur){cur=v;return}if(v===cur)return;var k='dm_rel_reload_'+v;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1')}catch(e){}location.reload()}).catch(function(){})}
+ setTimeout(chk,1500);document.addEventListener('visibilitychange',function(){if(document.visibilityState==='visible')chk(1)});setInterval(chk,600000)})();

@@ -133,5 +133,6 @@
     D.querySelectorAll('.dmSpFacts[data-sci]:not(.done)').forEach(function (b) { b.classList.add('done'); facts(b); });
     D.querySelectorAll('button.dmIcs:not(.done)').forEach(function (b) { b.classList.add('done'); ics(b); });
   }
+  window.DMLive = { wind: wind, gbif: gbif, facts: facts };
   if (D.readyState === 'loading') D.addEventListener('DOMContentLoaded', run); else run();
 })();
