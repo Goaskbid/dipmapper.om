@@ -33,6 +33,12 @@ HEADERS = """/*
 /version.txt
   Cache-Control: no-cache
 
+/dm-rel.css
+  Cache-Control: no-cache
+
+/dm-rel.js
+  Cache-Control: no-cache
+
 /fonts/*
   Cache-Control: public, max-age=31536000, immutable
 
