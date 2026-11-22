@@ -12,7 +12,7 @@ DST = os.path.abspath(sys.argv[2] if len(sys.argv) > 2 else os.path.join(SRC, 'p
 
 # allowlist: only these file types are public
 EXT = {'.html', '.js', '.css', '.json', '.png', '.jpg', '.jpeg', '.webp', '.gif', '.svg', '.ico', '.xml',
-       '.webmanifest', '.woff', '.woff2', '.ttf', '.mp3', '.mp4'}
+       '.webmanifest', '.bin', '.woff', '.woff2', '.ttf', '.mp3', '.mp4'}
 TXT_OK = {'robots.txt', 'llms.txt', 'version.txt', 'ads.txt', 'LICENSE.txt', 'humans.txt'}
 SKIP_DIRS = {'.git', '.github', '_tools', 'node_modules', 'public', '.wrangler', 'tests', 'docs', 'build'}
 SKIP_FILES = {'wrangler.jsonc', 'wrangler.toml', 'package.json', 'package-lock.json', 'CNAME', '.nojekyll', '_delete.txt', 'README.md'}

@@ -1,9 +1,9 @@
 {
  "id": "/",
- "name": "DipMapper — Find your next swim",
+ "name": "DipMapper – Everything water",
  "short_name": "DipMapper",
- "description": "Find real, named swim spots near you or anywhere — lake baths, beaches, pools, thermal baths and wild swimming — plus SUP, boat rental, diving, sailing and one-off water experiences, with live conditions, opening hours, prices and emergency help.",
- "start_url": "/?source=pwa",
+ "description": "Swim spots, things to do, beach towns, sea life, diving, wrecks and fishing – on one map, with the best time to go.",
+ "start_url": "/?source=app",
  "scope": "/",
  "display": "standalone",
  "display_override": [
@@ -11,8 +11,8 @@
   "minimal-ui"
  ],
  "orientation": "portrait",
- "background_color": "#FCFEFD",
- "theme_color": "#0A8F88",
+ "background_color": "#04303a",
+ "theme_color": "#082c38",
  "lang": "en",
  "dir": "ltr",
  "categories": [
@@ -66,24 +66,66 @@
  ],
  "shortcuts": [
   {
-   "name": "Swim spots near me",
-   "short_name": "Near me",
-   "url": "/?source=shortcut",
+   "name": "Map",
+   "short_name": "Map",
+   "description": "What is around you",
+   "url": "/spots?source=app",
    "icons": [
     {
      "src": "/icon-192.png",
-     "sizes": "192x192"
+     "sizes": "192x192",
+     "type": "image/png"
     }
    ]
   },
   {
-   "name": "Swim guides",
-   "short_name": "Guides",
-   "url": "/swim.html",
+   "name": "Things to do",
+   "short_name": "To do",
+   "description": "646 hand-picked places",
+   "url": "/explore?source=app",
    "icons": [
     {
      "src": "/icon-192.png",
-     "sizes": "192x192"
+     "sizes": "192x192",
+     "type": "image/png"
+    }
+   ]
+  },
+  {
+   "name": "Beach towns",
+   "short_name": "Towns",
+   "description": "141 town guides",
+   "url": "/waterfront-towns?source=app",
+   "icons": [
+    {
+     "src": "/icon-192.png",
+     "sizes": "192x192",
+     "type": "image/png"
+    }
+   ]
+  },
+  {
+   "name": "Sea life",
+   "short_name": "Sea life",
+   "description": "Whales, seals, puffins",
+   "url": "/wildlife-calendar?source=app",
+   "icons": [
+    {
+     "src": "/icon-192.png",
+     "sizes": "192x192",
+     "type": "image/png"
+    }
+   ]
+  },
+  {
+   "name": "Diving and wrecks",
+   "short_name": "Diving",
+   "url": "/diving?source=app",
+   "icons": [
+    {
+     "src": "/icon-192.png",
+     "sizes": "192x192",
+     "type": "image/png"
     }
    ]
   }
