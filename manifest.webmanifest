@@ -81,7 +81,7 @@
   {
    "name": "Things to do",
    "short_name": "To do",
-   "description": "646 hand-picked places",
+   "description": "649 hand-picked places",
    "url": "/explore?source=app",
    "icons": [
     {
@@ -107,7 +107,7 @@
   {
    "name": "Sea life",
    "short_name": "Sea life",
-   "description": "Whales, seals, puffins",
+   "description": "Whales, seals, polar bears",
    "url": "/wildlife-calendar?source=app",
    "icons": [
     {

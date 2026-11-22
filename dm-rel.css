@@ -166,3 +166,4 @@ html body #mapPanel>#filters,html body #filters.filters{mask-image:none!importan
 .dmWQd{width:auto!important;height:auto!important;display:inline-flex!important;gap:2px;padding:2px 3px!important;border-radius:999px!important;background:#1d2a30!important;border:1.5px solid #fff!important;translate:-9px 1px}
 .dmWQd i{width:7px;height:7px;border-radius:50%;background:#4a5a60;display:block}
 .dmWQd[data-l=r] i.r{background:#ff4d4f;box-shadow:0 0 4px #ff4d4f}.dmWQd[data-l=a] i.a{background:#ffb703;box-shadow:0 0 4px #ffb703}.dmWQd[data-l=g] i.g{background:#2ee07a;box-shadow:0 0 4px #2ee07a}
+@media(min-width:640px){.hPilG{grid-template-columns:repeat(3,minmax(0,1fr))!important}}@media(min-width:1180px){.hPilC{padding:22px}}
