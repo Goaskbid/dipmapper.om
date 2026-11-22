@@ -11,6 +11,28 @@
     var el = D.createElement('div'); el.id = 'dmIntro'; el.setAttribute('role', 'img'); el.setAttribute('aria-label', 'DipMapper – everything water');
     el.innerHTML = '<div class="dmIn"><p class="dmInB">DipMapper</p><p class="dmInT">Everything water</p><ul>' + P.map(function (p, i) { return '<li style="--i:' + i + '" class="p' + i + '"><svg class="ic" aria-hidden="true"><use href="/icons.svg#i-' + p[0] + '"/></svg><b>' + p[1] + '</b><small>' + p[2] + '</small></li>'; }).join('') + '</ul></div>'
       + '<svg class="dmInW" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 C 150 10 300 110 450 60 S 750 10 900 60 S 1200 110 1200 60 V120 H0Z"/><path class="b" d="M0 75 C 200 35 350 115 600 75 S 1000 35 1200 75 V120 H0Z"/></svg>';
+    // changing background photos: our own beach photos at once, then free-licence photos from Wikimedia Commons (cached for next time)
+    var bg = D.createElement('div'); bg.className = 'dmInBg';
+    var own = ['/about-water.webp', '/about-pool.webp'], T = ['Coral reef', 'Humpback whale', 'Similan Islands', 'Navagio', 'Atlantic puffin', 'Lake Zurich', 'Moraine Lake', 'Great Blue Hole', 'Bora Bora', 'Lake Bled'];
+    var shown = 0;
+    function addImg(u) { var i = new Image(); i.alt = ''; i.decoding = 'async'; i.onload = function () { bg.appendChild(i); var all = bg.querySelectorAll('img'); requestAnimationFrame(function () { all.forEach(function (x) { x.classList.remove('on'); }); i.classList.add('on'); }); shown++; }; i.src = u; }
+    addImg(own[Math.floor(Math.random() * own.length)]);
+    var cache = null; try { cache = JSON.parse(localStorage.getItem('dm_inbg') || 'null'); } catch (e) {}
+    var pick = function (a) { return a.slice().sort(function () { return Math.random() - .5; }); };
+    if (cache && cache.t > Date.now() - 7 * 864e5 && cache.u && cache.u.length) {
+      pick(cache.u).slice(0, 2).forEach(function (u, k) { setTimeout(function () { addImg(u); }, 900 + k * 900); });
+    } else {
+      try {
+        fetch('https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&redirects=1&prop=pageimages&piprop=thumbnail&pithumbsize=1280&pilicense=free&titles=' + encodeURIComponent(T.join('|')))
+          .then(function (r) { return r.json(); }).then(function (j) {
+            var u = []; var pg = (j.query && j.query.pages) || {}; Object.keys(pg).forEach(function (k) { var t = pg[k].thumbnail; if (t && t.width >= 800) u.push(t.source); });
+            if (!u.length) return; try { localStorage.setItem('dm_inbg', JSON.stringify({ t: Date.now(), u: u })); } catch (e) {}
+            pick(u).slice(0, 2).forEach(function (x, k) { setTimeout(function () { addImg(x); }, 700 + k * 900); });
+          }).catch(function () {});
+      } catch (e) {}
+    }
+    el.insertBefore(bg, el.firstChild);
+    el.insertAdjacentHTML('beforeend', '<p class="dmInC">Photos: DipMapper, Wikimedia Commons</p>');
     var end = function () { if (!el.parentNode) return; el.classList.add('out'); setTimeout(function () { el.remove(); }, 350); };
     el.addEventListener('click', end);
     (D.body || D.documentElement).appendChild(el);
@@ -55,7 +77,7 @@
     s.innerHTML = '<i class="r"></i><i class="a"></i><i class="g"></i>'; el.insertBefore(s, el.firstChild);
   }
   function scan(root) {
-    (root.querySelectorAll ? root : document).querySelectorAll('.dmScGreat,.dmScGood,.dmScOk,.dmScLow,.dmScOff,.dmIceStat,.dmWQp:not(.dmTL),.dmPlanWarn,.dmOpen,.st.closed').forEach(function (e) {
+    (root.querySelectorAll ? root : document).querySelectorAll('.dmIceStat').forEach(function (e) {
       var c = e.className, l = '';
       if (/dmScGreat|dmScGood/.test(c)) l = 'g'; else if (/dmScOk/.test(c)) l = 'a'; else if (/dmScLow/.test(c)) l = 'r'; else if (/dmScOff/.test(c)) l = 'o';
       else if (/dmIceStat/.test(c)) { var m = /ice-([a-z]+)/.exec(c); l = m ? (ICE[m[1]] || 'a') : 'a'; }
