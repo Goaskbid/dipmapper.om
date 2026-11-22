@@ -69,3 +69,50 @@
   function later() { if (q) return; q = setTimeout(function () { q = 0; scan(document); }, 250); }
   try { scan(document); new MutationObserver(later).observe(document.body, { childList: true, subtree: true }); } catch (e) {}
 })();
+
+(function () {
+  var D = document, M = new Date().getMonth(), path = location.pathname.replace(/\.html$/, '');
+  var ML = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
+  function stored() { try { var c = JSON.parse(localStorage.getItem('dm_loc') || 'null'); if (c && c.la && (!c.t || c.t > Date.now() - 7 * 864e5)) return c; } catch (e) {} return null; }
+  function withLoc(cb) {
+    var c = stored(); if (c) return cb(c);
+    try {
+      if (!navigator.permissions || !navigator.geolocation) return;
+      navigator.permissions.query({ name: 'geolocation' }).then(function (p) {
+        if (p.state !== 'granted') return;
+        navigator.geolocation.getCurrentPosition(function (g) {
+          var v = { la: g.coords.latitude, lo: g.coords.longitude, t: Date.now() };
+          try { localStorage.setItem('dm_loc', JSON.stringify(v)); } catch (e) {}
+          cb(v);
+        }, function () {}, { timeout: 8000, maximumAge: 600000 });
+      }).catch(function () {});
+    } catch (e) {}
+  }
+  // answer location requests from the page's own buttons with the known position for a few seconds (no second prompt)
+  function lend(c, ms) {
+    var g = navigator.geolocation; if (!g) return;
+    var orig = g.getCurrentPosition.bind(g);
+    g.getCurrentPosition = function (ok) { setTimeout(function () { ok({ coords: { latitude: c.la, longitude: c.lo, accuracy: 500 }, timestamp: Date.now() }); }, 0); };
+    setTimeout(function () { g.getCurrentPosition = orig; }, ms || 4000);
+  }
+  function fire(el, ev) { if (el) el.dispatchEvent(new Event(ev || 'change', { bubbles: true })); }
+  function whenReady(test, cb, n) { n = n || 0; if (test()) return cb(); if (n < 40) setTimeout(function () { whenReady(test, cb, n + 1); }, 150); }
+  if (path === '/wildlife-calendar') {
+    // this month first
+    whenReady(function () { return D.querySelector('#dmGalM button[data-m="' + (M + 1) + '"]'); }, function () { D.querySelector('#dmGalM button[data-m="' + (M + 1) + '"]').click(); });
+    whenReady(function () { var s = D.getElementById('month'); return s && s.options.length > 2; }, function () {
+      var s = D.getElementById('month');
+      for (var i = 0; i < s.options.length; i++) { var o = s.options[i]; if (o.value == M + 1 || String(o.textContent).toLowerCase().indexOf(ML[M]) === 0) { s.value = o.value; fire(s); break; } }
+    });
+    // and near you
+    withLoc(function (c) {
+      lend(c, 5000);
+      whenReady(function () { return D.querySelector('.dmLocBtn[data-dm-locate]'); }, function () {
+        D.querySelectorAll('.dmLocBtn[data-dm-locate]').forEach(function (b) { b.click(); });
+        var s = D.getElementById('sort'); if (s) { var n = s.querySelector('option[value="near"]'); if (n) { n.disabled = false; s.value = 'near'; fire(s); } }
+      });
+    });
+  }
+  if (path === '/fishing') withLoc(function (c) { lend(c, 4000); whenReady(function () { return D.getElementById('fHere'); }, function () { D.getElementById('fHere').click(); }); });
+  if (path === '/shipwrecks') withLoc(function () { whenReady(function () { var l = D.getElementById('wList'); return l && l.children.length; }, function () { var b = D.getElementById('wNear'); if (b) b.click(); }); });
+})();
