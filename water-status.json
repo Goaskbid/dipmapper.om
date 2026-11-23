@@ -1,5 +1,5 @@
 {
- "ok": true,
- "when": "2026-11-16T13:10:01.053015Z",
- "log_tail": "service https://marine.discomap.eea.europa.eu/arcgis/rest/services/BathingWater/BathingWater_Dyna_WM_2025/MapServer layer 3 season 2025\nsites listed 22289\nsites fetched 22289 values {'Poor': 1293, 'Sufficient': 1956, 'Good': 7513, 'Excellent': 74910, 'Not classified': 2241, '': 1243}\ntiles 215 by class {'P': 356, 'S': 516, 'G': 1990, 'E': 18810, 'N': 617}\n"
+ "ok": false,
+ "when": "2026-11-23T15:39:40.661428Z",
+ "log_tail": "folder unavailable on https://marine.discomap.eea.europa.eu/arcgis/rest/services failed https://marine.discomap.eea.europa.eu/arcgis/rest/services/BathingWater?f=json: <urlopen error timed out>\nfolder unavailable on https://water.discomap.eea.europa.eu/arcgis/rest/services failed https://water.discomap.eea.europa.eu/arcgis/rest/services/BathingWater?f=json: <urlopen error timed out>\nTraceback (most recent call last):\n  File \"/home/runner/work/dipmapper.om/dipmapper.om/_tools/water_eea.py\", line 135, in <module>\n    main()\n    ~~~~^^\n  File \"/home/runner/work/dipmapper.om/dipmapper.om/_tools/water_eea.py\", line 76, in main\n    yr, url, lid = find_service()\n                   ~~~~~~~~~~~~^^\n  File \"/home/runner/work/dipmapper.om/dipmapper.om/_tools/water_eea.py\", line 63, in find_service\n    raise RuntimeError('no BathingWater_Dyna_WM_YYYY service found')\nRuntimeError: no BathingWater_Dyna_WM_YYYY service found\n"
 }
