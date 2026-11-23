@@ -177,3 +177,15 @@
   try { new MutationObserver(function () { scan(); }).observe(document.documentElement, { childList: true, subtree: true }); } catch (e) {}
   if (document.readyState !== 'loading') scan(); else document.addEventListener('DOMContentLoaded', scan);
 })();
+
+/* 23.66 focus trap for open modals */
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Tab') return;
+  var m = [].slice.call(document.querySelectorAll('[aria-modal="true"]')).filter(function (x) { return x.offsetParent !== null || getComputedStyle(x).position === 'fixed' && getComputedStyle(x).display !== 'none' && getComputedStyle(x).visibility !== 'hidden' && x.getClientRects().length; })[0];
+  if (!m) return;
+  var f = [].slice.call(m.querySelectorAll('a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])')).filter(function (x) { return x.getClientRects().length; });
+  if (!f.length) return;
+  var a = f[0], z = f[f.length - 1];
+  if (!m.contains(document.activeElement)) { e.preventDefault(); a.focus(); return; }
+  if (e.shiftKey && document.activeElement === a) { e.preventDefault(); z.focus(); } else if (!e.shiftKey && document.activeElement === z) { e.preventDefault(); a.focus(); }
+});

@@ -3,16 +3,24 @@
 > DipMapper (dipmapper.com) finds swim spots and water trips anywhere: beaches, lake baths, pools, thermal baths and wild swims near you, with live tides, official EU bathing-water quality, a swim-window forecast, webcams and a wildlife calendar. Free, no account.
 
 ## Key pages
-- [Swim spots near you (map)](https://dipmapper.com/): live map of swim spots around any location.
-- [Waterfront towns](https://dipmapper.com/waterfront-towns): 141 beach towns and cruise ports with beaches, tides, water quality and local tips.
-- [Top 200 water experiences](https://dipmapper.com/top-water-experiences): ranked beaches, dives, boat trips and wildlife encounters with best months.
-- [Water experience guides](https://dipmapper.com/water-experience-guides): detailed pages per experience.
-- [100 best public aquariums](https://dipmapper.com/best-public-aquariums)
-- [Wildlife calendar](https://dipmapper.com/wildlife-calendar): where and when to see whales, dolphins, turtles, seals and more, with sources.
+- [Live map](https://dipmapper.com/spots): swim spots, beaches, lakes, pools and water activities around any location, with weather, tides, official EU bathing-water quality and routes.
+- [Things to do](https://dipmapper.com/explore): 652 hand-picked water experiences worldwide (boat trips, diving, rafting, spas, wildlife) with best months and official links.
+- [Beach towns](https://dipmapper.com/waterfront-towns): 141 beach towns and cruise ports, each with best months, beaches, sights, food, nightlife, festivals, seasonal risks, emergency numbers and a climate chart.
+- [Trip planner](https://dipmapper.com/plan): pick a beach town and a month – good month or not, climate, festivals, water experiences in season within 150 km, fishing, sunsets and risks.
+- [Compare towns](https://dipmapper.com/compare): two or three beach towns side by side.
+- Where to go by month: [January](https://dipmapper.com/best-beach-towns-in-january), [February](https://dipmapper.com/best-beach-towns-in-february), [March](https://dipmapper.com/best-beach-towns-in-march), [April](https://dipmapper.com/best-beach-towns-in-april), [May](https://dipmapper.com/best-beach-towns-in-may), [June](https://dipmapper.com/best-beach-towns-in-june), [July](https://dipmapper.com/best-beach-towns-in-july), [August](https://dipmapper.com/best-beach-towns-in-august), [September](https://dipmapper.com/best-beach-towns-in-september), [October](https://dipmapper.com/best-beach-towns-in-october), [November](https://dipmapper.com/best-beach-towns-in-november), [December](https://dipmapper.com/best-beach-towns-in-december) – the beach towns at their best that month.
+- [Wildlife calendar](https://dipmapper.com/wildlife-calendar): where and when to see whales, dolphins, seals, turtles, polar bears, salmon and seabirds, with sources.
+- [Diving and snorkelling](https://dipmapper.com/diving): seasons, spots, what you see, conditions (level, depth, current), venomous sea life, hotels with a house reef.
+- [Shipwrecks](https://dipmapper.com/shipwrecks): famous wrecks on land and under water, with history and preservation.
+- [Fishing](https://dipmapper.com/fishing): Swiss lakes, licence rules for ten countries, fly fishing and 23 famous fishing spots worldwide – sorted from the visitor's location.
+- [Sunsets, beach bars and drive-on beaches](https://dipmapper.com/beach-life)
 - [Sea-risk calendar](https://dipmapper.com/sea-risk-calendar): jellyfish, storm and rough-sea months by region.
-- [Sources and licences](https://dipmapper.com/sources)
-- [Cite and reuse](https://dipmapper.com/cite)
-- [About and founder interview](https://dipmapper.com/about)
+- [Sources and licences](https://dipmapper.com/sources) · [Cite and reuse](https://dipmapper.com/cite) · [About](https://dipmapper.com/about)
+
+## How to read the data
+- Best months come from published seasons; months that are not documented are not shown as good.
+- Water quality is the official EU classification (European Environment Agency), not a DipMapper estimate.
+- Forecasts come from MET Norway; climate averages from NASA POWER.
 
 ## Terms
 - Content © 2026 DipMapper.com, Torsten Sauter. All rights reserved. You may quote short passages with a link to the page. Bulk extraction, scraping and use for AI training are not permitted: https://dipmapper.com/terms#rights

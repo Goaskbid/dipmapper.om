@@ -116,30 +116,42 @@ def main():
                 link = ''
             rows.append([round(la, 5), round(lo, 5), (a.get('bathingWaterName') or '').strip()[:90], (a.get('countryCode') or '')[:2],
                          'c' if 'coast' in cat or 'transit' in cat else 'r' if 'river' in cat else 'l' if 'lake' in cat else '',
-                         ''.join(letter(a.get(c), seen) for c in cols), link[:300]])
+                         ''.join(letter(a.get(c), seen) for c in cols), link[:300], (a.get('bathingWaterIdentifier') or '')[:40]])
         time.sleep(float(os.environ.get("WQ_SLEEP","0.4")))
     print('sites fetched', len(rows), 'values', seen)
-    if len(rows) < 0.9 * len(ids):
-        raise RuntimeError('only %d of %d sites fetched' % (len(rows), len(ids)))
+    if len(rows) < 0.98 * len(ids):
+        raise RuntimeError('only %d of %d sites fetched - nothing published' % (len(rows), len(ids)))
+    try:
+        prev = json.load(open(os.path.join(OUT, 'index.json'), encoding='utf8')).get('sites') or 0
+    except Exception:
+        prev = 0
+    if prev and len(rows) < 0.95 * prev:
+        raise RuntimeError('only %d sites against %d published last time - nothing published' % (len(rows), prev))
     tiles = {}
     for r in rows:
         k = '%d_%d' % (int(r[0] // TILE * TILE), int(r[1] // TILE * TILE))
         tiles.setdefault(k, []).append(r)
-    os.makedirs(OUT, exist_ok=True)
-    for f in os.listdir(OUT):
-        if f.startswith('w_') and f.endswith('.json'):
-            os.remove(os.path.join(OUT, f))
+    NEW = OUT.rstrip('/') + '.new'
+    if os.path.isdir(NEW):
+        import shutil; shutil.rmtree(NEW)
+    os.makedirs(NEW)
     yl = [years[c] for c in cols]
     for k, ps in tiles.items():
         ps.sort()
-        json.dump({'y': yl, 'p': ps}, open(os.path.join(OUT, 'w_%s.json' % k), 'w'), separators=(',', ':'), ensure_ascii=False)
+        json.dump({'y': yl, 'p': ps}, open(os.path.join(NEW, 'w_%s.json' % k), 'w'), separators=(',', ':'), ensure_ascii=False)
     cnt = {}
     for r in rows:
         cnt[r[5][:1]] = cnt.get(r[5][:1], 0) + 1
     json.dump({'source': 'European Environment Agency (EEA); bathing water data and coordinates: Member States authorities',
                'licence': 'CC BY 4.0', 'service': url, 'season': yl[0], 'years': yl, 'tile_deg': TILE, 'sites': len(rows),
                'by_class': cnt, 'tiles': sorted(tiles), 'updated': time.strftime('%Y-%m-%d')},
-              open(os.path.join(OUT, 'index.json'), 'w'), indent=0)
+              open(os.path.join(NEW, 'index.json'), 'w'), indent=0)
+    import shutil
+    OLD = OUT.rstrip('/') + '.old'
+    if os.path.isdir(OLD): shutil.rmtree(OLD)
+    if os.path.isdir(OUT): os.rename(OUT, OLD)
+    os.rename(NEW, OUT)
+    if os.path.isdir(OLD): shutil.rmtree(OLD)
     print('tiles', len(tiles), 'by class', cnt)
 
 
