@@ -73,7 +73,19 @@ def letter(v, seen):
 
 
 def main():
-    yr, url, lid = find_service()
+    try:
+        yr, url, lid = find_service()
+    except RuntimeError as e:
+        old = os.path.join(OUT, 'index.json')
+        if os.path.exists(old):
+            when = time.strftime('%Y-%m-%d', time.gmtime(os.path.getmtime(old)))
+            try:
+                when = json.load(open(old, encoding='utf8')).get('updated') or when
+            except Exception:
+                pass
+            print('EEA bathing-water service unreachable (%s) - the published data stays online unchanged; the next scheduled run tries again.' % e)
+            return
+        raise
     print('service', url, 'layer', lid, 'season', yr)
     lay = get('%s/%d' % (url, lid), {'f': 'json'})
     years = {}
