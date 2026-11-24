@@ -58,3 +58,8 @@
 - [Fishing in UAE](https://dipmapper.com/fishing-uae): who needs a licence, prices, where to buy it, key rules, checked 23 November 2026.
 - [Fishing in Seychelles](https://dipmapper.com/fishing-seychelles): who needs a licence, prices, where to buy it, key rules, checked 23 November 2026.
 - [Fishing in Maldives](https://dipmapper.com/fishing-maldives): who needs a licence, prices, where to buy it, key rules, checked 23 November 2026.
+
+## Sea-life extras
+- [Guess the sea animal](https://dipmapper.com/animal-game): daily multiple-choice quiz on 34 marine animals, with where to see each one.
+- [Dolphin, seal and turtle rescue centres](https://dipmapper.com/marine-rescue-centres): 12 rescue and rehabilitation centres you can visit, with official pages.
+- The home page map shows every place, beach town, sea-life window, fishing spot and rescue centre, with a month slider for seasons.

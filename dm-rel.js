@@ -7,7 +7,7 @@
     if (sessionStorage.getItem('dm_sp57') === '1') return;
     sessionStorage.setItem('dm_sp57', '1');
     var red = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var P = [['map', 'Map', 'what is around you'], ['star', 'Things to do', 'hand-picked places'], ['city', 'Beach towns', 'city guides'], ['whale', 'Sea life', 'whales, seals, polar bears'], ['mask', 'Diving', 'reefs and wrecks'], ['fish', 'Fishing', 'lakes, licences, fish']];
+    var P = [['map', 'Map', 'every swim spot near you'], ['star', 'Things to do', '652 places worldwide'], ['city', 'Beach towns', '141 town guides'], ['whale', 'Sea life', 'seasons, rescue centres, quiz'], ['mask', 'Diving', 'reefs, wrecks, house-reef hotels'], ['fish', 'Fishing', 'what you need, 31 countries']];
     var el = D.createElement('div'); el.id = 'dmIntro'; el.setAttribute('role', 'img'); el.setAttribute('aria-label', 'DipMapper – everything water');
     el.innerHTML = '<div class="dmIn"><p class="dmInB">DipMapper</p><p class="dmInT">Everything water</p><ul>' + P.map(function (p, i) { return '<li style="--i:' + i + '" class="p' + i + '"><svg class="ic" aria-hidden="true"><use href="/icons.svg#i-' + p[0] + '"/></svg><b>' + p[1] + '</b><small>' + p[2] + '</small></li>'; }).join('') + '</ul></div>'
       + '<svg class="dmInW" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 C 150 10 300 110 450 60 S 750 10 900 60 S 1200 110 1200 60 V120 H0Z"/><path class="b" d="M0 75 C 200 35 350 115 600 75 S 1000 35 1200 75 V120 H0Z"/></svg>';
@@ -189,3 +189,16 @@ document.addEventListener('keydown', function (e) {
   if (!m.contains(document.activeElement)) { e.preventDefault(); a.focus(); return; }
   if (e.shiftKey && document.activeElement === a) { e.preventDefault(); z.focus(); } else if (!e.shiftKey && document.activeElement === z) { e.preventDefault(); a.focus(); }
 });
+
+/* 23.70 credits in a smaller font */
+(function () {
+  var RX = /^(nearby photo|photo|photos|image|picture)\s*[:©]|^©|wikimedia commons|\bCC BY(-SA)?\b|\bCC0\b|public domain/i;
+  function mark(root) {
+    [].forEach.call((root || document).querySelectorAll('figcaption,small,span,p,a,div.dmCr,.dmInC,.dmGalNote'), function (e) {
+      if (e.dataset.crs) return; var t = (e.textContent || '').trim();
+      if (t && t.length < 220 && RX.test(t) && !e.querySelector('h1,h2,h3,img,svg,ul,table')) { e.dataset.crs = 1; e.classList.add('dmCrTxt'); }
+    });
+  }
+  function go() { mark(); try { new MutationObserver(function (ms) { ms.forEach(function (m) { [].forEach.call(m.addedNodes, function (n) { if (n.nodeType === 1) mark(n.parentNode || n); }); }); }).observe(document.body, { childList: true, subtree: true }); } catch (e) {} }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', go); else go();
+})();
