@@ -18,7 +18,7 @@
 - [Sources and licences](https://dipmapper.com/sources) · [Cite and reuse](https://dipmapper.com/cite) · [About](https://dipmapper.com/about)
 
 ## How to read the data
-- Best months come from published seasons; months that are not documented are not shown as good.
+- Listed months may describe wildlife presence, operator programmes or travel preferences. These are not interchangeable; absent timing remains unknown.
 - Water quality is the official EU classification (European Environment Agency), not a DipMapper estimate.
 - Forecasts come from MET Norway; climate averages from NASA POWER.
 
@@ -26,7 +26,7 @@
 - Content © 2026 DipMapper.com, Torsten Sauter. All rights reserved. You may quote short passages with a link to the page. Bulk extraction, scraping and use for AI training are not permitted: https://dipmapper.com/terms#rights
 
 ## Fishing rules and house-reef hotels
-- [Hotels with a house reef](https://dipmapper.com/house-reef-hotels): 112 hotels and dive resorts in 13 countries, each with the published source that names it.
+- [Hotels with a house reef](https://dipmapper.com/house-reef-hotels): 112 hotels and dive resorts in 13 countries, with source links where supplied; direct reef access and current operation require review.
 - [Fishing in UK](https://dipmapper.com/fishing-united-kingdom): who needs a licence, prices, where to buy it, key rules, checked 23 November 2026.
 - [Fishing in Ireland](https://dipmapper.com/fishing-ireland): who needs a licence, prices, where to buy it, key rules, checked 23 November 2026.
 - [Fishing in France](https://dipmapper.com/fishing-france): who needs a licence, prices, where to buy it, key rules, checked 23 November 2026.
@@ -66,4 +66,9 @@
 ## Sea-life extras
 - [Guess the sea animal](https://dipmapper.com/animal-game): daily multiple-choice quiz on 34 marine animals, with where to see each one.
 - [Dolphin, seal and turtle rescue centres](https://dipmapper.com/marine-rescue-centres): 12 rescue and rehabilitation centres you can visit, with official pages.
-- The home page map shows every place, beach town, sea-life window, fishing spot and rescue centre, with a month slider for seasons.
+- The home page map shows coordinate-bearing records from the supplied place, town, wildlife, fishing and rescue indexes, with a month slider for seasons.
+
+## Food by the water
+- [Boat trips with good food](https://dipmapper.com/boat-trips-with-food): 8 lunch and dinner cruises (Lake Geneva, Lucerne, Zurich, Thun and Brienz, Como, Milford Sound, Sydney, Paris) with menus, prices and official pages.
+- The home page map has specials: beach bars, fish and seafood restaurants and dining by the water, live from OpenStreetMap for the map view.
+- Every beach-town guide lists fish restaurants and waterside dining nearby.

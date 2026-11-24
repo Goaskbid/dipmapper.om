@@ -62,3 +62,18 @@ header.bar .nav{flex-wrap:nowrap}@media(max-width:640px){header.bar .nav a:nth-c
 @media(max-width:760px){.hHero{padding:22px 0 60px}.hSearch button.hGo{padding:0 14px}.hMap{grid-template-columns:1fr}.hMap .v{min-height:110px}.hGrid{grid-template-columns:1fr 1fr;gap:12px}.hBd{padding:10px 11px 12px}.hBd h3{font-size:16px}.hBd p{display:none}.hMeta{font-size:12px}}
 @media(max-width:380px){.hGrid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.hCard,.hPh>img{transition:none}.hSkel .hCard{animation:none}}
+
+/* Audit 23.70.0: scoped resilience when optional shared styles arrive late. */
+.ic{width:1.15em;height:1.15em;flex:none;vertical-align:-.15em}svg:not([viewBox]).ic{max-width:1.15em}
+.hTL li,.hTL a,.hTL span,.tdC,.tdTl,.t63Clim{min-width:0;overflow-wrap:anywhere}
+.hTL{padding-left:0;list-style:none}.tdTl svg,.t63Clim svg{display:block;width:100%;max-width:100%;height:auto}
+.tdTl{margin-top:1rem;padding:1rem;border:1px solid #d1dce0;border-radius:12px;background:#fff}.tdTl h3{margin-top:0}.tdTl p,.tdLegend,.tdZone{font-size:14px;line-height:1.5}
+.tdTable{max-width:100%;overflow:auto}.tdTable table{border-collapse:collapse;width:100%;font-size:14px}.tdTable td,.tdTable th{padding:.45rem;text-align:left;border-bottom:1px solid #dae2e4}
+.hEmpty,.hDataStatus{padding:1rem;border:1px solid #b6c6cb;border-radius:8px;background:#fff}
+button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #b55f1b;outline-offset:3px}
+@media(max-width:480px){.hTabCta{flex-wrap:wrap}.hTabCta>div{min-width:0}.hTL a{overflow-wrap:anywhere}.tdTl{padding:10px}.hmBar{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+.hmSp{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:8px}.hmSpT{display:inline-flex;gap:5px;align-items:center;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#7a3a68;margin-right:2px}.hmSpT .ic{width:15px;height:15px}
+.hmS{display:inline-flex;gap:6px;align-items:center;font:700 13px Manrope,system-ui,sans-serif;padding:7px 12px;border-radius:999px;border:1.5px solid #e3d3df;background:#fff;color:#3b2a36;cursor:pointer;min-height:36px}.hmS span{width:10px;height:10px;border-radius:50%;display:inline-block}
+.hmS[aria-pressed=true]{background:#fff4fb;border-color:#b5179e;color:#5c0d48;box-shadow:0 0 0 1px #b5179e inset}.hmSpN{margin:6px 0 0;font-size:.86rem;color:#33474b;min-height:1.2em}.hmSpN small{display:block;font-size:11px;color:#6b7b7e}.hmSpN a{color:#0a6f69;font-weight:800}

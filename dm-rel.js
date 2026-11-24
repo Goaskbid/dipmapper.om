@@ -1,44 +1,5 @@
 /* DipMapper release layer – always fetched fresh */
-(function () {
-  // start screen: once per visit and once per release, on every page except where the live map shows its own
-  try {
-    var D = document, v = (D.documentElement.getAttribute('data-version') || '') + '|57', path = location.pathname;
-    if (/^\/spots/.test(path) && innerWidth <= 760) return;
-    if (sessionStorage.getItem('dm_sp57') === '1') return;
-    sessionStorage.setItem('dm_sp57', '1');
-    var red = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var P = [['map', 'Map', 'every swim spot near you'], ['star', 'Things to do', '652 places worldwide'], ['city', 'Beach towns', '141 town guides'], ['whale', 'Sea life', 'seasons, rescue centres, quiz'], ['mask', 'Diving', 'reefs, wrecks, house-reef hotels'], ['fish', 'Fishing', 'what you need, 35 countries']];
-    var el = D.createElement('div'); el.id = 'dmIntro'; el.setAttribute('role', 'img'); el.setAttribute('aria-label', 'DipMapper – everything water');
-    el.innerHTML = '<div class="dmIn"><p class="dmInB">DipMapper</p><p class="dmInT">Everything water</p><ul>' + P.map(function (p, i) { return '<li style="--i:' + i + '" class="p' + i + '"><svg class="ic" aria-hidden="true"><use href="/icons.svg#i-' + p[0] + '"/></svg><b>' + p[1] + '</b><small>' + p[2] + '</small></li>'; }).join('') + '</ul></div>'
-      + '<svg class="dmInW" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 C 150 10 300 110 450 60 S 750 10 900 60 S 1200 110 1200 60 V120 H0Z"/><path class="b" d="M0 75 C 200 35 350 115 600 75 S 1000 35 1200 75 V120 H0Z"/></svg>';
-    // changing background photos: our own beach photos at once, then free-licence photos from Wikimedia Commons (cached for next time)
-    var bg = D.createElement('div'); bg.className = 'dmInBg';
-    var own = ['/about-water.webp', '/about-pool.webp'], T = ['Coral reef', 'Humpback whale', 'Similan Islands', 'Navagio', 'Atlantic puffin', 'Lake Zurich', 'Moraine Lake', 'Great Blue Hole', 'Bora Bora', 'Lake Bled'];
-    var shown = 0;
-    function addImg(u) { var i = new Image(); i.alt = ''; i.decoding = 'async'; i.onload = function () { bg.appendChild(i); var all = bg.querySelectorAll('img'); requestAnimationFrame(function () { all.forEach(function (x) { x.classList.remove('on'); }); i.classList.add('on'); }); shown++; }; i.src = u; }
-    addImg(own[Math.floor(Math.random() * own.length)]);
-    var cache = null; try { cache = JSON.parse(localStorage.getItem('dm_inbg') || 'null'); } catch (e) {}
-    var pick = function (a) { return a.slice().sort(function () { return Math.random() - .5; }); };
-    if (cache && cache.t > Date.now() - 7 * 864e5 && cache.u && cache.u.length) {
-      pick(cache.u).slice(0, 2).forEach(function (u, k) { setTimeout(function () { addImg(u); }, 900 + k * 900); });
-    } else {
-      try {
-        fetch('https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&redirects=1&prop=pageimages&piprop=thumbnail&pithumbsize=1280&pilicense=free&titles=' + encodeURIComponent(T.join('|')))
-          .then(function (r) { return r.json(); }).then(function (j) {
-            var u = []; var pg = (j.query && j.query.pages) || {}; Object.keys(pg).forEach(function (k) { var t = pg[k].thumbnail; if (t && t.width >= 800) u.push(t.source); });
-            if (!u.length) return; try { localStorage.setItem('dm_inbg', JSON.stringify({ t: Date.now(), u: u })); } catch (e) {}
-            pick(u).slice(0, 2).forEach(function (x, k) { setTimeout(function () { addImg(x); }, 700 + k * 900); });
-          }).catch(function () {});
-      } catch (e) {}
-    }
-    el.insertBefore(bg, el.firstChild);
-    el.insertAdjacentHTML('beforeend', '<p class="dmInC">Photos: DipMapper, Wikimedia Commons</p>');
-    var end = function () { if (!el.parentNode) return; el.classList.add('out'); setTimeout(function () { el.remove(); }, 350); };
-    el.addEventListener('click', end);
-    (D.body || D.documentElement).appendChild(el);
-    setTimeout(end, red ? 1200 : 3000);
-  } catch (e) {}
-})();
+/* Navigation is immediately usable; no forced launch interstitial. */
 
 (function () {
   // seasons page: the current month and the next two stay open, later months fold away
@@ -139,43 +100,20 @@
   if (path === '/shipwrecks') withLoc(function () { whenReady(function () { var l = D.getElementById('wList'); return l && l.children.length; }, function () { var b = D.getElementById('wNear'); if (b) b.click(); }); });
 })();
 
-/* 23.64 photo credits: generic labels replaced by each file's author and licence from Wikimedia Commons */
-(function () {
-  var wait = {}, timer = 0, MD = {}, GEN = /^\s*(Nearby photo|Photo):\s*(Wikipedia|Wikimedia Commons)(\s*\/\s*Wikimedia Commons)?\b/i;
-  try { MD = JSON.parse(sessionStorage.getItem('dm_phmeta') || '{}'); } catch (e) {}
-  function fileOf(src) { var m = /upload\.wikimedia\.org\/wikipedia\/commons\/(?:thumb\/)?[0-9a-f]\/[0-9a-f]{2}\/([^\/?#]+)/.exec(src || ''); return m ? decodeURIComponent(m[1]).replace(/_/g, ' ') : null; }
-  function strip(h) { var d = document.createElement('div'); d.innerHTML = h || ''; return (d.textContent || '').replace(/\s+/g, ' ').trim(); }
-  var FREE = /(^|\b)(cc[ -]?(by|0|zero|pd)|public domain|pd[- ]|gfdl|no restrictions|attribution|copyrighted free use|free art|ogl)/i;
-  function apply(c, img, m) {
-    if (!m || !FREE.test(m.lic || '')) { c.style.display = 'none'; return; }
-    var txt = (/^\s*Nearby/i.test(c.textContent) ? 'Nearby photo: ' : 'Photo: ') + (m.by || 'Wikimedia Commons').slice(0, 70) + ' · ' + m.lic;
-    c.textContent = txt; c.title = txt;
-    if (c.tagName === 'A') { c.href = 'https://commons.wikimedia.org/wiki/File:' + encodeURIComponent(m.f.replace(/ /g, '_')); c.target = '_blank'; c.rel = 'noopener'; }
-    var box = c.parentElement; if (box) [].forEach.call(box.querySelectorAll(':scope > .dmCr'), function (x) { x.remove(); });
-    box && box.setAttribute('data-crok', '1');
-  }
-  function flush() {
-    timer = 0; var names = Object.keys(wait).filter(function (f) { return !(f in MD); }).slice(0, 40);
-    var done = function () { Object.keys(wait).forEach(function (f) { if (f in MD) { wait[f].forEach(function (p) { apply(p[0], p[1], MD[f]); }); delete wait[f]; } }); try { sessionStorage.setItem('dm_phmeta', JSON.stringify(MD)); } catch (e) {} if (Object.keys(wait).length && !timer) timer = setTimeout(flush, 400); };
-    if (!names.length) return done();
-    fetch('https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&prop=imageinfo&iiprop=extmetadata&iiextmetadatafilter=Artist|LicenseShortName&titles=' + encodeURIComponent(names.map(function (n) { return 'File:' + n; }).join('|')))
-      .then(function (r) { return r.json(); }).then(function (j) {
-        var q = j.query || {}, map = {}; (q.normalized || []).forEach(function (n) { map[n.to] = n.from; });
-        Object.keys(q.pages || {}).forEach(function (id) { var p = q.pages[id], t = (map[p.title] || p.title).replace(/^File:/, ''), md = p.imageinfo && p.imageinfo[0] && p.imageinfo[0].extmetadata || {};
-          MD[t] = md.LicenseShortName ? { f: t, by: strip(md.Artist && md.Artist.value), lic: strip(md.LicenseShortName.value) } : null; });
-        names.forEach(function (n) { if (!(n in MD)) MD[n] = null; }); done();
-      }).catch(function () { names.forEach(function (n) { delete wait[n]; }); });
-  }
-  function scan() {
-    [].forEach.call(document.querySelectorAll('a,span,small,figcaption'), function (c) {
-      if (c.dataset.dmg || c.children.length || c.textContent.length > 80 || !GEN.test(c.textContent)) return;
-      var img = c.parentElement && c.parentElement.querySelector('img[src*="upload.wikimedia.org"]'); if (!img) return;
-      c.dataset.dmg = 1; var f = fileOf(img.currentSrc || img.src); if (!f) { c.style.display = 'none'; return; }
-      (wait[f] = wait[f] || []).push([c, img]); if (!timer) timer = setTimeout(flush, 250);
-    });
-  }
-  try { new MutationObserver(function () { scan(); }).observe(document.documentElement, { childList: true, subtree: true }); } catch (e) {}
-  if (document.readyState !== 'loading') scan(); else document.addEventListener('DOMContentLoaded', scan);
+/* Reviewed image gate. Metadata alone cannot confirm that a photo depicts this place.
+   Editors may set data-subject-reviewed="true" only after inspecting the exact file. */
+(function(){var D=document,seen=new WeakMap();
+function text(s){return String(s||'').replace(/<[^>]*>/g,'').replace(/&[^;]+;/g,' ').trim()}
+function hide(img,reason){img.hidden=true;img.dataset.imageReview=reason;var c=img.parentElement&&img.parentElement.querySelector('.hCr,.dmCr,figcaption');if(c)c.textContent='Image awaiting subject and rights review.'}
+function scan(){D.querySelectorAll('img[src*="upload.wikimedia.org"]').forEach(function(img){var src=img.getAttribute('src');if(seen.get(img)===src)return;seen.set(img,src);hide(img,'pending');if(img.dataset.subjectReviewed!=='true')return;
+var match=/upload\.wikimedia\.org\/wikipedia\/commons\/(?:thumb\/)?[0-9a-f]\/[0-9a-f]{2}\/([^/?#]+)/.exec(src);if(!match)return;var file;try{file=decodeURIComponent(match[1]).replace(/_/g,' ')}catch(e){return}
+fetch('https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&prop=imageinfo&iiprop=extmetadata&iiextmetadatafilter=Artist|LicenseShortName|LicenseUrl|AttributionRequired|Attribution&titles='+encodeURIComponent('File:'+file)).then(function(r){if(!r.ok)throw Error('Metadata unavailable');return r.json()}).then(function(j){
+if(seen.get(img)!==src)return;var p=Object.values(j.query&&j.query.pages||{})[0],m=p&&p.imageinfo&&p.imageinfo[0]&&p.imageinfo[0].extmetadata||{},lic=text(m.LicenseShortName&&m.LicenseShortName.value),artist=text(m.Attribution&&m.Attribution.value)||text(m.Artist&&m.Artist.value);
+var url=String(m.LicenseUrl&&m.LicenseUrl.value||'');if(!/^(CC BY(?:-SA)? [1-4]\.0|CC0 1\.0|Public domain)$/i.test(lic)||!artist||!/^https:\/\/(creativecommons\.org)\//i.test(url)){hide(img,'rights-not-established');return}
+var box=img.parentElement,credit=box.querySelector('.dmReviewedCredit');if(!credit){credit=D.createElement('p');credit.className='dmReviewedCredit';box.appendChild(credit)}credit.replaceChildren();credit.appendChild(D.createTextNode('Photo: '+artist+'. '));
+var a=D.createElement('a');a.href='https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(file.replace(/ /g,'_'));a.textContent='Source file';a.target='_blank';a.rel='noopener';credit.appendChild(a);credit.appendChild(D.createTextNode(' | '));var l=D.createElement('a');l.href=url;l.textContent=lic;l.target='_blank';l.rel='noopener';credit.appendChild(l);credit.appendChild(D.createTextNode('. Display resized; check original file for additional restrictions.'));img.hidden=false;img.dataset.imageReview='metadata-and-subject-reviewed';
+}).catch(function(){hide(img,'metadata-unavailable')})})}
+var queued=false;new MutationObserver(function(){if(queued)return;queued=true;Promise.resolve().then(function(){queued=false;scan()})}).observe(D.documentElement,{subtree:true,childList:true,attributes:true,attributeFilter:['src']});scan();
 })();
 
 /* 23.66 focus trap for open modals */
@@ -194,7 +132,7 @@ document.addEventListener('keydown', function (e) {
 (function () {
   var RX = /^(nearby photo|photo|photos|image|picture)\s*[:©]|^©|wikimedia commons|\bCC BY(-SA)?\b|\bCC0\b|public domain/i;
   function mark(root) {
-    [].forEach.call((root || document).querySelectorAll('figcaption,small,span,p,a,div.dmCr,.dmInC,.dmGalNote'), function (e) {
+    [].forEach.call((root || document).querySelectorAll('figcaption,.hCr,.dmCr,.dmReviewedCredit,.dmGalNote'), function (e) {
       if (e.dataset.crs) return; var t = (e.textContent || '').trim();
       if (t && t.length < 220 && RX.test(t) && !e.querySelector('h1,h2,h3,img,svg,ul,table')) { e.dataset.crs = 1; e.classList.add('dmCrTxt'); }
     });
