@@ -1,0 +1,64 @@
+/*! DipMapper (c) 2026 Torsten Sauter. All rights reserved. dipmapper.com/terms */
+(function(){
+var $=function(i){return document.getElementById(i)},R=Math.PI/180;
+function E(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function ic(n){return'<svg class="ic" aria-hidden="true"><use href="/icons.svg#i-'+n+'"/></svg>'}
+function km(a,b,c,d){var x=Math.sin((c-a)*R/2),y=Math.sin((d-b)*R/2);return 12742*Math.asin(Math.sqrt(x*x+Math.cos(a*R)*Math.cos(c*R)*y*y))}
+function loc(){try{var s=JSON.parse(localStorage.getItem('dm_loc')||'null');if(s&&isFinite(s.la)&&Math.abs(s.la)<=90&&Math.abs(s.lo)<=180&&Date.now()-s.t<432e5)return s}catch(e){}return null}
+var MO=new Date().getMonth(),HI=null,MAP=null,ML=null;
+function idx(){return HI||(HI=fetch('/home-index.json?v=afb10d826e').then(function(r){return r.json()}))}
+/* ---------- 1. the near-me map, first thing on the page ---------- */
+function feats(j){var f=[];j.p.forEach(function(p){if(p.la==null)return;var on=p.m===4095||(p.m&(1<<MO))>0;f.push({type:'Feature',geometry:{type:'Point',coordinates:[p.lo,p.la]},properties:{n:p.n,s:p.a+(p.sub?' · '+p.sub:''),u:p.u,k:on?'p':'q'}})});
+j.t.forEach(function(t){f.push({type:'Feature',geometry:{type:'Point',coordinates:[t.lo,t.la]},properties:{n:t.n,s:'Beach town · '+t.sub,u:t.u,k:'t'}})});
+j.w.forEach(function(w){if(w.m.indexOf(MO+1)<0)return;f.push({type:'Feature',geometry:{type:'Point',coordinates:[w.lo,w.la]},properties:{n:w.n,s:'Sea life in season · '+w.sub,u:w.u,k:'w'}})});return{type:'FeatureCollection',features:f}}
+function css(h){var l=document.createElement('link');l.rel='stylesheet';l.href=h;document.head.appendChild(l)}
+function js(s,cb){var x=document.createElement('script');x.src=s;x.onload=cb;x.onerror=function(){$('hMapC').innerHTML='<p class="hMapErr">The map could not load. <a href="/spots">Open the live map</a></p>'};document.head.appendChild(x)}
+function start(){if(ML)return;ML=1;css('/vendor/maplibre-gl@4.7.1/maplibre-gl.css');js('/vendor/maplibre-gl@4.7.1/maplibre-gl.js',function(){
+var c=loc(),st='https://tiles.openfreemap.org/styles/liberty';
+try{MAP=new maplibregl.Map({container:'hMapC',style:st,center:c?[c.lo,c.la]:[12,30],zoom:c?8.2:1.1,attributionControl:{compact:true},cooperativeGestures:true,dragRotate:false,pitchWithRotate:false})}catch(e){$('hMapC').innerHTML='<p class="hMapErr">Your browser cannot show this map. <a href="/spots">Open the live map</a></p>';return}
+MAP.touchZoomRotate.disableRotation();
+MAP.on('error',function(e){if(String(e&&e.error&&e.error.message).indexOf('style')>=0&&!MAP._bk){MAP._bk=1;MAP.setStyle('https://tiles.versatiles.org/assets/styles/colorful/style.json')}});
+MAP.on('load',function(){idx().then(function(j){MAP.addSource('dm',{type:'geojson',data:feats(j)});
+MAP.addLayer({id:'dmq',type:'circle',source:'dm',filter:['==',['get','k'],'q'],paint:{'circle-radius':4,'circle-color':'#8aa3a8','circle-stroke-color':'#fff','circle-stroke-width':1}});
+MAP.addLayer({id:'dmt',type:'circle',source:'dm',filter:['==',['get','k'],'t'],paint:{'circle-radius':5.5,'circle-color':'#e0a020','circle-stroke-color':'#fff','circle-stroke-width':1.5}});
+MAP.addLayer({id:'dmw',type:'circle',source:'dm',filter:['==',['get','k'],'w'],paint:{'circle-radius':5.5,'circle-color':'#5b34b8','circle-stroke-color':'#fff','circle-stroke-width':1.5}});
+MAP.addLayer({id:'dmp',type:'circle',source:'dm',filter:['==',['get','k'],'p'],paint:{'circle-radius':6,'circle-color':'#0a8f88','circle-stroke-color':'#fff','circle-stroke-width':1.5}});
+['dmp','dmt','dmw','dmq'].forEach(function(l){MAP.on('click',l,function(e){var p=e.features[0].properties;e.preventDefault&&e.preventDefault();e.originalEvent._dm=1;new maplibregl.Popup({offset:8,maxWidth:'260px'}).setLngLat(e.features[0].geometry.coordinates).setHTML('<b>'+E(p.n)+'</b><br><small>'+E(p.s)+'</small><br><a href="'+E(p.u)+'">Open →</a>').addTo(MAP)});MAP.on('mouseenter',l,function(){MAP.getCanvas().style.cursor='pointer'});MAP.on('mouseleave',l,function(){MAP.getCanvas().style.cursor=''})});
+MAP.on('click',function(e){if(e.originalEvent._dm)return;var ll=e.lngLat;new maplibregl.Popup({offset:6,maxWidth:'240px'}).setLngLat(ll).setHTML('<b>Swim spots here?</b><br><a href="/spots?lat='+ll.lat.toFixed(4)+'&lon='+ll.lng.toFixed(4)+'">Scan this area on the live map →</a>').addTo(MAP)});
+if(c)me(c,1)})})})}
+var MK=null;function me(c,quiet){$('hMapOpen').href='/spots?lat='+c.la.toFixed(4)+'&lon='+c.lo.toFixed(4);if(!MAP)return;if(!MK){var d=document.createElement('div');d.className='hMe';d.title='You are here';MK=new maplibregl.Marker({element:d})}MK.setLngLat([c.lo,c.la]).addTo(MAP);if(!quiet)MAP.flyTo({center:[c.lo,c.la],zoom:8.2,speed:1.4})}
+function locate(){var b=$('hMapLoc'),o=b.innerHTML;b.disabled=true;b.innerHTML=ic('locate')+' Finding you…';
+if(!navigator.geolocation){b.innerHTML='Location not available';return}
+navigator.geolocation.getCurrentPosition(function(p){var c={la:p.coords.latitude,lo:p.coords.longitude,t:Date.now()};try{localStorage.setItem('dm_loc',JSON.stringify(c))}catch(e){}b.disabled=false;b.innerHTML=o;me(c);today(c);var h=$('hLocB');if(h&&!h.dataset.dm69){h.dataset.dm69=1;h.click()}},function(){b.disabled=false;b.innerHTML=ic('locate')+' Location not shared – tap the map instead'},{timeout:12000,maximumAge:3e5})}
+/* ---------- 2. today at the water ---------- */
+function today(c){var t=$('hToday'),a=$('hTodayAsk');if(!c){t.hidden=true;a.hidden=false;return}idx().then(function(j){var nt=null,bd=1e9;j.t.forEach(function(x){var d=km(c.la,c.lo,x.la,x.lo);if(d<bd){bd=d;nt=x}});
+t.dataset.la=c.la.toFixed(4);t.dataset.lo=c.lo.toFixed(4);t.dataset.name=nt&&bd<40?'near '+nt.n:'your location';a.hidden=true;if(window.DMToday)DMToday.render(t)})}
+/* ---------- 3. daily: puzzle, place of the day, starting this month, sea life now ---------- */
+var DAY=Math.floor((new Date(new Date().getFullYear(),new Date().getMonth(),new Date().getDate())-new Date(2026,0,1))/864e5);
+function store(){try{return JSON.parse(localStorage.getItem('dm_daily')||'{}')}catch(e){return{}}}function save(g){try{localStorage.setItem('dm_daily',JSON.stringify(g))}catch(e){}}
+function dir(a,b,c,d){var y=Math.sin((d-b)*R)*Math.cos(c*R),x=Math.cos(a*R)*Math.sin(c*R)-Math.sin(a*R)*Math.cos(c*R)*Math.cos((d-b)*R),g=(Math.atan2(y,x)/R+360)%360;return['↑ north','↗ north-east','→ east','↘ south-east','↓ south','↙ south-west','← west','↖ north-west'][Math.round(g/45)%8]}
+function daily(D){var n=D.ord.length,P=D.q[D.ord[DAY%n]],C=D.cn,g=store(),me=g.d===DAY?g:{d:DAY,gs:[],done:0,win:0};
+var clues=['<b>What:</b> '+E(P.a)+' · <b>season:</b> '+E(P.se||'see the page'),'<b>Continent:</b> '+E(P.ct||'–'),'<b>Insider line:</b> “'+E(P.w)+'”','<b>Country starts with:</b> '+E(C[P.cc][0].charAt(0)),'<b>Area:</b> '+E(P.ar||'–')];
+var box=$('hGame');function draw(){var shown=Math.min(clues.length,1+me.gs.length);
+var h='<h3>'+ic('globe')+' Where on Earth? <small>Daily #'+(DAY+1)+'</small></h3><p class="gSub">One water experience a day. Guess the country in up to 5 tries – every wrong guess unlocks a clue.</p><ol class="gCl">'+clues.slice(0,me.done?5:shown).map(function(c){return'<li>'+c+'</li>'}).join('')+'</ol>';
+h+=me.gs.length?'<ul class="gGs">'+me.gs.map(function(cc){var ok=cc===P.cc,c=C[cc];return'<li class="'+(ok?'ok':'no')+'">'+E(c[0])+(ok?' – correct!':' – about '+Math.round(km(c[1],c[2],P.la,P.lo)/10)*10+' km off, go '+dir(c[1],c[2],P.la,P.lo))+'</li>'}).join('')+'</ul>':'';
+if(me.done){var st=store();h+='<div class="gEnd"><p>'+(me.win?'<b>Well found!</b> ':'<b>It was '+E(C[P.cc][0])+'.</b> ')+'<a href="'+E(P.u)+'">'+E(P.n)+'</a></p><p class="gSt">'+ic('trophy')+' Streak <b>'+(st.streak||0)+'</b> · best '+(st.best||0)+' · played '+(st.played||0)+'</p><button type="button" id="gShare">'+ic('share')+' Share result</button> <span class="gSub">New puzzle tomorrow.</span></div>'}
+else h+='<form class="gF" id="gF"><label class="sr" for="gIn">Your guess</label><input id="gIn" list="gList" placeholder="Type a country…" autocomplete="off" required><button type="submit">Guess</button><datalist id="gList">'+Object.keys(C).sort(function(a,b){return C[a][0]<C[b][0]?-1:1}).map(function(k){return'<option value="'+E(C[k][0])+'">'}).join('')+'</datalist></form><p class="gMsg" id="gMsg" aria-live="polite"></p>';
+box.innerHTML=h;var f=$('gF');if(f)f.onsubmit=function(e){e.preventDefault();var v=$('gIn').value.trim().toLowerCase(),cc=Object.keys(C).filter(function(k){return C[k][0].toLowerCase()===v})[0];if(!cc){$('gMsg').textContent='Pick a country from the list.';return}if(me.gs.indexOf(cc)>=0){$('gMsg').textContent='Already guessed.';return}
+me.gs.push(cc);if(cc===P.cc||me.gs.length>=5){me.done=1;me.win=cc===P.cc?1:0;var st=store();st.played=(st.played||0)+1;st.streak=me.win?((st.last===DAY-1?st.streak||0:0)+1):0;st.best=Math.max(st.best||0,st.streak);st.last=me.win?DAY:st.last;Object.assign(st,{d:DAY,gs:me.gs,done:1,win:me.win});save(st)}else{var s2=store();Object.assign(s2,{d:DAY,gs:me.gs,done:0,win:0});save(s2)}draw()};
+var sh=$('gShare');if(sh)sh.onclick=function(){var t='DipMapper Daily #'+(DAY+1)+' '+(me.win?me.gs.length:'X')+'/5 '+me.gs.map(function(c){return c===P.cc?'🟩':'🟥'}).join('')+' https://dipmapper.com/#daily';if(navigator.share)navigator.share({text:t}).catch(function(){});else if(navigator.clipboard)navigator.clipboard.writeText(t).then(function(){sh.lastChild.textContent=' Copied'})}}
+draw();
+idx().then(function(j){var PQ=j.p.filter(function(p){return p.w&&p.w.length>=60&&(p.s||0)>=50&&!/^An? identified/.test(p.w)}),pd=PQ[(DAY*7+3)%PQ.length];if(pd)$('hPod').innerHTML='<h3>'+ic('star')+' Place of the day</h3><p class="pdN"><a href="'+E(pd.u)+'">'+E(pd.n)+'</a></p><p class="gSub">'+E(pd.a)+(pd.sub?' · '+E(pd.sub):'')+(pd.m&&pd.m!==4095&&(pd.m&(1<<MO))?' · in season now':'')+'</p><p>'+E(pd.w)+'</p><p><a href="'+E(pd.u)+'">'+ic('arrow')+' Read more</a></p>';var b=1<<MO,pb=1<<((MO+11)%12),ns=j.p.filter(function(p){return p.m!==4095&&(p.m&b)&&!(p.m&pb)}),k=ns.length;
+var pick=[];for(var i=0;i<Math.min(6,k);i++)pick.push(ns[(DAY*5+i*7)%k]);pick=pick.filter(function(x,i){return pick.indexOf(x)===i});
+$('hNew').innerHTML='<h3>'+ic('calendar')+' Just came into season</h3><p class="gSub">'+k+' experiences worldwide start their season this month. Six of them, new picks every day:</p><ul class="dL">'+pick.map(function(p){return'<li><a href="'+E(p.u)+'"><b>'+E(p.n)+'</b><small>'+E(p.a)+(p.sub?' · '+E(p.sub):'')+'</small></a></li>'}).join('')+'</ul>';
+var wl=j.w.filter(function(w){return w.m.indexOf(MO+1)>=0}),m=wl.length,ws=[];for(i=0;i<Math.min(4,m);i++)ws.push(wl[(DAY*3+i*11)%m]);ws=ws.filter(function(x,i){return ws.indexOf(x)===i});
+$('hSea').innerHTML='<h3>'+ic('whale')+' Sea life in season right now</h3><p class="gSub">'+m+' wildlife windows are open this month. Today\'s four:</p><ul class="dL">'+ws.map(function(w){return'<li><a href="'+E(w.u)+'"><b>'+E(w.n)+'</b>'+(/[A-Za-z]/.test(w.sub||'')?'<small>'+E(w.sub)+'</small>':'')+'</a></li>'}).join('')+'</ul><p><a href="/wildlife-calendar">'+ic('arrow')+' Full sea-life calendar</a></p>'})}
+/* ---------- jump bar follows the scroll ---------- */
+(function(){var L=[].slice.call(document.querySelectorAll('.hJump a'));if(!L.length||!('IntersectionObserver'in window))return;var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){L.forEach(function(a){var on=a.getAttribute('href')==='#'+e.target.id;a.classList.toggle('on',on);if(on&&a.scrollIntoView&&a.parentNode.scrollWidth>a.parentNode.clientWidth)a.parentNode.scrollTo({left:Math.max(0,a.offsetLeft-60),behavior:'smooth'})})}})},{rootMargin:'-45% 0px -50% 0px'});L.forEach(function(a){var t=document.getElementById(a.getAttribute('href').slice(1));if(t)io2.observe(t)})})();
+/* ---------- boot ---------- */
+var c=loc();$('hMapLoc').onclick=locate;today(c);if(c)me(c,1);
+var io='IntersectionObserver'in window?new IntersectionObserver(function(es){if(es.some(function(x){return x.isIntersecting})){io.disconnect();start()}},{rootMargin:'200px'}):null;if(io)io.observe($('hLive'));else start();
+var hb=$('hLocB');if(hb)hb.addEventListener('click',function(){var t0=Date.now(),iv=setInterval(function(){var c2=loc();if(c2&&c2.t>=t0-1000){clearInterval(iv);me(c2);today(c2)}else if(Date.now()-t0>20000)clearInterval(iv)},400)});
+var dl=$('daily');var go=function(){fetch('/daily-index.json?v=28efb2afbe').then(function(r){return r.json()}).then(daily).catch(function(){$('hGame').innerHTML='<p>Today\'s puzzle could not be loaded. <a href="/">Reload</a></p>'})};
+if('IntersectionObserver'in window){var i2=new IntersectionObserver(function(es){if(es.some(function(x){return x.isIntersecting})){i2.disconnect();go()}},{rootMargin:'400px'});i2.observe(dl)}else go();
+})();

@@ -1,51 +1,12 @@
 DipMapper repo clean-up check
 
-Website files: 2133, 74.0 MB (GitHub Pages limit 1 GB)
-Git history: count: 479, in-pack: 34004, size-pack: 786.05 MiB
+Website files: 2166, 75.5 MB (GitHub Pages limit 1 GB)
+Git history: count: 482, in-pack: 35391, size-pack: 804.94 MiB
 
 Junk in the repository root (removed by the next deploy): 0
 
-Possibly unused (report only – needs the owner's yes before removal): 40
-  VERSION.json
-  act.css
-  act2.css
-  act3.css
-  act4.css
-  act5.css
-  act6.css
-  act_core.js
-  coastal-core.js
-  d_underwater.png
-  data_audit.js
-  data_audit_result.json
-  dipmapper-logo.png
-  dir.json
-  dir_enrich.json
-  frames.js
-  gh.js
-  ice.json
-  iperf.js
-  logo-dipmapper.svg
-  m_core.js
-  m_dive.js
-  m_fame.js
-  m_icons.js
-  m_journey.js
-  m_photo.js
-  m_sos.js
-  m_ui.js
-  m_ui2.js
-  m_ui3.js
-  p_about.png
-  p_about3.png
-  p_align.png
-  p_fuel.png
-  p_list_sos.png
-  p_opening.png
-  p_specials.png
-  p_zones.png
-  pickjump.js
-  requirements.json
+Possibly unused (report only – needs the owner's yes before removal): 1
+  p_journey.png
 
 Largest files:
   5.9 MB  explore-classic-data.json
