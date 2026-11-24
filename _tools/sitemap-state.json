@@ -2,12 +2,12 @@
  "https://dipmapper.com/": {
   "file": "index.html",
   "lastmod": "2026-11-24",
-  "sig": "00f23cde9dfe042cd07b"
+  "sig": "5b5dba96b63f3cce6d68"
  },
  "https://dipmapper.com/about": {
   "file": "about.html",
   "lastmod": "2026-11-24",
-  "sig": "7f3b73e609a8e181e83b"
+  "sig": "ba73db7427d8c6562815"
  },
  "https://dipmapper.com/activities": {
   "file": "activities.html",
@@ -22,7 +22,7 @@
  "https://dipmapper.com/animal-game": {
   "file": "animal-game.html",
   "lastmod": "2026-11-24",
-  "sig": "95e07bf916c922b9c00d"
+  "sig": "204cd57624f067cbafd5"
  },
  "https://dipmapper.com/aquariums-in-shopping-malls": {
   "file": "aquariums-in-shopping-malls.html",
@@ -42,67 +42,67 @@
  "https://dipmapper.com/beach-life": {
   "file": "beach-life.html",
   "lastmod": "2026-11-24",
-  "sig": "d87862b9a53d3c64bbcb"
+  "sig": "473cd0453a507bb39189"
  },
  "https://dipmapper.com/best-beach-towns-in-april": {
   "file": "best-beach-towns-in-april.html",
   "lastmod": "2026-11-24",
-  "sig": "a08f8c6e9a45fce9e6e3"
+  "sig": "b9a40b99933247730be9"
  },
  "https://dipmapper.com/best-beach-towns-in-august": {
   "file": "best-beach-towns-in-august.html",
   "lastmod": "2026-11-24",
-  "sig": "1cf0464b8fc585512e0a"
+  "sig": "14643db0bd313c6f2201"
  },
  "https://dipmapper.com/best-beach-towns-in-december": {
   "file": "best-beach-towns-in-december.html",
   "lastmod": "2026-11-24",
-  "sig": "007039aaf268cc3a8930"
+  "sig": "ba050bbfe919fc14e5ee"
  },
  "https://dipmapper.com/best-beach-towns-in-february": {
   "file": "best-beach-towns-in-february.html",
   "lastmod": "2026-11-24",
-  "sig": "e05dded98c48527e6597"
+  "sig": "bc45a9c506c5973362db"
  },
  "https://dipmapper.com/best-beach-towns-in-january": {
   "file": "best-beach-towns-in-january.html",
   "lastmod": "2026-11-24",
-  "sig": "b0f3413f4dffa2e88bce"
+  "sig": "86489037788e6289bca5"
  },
  "https://dipmapper.com/best-beach-towns-in-july": {
   "file": "best-beach-towns-in-july.html",
   "lastmod": "2026-11-24",
-  "sig": "051ad603c8f39a27dcbe"
+  "sig": "ce2d7126ce755cc5618e"
  },
  "https://dipmapper.com/best-beach-towns-in-june": {
   "file": "best-beach-towns-in-june.html",
   "lastmod": "2026-11-24",
-  "sig": "690d5cbe764f69eef660"
+  "sig": "b0975ffd9fc43509f8ac"
  },
  "https://dipmapper.com/best-beach-towns-in-march": {
   "file": "best-beach-towns-in-march.html",
   "lastmod": "2026-11-24",
-  "sig": "c3039633b5325f49241e"
+  "sig": "3a7f9e6e20c6851fb60e"
  },
  "https://dipmapper.com/best-beach-towns-in-may": {
   "file": "best-beach-towns-in-may.html",
   "lastmod": "2026-11-24",
-  "sig": "156b0233b32b5d5a5578"
+  "sig": "181af438dd6d60008ee5"
  },
  "https://dipmapper.com/best-beach-towns-in-november": {
   "file": "best-beach-towns-in-november.html",
   "lastmod": "2026-11-24",
-  "sig": "29866d5d7b07e6068022"
+  "sig": "9709e240ec70dd8619da"
  },
  "https://dipmapper.com/best-beach-towns-in-october": {
   "file": "best-beach-towns-in-october.html",
   "lastmod": "2026-11-24",
-  "sig": "8e469c0718908b80d86d"
+  "sig": "4a56aa097e7a7f0cf872"
  },
  "https://dipmapper.com/best-beach-towns-in-september": {
   "file": "best-beach-towns-in-september.html",
   "lastmod": "2026-11-24",
-  "sig": "5b193e0b260719f67e0f"
+  "sig": "e46382341a285d1e0cdc"
  },
  "https://dipmapper.com/best-public-aquariums": {
   "file": "best-public-aquariums.html",
@@ -119,20 +119,25 @@
   "lastmod": "2026-11-24",
   "sig": "14a1ea35aa82be98b42b"
  },
+ "https://dipmapper.com/boat-trips-with-food": {
+  "file": "boat-trips-with-food.html",
+  "lastmod": "2026-11-24",
+  "sig": "9e450b36e0e2f44ed09f"
+ },
  "https://dipmapper.com/cite": {
   "file": "cite.html",
   "lastmod": "2026-11-24",
-  "sig": "852f835b074fe14d8bec"
+  "sig": "faee6f180fecca48a0f0"
  },
  "https://dipmapper.com/compare": {
   "file": "compare.html",
   "lastmod": "2026-11-24",
-  "sig": "12884e76023f508915eb"
+  "sig": "b223e97268278d810623"
  },
  "https://dipmapper.com/diving": {
   "file": "diving.html",
   "lastmod": "2026-11-24",
-  "sig": "e24682aa62f1991565a2"
+  "sig": "8705223d17e4eed5b0ca"
  },
  "https://dipmapper.com/diving-lake-zurich": {
   "file": "diving-lake-zurich.html",
@@ -147,187 +152,187 @@
  "https://dipmapper.com/fishing": {
   "file": "fishing.html",
   "lastmod": "2026-11-24",
-  "sig": "9299e01232982409757c"
+  "sig": "84ac97bb0b41e3ef2186"
  },
  "https://dipmapper.com/fishing-argentina": {
   "file": "fishing-argentina.html",
   "lastmod": "2026-11-24",
-  "sig": "f9217b63c2808a7cedba"
+  "sig": "c3ba71b81c2f56be443e"
  },
  "https://dipmapper.com/fishing-australia": {
   "file": "fishing-australia.html",
   "lastmod": "2026-11-24",
-  "sig": "136d27076085b95eeb20"
+  "sig": "8b3c5fbe161e18503852"
  },
  "https://dipmapper.com/fishing-austria": {
   "file": "fishing-austria.html",
   "lastmod": "2026-11-24",
-  "sig": "6c7286fb59399949888e"
+  "sig": "d62713152f929f3fe507"
  },
  "https://dipmapper.com/fishing-bahamas": {
   "file": "fishing-bahamas.html",
   "lastmod": "2026-11-24",
-  "sig": "f637409feef7ddafd866"
+  "sig": "d175e92de14f85dabff7"
  },
  "https://dipmapper.com/fishing-canada": {
   "file": "fishing-canada.html",
   "lastmod": "2026-11-24",
-  "sig": "0a68f123452afff7ffa0"
+  "sig": "632e869e1c64c38e4f90"
  },
  "https://dipmapper.com/fishing-chile": {
   "file": "fishing-chile.html",
   "lastmod": "2026-11-24",
-  "sig": "558882d2888056acf22f"
+  "sig": "78f254e1995ff6826084"
  },
  "https://dipmapper.com/fishing-costa-rica": {
   "file": "fishing-costa-rica.html",
   "lastmod": "2026-11-24",
-  "sig": "8cc72127a8d463da81f4"
+  "sig": "0e59393b0b08e4c874c8"
  },
  "https://dipmapper.com/fishing-croatia": {
   "file": "fishing-croatia.html",
   "lastmod": "2026-11-24",
-  "sig": "765021d04d50e874511d"
+  "sig": "5377c6bd4c7daf03cf2a"
  },
  "https://dipmapper.com/fishing-czechia": {
   "file": "fishing-czechia.html",
   "lastmod": "2026-11-24",
-  "sig": "2b1a81942449a3d1c396"
+  "sig": "9ba772a2495d2c09cfeb"
  },
  "https://dipmapper.com/fishing-denmark": {
   "file": "fishing-denmark.html",
   "lastmod": "2026-11-24",
-  "sig": "0e3410f69d338d49188b"
+  "sig": "95b35cbeebbf91e0badf"
  },
  "https://dipmapper.com/fishing-finland": {
   "file": "fishing-finland.html",
   "lastmod": "2026-11-24",
-  "sig": "ee153879e41773789fa4"
+  "sig": "4f64514f8c16efcf0300"
  },
  "https://dipmapper.com/fishing-france": {
   "file": "fishing-france.html",
   "lastmod": "2026-11-24",
-  "sig": "3ccc93713a42a4f1aa31"
+  "sig": "af29cc3159593b136bb6"
  },
  "https://dipmapper.com/fishing-germany": {
   "file": "fishing-germany.html",
   "lastmod": "2026-11-24",
-  "sig": "73a5a534ac6d86af8afd"
+  "sig": "e0741346f67e43914222"
  },
  "https://dipmapper.com/fishing-greece": {
   "file": "fishing-greece.html",
   "lastmod": "2026-11-24",
-  "sig": "c36221a6a891ee418b71"
+  "sig": "363cce8e92022495a5d2"
  },
  "https://dipmapper.com/fishing-iceland": {
   "file": "fishing-iceland.html",
   "lastmod": "2026-11-24",
-  "sig": "9991188754bf69a80f9e"
+  "sig": "355a249bec363d8d30da"
  },
  "https://dipmapper.com/fishing-ireland": {
   "file": "fishing-ireland.html",
   "lastmod": "2026-11-24",
-  "sig": "b641022e5536169f4c10"
+  "sig": "9cb3607b824f90ce0c26"
  },
  "https://dipmapper.com/fishing-italy": {
   "file": "fishing-italy.html",
   "lastmod": "2026-11-24",
-  "sig": "5a4a242feafa2d8c13b9"
+  "sig": "a98b3dc52e4d61dbff7d"
  },
  "https://dipmapper.com/fishing-japan": {
   "file": "fishing-japan.html",
   "lastmod": "2026-11-24",
-  "sig": "a420cf7369c252735210"
+  "sig": "db3d8c9319c97cfec9f6"
  },
  "https://dipmapper.com/fishing-maldives": {
   "file": "fishing-maldives.html",
   "lastmod": "2026-11-24",
-  "sig": "d73f2184d298f8e316f1"
+  "sig": "f43401173f6f5b378e13"
  },
  "https://dipmapper.com/fishing-mexico": {
   "file": "fishing-mexico.html",
   "lastmod": "2026-11-24",
-  "sig": "507ff8d27034ad9bbba6"
+  "sig": "4c9b4d0b5aad31ccbd21"
  },
  "https://dipmapper.com/fishing-netherlands": {
   "file": "fishing-netherlands.html",
   "lastmod": "2026-11-24",
-  "sig": "12d9f4058054501d9c6b"
+  "sig": "8ded5e38986e3ee25697"
  },
  "https://dipmapper.com/fishing-new-zealand": {
   "file": "fishing-new-zealand.html",
   "lastmod": "2026-11-24",
-  "sig": "a862e1606cd00a90979d"
+  "sig": "96c84b13f03e8c4ef4cf"
  },
  "https://dipmapper.com/fishing-norway": {
   "file": "fishing-norway.html",
   "lastmod": "2026-11-24",
-  "sig": "1b6fa065ca2ba3c2f5b2"
+  "sig": "2e221111c61f8ab72ddc"
  },
  "https://dipmapper.com/fishing-poland": {
   "file": "fishing-poland.html",
   "lastmod": "2026-11-24",
-  "sig": "341512e86ad9075d0c3d"
+  "sig": "5c27a1ee781a510773cd"
  },
  "https://dipmapper.com/fishing-portugal": {
   "file": "fishing-portugal.html",
   "lastmod": "2026-11-24",
-  "sig": "8243b842ec61b96a31c2"
+  "sig": "f97cc53d3d0573b6d2f3"
  },
  "https://dipmapper.com/fishing-seychelles": {
   "file": "fishing-seychelles.html",
   "lastmod": "2026-11-24",
-  "sig": "045505431137f82c105d"
+  "sig": "bd9b26518caf73abd2ce"
  },
  "https://dipmapper.com/fishing-slovenia": {
   "file": "fishing-slovenia.html",
   "lastmod": "2026-11-24",
-  "sig": "3bbe64271f473f73108e"
+  "sig": "49a5b8acca7c8ff2fe96"
  },
  "https://dipmapper.com/fishing-south-africa": {
   "file": "fishing-south-africa.html",
   "lastmod": "2026-11-24",
-  "sig": "4918295752ff1f5e6503"
+  "sig": "6cc277ff926a11670f4e"
  },
  "https://dipmapper.com/fishing-spain": {
   "file": "fishing-spain.html",
   "lastmod": "2026-11-24",
-  "sig": "614e5d069368d3d5a098"
+  "sig": "743294fb47d9fbe38626"
  },
  "https://dipmapper.com/fishing-sweden": {
   "file": "fishing-sweden.html",
   "lastmod": "2026-11-24",
-  "sig": "96bf7c2415c7d68b4cd3"
+  "sig": "7dc984d9c1cbf3ba672f"
  },
  "https://dipmapper.com/fishing-thailand": {
   "file": "fishing-thailand.html",
   "lastmod": "2026-11-24",
-  "sig": "207b996273d2ab2dabea"
+  "sig": "3a1d8cb76f0c2fbe0ceb"
  },
  "https://dipmapper.com/fishing-turkey": {
   "file": "fishing-turkey.html",
   "lastmod": "2026-11-24",
-  "sig": "635c12cbd539196008e3"
+  "sig": "a1749df2f5c9ff43c934"
  },
  "https://dipmapper.com/fishing-uae": {
   "file": "fishing-uae.html",
   "lastmod": "2026-11-24",
-  "sig": "8f5ad58d8742d0348487"
+  "sig": "db6cdc4b0782743c9eb2"
  },
  "https://dipmapper.com/fishing-united-kingdom": {
   "file": "fishing-united-kingdom.html",
   "lastmod": "2026-11-24",
-  "sig": "efb2530ec8c16ac0bbd7"
+  "sig": "a35b319f1683fc9484b6"
  },
  "https://dipmapper.com/fishing-usa": {
   "file": "fishing-usa.html",
   "lastmod": "2026-11-24",
-  "sig": "9ab33726f550985d16ef"
+  "sig": "e441ec23846f1fe7efd9"
  },
  "https://dipmapper.com/house-reef-hotels": {
   "file": "house-reef-hotels.html",
   "lastmod": "2026-11-24",
-  "sig": "88cfd94a089f47827541"
+  "sig": "81288f35827f74dc2f6f"
  },
  "https://dipmapper.com/kayak": {
   "file": "kayak.html",
@@ -347,7 +352,7 @@
  "https://dipmapper.com/marine-rescue-centres": {
   "file": "marine-rescue-centres.html",
   "lastmod": "2026-11-24",
-  "sig": "08092ce800fb0d3c9132"
+  "sig": "e8c89fbd423c85bb861f"
  },
  "https://dipmapper.com/mediterranean": {
   "file": "mediterranean.html",
@@ -382,797 +387,797 @@
  "https://dipmapper.com/pick-aquarium-aquaria-phuket": {
   "file": "pick-aquarium-aquaria-phuket.html",
   "lastmod": "2026-11-24",
-  "sig": "34219e1d3b0e0f364b70"
+  "sig": "3c0560fa9a2566d4a6ea"
  },
  "https://dipmapper.com/pick-aquarium-aquatis": {
   "file": "pick-aquarium-aquatis.html",
   "lastmod": "2026-11-24",
-  "sig": "7a6abad17e396d08adf0"
+  "sig": "6e8159e42e6087ac3fa8"
  },
  "https://dipmapper.com/pick-aquarium-atlantis-lost-world": {
   "file": "pick-aquarium-atlantis-lost-world.html",
   "lastmod": "2026-11-24",
-  "sig": "4b5397ebd7fe0df9d617"
+  "sig": "b0b08e1752e6d393b08c"
  },
  "https://dipmapper.com/pick-aquarium-baltimore": {
   "file": "pick-aquarium-baltimore.html",
   "lastmod": "2026-11-24",
-  "sig": "945e674882ed3dad5a48"
+  "sig": "c52614b27bd101a9bf4b"
  },
  "https://dipmapper.com/pick-aquarium-bangkok": {
   "file": "pick-aquarium-bangkok.html",
   "lastmod": "2026-11-24",
-  "sig": "3fe079fb57e94a26e288"
+  "sig": "f0ed099d65d7ffe59ae8"
  },
  "https://dipmapper.com/pick-aquarium-barcelona": {
   "file": "pick-aquarium-barcelona.html",
   "lastmod": "2026-11-24",
-  "sig": "c0e4154509a03c521b32"
+  "sig": "1b4767926229c062381b"
  },
  "https://dipmapper.com/pick-aquarium-berlin": {
   "file": "pick-aquarium-berlin.html",
   "lastmod": "2026-11-24",
-  "sig": "dd11ab5de66216d18254"
+  "sig": "d9d23d0d95d052e6c314"
  },
  "https://dipmapper.com/pick-aquarium-birch-scripps": {
   "file": "pick-aquarium-birch-scripps.html",
   "lastmod": "2026-11-24",
-  "sig": "2ae0beb0662e680d0745"
+  "sig": "187ab420e0b9addb4f2a"
  },
  "https://dipmapper.com/pick-aquarium-blue-planet": {
   "file": "pick-aquarium-blue-planet.html",
   "lastmod": "2026-11-24",
-  "sig": "f45486db9f9246c87da1"
+  "sig": "8fd9198e57cc76e264d2"
  },
  "https://dipmapper.com/pick-aquarium-brighton": {
   "file": "pick-aquarium-brighton.html",
   "lastmod": "2026-11-24",
-  "sig": "92897efe173bea7e96b1"
+  "sig": "327f2677f0f785eea559"
  },
  "https://dipmapper.com/pick-aquarium-budapest-tropicarium": {
   "file": "pick-aquarium-budapest-tropicarium.html",
   "lastmod": "2026-11-24",
-  "sig": "44f9e4ce557f34e0e758"
+  "sig": "91d3e9927f8fc2d289ca"
  },
  "https://dipmapper.com/pick-aquarium-burgers-ocean": {
   "file": "pick-aquarium-burgers-ocean.html",
   "lastmod": "2026-11-24",
-  "sig": "27c533fc8e02da172f58"
+  "sig": "384f198eac8b2712bced"
  },
  "https://dipmapper.com/pick-aquarium-cairns": {
   "file": "pick-aquarium-cairns.html",
   "lastmod": "2026-11-24",
-  "sig": "6d83c7666e9063b25997"
+  "sig": "057ceee69224ca302c53"
  },
  "https://dipmapper.com/pick-aquarium-cebu-ocean": {
   "file": "pick-aquarium-cebu-ocean.html",
   "lastmod": "2026-11-24",
-  "sig": "b5b4134d58aa405957ab"
+  "sig": "07d4e027df7e89f172fa"
  },
  "https://dipmapper.com/pick-aquarium-cretaquarium": {
   "file": "pick-aquarium-cretaquarium.html",
   "lastmod": "2026-11-24",
-  "sig": "e0e0b0514a05a71256b0"
+  "sig": "4d0834eecb59e889ca10"
  },
  "https://dipmapper.com/pick-aquarium-dubai-mall": {
   "file": "pick-aquarium-dubai-mall.html",
   "lastmod": "2026-11-24",
-  "sig": "6ed8a5122cf979fd4c55"
+  "sig": "497cec266bd18050bbf2"
  },
  "https://dipmapper.com/pick-aquarium-enoshima": {
   "file": "pick-aquarium-enoshima.html",
   "lastmod": "2026-11-24",
-  "sig": "a395576175fe8019d0da"
+  "sig": "4e5b56700b606c51f7d2"
  },
  "https://dipmapper.com/pick-aquarium-florida-tampa": {
   "file": "pick-aquarium-florida-tampa.html",
   "lastmod": "2026-11-24",
-  "sig": "c86e96c4130c65dacebb"
+  "sig": "fc3618d83e3c930cba51"
  },
  "https://dipmapper.com/pick-aquarium-galway": {
   "file": "pick-aquarium-galway.html",
   "lastmod": "2026-11-24",
-  "sig": "356d3bd7a9d40bb6141a"
+  "sig": "bd3848ec29a038e6cb30"
  },
  "https://dipmapper.com/pick-aquarium-gdynia": {
   "file": "pick-aquarium-gdynia.html",
   "lastmod": "2026-11-24",
-  "sig": "b512b315dc4428a29dee"
+  "sig": "0fd9faebba15a80382a7"
  },
  "https://dipmapper.com/pick-aquarium-genoa": {
   "file": "pick-aquarium-genoa.html",
   "lastmod": "2026-11-24",
-  "sig": "6ae2c33071e92b0027c7"
+  "sig": "1156e238acfbdd5d99c2"
  },
  "https://dipmapper.com/pick-aquarium-haus-des-meeres": {
   "file": "pick-aquarium-haus-des-meeres.html",
   "lastmod": "2026-11-24",
-  "sig": "157c71b05db45cfc95ff"
+  "sig": "7e640ce3656a2b7fad62"
  },
  "https://dipmapper.com/pick-aquarium-hurghada-grand": {
   "file": "pick-aquarium-hurghada-grand.html",
   "lastmod": "2026-11-24",
-  "sig": "388752a5daeb97e3bc60"
+  "sig": "fac00fd4bbf79ca636af"
  },
  "https://dipmapper.com/pick-aquarium-kamo": {
   "file": "pick-aquarium-kamo.html",
   "lastmod": "2026-11-24",
-  "sig": "b94e5d2c18255b920b35"
+  "sig": "9fe2421c5db06348df9e"
  },
  "https://dipmapper.com/pick-aquarium-kelonia": {
   "file": "pick-aquarium-kelonia.html",
   "lastmod": "2026-11-24",
-  "sig": "28fc26a12c979a3f7c68"
+  "sig": "370a13a4fbe7a10c1907"
  },
  "https://dipmapper.com/pick-aquarium-klcc": {
   "file": "pick-aquarium-klcc.html",
   "lastmod": "2026-11-24",
-  "sig": "52afff0f7307cff97a2b"
+  "sig": "bf8849d1f0b4307ce43e"
  },
  "https://dipmapper.com/pick-aquarium-la-rochelle": {
   "file": "pick-aquarium-la-rochelle.html",
   "lastmod": "2026-11-24",
-  "sig": "98d681a88dc3f09f3e7a"
+  "sig": "c218da3701f899a47462"
  },
  "https://dipmapper.com/pick-aquarium-lisbon": {
   "file": "pick-aquarium-lisbon.html",
   "lastmod": "2026-11-24",
-  "sig": "da1e5d981fadfcb19c04"
+  "sig": "83858113732a02bb94d3"
  },
  "https://dipmapper.com/pick-aquarium-london": {
   "file": "pick-aquarium-london.html",
   "lastmod": "2026-11-24",
-  "sig": "906b3a46320ee8b19e75"
+  "sig": "1f3c29095ec23a0c460b"
  },
  "https://dipmapper.com/pick-aquarium-malta": {
   "file": "pick-aquarium-malta.html",
   "lastmod": "2026-11-24",
-  "sig": "befb5765db706f3c6ae7"
+  "sig": "51409047a1d7a0a331dd"
  },
  "https://dipmapper.com/pick-aquarium-manila-ocean": {
   "file": "pick-aquarium-manila-ocean.html",
   "lastmod": "2026-11-24",
-  "sig": "005d85867a4003ad3f20"
+  "sig": "1c960e7cb829901e4917"
  },
  "https://dipmapper.com/pick-aquarium-monaco": {
   "file": "pick-aquarium-monaco.html",
   "lastmod": "2026-11-24",
-  "sig": "14f0c8d61c7b286da952"
+  "sig": "09afcfd3aa66d99d0ab2"
  },
  "https://dipmapper.com/pick-aquarium-mote-sea": {
   "file": "pick-aquarium-mote-sea.html",
   "lastmod": "2026-11-24",
-  "sig": "a496d0f5a7129b402767"
+  "sig": "f877b56105dc54e6535c"
  },
  "https://dipmapper.com/pick-aquarium-nausicaa": {
   "file": "pick-aquarium-nausicaa.html",
   "lastmod": "2026-11-24",
-  "sig": "bf067cc388929a7f6260"
+  "sig": "0f2641650c14d3728184"
  },
  "https://dipmapper.com/pick-aquarium-noumea": {
   "file": "pick-aquarium-noumea.html",
   "lastmod": "2026-11-24",
-  "sig": "fce2b6cd5d1e8f9731e9"
+  "sig": "c9840570e70556dd159b"
  },
  "https://dipmapper.com/pick-aquarium-oceanopolis": {
   "file": "pick-aquarium-oceanopolis.html",
   "lastmod": "2026-11-24",
-  "sig": "9d01e43ae3fcf0460578"
+  "sig": "635e24d5277f8966ec42"
  },
  "https://dipmapper.com/pick-aquarium-okinawa": {
   "file": "pick-aquarium-okinawa.html",
   "lastmod": "2026-11-24",
-  "sig": "bd704c2300f9d7063dbb"
+  "sig": "6dddef2b640f949614dd"
  },
  "https://dipmapper.com/pick-aquarium-ozeaneum": {
   "file": "pick-aquarium-ozeaneum.html",
   "lastmod": "2026-11-24",
-  "sig": "44ece7cee579a632a88b"
+  "sig": "a092d460ec39cade9992"
  },
  "https://dipmapper.com/pick-aquarium-phu-quoc-sea-shell": {
   "file": "pick-aquarium-phu-quoc-sea-shell.html",
   "lastmod": "2026-11-24",
-  "sig": "b35f9bfa83375f5550ba"
+  "sig": "047ccfe14a26e678b567"
  },
  "https://dipmapper.com/pick-aquarium-poema-del-mar": {
   "file": "pick-aquarium-poema-del-mar.html",
   "lastmod": "2026-11-24",
-  "sig": "94558cf8a2b60121de32"
+  "sig": "d3b24d368464878eeb60"
  },
  "https://dipmapper.com/pick-aquarium-rotterdam-oceanium": {
   "file": "pick-aquarium-rotterdam-oceanium.html",
   "lastmod": "2026-11-24",
-  "sig": "2e5074253fa999a41285"
+  "sig": "e8eb76fae3baf76adc87"
  },
  "https://dipmapper.com/pick-aquarium-sea-life-konstanz": {
   "file": "pick-aquarium-sea-life-konstanz.html",
   "lastmod": "2026-11-24",
-  "sig": "049237cad4a981a68654"
+  "sig": "36dd799dc6a81cd5063b"
  },
  "https://dipmapper.com/pick-aquarium-seattle": {
   "file": "pick-aquarium-seattle.html",
   "lastmod": "2026-11-24",
-  "sig": "732929d46debdc47714c"
+  "sig": "fa234b961366cce1db79"
  },
  "https://dipmapper.com/pick-aquarium-sharjah": {
   "file": "pick-aquarium-sharjah.html",
   "lastmod": "2026-11-24",
-  "sig": "a25a5d14424fab7558e7"
+  "sig": "0b4539fb8a93697c779e"
  },
  "https://dipmapper.com/pick-aquarium-sydney": {
   "file": "pick-aquarium-sydney.html",
   "lastmod": "2026-11-24",
-  "sig": "b057ab2a2450a288b6b7"
+  "sig": "28ff241b301b131fae41"
  },
  "https://dipmapper.com/pick-aquarium-taiwan-national": {
   "file": "pick-aquarium-taiwan-national.html",
   "lastmod": "2026-11-24",
-  "sig": "4e06c3c1fe37a9b4f82b"
+  "sig": "aea656eb8b068bfd4aa4"
  },
  "https://dipmapper.com/pick-aquarium-the-deep": {
   "file": "pick-aquarium-the-deep.html",
   "lastmod": "2026-11-24",
-  "sig": "7e7ba3d3be57bf28909f"
+  "sig": "67b522154e11f2065664"
  },
  "https://dipmapper.com/pick-aquarium-valencia": {
   "file": "pick-aquarium-valencia.html",
   "lastmod": "2026-11-24",
-  "sig": "9604c8ac0b1f612f1404"
+  "sig": "4fa6f41763433bcc30ff"
  },
  "https://dipmapper.com/pick-aquarium-wroclaw-afrykarium": {
   "file": "pick-aquarium-wroclaw-afrykarium.html",
   "lastmod": "2026-11-24",
-  "sig": "259784a37f896783508a"
+  "sig": "57da93944c6ed8f032bc"
  },
  "https://dipmapper.com/pick-aquarium-xpark": {
   "file": "pick-aquarium-xpark.html",
   "lastmod": "2026-11-24",
-  "sig": "0a7763aca72d09c81bc8"
+  "sig": "4299629163e14be03ca1"
  },
  "https://dipmapper.com/pick-beach-balos": {
   "file": "pick-beach-balos.html",
   "lastmod": "2026-11-24",
-  "sig": "e71a98d0a03fdbd68c3b"
+  "sig": "9ad5b992a9f04b1b86d3"
  },
  "https://dipmapper.com/pick-beach-calo-moro": {
   "file": "pick-beach-calo-moro.html",
   "lastmod": "2026-11-24",
-  "sig": "21c7dd00fd0cb751d44a"
+  "sig": "f5e732385dee26523a82"
  },
  "https://dipmapper.com/pick-beach-calo-mort": {
   "file": "pick-beach-calo-mort.html",
   "lastmod": "2026-11-24",
-  "sig": "cd7264c68adddd6040ec"
+  "sig": "b34de1431c9fed9300b1"
  },
  "https://dipmapper.com/pick-beach-cavalleria": {
   "file": "pick-beach-cavalleria.html",
   "lastmod": "2026-11-24",
-  "sig": "de70ed07e7462837932c"
+  "sig": "c27b77d864eb9b236a99"
  },
  "https://dipmapper.com/pick-beach-ehukai": {
   "file": "pick-beach-ehukai.html",
   "lastmod": "2026-11-24",
-  "sig": "0d72931d741bf290ff9d"
+  "sig": "33fde0ebf59b47ffab4a"
  },
  "https://dipmapper.com/pick-beach-elafonisi": {
   "file": "pick-beach-elafonisi.html",
   "lastmod": "2026-11-24",
-  "sig": "967f51e89fcf681d6105"
+  "sig": "bba0736b6c11ee7d199f"
  },
  "https://dipmapper.com/pick-beach-es-trenc": {
   "file": "pick-beach-es-trenc.html",
   "lastmod": "2026-11-24",
-  "sig": "7a82758ab42dfcdae0f0"
+  "sig": "080dcc06be9fc13ae2c9"
  },
  "https://dipmapper.com/pick-beach-fishermans-torquay": {
   "file": "pick-beach-fishermans-torquay.html",
   "lastmod": "2026-11-24",
-  "sig": "b0e2d2fc49a7f1a6269f"
+  "sig": "a62dc6da7ec1cb27c832"
  },
  "https://dipmapper.com/pick-beach-garda-jamaica": {
   "file": "pick-beach-garda-jamaica.html",
   "lastmod": "2026-11-24",
-  "sig": "d98c89ca013722a8c9aa"
+  "sig": "ff184200b5989d70745a"
  },
  "https://dipmapper.com/pick-beach-la-pelosa": {
   "file": "pick-beach-la-pelosa.html",
   "lastmod": "2026-11-24",
-  "sig": "38c052e9c7d662dd9f94"
+  "sig": "f303c95ec3b16bb19a70"
  },
  "https://dipmapper.com/pick-beach-macarella": {
   "file": "pick-beach-macarella.html",
   "lastmod": "2026-11-24",
-  "sig": "81aa9d919972d9cf7a57"
+  "sig": "5e1be3e97b00d588db2d"
  },
  "https://dipmapper.com/pick-beach-palombaggia": {
   "file": "pick-beach-palombaggia.html",
   "lastmod": "2026-11-24",
-  "sig": "4b50d516f1945b4fbaa3"
+  "sig": "00beef91e42f2fee9c0d"
  },
  "https://dipmapper.com/pick-beach-santa-giulia": {
   "file": "pick-beach-santa-giulia.html",
   "lastmod": "2026-11-24",
-  "sig": "30c88c28454090a8d14a"
+  "sig": "1cfc965c6e288fd80bdd"
  },
  "https://dipmapper.com/pick-beach-ses-illetes": {
   "file": "pick-beach-ses-illetes.html",
   "lastmod": "2026-11-24",
-  "sig": "f38875fcb3a6f222488a"
+  "sig": "204590a92935eeb3d325"
  },
  "https://dipmapper.com/pick-beach-zurich-mythenquai": {
   "file": "pick-beach-zurich-mythenquai.html",
   "lastmod": "2026-11-24",
-  "sig": "3ae14cb3355d7d16448b"
+  "sig": "f232ee63eaa7ee60cf75"
  },
  "https://dipmapper.com/pick-birds-bass-rock": {
   "file": "pick-birds-bass-rock.html",
   "lastmod": "2026-11-24",
-  "sig": "6e2a919a59875eae91ac"
+  "sig": "e0fef207d2eea25db0cd"
  },
  "https://dipmapper.com/pick-birds-bempton": {
   "file": "pick-birds-bempton.html",
   "lastmod": "2026-11-24",
-  "sig": "6fd32fc0ff2fd5e53ad0"
+  "sig": "892f621c31dc862e46c0"
  },
  "https://dipmapper.com/pick-birds-borgarfjordur-eystri": {
   "file": "pick-birds-borgarfjordur-eystri.html",
   "lastmod": "2026-11-24",
-  "sig": "267d4632ec1087037e73"
+  "sig": "e2f879af08fe3cf2f564"
  },
  "https://dipmapper.com/pick-birds-elliston": {
   "file": "pick-birds-elliston.html",
   "lastmod": "2026-11-24",
-  "sig": "ffeaec0ecac205440a78"
+  "sig": "fbf0ca2fbc621ed14096"
  },
  "https://dipmapper.com/pick-birds-farne-islands": {
   "file": "pick-birds-farne-islands.html",
   "lastmod": "2026-11-24",
-  "sig": "aac0071697b1074a33de"
+  "sig": "6e5685ad62fc0f2b5ed7"
  },
  "https://dipmapper.com/pick-birds-helgoland-lummenfelsen": {
   "file": "pick-birds-helgoland-lummenfelsen.html",
   "lastmod": "2026-11-24",
-  "sig": "8376e22785281e5bc2c4"
+  "sig": "0bfd10ca8ca3e5ebe65f"
  },
  "https://dipmapper.com/pick-birds-hornoya": {
   "file": "pick-birds-hornoya.html",
   "lastmod": "2026-11-24",
-  "sig": "3283fdc3ba7afbc3b833"
+  "sig": "19314d2b5691d0b66d17"
  },
  "https://dipmapper.com/pick-birds-isle-of-may": {
   "file": "pick-birds-isle-of-may.html",
   "lastmod": "2026-11-24",
-  "sig": "f30e17649ef55353192d"
+  "sig": "a3b01c106721781ab2f6"
  },
  "https://dipmapper.com/pick-birds-latrabjarg": {
   "file": "pick-birds-latrabjarg.html",
   "lastmod": "2026-11-24",
-  "sig": "2f37623f6516f2c8d95e"
+  "sig": "5d93e24cabcdcd1f6f13"
  },
  "https://dipmapper.com/pick-birds-lunga": {
   "file": "pick-birds-lunga.html",
   "lastmod": "2026-11-24",
-  "sig": "4cc55c0eba48d2a58e92"
+  "sig": "8dbec31d6f41e06d5a9f"
  },
  "https://dipmapper.com/pick-birds-mykines": {
   "file": "pick-birds-mykines.html",
   "lastmod": "2026-11-24",
-  "sig": "06762fce84631922cbb7"
+  "sig": "6686301956801d8c1b33"
  },
  "https://dipmapper.com/pick-birds-pont-de-gau": {
   "file": "pick-birds-pont-de-gau.html",
   "lastmod": "2026-11-24",
-  "sig": "68913816b987d7676416"
+  "sig": "bc28f309052e9444b053"
  },
  "https://dipmapper.com/pick-birds-reykjavik": {
   "file": "pick-birds-reykjavik.html",
   "lastmod": "2026-11-24",
-  "sig": "712b9efbe77b831c78bc"
+  "sig": "c8734d815a4ca64b6d42"
  },
  "https://dipmapper.com/pick-birds-runde": {
   "file": "pick-birds-runde.html",
   "lastmod": "2026-11-24",
-  "sig": "235366b4a4d7997fb5a2"
+  "sig": "c0bfe394c8121e0ea6d2"
  },
  "https://dipmapper.com/pick-birds-sept-iles": {
   "file": "pick-birds-sept-iles.html",
   "lastmod": "2026-11-24",
-  "sig": "cf5fd69f3db11429d064"
+  "sig": "5e250f77714b81c11692"
  },
  "https://dipmapper.com/pick-birds-skomer": {
   "file": "pick-birds-skomer.html",
   "lastmod": "2026-11-24",
-  "sig": "0510ce40cbbdffb2aff9"
+  "sig": "0bc111eb22a91ca0b317"
  },
  "https://dipmapper.com/pick-boat-curieuse": {
   "file": "pick-boat-curieuse.html",
   "lastmod": "2026-11-24",
-  "sig": "daeed52ac495973ffb46"
+  "sig": "58c04a601f916d9ecac2"
  },
  "https://dipmapper.com/pick-boat-staffa": {
   "file": "pick-boat-staffa.html",
   "lastmod": "2026-11-24",
-  "sig": "9b72772248de6ae934c0"
+  "sig": "5da5c9d44a2bdf2ef73a"
  },
  "https://dipmapper.com/pick-canoe-soomaa-flood": {
   "file": "pick-canoe-soomaa-flood.html",
   "lastmod": "2026-11-24",
-  "sig": "40cd8c846088cbef3337"
+  "sig": "3e83acfe60a420d5bddf"
  },
  "https://dipmapper.com/pick-cave-ko-muk": {
   "file": "pick-cave-ko-muk.html",
   "lastmod": "2026-11-24",
-  "sig": "80dc28c822f7357b7542"
+  "sig": "bdf5d370ff146cf6e835"
  },
  "https://dipmapper.com/pick-cruise-como-colico": {
   "file": "pick-cruise-como-colico.html",
   "lastmod": "2026-11-24",
-  "sig": "3128ba80bc6bf0f35922"
+  "sig": "9966bf89a1ffd84c98da"
  },
  "https://dipmapper.com/pick-cruise-milford": {
   "file": "pick-cruise-milford.html",
   "lastmod": "2026-11-24",
-  "sig": "363bd2987c91d83210d3"
+  "sig": "82de179fcd78a0510048"
  },
  "https://dipmapper.com/pick-dive-gbr-spawning": {
   "file": "pick-dive-gbr-spawning.html",
   "lastmod": "2026-11-24",
-  "sig": "0ad09aef56c9ad2f14f6"
+  "sig": "7037b3ba02631f18ffcc"
  },
  "https://dipmapper.com/pick-dive-gozo-bluehole": {
   "file": "pick-dive-gozo-bluehole.html",
   "lastmod": "2026-11-24",
-  "sig": "0ad4f05ceb249b9dffe9"
+  "sig": "604e95415848a2457b39"
  },
  "https://dipmapper.com/pick-dive-iriomote": {
   "file": "pick-dive-iriomote.html",
   "lastmod": "2026-11-24",
-  "sig": "ac7de277476ab5c10088"
+  "sig": "728b1d584c06eb21e069"
  },
  "https://dipmapper.com/pick-dive-koh-tao": {
   "file": "pick-dive-koh-tao.html",
   "lastmod": "2026-11-24",
-  "sig": "a0fe099ac86088cbcbc0"
+  "sig": "d0050d92a2bc49ef4655"
  },
  "https://dipmapper.com/pick-dive-nusa-penida": {
   "file": "pick-dive-nusa-penida.html",
   "lastmod": "2026-11-24",
-  "sig": "1c61eadd49c93591b555"
+  "sig": "4bfef2055b55ff182ff1"
  },
  "https://dipmapper.com/pick-dive-phuket-racha": {
   "file": "pick-dive-phuket-racha.html",
   "lastmod": "2026-11-24",
-  "sig": "30429c238c07a31928ee"
+  "sig": "1f8ef711a746df631789"
  },
  "https://dipmapper.com/pick-dive-phuket-sharkpoint": {
   "file": "pick-dive-phuket-sharkpoint.html",
   "lastmod": "2026-11-24",
-  "sig": "ac45a6c4853d49c93d12"
+  "sig": "935ae470b60cebae5724"
  },
  "https://dipmapper.com/pick-dive-richelieu": {
   "file": "pick-dive-richelieu.html",
   "lastmod": "2026-11-24",
-  "sig": "2b3884203683f426ec39"
+  "sig": "4e599b09d6082e51dd32"
  },
  "https://dipmapper.com/pick-dive-similan": {
   "file": "pick-dive-similan.html",
   "lastmod": "2026-11-24",
-  "sig": "3a5406a83c98be58c4af"
+  "sig": "c4cdd0a4d7b85a9d7a58"
  },
  "https://dipmapper.com/pick-dive-tenggol": {
   "file": "pick-dive-tenggol.html",
   "lastmod": "2026-11-24",
-  "sig": "6c88f6fce653de8c426e"
+  "sig": "262318a74d5387201dca"
  },
  "https://dipmapper.com/pick-dolphin-carrigaholt": {
   "file": "pick-dolphin-carrigaholt.html",
   "lastmod": "2026-11-24",
-  "sig": "c393a51fd747403cb741"
+  "sig": "037e2dd6b8fa15467420"
  },
  "https://dipmapper.com/pick-dolphin-chanonry-point": {
   "file": "pick-dolphin-chanonry-point.html",
   "lastmod": "2026-11-24",
-  "sig": "e1a33f9c3d4727dbedf5"
+  "sig": "336481ee277bcff8bb13"
  },
  "https://dipmapper.com/pick-dolphin-losinj": {
   "file": "pick-dolphin-losinj.html",
   "lastmod": "2026-11-24",
-  "sig": "cb09ccbee006eafc9799"
+  "sig": "5aaeb8cf1e8144cc4e6a"
  },
  "https://dipmapper.com/pick-dolphin-monkey-mia": {
   "file": "pick-dolphin-monkey-mia.html",
   "lastmod": "2026-11-24",
-  "sig": "4ec3b8ed9f7ca422d57b"
+  "sig": "f192d63e7e6aecf004c5"
  },
  "https://dipmapper.com/pick-ferry-como-centre": {
   "file": "pick-ferry-como-centre.html",
   "lastmod": "2026-11-24",
-  "sig": "589d1d79612d1ec61d2e"
+  "sig": "b1cf9bf7759c4cf99b0b"
  },
  "https://dipmapper.com/pick-kayak-fajardo-biobay": {
   "file": "pick-kayak-fajardo-biobay.html",
   "lastmod": "2026-11-24",
-  "sig": "fd8b58b4d20ada7cb9b1"
+  "sig": "989c5fc1db21793eb8bb"
  },
  "https://dipmapper.com/pick-kayak-phang-nga": {
   "file": "pick-kayak-phang-nga.html",
   "lastmod": "2026-11-24",
-  "sig": "0f97df1a75bc2ae05da3"
+  "sig": "9a85876db259f96b6abf"
  },
  "https://dipmapper.com/pick-marine-mammal-center-sausalito": {
   "file": "pick-marine-mammal-center-sausalito.html",
   "lastmod": "2026-11-24",
-  "sig": "75bcb1531d659254a410"
+  "sig": "115dc71e82708e3c7095"
  },
  "https://dipmapper.com/pick-park-alpamare": {
   "file": "pick-park-alpamare.html",
   "lastmod": "2026-11-24",
-  "sig": "c397fc1e6743edb763e7"
+  "sig": "397c6f1770f1d62e9141"
  },
  "https://dipmapper.com/pick-park-andamanda": {
   "file": "pick-park-andamanda.html",
   "lastmod": "2026-11-24",
-  "sig": "cb0be2a34c8879657925"
+  "sig": "41ac00e7ed40c3d754d1"
  },
  "https://dipmapper.com/pick-park-erding": {
   "file": "pick-park-erding.html",
   "lastmod": "2026-11-24",
-  "sig": "99031cba28a2cc4a29bc"
+  "sig": "2dcd1cc0223c4d287c6d"
  },
  "https://dipmapper.com/pick-penguin-phillip-island": {
   "file": "pick-penguin-phillip-island.html",
   "lastmod": "2026-11-24",
-  "sig": "1d5c3890872e16805dbc"
+  "sig": "86eaf90dc1fb513c3244"
  },
  "https://dipmapper.com/pick-polar-bears-churchill": {
   "file": "pick-polar-bears-churchill.html",
   "lastmod": "2026-11-24",
-  "sig": "7dbfe31948ff83750361"
+  "sig": "efb0550898c736ccc4ce"
  },
  "https://dipmapper.com/pick-raft-nakhon-nayok": {
   "file": "pick-raft-nakhon-nayok.html",
   "lastmod": "2026-11-24",
-  "sig": "6e0820317d210ec3322b"
+  "sig": "fdaff41633d6f7626d3b"
  },
  "https://dipmapper.com/pick-raft-simme-boltigen": {
   "file": "pick-raft-simme-boltigen.html",
   "lastmod": "2026-11-24",
-  "sig": "25590ef93440f37994ce"
+  "sig": "39f5adebcfda09d3c6ed"
  },
  "https://dipmapper.com/pick-raft-soca": {
   "file": "pick-raft-soca.html",
   "lastmod": "2026-11-24",
-  "sig": "24595c674adfe9ba2693"
+  "sig": "ca10a76a78591af61e81"
  },
  "https://dipmapper.com/pick-raft-vorderrhein-ilanz": {
   "file": "pick-raft-vorderrhein-ilanz.html",
   "lastmod": "2026-11-24",
-  "sig": "b3faffec502b6362db11"
+  "sig": "829bd26555e61818132b"
  },
  "https://dipmapper.com/pick-reef-agincourt": {
   "file": "pick-reef-agincourt.html",
   "lastmod": "2026-11-24",
-  "sig": "1711ec98a979935b73bd"
+  "sig": "00b302cb43712b63e81d"
  },
  "https://dipmapper.com/pick-salmon-falls-of-shin": {
   "file": "pick-salmon-falls-of-shin.html",
   "lastmod": "2026-11-24",
-  "sig": "ce90d87c3dca0d8c5273"
+  "sig": "39c1dc1018e29df2061a"
  },
  "https://dipmapper.com/pick-salmon-rogie-falls": {
   "file": "pick-salmon-rogie-falls.html",
   "lastmod": "2026-11-24",
-  "sig": "e310b504b2768bdb68ce"
+  "sig": "ffca978a3542b6b611ae"
  },
  "https://dipmapper.com/pick-sauna-dampen": {
   "file": "pick-sauna-dampen.html",
   "lastmod": "2026-11-24",
-  "sig": "e6ba839a409168391cec"
+  "sig": "6e240907758cf000e5af"
  },
  "https://dipmapper.com/pick-seal-baie-de-somme": {
   "file": "pick-seal-baie-de-somme.html",
   "lastmod": "2026-11-24",
-  "sig": "a0b27dddfce3dee5d56f"
+  "sig": "f38bf17b30494f00c725"
  },
  "https://dipmapper.com/pick-seal-bay-kangaroo-island": {
   "file": "pick-seal-bay-kangaroo-island.html",
   "lastmod": "2026-11-24",
-  "sig": "984b03d5a185b1bde70a"
+  "sig": "56c56014068c28dd1b51"
  },
  "https://dipmapper.com/pick-seal-blakeney-point": {
   "file": "pick-seal-blakeney-point.html",
   "lastmod": "2026-11-24",
-  "sig": "8a0e8c90472ef7e1cf1d"
+  "sig": "c67d3ec78142050ac676"
  },
  "https://dipmapper.com/pick-seal-cape-cross": {
   "file": "pick-seal-cape-cross.html",
   "lastmod": "2026-11-24",
-  "sig": "9163a16b4ae2a555eaec"
+  "sig": "f87eb6cb275d133a03d3"
  },
  "https://dipmapper.com/pick-seal-donna-nook": {
   "file": "pick-seal-donna-nook.html",
   "lastmod": "2026-11-24",
-  "sig": "a0711d2cc7ae6013ad9d"
+  "sig": "913324361e9ac81532e5"
  },
  "https://dipmapper.com/pick-seal-friedrichskoog": {
   "file": "pick-seal-friedrichskoog.html",
   "lastmod": "2026-11-24",
-  "sig": "2eced7b805fbe445678c"
+  "sig": "4184bb339c2e9a2cea53"
  },
  "https://dipmapper.com/pick-seal-hel-fokarium": {
   "file": "pick-seal-hel-fokarium.html",
   "lastmod": "2026-11-24",
-  "sig": "4879812682113f452d28"
+  "sig": "e5492d921d5662a614d3"
  },
  "https://dipmapper.com/pick-seal-helgoland-dune": {
   "file": "pick-seal-helgoland-dune.html",
   "lastmod": "2026-11-24",
-  "sig": "7564fc0d89d72953076f"
+  "sig": "c5fb96c258bfd27bf63f"
  },
  "https://dipmapper.com/pick-seal-hvammstangi": {
   "file": "pick-seal-hvammstangi.html",
   "lastmod": "2026-11-24",
-  "sig": "dcfe8e31602ebfb894fc"
+  "sig": "b4d4133eccdd06cc6e3a"
  },
  "https://dipmapper.com/pick-seal-lauwersoog": {
   "file": "pick-seal-lauwersoog.html",
   "lastmod": "2026-11-24",
-  "sig": "93a3ab6d05336de7a630"
+  "sig": "9ac522db414383890f89"
  },
  "https://dipmapper.com/pick-seal-norddeich": {
   "file": "pick-seal-norddeich.html",
   "lastmod": "2026-11-24",
-  "sig": "c1b6df44d7d2e449da9e"
+  "sig": "b87a9bd23d692d0e2fd0"
  },
  "https://dipmapper.com/pick-seal-rescue-ireland-courtown": {
   "file": "pick-seal-rescue-ireland-courtown.html",
   "lastmod": "2026-11-24",
-  "sig": "70a31fb1b613ba4d0c63"
+  "sig": "e2fed9596b65508e238d"
  },
  "https://dipmapper.com/pick-seal-sanctuary-gweek": {
   "file": "pick-seal-sanctuary-gweek.html",
   "lastmod": "2026-11-24",
-  "sig": "5b81c032aa9a5ae83c94"
+  "sig": "331ca288fe318206c438"
  },
  "https://dipmapper.com/pick-seal-texel-ecomare": {
   "file": "pick-seal-texel-ecomare.html",
   "lastmod": "2026-11-24",
-  "sig": "657e3bf5968747a480b9"
+  "sig": "8f24d156643b61019c01"
  },
  "https://dipmapper.com/pick-semisub-seychelles": {
   "file": "pick-semisub-seychelles.html",
   "lastmod": "2026-11-24",
-  "sig": "a756dade95e601425211"
+  "sig": "886c9c2325e1e9d034fd"
  },
  "https://dipmapper.com/pick-snorkel-jabang": {
   "file": "pick-snorkel-jabang.html",
   "lastmod": "2026-11-24",
-  "sig": "0c3b9d794a7e6e6448e7"
+  "sig": "2468c8525a9ab46acde1"
  },
  "https://dipmapper.com/pick-snorkel-ningaloo": {
   "file": "pick-snorkel-ningaloo.html",
   "lastmod": "2026-11-24",
-  "sig": "d72efdeb918f4d68be06"
+  "sig": "c06324cb465928da4d7b"
  },
  "https://dipmapper.com/pick-snorkel-phi-phi": {
   "file": "pick-snorkel-phi-phi.html",
   "lastmod": "2026-11-24",
-  "sig": "499daed7685e5f9d4eed"
+  "sig": "7cd65eb83de121866b29"
  },
  "https://dipmapper.com/pick-snorkel-surin": {
   "file": "pick-snorkel-surin.html",
   "lastmod": "2026-11-24",
-  "sig": "14fefa4d1aec5527c740"
+  "sig": "5cdb7672bbe31a0c073f"
  },
  "https://dipmapper.com/pick-turtle-iztuzu": {
   "file": "pick-turtle-iztuzu.html",
   "lastmod": "2026-11-24",
-  "sig": "56917f3ace462b88c99b"
+  "sig": "eae226522d871159abae"
  },
  "https://dipmapper.com/pick-turtle-zakynthos": {
   "file": "pick-turtle-zakynthos.html",
   "lastmod": "2026-11-24",
-  "sig": "1ed4e711e2417302eff4"
+  "sig": "50f24a0dc4d9c739d2c6"
  },
  "https://dipmapper.com/pick-whale-andenes": {
   "file": "pick-whale-andenes.html",
   "lastmod": "2026-11-24",
-  "sig": "125c875338116beeabc1"
+  "sig": "f050e4c49e18b4397ffc"
  },
  "https://dipmapper.com/pick-whale-churchill-beluga": {
   "file": "pick-whale-churchill-beluga.html",
   "lastmod": "2026-11-24",
-  "sig": "f7690b0cfaacfdef34e3"
+  "sig": "adfa4a3dad4becdcc426"
  },
  "https://dipmapper.com/pick-whale-hermanus": {
   "file": "pick-whale-hermanus.html",
   "lastmod": "2026-11-24",
-  "sig": "1176ef0021b429a4ec5a"
+  "sig": "7a3bae761a12328821f5"
  },
  "https://dipmapper.com/pick-whale-hervey-bay": {
   "file": "pick-whale-hervey-bay.html",
   "lastmod": "2026-11-24",
-  "sig": "08f767be529543548714"
+  "sig": "af3b2b01333bd223685e"
  },
  "https://dipmapper.com/pick-whale-husavik": {
   "file": "pick-whale-husavik.html",
   "lastmod": "2026-11-24",
-  "sig": "54f3da65e7753bdc356e"
+  "sig": "ea8bde6f8eb762c612cc"
  },
  "https://dipmapper.com/pick-whale-kaikoura": {
   "file": "pick-whale-kaikoura.html",
   "lastmod": "2026-11-24",
-  "sig": "08a7978f99f4a0cde2be"
+  "sig": "194c54168893dad6eaa2"
  },
  "https://dipmapper.com/pick-whale-lime-kiln": {
   "file": "pick-whale-lime-kiln.html",
   "lastmod": "2026-11-24",
-  "sig": "fdb163960637c622c2f4"
+  "sig": "90c4e6f85a2e50485ba7"
  },
  "https://dipmapper.com/pick-whale-mirissa": {
   "file": "pick-whale-mirissa.html",
   "lastmod": "2026-11-24",
-  "sig": "51d80c2b3a1b0092f649"
+  "sig": "6075b88b24800e580461"
  },
  "https://dipmapper.com/pick-whale-monterey": {
   "file": "pick-whale-monterey.html",
   "lastmod": "2026-11-24",
-  "sig": "7c8efc951aebccb3a2c8"
+  "sig": "15b603d15215bc1b9f70"
  },
  "https://dipmapper.com/pick-whale-pelagos-genoa": {
   "file": "pick-whale-pelagos-genoa.html",
   "lastmod": "2026-11-24",
-  "sig": "e06231157fbc9d927400"
+  "sig": "acad6878aa2fbfc94f2b"
  },
  "https://dipmapper.com/pick-whale-pico": {
   "file": "pick-whale-pico.html",
   "lastmod": "2026-11-24",
-  "sig": "77166d456447ced00f4b"
+  "sig": "c3700013610c051fd91b"
  },
  "https://dipmapper.com/pick-whale-ponta-delgada": {
   "file": "pick-whale-ponta-delgada.html",
   "lastmod": "2026-11-24",
-  "sig": "3ffb3e8ddf7884d1fee3"
+  "sig": "d76d39f01224df264cea"
  },
  "https://dipmapper.com/pick-whale-reykjavik": {
   "file": "pick-whale-reykjavik.html",
   "lastmod": "2026-11-24",
-  "sig": "c50ecd5d2d5ada1b3bcb"
+  "sig": "e67fe28b80e482dcaa11"
  },
  "https://dipmapper.com/pick-whale-tarifa": {
   "file": "pick-whale-tarifa.html",
   "lastmod": "2026-11-24",
-  "sig": "bd6347d5e756f52bac8b"
+  "sig": "683f3596cd011b93a283"
  },
  "https://dipmapper.com/pick-whale-tenerife": {
   "file": "pick-whale-tenerife.html",
   "lastmod": "2026-11-24",
-  "sig": "41e5814c171b834edd29"
+  "sig": "019813338240b2dcb44c"
  },
  "https://dipmapper.com/pick-whale-tonga": {
   "file": "pick-whale-tonga.html",
   "lastmod": "2026-11-24",
-  "sig": "7884aa027d612188bc7a"
+  "sig": "f246b524caef904d7c94"
  },
  "https://dipmapper.com/pick-whale-uvita": {
   "file": "pick-whale-uvita.html",
   "lastmod": "2026-11-24",
-  "sig": "57f392bc6b1a62d1df83"
+  "sig": "e264abd90d09ca8a12be"
  },
  "https://dipmapper.com/pick-whale-victoria": {
   "file": "pick-whale-victoria.html",
   "lastmod": "2026-11-24",
-  "sig": "68d746e1c6b83279489f"
+  "sig": "a01a68e3c3c7b249d994"
  },
  "https://dipmapper.com/pick-wildlife-crystal-river": {
   "file": "pick-wildlife-crystal-river.html",
   "lastmod": "2026-11-24",
-  "sig": "925b0dbe32695338ade3"
+  "sig": "ee62ac66773297c582b0"
  },
  "https://dipmapper.com/plan": {
   "file": "plan.html",
   "lastmod": "2026-11-24",
-  "sig": "51ef356ea87a2557ac8c"
+  "sig": "b74132a3e7b0ce37f35e"
  },
  "https://dipmapper.com/rafting": {
   "file": "rafting.html",
@@ -1227,7 +1232,7 @@
  "https://dipmapper.com/shipwrecks": {
   "file": "shipwrecks.html",
   "lastmod": "2026-11-24",
-  "sig": "398571127d096065d151"
+  "sig": "0d86d53311ec3abb377a"
  },
  "https://dipmapper.com/snorkel": {
   "file": "snorkel.html",
@@ -1992,12 +1997,12 @@
  "https://dipmapper.com/visa-and-entry": {
   "file": "visa-and-entry.html",
   "lastmod": "2026-11-24",
-  "sig": "5f5abe257be75786dd1d"
+  "sig": "b70bcf95991aa3bc5a8e"
  },
  "https://dipmapper.com/water-experience-guides": {
   "file": "water-experience-guides.html",
   "lastmod": "2026-11-24",
-  "sig": "fdb75651d4983f1ee349"
+  "sig": "dd5df98a6ffdd37dba10"
  },
  "https://dipmapper.com/water-experiences-australia": {
   "file": "water-experiences-australia.html",
@@ -2287,342 +2292,342 @@
  "https://dipmapper.com/wildlife-calendar": {
   "file": "wildlife-calendar.html",
   "lastmod": "2026-11-24",
-  "sig": "709e4c9e66de8691b537"
+  "sig": "ad6f181d8185f73bd3c7"
  },
  "https://dipmapper.com/wildlife-id-guide": {
   "file": "wildlife-id-guide.html",
   "lastmod": "2026-11-24",
-  "sig": "95546b37803b2337187f"
+  "sig": "bf4a4c089c80a065e190"
  },
  "https://dipmapper.com/wildlife-knowledge": {
   "file": "wildlife-knowledge.html",
   "lastmod": "2026-11-24",
-  "sig": "c7248436d9083cf82df9"
+  "sig": "c1652c74c8bc17addda3"
  },
  "https://dipmapper.com/wildlife-species-african-penguin": {
   "file": "wildlife-species-african-penguin.html",
   "lastmod": "2026-11-24",
-  "sig": "47cc8d1aab6a54933226"
+  "sig": "d51a3088f05fbf949d9d"
  },
  "https://dipmapper.com/wildlife-species-amazon-river-dolphin": {
   "file": "wildlife-species-amazon-river-dolphin.html",
   "lastmod": "2026-11-24",
-  "sig": "fbbd1dcc62d5ab6e3f4b"
+  "sig": "f243599d17e3df1f230a"
  },
  "https://dipmapper.com/wildlife-species-atlantic-puffin": {
   "file": "wildlife-species-atlantic-puffin.html",
   "lastmod": "2026-11-24",
-  "sig": "75ab9ca9b5c6e701bebe"
+  "sig": "659689cb14717b76334b"
  },
  "https://dipmapper.com/wildlife-species-atlantic-salmon": {
   "file": "wildlife-species-atlantic-salmon.html",
   "lastmod": "2026-11-24",
-  "sig": "8ba280a786e33e29e0e7"
+  "sig": "a1b3c28e989056cc59e3"
  },
  "https://dipmapper.com/wildlife-species-australian-sea-lion": {
   "file": "wildlife-species-australian-sea-lion.html",
   "lastmod": "2026-11-24",
-  "sig": "3604c65888a36f271c68"
+  "sig": "08275c4df96c5e92afb2"
  },
  "https://dipmapper.com/wildlife-species-beluga-whale": {
   "file": "wildlife-species-beluga-whale.html",
   "lastmod": "2026-11-24",
-  "sig": "1a76275373cf6ec8135f"
+  "sig": "8bddb09f8aef9b05a21b"
  },
  "https://dipmapper.com/wildlife-species-blue-whale": {
   "file": "wildlife-species-blue-whale.html",
   "lastmod": "2026-11-24",
-  "sig": "001035e9601386f30d67"
+  "sig": "80166e1541231991ccd3"
  },
  "https://dipmapper.com/wildlife-species-brydes-whale": {
   "file": "wildlife-species-brydes-whale.html",
   "lastmod": "2026-11-24",
-  "sig": "4fb5f8da1034bcacc70f"
+  "sig": "93e71d0a4bb583064fcf"
  },
  "https://dipmapper.com/wildlife-species-california-grunion": {
   "file": "wildlife-species-california-grunion.html",
   "lastmod": "2026-11-24",
-  "sig": "e5e7117040c70a30ca18"
+  "sig": "a0369f5065740216bc3f"
  },
  "https://dipmapper.com/wildlife-species-california-sea-lion": {
   "file": "wildlife-species-california-sea-lion.html",
   "lastmod": "2026-11-24",
-  "sig": "b9711d0ab7ef0f6d6980"
+  "sig": "d0c8d7727ee2758facf2"
  },
  "https://dipmapper.com/wildlife-species-cape-fur-seal": {
   "file": "wildlife-species-cape-fur-seal.html",
   "lastmod": "2026-11-24",
-  "sig": "f5bbf4b6c9aa291996f6"
+  "sig": "7700a0575ef34b68db76"
  },
  "https://dipmapper.com/wildlife-species-coho-salmon": {
   "file": "wildlife-species-coho-salmon.html",
   "lastmod": "2026-11-24",
-  "sig": "86fba7288d6041d2b780"
+  "sig": "fa3fe577b852b77b49be"
  },
  "https://dipmapper.com/wildlife-species-commersons-dolphin": {
   "file": "wildlife-species-commersons-dolphin.html",
   "lastmod": "2026-11-24",
-  "sig": "08ed7a8879e224694907"
+  "sig": "2579ad572951d85f74a8"
  },
  "https://dipmapper.com/wildlife-species-common-bottlenose-dolphin": {
   "file": "wildlife-species-common-bottlenose-dolphin.html",
   "lastmod": "2026-11-24",
-  "sig": "d39fa71e9902b92bb597"
+  "sig": "9cbd5a387e0ad409cf01"
  },
  "https://dipmapper.com/wildlife-species-common-dolphin": {
   "file": "wildlife-species-common-dolphin.html",
   "lastmod": "2026-11-24",
-  "sig": "c9bbebd5a309bad7f73b"
+  "sig": "0e98c80118db5cda9857"
  },
  "https://dipmapper.com/wildlife-species-common-guillemot": {
   "file": "wildlife-species-common-guillemot.html",
   "lastmod": "2026-11-24",
-  "sig": "507f787656bdba8fa04e"
+  "sig": "9571f04fc5e40d209fe5"
  },
  "https://dipmapper.com/wildlife-species-coral-spawning": {
   "file": "wildlife-species-coral-spawning.html",
   "lastmod": "2026-11-24",
-  "sig": "877a6a88282c2e7c7bdd"
+  "sig": "3d4e2d4f7692ccc2fb67"
  },
  "https://dipmapper.com/wildlife-species-dugong": {
   "file": "wildlife-species-dugong.html",
   "lastmod": "2026-11-24",
-  "sig": "c5aef71ad2fbd403cffc"
+  "sig": "e38db8df422ef70a2884"
  },
  "https://dipmapper.com/wildlife-species-dusky-dolphin": {
   "file": "wildlife-species-dusky-dolphin.html",
   "lastmod": "2026-11-24",
-  "sig": "d3cc0e9215e32c6454bf"
+  "sig": "e60110f759303695d33b"
  },
  "https://dipmapper.com/wildlife-species-fin-whale": {
   "file": "wildlife-species-fin-whale.html",
   "lastmod": "2026-11-24",
-  "sig": "f2fdc14ff9df7c20b196"
+  "sig": "d5f001385838fe4fe3ee"
  },
  "https://dipmapper.com/wildlife-species-florida-manatee": {
   "file": "wildlife-species-florida-manatee.html",
   "lastmod": "2026-11-24",
-  "sig": "59814e17228762629434"
+  "sig": "62da940e718cd2e778de"
  },
  "https://dipmapper.com/wildlife-species-franciscana": {
   "file": "wildlife-species-franciscana.html",
   "lastmod": "2026-11-24",
-  "sig": "b7436e5310518242a5e1"
+  "sig": "6c290a46baf1773bf4af"
  },
  "https://dipmapper.com/wildlife-species-giant-australian-cuttlefish": {
   "file": "wildlife-species-giant-australian-cuttlefish.html",
   "lastmod": "2026-11-24",
-  "sig": "08c4a66a936f7feabdca"
+  "sig": "87e401d4f035f1842d73"
  },
  "https://dipmapper.com/wildlife-species-giant-manta-ray": {
   "file": "wildlife-species-giant-manta-ray.html",
   "lastmod": "2026-11-24",
-  "sig": "dc6a26a8463e1c35ab61"
+  "sig": "884f42892b4bf8897d70"
  },
  "https://dipmapper.com/wildlife-species-gray-seal": {
   "file": "wildlife-species-gray-seal.html",
   "lastmod": "2026-11-24",
-  "sig": "4c30088005bf2e3d4cae"
+  "sig": "09a90d840c5946f6322c"
  },
  "https://dipmapper.com/wildlife-species-gray-whale": {
   "file": "wildlife-species-gray-whale.html",
   "lastmod": "2026-11-24",
-  "sig": "340f83e282b79d1d6c67"
+  "sig": "d38ca405ac13a8d36ea9"
  },
  "https://dipmapper.com/wildlife-species-greater-flamingo": {
   "file": "wildlife-species-greater-flamingo.html",
   "lastmod": "2026-11-24",
-  "sig": "d13bba4b5d02c491070a"
+  "sig": "802afb8204be28021585"
  },
  "https://dipmapper.com/wildlife-species-green-turtle": {
   "file": "wildlife-species-green-turtle.html",
   "lastmod": "2026-11-24",
-  "sig": "d9b76926805056ffe660"
+  "sig": "206db2aba451f0a2f6fc"
  },
  "https://dipmapper.com/wildlife-species-guiana-dolphin": {
   "file": "wildlife-species-guiana-dolphin.html",
   "lastmod": "2026-11-24",
-  "sig": "7e1a843749b69fe8eebb"
+  "sig": "12659e584807d90e4c35"
  },
  "https://dipmapper.com/wildlife-species-harbor-porpoise": {
   "file": "wildlife-species-harbor-porpoise.html",
   "lastmod": "2026-11-24",
-  "sig": "f9f592cd915404a01329"
+  "sig": "9b48773bbe0828a32195"
  },
  "https://dipmapper.com/wildlife-species-harbor-seal": {
   "file": "wildlife-species-harbor-seal.html",
   "lastmod": "2026-11-24",
-  "sig": "c3203bcf599624e32c1b"
+  "sig": "c3997661c2c6d9034f5e"
  },
  "https://dipmapper.com/wildlife-species-hawaiian-monk-seal": {
   "file": "wildlife-species-hawaiian-monk-seal.html",
   "lastmod": "2026-11-24",
-  "sig": "8f818ced19cd1a65d3e5"
+  "sig": "b99fb166b7cb498f2e60"
  },
  "https://dipmapper.com/wildlife-species-hawksbill-turtle": {
   "file": "wildlife-species-hawksbill-turtle.html",
   "lastmod": "2026-11-24",
-  "sig": "53fcc32e10773e4df469"
+  "sig": "f29cc7f5766187932566"
  },
  "https://dipmapper.com/wildlife-species-hectors-dolphin": {
   "file": "wildlife-species-hectors-dolphin.html",
   "lastmod": "2026-11-24",
-  "sig": "0077cb7dd190b81ff7f9"
+  "sig": "99187dc2f5a50a741125"
  },
  "https://dipmapper.com/wildlife-species-horned-puffin": {
   "file": "wildlife-species-horned-puffin.html",
   "lastmod": "2026-11-24",
-  "sig": "3a8ca383aae0fe9956f3"
+  "sig": "1296b6354bf3223817ad"
  },
  "https://dipmapper.com/wildlife-species-humpback-whale": {
   "file": "wildlife-species-humpback-whale.html",
   "lastmod": "2026-11-24",
-  "sig": "931b7b1b56afb2338128"
+  "sig": "06478b82a0409d216b29"
  },
  "https://dipmapper.com/wildlife-species-killer-whale": {
   "file": "wildlife-species-killer-whale.html",
   "lastmod": "2026-11-24",
-  "sig": "296bb33bcfbd6b5c0b8c"
+  "sig": "68cfb9066889ad261758"
  },
  "https://dipmapper.com/wildlife-species-leatherback-turtle": {
   "file": "wildlife-species-leatherback-turtle.html",
   "lastmod": "2026-11-24",
-  "sig": "53f95f65994a2907b3e1"
+  "sig": "24bf46cced59e28bb7c3"
  },
  "https://dipmapper.com/wildlife-species-little-penguin": {
   "file": "wildlife-species-little-penguin.html",
   "lastmod": "2026-11-24",
-  "sig": "d6a1f26ddbc118fa825d"
+  "sig": "97bb25d6f2e301b4c20f"
  },
  "https://dipmapper.com/wildlife-species-loggerhead-turtle": {
   "file": "wildlife-species-loggerhead-turtle.html",
   "lastmod": "2026-11-24",
-  "sig": "6f70ed3aa10e8ee0c1c7"
+  "sig": "6192ec8c92b56ed97104"
  },
  "https://dipmapper.com/wildlife-species-minke-whale": {
   "file": "wildlife-species-minke-whale.html",
   "lastmod": "2026-11-24",
-  "sig": "550d467de324f1a723b1"
+  "sig": "96610a888de5bd757821"
  },
  "https://dipmapper.com/wildlife-species-northern-elephant-seal": {
   "file": "wildlife-species-northern-elephant-seal.html",
   "lastmod": "2026-11-24",
-  "sig": "222fe05f1c4f998ab680"
+  "sig": "68da210093fabfe01306"
  },
  "https://dipmapper.com/wildlife-species-northern-gannet": {
   "file": "wildlife-species-northern-gannet.html",
   "lastmod": "2026-11-24",
-  "sig": "913fe122b8dae4db7e1e"
+  "sig": "83a62c092c7fe7741542"
  },
  "https://dipmapper.com/wildlife-species-nz-fur-seal": {
   "file": "wildlife-species-nz-fur-seal.html",
   "lastmod": "2026-11-24",
-  "sig": "7856a71f13214effa272"
+  "sig": "c397243ea61d997ce081"
  },
  "https://dipmapper.com/wildlife-species-nz-sea-lion": {
   "file": "wildlife-species-nz-sea-lion.html",
   "lastmod": "2026-11-24",
-  "sig": "e284e35be331703246a1"
+  "sig": "87068b5493f4d1dc7bd0"
  },
  "https://dipmapper.com/wildlife-species-olive-ridley-turtle": {
   "file": "wildlife-species-olive-ridley-turtle.html",
   "lastmod": "2026-11-24",
-  "sig": "3bf3bb2134aca55d05c8"
+  "sig": "bc484e4e548883cd58bb"
  },
  "https://dipmapper.com/wildlife-species-peales-dolphin": {
   "file": "wildlife-species-peales-dolphin.html",
   "lastmod": "2026-11-24",
-  "sig": "59400bcbba86cc5bd19f"
+  "sig": "82117ea0f798169eb52b"
  },
  "https://dipmapper.com/wildlife-species-platypus": {
   "file": "wildlife-species-platypus.html",
   "lastmod": "2026-11-24",
-  "sig": "ef9654758d41dbb34828"
+  "sig": "aa3d538f78c25d5ffdd1"
  },
  "https://dipmapper.com/wildlife-species-polar-bear": {
   "file": "wildlife-species-polar-bear.html",
   "lastmod": "2026-11-24",
-  "sig": "8e267caaf71ce8a9047e"
+  "sig": "66a0573276ff32dcec28"
  },
  "https://dipmapper.com/wildlife-species-razorbill": {
   "file": "wildlife-species-razorbill.html",
   "lastmod": "2026-11-24",
-  "sig": "25e03e59968903edc451"
+  "sig": "d71471ed2498c72b9001"
  },
  "https://dipmapper.com/wildlife-species-red-necked-phalarope": {
   "file": "wildlife-species-red-necked-phalarope.html",
   "lastmod": "2026-11-24",
-  "sig": "d6d73ffa04b2778791fd"
+  "sig": "0a25733600e8c5d5a9fb"
  },
  "https://dipmapper.com/wildlife-species-reef-manta-ray": {
   "file": "wildlife-species-reef-manta-ray.html",
   "lastmod": "2026-11-24",
-  "sig": "d5509dc1c5c3c04f45b4"
+  "sig": "91b08e8104b9c7a08be4"
  },
  "https://dipmapper.com/wildlife-species-sea-otter": {
   "file": "wildlife-species-sea-otter.html",
   "lastmod": "2026-11-24",
-  "sig": "c89167e398c1aa7e6987"
+  "sig": "4ba3d47038f7cb8a8c4f"
  },
  "https://dipmapper.com/wildlife-species-sei-whale": {
   "file": "wildlife-species-sei-whale.html",
   "lastmod": "2026-11-24",
-  "sig": "9635a0e00f0c012c660f"
+  "sig": "81ca3bffb222b750df52"
  },
  "https://dipmapper.com/wildlife-species-short-finned-pilot-whale": {
   "file": "wildlife-species-short-finned-pilot-whale.html",
   "lastmod": "2026-11-24",
-  "sig": "9ab074098192e04476e4"
+  "sig": "e54161279f057b238c89"
  },
  "https://dipmapper.com/wildlife-species-smalltooth-sawfish": {
   "file": "wildlife-species-smalltooth-sawfish.html",
   "lastmod": "2026-11-24",
-  "sig": "c47fe9904c8c79b82f36"
+  "sig": "148235f4b0fb62b1a7b7"
  },
  "https://dipmapper.com/wildlife-species-sooty-shearwater": {
   "file": "wildlife-species-sooty-shearwater.html",
   "lastmod": "2026-11-24",
-  "sig": "7504d2859d2dcfcfd798"
+  "sig": "97d5833efcaed125ac9c"
  },
  "https://dipmapper.com/wildlife-species-southern-right-whale": {
   "file": "wildlife-species-southern-right-whale.html",
   "lastmod": "2026-11-24",
-  "sig": "29b273a3a3434ea73d72"
+  "sig": "4302981938a2a5393796"
  },
  "https://dipmapper.com/wildlife-species-sperm-whale": {
   "file": "wildlife-species-sperm-whale.html",
   "lastmod": "2026-11-24",
-  "sig": "03f6c8dede4e85cb3cc6"
+  "sig": "14cd1b1dd8e556bad1c0"
  },
  "https://dipmapper.com/wildlife-species-spinner-dolphin": {
   "file": "wildlife-species-spinner-dolphin.html",
   "lastmod": "2026-11-24",
-  "sig": "6242d110d4ad1c815234"
+  "sig": "e20f138337756926b145"
  },
  "https://dipmapper.com/wildlife-species-steller-sea-lion": {
   "file": "wildlife-species-steller-sea-lion.html",
   "lastmod": "2026-11-24",
-  "sig": "4e18f70bce13555d5153"
+  "sig": "946e87e52826692fe8b0"
  },
  "https://dipmapper.com/wildlife-species-striped-dolphin": {
   "file": "wildlife-species-striped-dolphin.html",
   "lastmod": "2026-11-24",
-  "sig": "d98ee86cc9f846528a0e"
+  "sig": "a7aef8588894b35413a3"
  },
  "https://dipmapper.com/wildlife-species-tufted-puffin": {
   "file": "wildlife-species-tufted-puffin.html",
   "lastmod": "2026-11-24",
-  "sig": "779c8a00560e6418e17e"
+  "sig": "febc925a8aa6afa77733"
  },
  "https://dipmapper.com/wildlife-species-whale-shark": {
   "file": "wildlife-species-whale-shark.html",
   "lastmod": "2026-11-24",
-  "sig": "9d4143564bc900834cb8"
+  "sig": "b316280daaaae429bf1d"
  },
  "https://dipmapper.com/wildlife-species-yellow-eyed-penguin": {
   "file": "wildlife-species-yellow-eyed-penguin.html",
   "lastmod": "2026-11-24",
-  "sig": "fb16235ad71a84291f20"
+  "sig": "ad35092240ba94722bb5"
  },
  "https://dipmapper.com/zurich": {
   "file": "zurich.html",
