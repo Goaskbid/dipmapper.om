@@ -100,15 +100,17 @@ def main():
     if len(ids) < 5000:
         raise RuntimeError('implausibly few sites: %d' % len(ids))
     out = ['bathingWaterName', 'countryCode', 'bwWaterCategory', 'latitude', 'longitude', 'bwProfileLink', 'bathingWaterIdentifier'] + cols
-    rows, seen = [], {}
+    rows, seen, got, bad = [], {}, 0, 0
     ids.sort()
     for i in range(0, len(ids), 400):
         j = get('%s/%d/query' % (url, lid), {'objectIds': ','.join(map(str, ids[i:i + 400])), 'outFields': ','.join(out),
                                              'returnGeometry': 'false', 'f': 'json'})
         for ft in j.get('features', []):
+            got += 1
             a = ft.get('attributes', {})
             la, lo = a.get('latitude'), a.get('longitude')
             if la is None or lo is None or not (-90 <= la <= 90 and -180 <= lo <= 180):
+                bad += 1
                 continue
             cat = (a.get('bwWaterCategory') or '').lower()
             link = a.get('bwProfileLink') or ''
@@ -119,8 +121,11 @@ def main():
                          ''.join(letter(a.get(c), seen) for c in cols), link[:300], (a.get('bathingWaterIdentifier') or '')[:40]])
         time.sleep(float(os.environ.get("WQ_SLEEP","0.4")))
     print('sites fetched', len(rows), 'values', seen)
-    if len(rows) < 0.98 * len(ids):
-        raise RuntimeError('only %d of %d sites fetched - nothing published' % (len(rows), len(ids)))
+    if got < len(ids):
+        raise RuntimeError('the service returned %d of %d listed sites - nothing published' % (got, len(ids)))
+    if bad > 0.01 * len(ids):
+        raise RuntimeError('%d of %d sites without valid coordinates - nothing published' % (bad, len(ids)))
+    print('sites without valid coordinates (left out):', bad)
     try:
         prev = json.load(open(os.path.join(OUT, 'index.json'), encoding='utf8')).get('sites') or 0
     except Exception:

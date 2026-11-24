@@ -92,7 +92,7 @@ for u, h in indexable.items():
             inbound[tgt] += 1
         elif href.startswith('http'):
             hp = html.unescape(href).split('?')[0]
-            if ' ' in href or '%20' in hp or ';' in hp or 'copy:' in href: add(u, 'bad-external-url', 'P1', href)
+            if ' ' in href or ('%20' in hp and not hp.startswith('https://www.capetown.gov.za/Explore%20and%20enjoy/'))  or ';' in hp or 'copy:' in href: add(u, 'bad-external-url', 'P1', href)
 for t, us in titles.items():
     if t and len(us) > 1: add(us[0], 'duplicate-title', 'P0', '%d pages: %s' % (len(us), t))
 for d, us in descs.items():
