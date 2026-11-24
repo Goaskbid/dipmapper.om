@@ -420,3 +420,10 @@ section.hero>.wrap{position:relative;z-index:1}
 .hTabA{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:6px 0 0}.hTabA a:not(.agP){font-weight:800;color:#0a6f69}.hTabA .ic{width:16px;height:16px}
 .hrTop{display:flex;gap:12px;align-items:center;padding:14px 16px;border-radius:18px;background:linear-gradient(135deg,#5b34b8,#2a7fd4);color:#fff!important;text-decoration:none;margin:4px 0 18px}.hrTop .ic{width:26px;height:26px;flex:none}.hrTop span{flex:1}.hrTop b{display:block;font-size:1.05rem}.hrTop small{opacity:.9}
 .hX>.h2wrap{display:block!important;max-width:1240px}.hX .hLive{width:100%;max-width:none!important;grid-column:1/-1}.hX>.h2wrap>*{max-width:none!important}.hX .hSearch{max-width:720px!important}.hX .hSearch{max-width:720px}.fndSp small{display:block;margin-top:2px}.fndSp b{display:block}
+
+.dmOsm{margin:14px 0;padding:14px;border-radius:18px;background:#fff;border:1px solid #dce8e6;min-height:40px}.dmOsm h3{display:flex;gap:8px;align-items:center;margin:0 0 6px;font-size:1.02rem}.dmOsm h3 .ic{width:20px;height:20px;color:#e08a1e}.osmpiers h3 .ic{color:#0a6f69}
+.osmS{margin:0 0 6px;font-size:.92rem}.osmL{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:6px}.osmL li{display:flex;gap:6px;align-items:stretch}
+.osmL li>a:first-child{flex:1;display:block;padding:8px 10px;border-radius:12px;background:#f4f8f7;color:#0b2a33;text-decoration:none}.osmL small{display:block;color:#5d6c70}
+.osmGo{display:flex;align-items:center;justify-content:center;width:40px;border-radius:12px;background:#eef6f5;color:#0a6f69}.osmGo .ic{width:18px;height:18px}.osmC{margin:8px 0 0;font-size:11px;color:#6b7b7e}.osmR{font:inherit;font-weight:800;border:0;background:none;color:#0a6f69;cursor:pointer;text-decoration:underline}
+.osmBox{grid-column:1/-1}.blNear{margin:4px 0 18px}
+.dmOsm .osmL{padding:0!important;margin:0!important}.dmOsm .osmL li{margin:0!important}.dmOsm .osmL li::before{display:none!important}.dmOsm h3{font:800 1.02rem/1.3 Manrope,system-ui,sans-serif!important}
