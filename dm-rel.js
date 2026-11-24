@@ -56,7 +56,7 @@
 (function () {
   var D = document, M = new Date().getMonth(), path = location.pathname.replace(/\.html$/, '');
   var ML = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
-  function stored() { try { var c = JSON.parse(localStorage.getItem('dm_loc') || 'null'); if (c && isFinite(c.la) && isFinite(c.lo) && Math.abs(c.la) <= 90 && Math.abs(c.lo) <= 180 && c.t && c.t <= Date.now() + 6e4 && c.t > Date.now() - 432e5) return c; } catch (e) {} return null; }
+  function stored() { try { var c = JSON.parse(localStorage.getItem('dm_loc') || 'null'); if (c && typeof c.la === 'number' && typeof c.lo === 'number' && isFinite(c.la) && isFinite(c.lo) && typeof c.t === 'number' && Math.abs(c.la) <= 90 && Math.abs(c.lo) <= 180 && c.t && c.t <= Date.now() + 6e4 && c.t > Date.now() - 432e5) return c; } catch (e) {} return null; }
   function withLoc(cb) {
     var c = stored(); if (c) return cb(c);
     try {
@@ -64,7 +64,7 @@
       navigator.permissions.query({ name: 'geolocation' }).then(function (p) {
         if (p.state !== 'granted') return;
         navigator.geolocation.getCurrentPosition(function (g) {
-          var v = { la: g.coords.latitude, lo: g.coords.longitude, t: Date.now() };
+          var v = { la: g.coords.latitude, lo: g.coords.longitude, acc: g.coords.accuracy, t: Date.now() };
           try { localStorage.setItem('dm_loc', JSON.stringify(v)); } catch (e) {}
           cb(v);
         }, function () {}, { timeout: 8000, maximumAge: 600000 });
@@ -75,7 +75,7 @@
   function lend(c, ms) {
     var g = navigator.geolocation; if (!g) return;
     var orig = g.getCurrentPosition.bind(g);
-    g.getCurrentPosition = function (ok) { setTimeout(function () { ok({ coords: { latitude: c.la, longitude: c.lo, accuracy: 500 }, timestamp: c.t || Date.now() }); }, 0); };
+    g.getCurrentPosition = function (ok, err, o) { if (o && o.maximumAge === 0) return orig(ok, err, o); setTimeout(function () { ok({ coords: { latitude: c.la, longitude: c.lo, accuracy: typeof c.acc === 'number' && isFinite(c.acc) ? c.acc : null }, timestamp: c.t }); }, 0); };
     setTimeout(function () { g.getCurrentPosition = orig; }, ms || 4000);
   }
   function fire(el, ev) { if (el) el.dispatchEvent(new Event(ev || 'change', { bubbles: true })); }

@@ -1,6 +1,6 @@
 # DipMapper
 
-> DipMapper (dipmapper.com) finds swim spots and water trips anywhere: beaches, lake baths, pools, thermal baths and wild swims near you, with live tides, official EU bathing-water quality, a swim-window forecast, webcams and a wildlife calendar. Free, no account.
+> DipMapper (dipmapper.com) finds swim spots and water trips: beaches, lake baths, pools, thermal baths and wild swims near you. Where sources cover a place it shows weather forecasts (MET Norway), modelled tides, official EU bathing-water classifications, webcams and published wildlife seasons. Free, no account.
 
 ## Key pages
 - [Live map](https://dipmapper.com/spots): swim spots, beaches, lakes, pools and water activities around any location, with weather, tides, official EU bathing-water quality and routes.
@@ -12,7 +12,7 @@
 - [Wildlife calendar](https://dipmapper.com/wildlife-calendar): where and when to see whales, dolphins, seals, turtles, polar bears, salmon and seabirds, with sources.
 - [Diving and snorkelling](https://dipmapper.com/diving): seasons, spots, what you see, conditions (level, depth, current), venomous sea life, hotels with a house reef.
 - [Shipwrecks](https://dipmapper.com/shipwrecks): famous wrecks on land and under water, with history and preservation.
-- [Fishing](https://dipmapper.com/fishing): Swiss lakes, licence rules for ten countries, fly fishing and 23 famous fishing spots worldwide – sorted from the visitor's location.
+- [Fishing](https://dipmapper.com/fishing): fishing guides for 35 countries (licences, prices, rules and official sources), Swiss lakes, fly fishing and famous fishing spots worldwide. The official rules stay binding.
 - [Sunsets, beach bars and drive-on beaches](https://dipmapper.com/beach-life)
 - [Sea-risk calendar](https://dipmapper.com/sea-risk-calendar): jellyfish, storm and rough-sea months by region.
 - [Sources and licences](https://dipmapper.com/sources) · [Cite and reuse](https://dipmapper.com/cite) · [About](https://dipmapper.com/about)
@@ -72,3 +72,6 @@
 - [Boat trips with good food](https://dipmapper.com/boat-trips-with-food): 8 lunch and dinner cruises (Lake Geneva, Lucerne, Zurich, Thun and Brienz, Como, Milford Sound, Sydney, Paris) with menus, prices and official pages.
 - The home page map has specials: beach bars, fish and seafood restaurants and dining by the water, live from OpenStreetMap for the map view.
 - Every beach-town guide lists fish restaurants and waterside dining nearby.
+
+## Water butler
+- On the home page, every beach-town guide and every place page: the best hours for the water today from the MET Norway forecast, tonight's sunset with the nearest beach bar and a fish restaurant for dinner (with "open now" where OpenStreetMap has opening hours), what to bring, add to calendar and share. Save places to your own list.
