@@ -4,7 +4,7 @@
 (function (W) {
   'use strict';
   var D=document,R=Math.PI/180,TTL=15*60*1000,MAX_CACHE=32;
-  var MIR=['https://overpass-api.de/api/interpreter','https://overpass.kumi.systems/api/interpreter','https://overpass.private.coffee/api/interpreter'];
+  var MIR=['https://overpass.kumi.systems/api/interpreter','https://overpass.private.coffee/api/interpreter','https://overpass-api.de/api/interpreter'];
   var cache=new Map(),pending=new Map(),states=new WeakMap(),observed=new WeakSet();
   function E(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
   function ic(n){return '<svg class="ic" aria-hidden="true"><use href="/icons.svg#i-'+n+'"/></svg>'}
@@ -15,12 +15,13 @@
     bars: function (A) { return 'nwr' + A + '[amenity~"^(bar|cafe|restaurant|pub|biergarten)$"][name~"beach|plage|strand|playa|spiaggia|praia|lido|chiringuito|plaj|paralia|seebad|badi|strandbad|beach club",i];nwr' + A + '[leisure=beach_resort][name];'; },
     piers: function (A) { return 'nwr' + A + '[amenity=ferry_terminal];nwr' + A + '[man_made=pier][name];nwr' + A + '[leisure=marina][name];'; },
     fish: function (A) { return 'nwr' + A + '[amenity~"^(restaurant|fast_food)$"][cuisine~"seafood|fish|oyster",i][name];'; },
-    water: function (A) { return '(way' + A + '[natural=coastline];way' + A + '[natural=beach];way' + A + '[natural=water];rel' + A + '[natural=water];)->.w;(way.w;way(r.w);)->.w;nwr(around.w:60)' + A + '[amenity~"^(restaurant|bar|cafe)$"][name];'; }
+    water: function (A) { return '(way' + A + '[natural=coastline];way' + A + '[natural=beach];way' + A + '[natural=water];rel' + A + '[natural=water];)->.w;(way.w;way(r.w)' + A + ';)->.w;nwr(around.w:60)' + A + '[amenity~"^(restaurant|bar|cafe)$"][name];'; }
   };
   var RAD = { bars: 15000, piers: 8000, fish: 8000, water: 3000 };
   function around(k, la, lo) { return '(around:' + RAD[k] + ',' + la + ',' + lo + ')'; }
   var Q = {
     bars: function (la, lo) { return '[out:json][timeout:20];(' + F.bars(around('bars', la, lo)) + ');out center 40;'; },
+    fish: function (la, lo) { return '[out:json][timeout:15];(' + F.fish(around('fish', la, lo)) + ');out center 40;'; },
     piers: function (la, lo) { return '[out:json][timeout:20];(' + F.piers(around('piers', la, lo)) + ');out center 40;'; },
     food: function (la, lo) { return '[out:json][timeout:25];(' + F.fish(around('fish', la, lo)) + ')->.f;' + F.water(around('water', la, lo)).replace(/;$/, '->.v;') + '(.f;.v;);out center 60;'; }
   };

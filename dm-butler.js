@@ -104,7 +104,7 @@
       events.push({ s: ss - 30 * 6e4, e: ss + 15 * 6e4, n: 'Sunset' + (nm ? ' – ' + nm : ''), d: 'Sunset ' + tm(ss, tz) });
       lines.push('Sunset: ' + tm(ss, tz));
       var pl = ev.querySelector('.btPl');
-      if (W.DMNear && DMNear.list) Promise.all([DMNear.list('bars', la, lo).catch(function () { return null; }), DMNear.list('food', la, lo).catch(function () { return null; })]).then(function (r) {
+      if (W.DMNear && DMNear.list) Promise.all([DMNear.list('bars', la, lo).catch(function () { return null; }), DMNear.list('fish', la, lo).catch(function () { return null; })]).then(function (r) {
         var o = '';
         function one(lbl, x) { if (!x) return ''; var op = DMNear.open ? DMNear.open(x.o, tz) : null; return '<p class="btPx"><span>' + lbl + '</span><a href="https://www.openstreetmap.org/?mlat=' + x.la.toFixed(5) + '&amp;mlon=' + x.lo.toFixed(5) + '#map=17/' + x.la.toFixed(5) + '/' + x.lo.toFixed(5) + '" target="_blank" rel="noopener" title="View the mapped location"><b>' + E(x.n) + '</b></a> <small>' + E(x.t) + ' · ' + (x.d < 1 ? Math.round(x.d * 1000) + ' m' : x.d.toFixed(1) + ' km') + (op ? ' · ' + op.txt : '') + '</small></p>'; }
         var nb = function (a, km) { return (a || []).filter(function (x) { return x.d <= km; }); }, bars = nb(r[0], 15), food = nb(r[1], 8), bar = bars[0], fish = food.filter(function (x) { return !/by the water/.test(x.t); })[0] || food[0];
