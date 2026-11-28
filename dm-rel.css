@@ -504,3 +504,31 @@ html body main h3.tdL,html body .tdC h3.tdL{font:800 13px/1.3 var(--t-sans)!impo
 html body main .tdRetry,html body main .t63Clim button,html body main button.dmRetry{display:inline-flex;align-items:center;gap:6px;margin:6px 0 0;padding:7px 14px;border-radius:999px;border:1.5px solid #0a8f88;background:#fff;color:#0a6f69;font:800 14px var(--t-sans);cursor:pointer;min-height:38px}
 html body main .tdRetry:hover,html body main .t63Clim button:hover{background:#eef8f7}
 @media (max-width:640px){html body .thero .ppB,html body .thero .svB,html body .thero .lgB,html body .dmPH .ppB,html body .dmPH .svB,html body .dmPH .lgB{font-size:14px!important;padding:7px 12px!important;margin:8px 6px 2px 0!important}}
+
+/* 23.78 one chart and table style */
+.dmChClim{width:100%;margin:6px 0 4px;min-height:200px}.dmChClim svg{display:block;width:100%;height:auto;max-width:100%;font-family:var(--t-sans,Manrope,system-ui,sans-serif)}
+.dmChLeg{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;margin:8px 0 0!important;font-size:13px!important;color:#4b5d61}
+.dmChK{display:inline-flex;align-items:center;gap:6px;font-weight:700}.dmChK::before{content:"";display:inline-block}
+.dmChKt::before{width:16px;height:3px;border-radius:2px;background:#d1622a}.dmChKr::before{width:10px;height:12px;border-radius:3px;background:#8fbfe6}
+.dmChSrc,.dmChNote{color:#6b7b7e;font-size:12.5px!important}
+.dmChTide{position:relative;margin:28px 0 26px}.dmChTide svg{display:block;width:100%}
+.dmChDot{position:absolute;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:#0b2a33;border:2px solid #fff;box-shadow:0 1px 2px rgba(0,0,0,.25)}
+.dmChLbl.up{transform:translate(-50%,calc(-100% - 8px))}.dmChLbl.dn{transform:translate(-50%,8px)}html body .dmTideEv{margin-left:0!important;margin-right:0!important;padding-left:0!important}@media (max-width:560px){html body .dmTideEv{grid-template-columns:1fr!important}}
+.dmChLbl{position:absolute;transform:translate(-50%,-50%);font:800 12px/1 var(--t-sans,Manrope,system-ui,sans-serif);color:#0b2a33;background:rgba(255,255,255,.92);padding:3px 6px;border-radius:999px;box-shadow:0 1px 3px rgba(6,50,58,.15);white-space:nowrap;pointer-events:none}
+html body .dmWQl{padding:0!important;margin:10px 0 0!important}html body .dmWQl li{padding:0!important;margin:0!important}html body .dmWQl li::before{display:none!important}
+.dmWQtop>div:first-child{flex:0 0 auto}.dmWQl li .dmWQp{flex:0 0 auto}
+.dmWQl li>span:not(.dmWQp){font-weight:600}.dmWQl small{margin-left:auto;white-space:nowrap}
+h3:has(+ .dmCamBox:empty){display:none}.dmCamBox:empty{display:none}
+main svg[role="img"] text{font-family:var(--t-sans,Manrope,system-ui,sans-serif)}
+/* one table look */
+html body main table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+html body main table th,html body main table td{padding:8px 10px;border-bottom:1px solid #e6eced;text-align:left;vertical-align:top}
+html body main table thead th{font-size:12.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#0a6f69;background:#f2f8f7;border-bottom:1px solid #d9e7e5}
+html body main table tbody tr:last-child>*{border-bottom:0}
+html body main table:is(.p,.dmTbl,.fTbl,.fndT,.cmTb){display:table!important;table-layout:auto;width:100%!important;border-collapse:separate!important;border-spacing:0!important;border:1px solid #e3ebec!important;border-radius:14px!important;overflow:hidden;background:#fff!important;font-size:14px!important;margin:10px 0 14px!important}
+html body main table:is(.p,.dmTbl,.fTbl,.fndT,.cmTb) :is(th,td){padding:9px 12px!important;border:0!important;border-bottom:1px solid #edf2f2!important;text-align:left;vertical-align:top;background:transparent}
+html body main table:is(.p,.dmTbl,.fTbl,.fndT,.cmTb) thead th{font-size:12.5px!important;font-weight:800!important;letter-spacing:.04em!important;text-transform:uppercase!important;color:#0a6f69!important;background:#f2f8f7!important}
+html body main table:is(.p,.dmTbl,.fTbl,.fndT,.cmTb) tbody th{font-size:14px!important;font-weight:700!important;letter-spacing:0!important;text-transform:none!important;color:#0b2a33!important;background:#fafcfc!important;width:auto}
+html body main table:is(.p,.dmTbl,.fTbl,.fndT,.cmTb) tbody tr:last-child>*{border-bottom:0!important}
+html body main table:is(.p,.dmTbl,.fTbl,.fndT,.cmTb) td:last-child:not(:first-child){text-align:right}
+html body main .tdTable,html body main .tblWrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid #e3ebec;border-radius:14px;background:#fff}
