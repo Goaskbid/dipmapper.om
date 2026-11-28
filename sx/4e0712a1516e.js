@@ -1,0 +1,2 @@
+(function(){function g(){try{return JSON.parse(localStorage.getItem('dm_pass')||'{}')}catch(e){return{}}}[].forEach.call(document.querySelectorAll('.ppB'),function(b){var id=b.dataset.pp;function sync(){var on=!!g()[id];b.setAttribute('aria-pressed',on);b.lastChild.textContent=on?'In your passport':'I\'ve been here'}sync();
+b.onclick=function(){var p=g();if(p[id])delete p[id];else p[id]={n:b.dataset.n,cc:b.dataset.cc,k:b.dataset.k,u:b.dataset.u,t:Date.now()};try{localStorage.setItem('dm_pass',JSON.stringify(p))}catch(e){}sync()}})})();

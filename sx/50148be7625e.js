@@ -1,0 +1,6 @@
+(function(){var h=document.querySelector('main h1');if(!h||!/wildlife-species-/.test(location.pathname))return;var n=h.textContent.trim(),K='dm_sp1_'+n;
+function put(u,pg){if(!u)return;var f=document.createElement('figure');f.className='spx';f.innerHTML='<img alt="'+n.replace(/"/g,'')+'" src="'+u+'"><figcaption><a href="'+pg+'" target="_blank" rel="noopener">Photo: Wikipedia</a></figcaption>';h.parentNode.insertBefore(f,h.nextSibling.nextSibling||null)}
+try{var c=JSON.parse(localStorage.getItem(K)||'null');if(c){put(c.u,c.p);return}}catch(e){}
+fetch('https://en.wikipedia.org/w/api.php?format=json&origin=*&action=query&generator=search&gsrlimit=3&prop=pageimages|info&inprop=url&piprop=thumbnail&pithumbsize=1000&gsrsearch='+encodeURIComponent(n)).then(function(r){return r.json()}).then(function(j){var b=null,w=n.toLowerCase().split(/\s+/).filter(function(x){return x.length>3});
+ Object.values((j.query||{}).pages||{}).sort(function(a,c){return a.index-c.index}).some(function(p){if(p.thumbnail&&!/map|range|distribution|\.svg|diagram|logo/i.test(p.thumbnail.source)&&w.some(function(x){return p.title.toLowerCase().indexOf(x)>=0})){b={u:p.thumbnail.source,p:p.fullurl};return true}});
+ try{localStorage.setItem(K,JSON.stringify(b||{}))}catch(e){}if(b)put(b.u,b.p)}).catch(function(){})})();

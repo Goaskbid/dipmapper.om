@@ -494,3 +494,13 @@ html body .dmPH>.wrap>.lgF{flex:0 0 100%}html body .dmPH>.wrap>.lgB{flex:0 0 aut
 .lgF input,.lgF select{font:500 15px var(--t-sans,Manrope,system-ui,sans-serif);padding:8px 10px;border-radius:10px;border:1px solid #c9d6d8;background:#fff;color:#0b2a33;min-width:0;max-width:100%;box-sizing:border-box}
 .lgF p{margin:0}.lgBox{margin:26px 0}.lgSum{color:#4b5d61}.lgL{list-style:none;padding:0;margin:8px 0}.lgL li{padding:10px 0;border-bottom:1px solid #e6eced;overflow-wrap:anywhere}.lgL time{font-variant-numeric:tabular-nums;color:#4b5d61;margin-right:6px}
 .lgX{margin-left:6px;border:0;background:#eef3f4;border-radius:999px;width:28px;height:28px;cursor:pointer;font-size:16px;line-height:1;color:#4b5d61}
+
+/* 23.77 UI pass */
+#dmBackTop{position:fixed;right:16px;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);z-index:60;width:46px;height:46px;border-radius:50%;border:0;display:flex;align-items:center;justify-content:center;background:#0b2a33;color:#fff;box-shadow:0 6px 18px rgba(6,50,58,.28);cursor:pointer;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s}
+#dmBackTop.on{opacity:.92;visibility:visible;transform:none}#dmBackTop:hover{opacity:1;background:#0a8a84}#dmBackTop:focus-visible{outline:3px solid #f5b544;outline-offset:2px}
+@media (max-width:760px){body.dmHasTab #dmBackTop{bottom:calc(env(safe-area-inset-bottom,0px) + 82px)}}
+@media print{#dmBackTop{display:none!important}}
+html body main h3.tdL,html body .tdC h3.tdL{font:800 13px/1.3 var(--t-sans)!important;letter-spacing:.07em!important;text-transform:uppercase;color:#0a6f69;margin:0 0 8px!important}
+html body main .tdRetry,html body main .t63Clim button,html body main button.dmRetry{display:inline-flex;align-items:center;gap:6px;margin:6px 0 0;padding:7px 14px;border-radius:999px;border:1.5px solid #0a8f88;background:#fff;color:#0a6f69;font:800 14px var(--t-sans);cursor:pointer;min-height:38px}
+html body main .tdRetry:hover,html body main .t63Clim button:hover{background:#eef8f7}
+@media (max-width:640px){html body .thero .ppB,html body .thero .svB,html body .thero .lgB,html body .dmPH .ppB,html body .dmPH .svB,html body .dmPH .lgB{font-size:14px!important;padding:7px 12px!important;margin:8px 6px 2px 0!important}}

@@ -4,7 +4,7 @@
 
 ## Key pages
 - [Live map](https://dipmapper.com/spots): swim spots, beaches, lakes, pools and water activities around any location, with weather, tides, official EU bathing-water quality and routes.
-- [Things to do](https://dipmapper.com/explore): 735 hand-picked water experiences worldwide (boat trips, diving, rafting, spas, wildlife) with best months and official links.
+- [Things to do](https://dipmapper.com/explore): 775 hand-picked water experiences worldwide (boat trips, diving, rafting, spas, wildlife) with best months and official links.
 - [Beach towns](https://dipmapper.com/waterfront-towns): 185 beach towns and cruise ports, each with best months, beaches, sights, food, nightlife, festivals, seasonal risks, emergency numbers and a climate chart.
 - [Trip planner](https://dipmapper.com/plan): pick a beach town and a month – good month or not, climate, festivals, water experiences in season within 150 km, fishing, sunsets and risks.
 - [Compare towns](https://dipmapper.com/compare): two or three beach towns side by side.
@@ -77,7 +77,7 @@
 - On the home page, every beach-town guide and every place page: the best hours for the water today from the MET Norway forecast, tonight's sunset with the nearest beach bar and a fish restaurant for dinner (with "open now" where OpenStreetMap has opening hours), what to bring, add to calendar and share. Save places to your own list.
 
 ## Facts and identity
-- [facts.json](https://dipmapper.com/facts.json): the numbers the site shows (735 places in 96 countries, 185 beach towns, 233 sea-life seasons, fishing guides for 36 countries), the operator and the sources page. One file, the same numbers everywhere.
+- [facts.json](https://dipmapper.com/facts.json): the numbers the site shows (775 places in 100 countries, 185 beach towns, 244 sea-life seasons, fishing guides for 36 countries), the operator and the sources page. One file, the same numbers everywhere.
 - DipMapper is operated by its founder and publisher, Torsten Sauter, who also builds TixTerex, Stoffknacker, CurveScout and Nestlyzer as separate products.
 
 ## Conditions and log

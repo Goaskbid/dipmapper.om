@@ -1,0 +1,12 @@
+(function(){var b=document.querySelector('.t63Clim');if(!b)return;var la=+b.dataset.la,lo=+b.dataset.lo,K='dm_clim_'+la.toFixed(1)+'_'+lo.toFixed(1);
+var M=['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'],L=['J','F','M','A','M','J','J','A','S','O','N','D'],D=[31,28.25,31,30,31,30,31,31,30,31,30,31];
+function draw(t,r){var W=360,H=150,x0=6,cw=(W-12)/12,mxR=Math.max.apply(null,r.concat([60])),mnT=Math.min.apply(null,t),mxT=Math.max.apply(null,t),sp=Math.max(8,mxT-mnT),
+y=function(v){return 24+(1-(v-mnT)/sp)*30},s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Average maximum temperature and rainfall per month">',pts=[];
+for(var i=0;i<12;i++){var h=Math.round(r[i]/mxR*46),cx=x0+cw*i+cw/2;s+='<rect class="rb" x="'+(cx-cw*0.32)+'" y="'+(132-h)+'" width="'+(cw*0.64)+'" height="'+h+'" rx="3"/>';
+s+='<text class="rv" x="'+cx+'" y="'+(128-h)+'" text-anchor="middle">'+Math.round(r[i])+'</text><text x="'+cx+'" y="146" text-anchor="middle">'+L[i]+'</text>';pts.push(cx+','+y(t[i]).toFixed(1))}
+s+='<polyline class="tl" points="'+pts.join(' ')+'"/>';for(i=0;i<12;i++){var p=pts[i].split(',');s+='<circle class="td" cx="'+p[0]+'" cy="'+p[1]+'" r="3"/><text class="tv" x="'+p[0]+'" y="'+(p[1]-7)+'" text-anchor="middle">'+Math.round(t[i])+'°</text>'}
+b.innerHTML='<h3><svg class="ic" aria-hidden="true"><use href="/icons.svg#i-chart"/></svg> Climate by month</h3>'+s+'</svg><p><span style="color:#b4561b;font-weight:800">● Average daily high (°C)</span> · <span style="color:#2f6fa8;font-weight:800">▮ Rain per month (mm)</span> · Long-term averages from NASA POWER (CC BY 4.0).</p>';b.hidden=false}
+try{var c=JSON.parse(localStorage.getItem(K)||'null');if(c&&Date.now()-c.t<90*864e5)return draw(c.a,c.b)}catch(e){}
+fetch('https://power.larc.nasa.gov/api/temporal/climatology/point?parameters=T2M_MAX,PRECTOTCORR&community=RE&longitude='+lo.toFixed(3)+'&latitude='+la.toFixed(3)+'&format=JSON').then(function(r){return r.json()}).then(function(j){var p=j.properties.parameter,t=M.map(function(m){return p.T2M_MAX[m]}),r=M.map(function(m,i){return p.PRECTOTCORR[m]*D[i]});
+if(t.some(function(v){return v==null||v<-90}))return;try{localStorage.setItem(K,JSON.stringify({t:Date.now(),a:t,b:r}))}catch(e){}draw(t,r)}).catch(function(){})})();
+(function(){var m=new Date().getMonth();document.querySelectorAll('.t63Mo>div[data-m="'+m+'"]').forEach(function(d){d.classList.add('now')})})();
