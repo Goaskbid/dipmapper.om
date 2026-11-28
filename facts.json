@@ -1,0 +1,24 @@
+{
+ "name": "DipMapper",
+ "url": "https://dipmapper.com/",
+ "category": "Water discovery and trip planning",
+ "operator": "Torsten Sauter (founder and publisher)",
+ "price": "Free, no account",
+ "places": 735,
+ "countries": 96,
+ "beach_towns": 185,
+ "sea_life_seasons": 233,
+ "shipwrecks_mapped": 1000,
+ "house_reef_hotels_listed": 112,
+ "fishing_countries": 36,
+ "bathing_water_sites_eu": "22,000+",
+ "version": "23.77.0",
+ "generated": "2026-11-28",
+ "sources": "https://dipmapper.com/sources",
+ "methodology": "https://dipmapper.com/about",
+ "notes": {
+  "places": "hand-picked water experiences in the catalogue that the map, Things to do and the planner share",
+  "fishing_countries": "Switzerland (lakes and cantonal rules) plus 35 country guides",
+  "forecasts": "MET Norway forecasts; tides are modelled; EU bathing-water classifications are official annual results"
+ }
+}

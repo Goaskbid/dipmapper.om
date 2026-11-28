@@ -46,8 +46,15 @@
     });return out;
   }
   function budget(){try{var k='dm_osm_budget',n=Date.now(),b=JSON.parse(localStorage.getItem(k)||'[]').filter(function(t){return typeof t==='number'&&n-t<36e5&&t<=n});if(b.length>=40)return false;b.push(n);localStorage.setItem(k,JSON.stringify(b));return true}catch(e){return true}}
+  /* shared edge cache when the site runs on Cloudflare (/api/osm); on GitHub Pages the ping is a 404 and nothing changes */
+  var PX=null;function proxy(){if(PX)return PX;var s=null;try{s=sessionStorage.getItem('dm_osm_px')}catch(e){}
+    if(s==='1'||s==='0')return PX=Promise.resolve(s==='1');
+    return PX=fetch('/api/osm/ping',{credentials:'omit',cache:'no-store'}).then(function(r){return r.status===204},function(){return false}).then(function(v){try{sessionStorage.setItem('dm_osm_px',v?'1':'0')}catch(e){}return v})}
   async function request(q,i){
-    i=i||0;if(!i&&!budget())throw Error('Hourly lookup limit reached');var ctl=W.AbortController?new AbortController():null;
+    i=i||0;if(!i&&!budget())throw Error('Hourly lookup limit reached');
+    if(!i&&await proxy()){try{var pr=await fetch('/api/osm',{method:'POST',body:'data='+encodeURIComponent(q),headers:{'Content-Type':'application/x-www-form-urlencoded'},credentials:'omit'});
+      if(pr.status===429){throw Object.assign(Error('OSM service busy (429)'),{busy:1})}
+      if(pr.ok){var pj=await pr.json();if(pj&&Array.isArray(pj.elements)&&!pj.remark)return pj}}catch(e){if(e&&e.busy)throw e}}var ctl=W.AbortController?new AbortController():null;
     var timer=setTimeout(function(){if(ctl)ctl.abort()},30000);
     try{
       var r=await fetch(MIR[i],{method:'POST',body:'data='+encodeURIComponent(q),headers:{'Content-Type':'application/x-www-form-urlencoded'},credentials:'omit',signal:ctl?ctl.signal:undefined});
@@ -72,31 +79,32 @@
     s = String(s || '').trim(); if (!s) return null; if (s === '24/7') return { all: 1 };
     var wk = [null, null, null, null, null, null, null], ok = true;
     s.split(';').forEach(function (r) {
-      r = r.trim(); if (!r || !ok) return; if (/^PH\b/.test(r)) return;
+      r = r.trim(); if (!r || !ok) return; if (/\b(?:PH|SH)\b/.test(r)) { ok=false; return; }
       var m = r.match(/^((?:(?:Mo|Tu|We|Th|Fr|Sa|Su)(?:-(?:Mo|Tu|We|Th|Fr|Sa|Su))?)(?:,(?:Mo|Tu|We|Th|Fr|Sa|Su)(?:-(?:Mo|Tu|We|Th|Fr|Sa|Su))?)*)?\s*(.*)$/);
       if (!m) { ok = false; return; }
       var ds = [], spec = m[1] || 'Mo-Su', tt = m[2].trim();
       spec.split(',').forEach(function (p) { var a = p.split('-'), i = DAYS.indexOf(a[0]), j = DAYS.indexOf(a[1] || a[0]); for (var k = i; ; k = (k + 1) % 7) { ds.push(k); if (k === j) break; } });
       var iv = [];
       if (tt === 'off' || tt === 'closed') iv = [];
-      else { tt.split(',').forEach(function (x) { var q = x.trim().match(/^(\d{1,2}):(\d\d)-(\d{1,2}):(\d\d)\+?$/); if (!q) { ok = false; return; } var a = q[1] * 60 + +q[2], b = q[3] * 60 + +q[4]; if (b <= a) b += 1440; iv.push([a, b]); }); }
+      else { tt.split(',').forEach(function (x) { var q = x.trim().match(/^(\d{1,2}):(\d\d)-(\d{1,2}):(\d\d)$/); if (!q || +q[1]>23 || +q[2]>59 || +q[3]>24 || +q[4]>59 || (+q[3]===24 && +q[4]!==0)) { ok = false; return; } var a = q[1] * 60 + +q[2], b = q[3] * 60 + +q[4]; if (b <= a) b += 1440; iv.push([a, b]); }); }
       ds.forEach(function (d) { wk[d] = iv; });
     });
     return ok && wk.some(function (x) { return x !== null; }) ? { wk: wk.map(function (x) { return x || []; }) } : null;
   }
   function hm(m) { m = m % 1440; return ('0' + Math.floor(m / 60)).slice(-2) + ':' + ('0' + m % 60).slice(-2); }
   function openNow(s, tz) {
-    var o = parseOH(s); if (!o) return null; if (o.all) return { open: true, txt: '<b class="oOpen">open 24/7</b>' };
+    var o = parseOH(s); if (!o) return null; if (o.all) return { open: true, txt: '<b class="oOpen">Listed hours: 24/7</b>' };
+    if (!tz) return null; try { new Intl.DateTimeFormat('en', {timeZone:tz}).format(); } catch(e) { return null; }
     var n = nowIn(tz), prev = (n.d + 6) % 7, iv = o.wk[n.d], pv = o.wk[prev];
     if (iv === null && pv === null) return null;
     var k, x;
-    if (pv) for (k = 0; k < pv.length; k++) { x = pv[k]; if (x[1] > 1440 && n.m < x[1] - 1440) return { open: true, txt: '<b class="oOpen">open now</b> until ' + hm(x[1]) }; }
-    if (iv) for (k = 0; k < iv.length; k++) { x = iv[k]; if (n.m >= x[0] && n.m < x[1]) return { open: true, txt: '<b class="oOpen">open now</b> until ' + hm(x[1]) }; }
-    if (iv) for (k = 0; k < iv.length; k++) { x = iv[k]; if (n.m < x[0]) return { open: false, txt: '<b class="oShut">closed</b> · opens ' + hm(x[0]) }; }
-    return iv ? { open: false, txt: '<b class="oShut">closed now</b>' } : null;
+    if (pv) for (k = 0; k < pv.length; k++) { x = pv[k]; if (x[1] > 1440 && n.m < x[1] - 1440) return { open: true, txt: '<b class="oOpen">Listed hours: open</b> until ' + hm(x[1]) }; }
+    if (iv) for (k = 0; k < iv.length; k++) { x = iv[k]; if (n.m >= x[0] && n.m < x[1]) return { open: true, txt: '<b class="oOpen">Listed hours: open</b> until ' + hm(x[1]) }; }
+    if (iv) for (k = 0; k < iv.length; k++) { x = iv[k]; if (n.m < x[0]) return { open: false, txt: '<b class="oShut">Listed hours: closed</b> · opens ' + hm(x[0]) }; }
+    return iv ? { open: false, txt: '<b class="oShut">Listed hours: closed</b>' } : null;
   }
   function list(k,la,lo){
-    la=Number(la);lo=Number(lo);if(!Q[k]||!point(la,lo))return Promise.reject(Error('Invalid point'));
+    if(!Q[k]||!point(la,lo))return Promise.reject(Error('Invalid point'));
     return get(Q[k](la.toFixed(4),lo.toFixed(4))).then(function(j){return items(j,k).map(function(x){return Object.assign({},x,{d:km(la,lo,x.la,x.lo)})}).sort(function(a,b){return a.d-b.d})});
   }
   function bbox(k,s,w,n,e){

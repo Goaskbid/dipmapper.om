@@ -11,7 +11,7 @@ var MO=new Date().getMonth(),HI=null,MAP=null,ML=null;
 function idx(){return window.dmHomeIndex?window.dmHomeIndex():Promise.reject(new Error('Shared catalogue loader unavailable'));}
 /* ---------- 1. the world water map: layers, month time-slider, tap anywhere for conditions ---------- */
 var MN=['January','February','March','April','May','June','July','August','September','October','November','December'],SM=MO+1,EX=null,LON={p:1,t:1,w:1,f:1,r:1};
-function extra(){return EX||(EX=fetch('/map-extra.json?v=a4a5e977e5').then(function(r){if(!r.ok)throw Error('Map extras unavailable');return r.json()}).then(function(x){if(!x||!x.tb||!Array.isArray(x.f)||!Array.isArray(x.r))throw Error('Invalid map extras');return x}).catch(function(){EX=null;return{tb:{},f:[],r:[],dc:[]}}))}
+function extra(){return EX||(EX=fetch('/map-extra.json?v=58047bd064').then(function(r){if(!r.ok)throw Error('Map extras unavailable');return r.json()}).then(function(x){if(!x||!x.tb||!Array.isArray(x.f)||!Array.isArray(x.r))throw Error('Invalid map extras');return x}).catch(function(){EX=null;return{tb:{},f:[],r:[],dc:[]}}))}
 function safeLink(u){try{var a=new URL(String(u),location.origin);return /^https?:$/.test(a.protocol)?a.href:'/explore'}catch(e){return '/explore'}}
 function season(p,mo){return !Number.isInteger(p.m)||p.m<=0||p.m>4095?'unknown':(p.m&(1<<(mo-1)))?'in':'out'}
 function seasonText(p,mo){var v=season(p,mo);return v==='unknown'?'timing not established':v==='in'?'published month window: '+MN[mo-1]:'outside published month window: '+MN[mo-1]}

@@ -2,7 +2,7 @@
 /* Water butler: the best hours today from the MET Norway forecast, tonight's sunset with the nearest beach bar, dinner by the water,
    what to bring, add to calendar, share – plus a saved list. Forecast: MET Norway (CC BY 4.0). Places: OpenStreetMap (ODbL). */
 (function (W) {
-  var D = document, H = 36e5, MET = 'https://api.met.no/weatherapi/locationforecast/2.0/compact';
+  var D = document, H = 36e5, MET = 'https://api.met.no/weatherapi/locationforecast/2.0/complete';
   function E(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
   function ic(n) { return '<svg class="ic" aria-hidden="true"><use href="/icons.svg#i-' + n + '"/></svg>'; }
   function tm(t, tz) { try { return new Date(t).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: tz || undefined }); } catch (e) { return new Date(t).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' }); } }
@@ -10,7 +10,7 @@
   function ymd(t, tz) { try { return new Date(t).toLocaleDateString('en-CA', { timeZone: tz || undefined }); } catch (e) { return new Date(t).toISOString().slice(0, 10); } }
   function getLoc() { try { var c = JSON.parse(localStorage.getItem('dm_loc') || 'null'); if (c && typeof c.la === 'number' && typeof c.lo === 'number' && isFinite(c.la) && isFinite(c.lo) && Math.abs(c.la) <= 90 && Math.abs(c.lo) <= 180 && typeof c.t === 'number' && c.t <= Date.now() + 6e4 && Date.now() - c.t < 432e5) return c; } catch (e) {} return null; }
   function fc(la, lo) {
-    var k = 'dm_btl_' + la.toFixed(2) + '_' + lo.toFixed(2), c = null;
+    var k = 'dm_btl2_' + la.toFixed(2) + '_' + lo.toFixed(2), c = null;
     try { c = JSON.parse(sessionStorage.getItem(k) || 'null'); } catch (e) {}
     if (c && Date.now() - c.t < H) return Promise.resolve(c.j);
     var ep = W.DM_FORECAST_ENDPOINT === '/api/forecast' ? '/api/forecast' : MET;
@@ -24,37 +24,39 @@
     out: { t0: 10, t1: 24, wt: 25, ww: 25, wr: 35, wc: 15, name: 'time outdoors', short: 'outdoor' }
   };
   function hour(p, m) {
-    var d = p.data.instant.details, n1 = p.data.next_1_hours || p.data.next_6_hours, rain = n1 && n1.details ? n1.details.precipitation_amount : null;
-    var T = d.air_temperature, ws = d.wind_speed, cl = d.cloud_area_fraction;
-    if (!isFinite(T) || !isFinite(ws)) return null;
+    if (!p || !p.data || !p.data.instant || !p.data.instant.details || typeof p.time !== 'string') return null;
+    var d = p.data.instant.details, n1 = p.data.next_1_hours, num = function (v) { return typeof v === 'number' && isFinite(v) ? v : null; };
+    var rain = n1 && n1.details ? num(n1.details.precipitation_amount) : null, T = num(d.air_temperature), ws = num(d.wind_speed), cl = num(d.cloud_area_fraction);
+    if (T === null || ws === null || ws < 0 || T < -60 || T > 60 || !isFinite(Date.parse(p.time))) return null;
+    if (rain !== null && rain < 0) rain = null; if (cl !== null && (cl < 0 || cl > 100)) cl = null;
     var s = Math.max(0, Math.min(1, (T - m.t0) / (m.t1 - m.t0))) * m.wt;
     s += (ws <= 4 ? 1 : ws <= 7 ? .6 : ws <= 10 ? .2 : 0) * m.ww;
     s += (rain == null ? .5 : rain === 0 ? 1 : rain < .3 ? .5 : 0) * m.wr;
-    s += (isFinite(cl) ? (100 - cl) / 100 : .5) * m.wc;
+    s += (cl !== null ? (100 - cl) / 100 : .5) * m.wc;
     return { t: Date.parse(p.time), s: s, T: T, ws: ws, rain: rain, cl: cl, sym: n1 && n1.summary ? n1.summary.symbol_code : '' };
   }
   function plan(j, la, lo, mode, tz) {
     var m = MODE[mode] || MODE.swim, now = Date.now(), S = W.DMToday && DMToday.sun;
     var hs = j.properties.timeseries.map(function (p) { return hour(p, m); }).filter(function (h) { return h && h.t >= now - H / 2 && h.t <= now + 48 * H; });
-    function light(t) { if (!S) return true; var d = new Date(t), up = S(d, la, lo, -0.833, true), dn = S(d, la, lo, -0.833, false); if (typeof up !== 'number' || typeof dn !== 'number') return true; return t >= up && t + H <= dn + 0.5 * H; }
+    function light(t) { if (!S) return false; var d = new Date(t), up = S(d, la, lo, -0.833, true), dn = S(d, la, lo, -0.833, false); if (typeof up !== 'number' || typeof dn !== 'number' || !isFinite(up) || !isFinite(dn)) return false; return t >= up && t + H <= dn + 0.5 * H; }
     var best = null, today = ymd(now, tz);
     for (var i = 0; i + 1 < hs.length; i++) {
-      var a = hs[i], b = hs[i + 1]; if (b.t - a.t > H + 60000 || !light(a.t) || !light(b.t)) continue;
+      var a = hs[i], b = hs[i + 1]; if (b.t - a.t !== H || !light(a.t) || !light(b.t)) continue;
       var sc = (a.s + b.s) / 2, w = { t: a.t, e: b.t + H, s: sc, a: a, b: b, today: ymd(a.t, tz) === today };
       if (!best || (w.today && !best.today && sc >= best.s - 8) || (w.today === best.today && sc > best.s) || (!best.today && !w.today && sc > best.s)) best = w;
     }
     var bd = best ? ymd(best.t, tz) : today, dayHs = hs.filter(function (h) { return ymd(h.t, tz) === bd; }), litHs = dayHs.filter(function (h) { return light(h.t); }), mx = -99, mn = 99, rain = 0;
     (litHs.length ? litHs : dayHs.length ? dayHs : hs.slice(0, 12)).forEach(function (h) { mx = Math.max(mx, h.T); mn = Math.min(mn, h.T); });
-    dayHs.forEach(function (h) { rain += h.rain || 0; });
+    var rk = 0; dayHs.forEach(function (h) { if (h.rain !== null) { rain += h.rain; rk++; } }); if (!rk) rain = null;
     return { best: best, mx: mx, mn: mn, rain: rain, dayLbl: bd === today ? 'Today' : bd === ymd(now + 24 * H, tz) ? 'Tomorrow' : day(best.t, tz), wsMax: Math.max.apply(null, hs.slice(0, 14).map(function (h) { return h.ws; })), m: m };
   }
-  function verdict(s) { return s >= 70 ? ['Good', 'btG'] : s >= 45 ? ['Fair', 'btF'] : ['Poor', 'btP']; }
+  function verdict(s) { return s >= 70 ? ['Good weather', 'btG'] : s >= 45 ? ['Mixed weather', 'btF'] : ['Poor weather', 'btP']; }
   function bring(p, mode, sunHigh) {
     var L = [];
     if (mode === 'swim') L.push('Towel and swimwear');
-    if (sunHigh && p.best && p.best.a.cl < 60) L.push('Sunscreen, hat and sunglasses – the sun is high at midday');
+    if (sunHigh && p.best && p.best.a.cl !== null && p.best.a.cl < 60) L.push('Sunscreen, hat and sunglasses – the sun is high at midday');
     if (p.mx >= 25) L.push('At least 1.5 litres of water and some shade');
-    if (p.rain >= 0.5) L.push('A rain jacket – ' + p.rain.toFixed(1) + ' mm of rain forecast ' + p.dayLbl.toLowerCase().replace(/^(mon|tues|wednes|thurs|fri|satur|sun)day$/, 'on $&'));
+    if (p.rain !== null && p.rain >= 0.5) L.push('A rain jacket – ' + p.rain.toFixed(1) + ' mm of rain forecast ' + p.dayLbl.toLowerCase().replace(/^(mon|tues|wednes|thurs|fri|satur|sun)day$/, 'on $&'));
     if (p.wsMax >= 8) L.push('A windproof layer – gusty wind, check the beach flags');
     if (p.mn < 16) L.push('A warm layer for after the water – ' + Math.round(p.mn) + '°C at the coolest');
     if (mode === 'boat') L.push('Something warm for the deck, even on sunny days');
@@ -87,24 +89,29 @@
     var ssTom = false; if (typeof ss === 'number' && ss < now) { ss = S(new Date(now + 24 * H), la, lo, -0.833, false); ssTom = true; }
     var noon = S && typeof ss === 'number' ? (S(new Date(), la, lo, -0.833, true) + ss) / 2 : null, sunHigh = false;
     if (noon) { var dec = 23.44 * Math.sin((2 * Math.PI / 365) * ((Date.now() / 864e5 + 10) % 365.25 - 81)); sunHigh = 90 - Math.abs(la - dec) >= 45; }
+    var tok = el._tok = {};
+    if (W.DMCond) try { DMCond.attach(el, pt, tz, mode, tok); } catch (e) {}
     fc(la, lo).then(function (j) {
+      if (el._tok !== tok) return;
       var p = plan(j, la, lo, mode, tz);
+      if (W.DMCond) try { DMCond.wx(el, p, j, tz); } catch (e) {}
       if (!p.best) { bx.innerHTML = '<h3>' + ic('sunrise') + ' Best hours</h3><p>No daylight hours are left in the forecast window.</p>'; return; }
       var b = p.best, v = verdict(b.s), when = p.dayLbl + ' ' + tm(b.t, tz) + '–' + tm(b.e, tz);
-      bx.innerHTML = '<h3>' + ic('sunrise') + ' Best hours for ' + p.m.name + '</h3><p class="btW"><b>' + when + '</b> <span class="btV ' + v[1] + '">' + v[0] + '</span></p><p class="btDet">' + Math.round(b.a.T) + '°C · wind ' + b.a.ws.toFixed(0) + ' m/s · ' + (b.a.rain ? b.a.rain.toFixed(1) + ' mm rain' : 'dry') + (isFinite(b.a.cl) ? ' · ' + Math.round(b.a.cl) + '% cloud' : '') + '</p>'
-        + (b.s < 45 ? '<p class="tdS">' + (mode === 'boat' ? 'Rough for an open deck – take a seat inside, or make it <a href="/boat-trips-with-food">a boat trip with lunch</a>.' : 'Not a great ' + p.m.short + ' day – <a href="/boat-trips-with-food">a boat trip with lunch</a> or <a href="/wildlife-calendar">sea life in season</a> work in most weather.') + '</p>' : '') + '<p class="tdS">' + p.dayLbl + ' in daylight ' + Math.round(p.mn) + ' to ' + Math.round(p.mx) + '°C' + (p.rain >= .1 ? ', ' + p.rain.toFixed(1) + ' mm rain over the day' : ', dry') + '.</p>';
+      bx.innerHTML = '<h3>' + ic('sunrise') + ' Best weather hours for ' + p.m.name + '</h3><p class="btW"><b>' + when + '</b> <span class="btV ' + v[1] + '">' + v[0] + '</span></p><p class="btDet">' + Math.round(b.a.T) + '°C · wind ' + b.a.ws.toFixed(0) + ' m/s · ' + (b.a.rain === null ? 'rain not forecast in hourly detail' : b.a.rain ? b.a.rain.toFixed(1) + ' mm rain' : 'dry') + (b.a.cl !== null ? ' · ' + Math.round(b.a.cl) + '% cloud' : '') + '</p>'
+        + (b.s < 45 ? '<p class="tdS">' + (mode === 'boat' ? 'Rough for an open deck – take a seat inside, or make it <a href="/boat-trips-with-food">a boat trip with lunch</a>.' : 'Not a great ' + p.m.short + ' day – <a href="/boat-trips-with-food">a boat trip with lunch</a> or <a href="/wildlife-calendar">sea life in season</a> work in most weather.') + '</p>' : '') + '<p class="tdS">' + p.dayLbl + ' in daylight ' + Math.round(p.mn) + ' to ' + Math.round(p.mx) + '°C' + (p.rain === null ? '' : p.rain >= .1 ? ', ' + p.rain.toFixed(1) + ' mm rain over the day' : ', dry') + '.</p>';
       events.push({ s: b.t, e: b.e, n: (b.s >= 45 ? 'Water time' : 'Possible water time') + (nm ? ' – ' + nm : ''), d: Math.round(b.a.T) + '°C wind ' + b.a.ws.toFixed(0) + ' m/s (MET Norway forecast)' });
       lines.push('Best hours: ' + when + ' (' + Math.round(b.a.T) + '°C, wind ' + b.a.ws.toFixed(0) + ' m/s)');
       var L = bring(p, mode, sunHigh);
       br.innerHTML = '<h3>' + ic('flag') + ' What to bring</h3><ul class="btL">' + L.map(function (x) { return '<li>' + E(x) + '</li>'; }).join('') + '</ul>';
       buttons();
-    }).catch(function () { bx.innerHTML = '<h3>' + ic('sunrise') + ' Best hours</h3><p class="tdS">The forecast did not answer right now. <button type="button" class="osmR">Try again</button></p>'; var r = bx.querySelector('.osmR'); if (r) r.onclick = function () { render(el, pt); }; });
+    }).catch(function () { if (el._tok !== tok) return; if (!br.innerHTML) br.hidden = true; bx.innerHTML = '<h3>' + ic('sunrise') + ' Best hours</h3><p class="tdS">The forecast did not answer right now. <button type="button" class="osmR">Try again</button></p>'; var r = bx.querySelector('.osmR'); if (r) r.onclick = function () { render(el, pt); }; });
     if (typeof ss === 'number') {
       ev.innerHTML = '<h3>' + ic('sunrise') + (ssTom ? ' Tomorrow evening' : ' This evening') + '</h3><p class="btW">Sunset' + (ssTom ? ' tomorrow' : '') + ' <b>' + tm(ss, tz) + '</b>' + (tz ? '' : ' (your time)') + '</p><div class="btPl"><p class="tdS">Looking for a sundowner and dinner nearby…</p></div>';
       events.push({ s: ss - 30 * 6e4, e: ss + 15 * 6e4, n: 'Sunset' + (nm ? ' – ' + nm : ''), d: 'Sunset ' + tm(ss, tz) });
       lines.push('Sunset: ' + tm(ss, tz));
       var pl = ev.querySelector('.btPl');
       if (W.DMNear && DMNear.list) Promise.all([DMNear.list('bars', la, lo).catch(function () { return null; }), DMNear.list('fish', la, lo).catch(function () { return null; })]).then(function (r) {
+        if (el._tok !== tok) return;
         var o = '';
         function one(lbl, x) { if (!x) return ''; var op = DMNear.open ? DMNear.open(x.o, tz) : null; return '<p class="btPx"><span>' + lbl + '</span><a href="https://www.openstreetmap.org/?mlat=' + x.la.toFixed(5) + '&amp;mlon=' + x.lo.toFixed(5) + '#map=17/' + x.la.toFixed(5) + '/' + x.lo.toFixed(5) + '" target="_blank" rel="noopener" title="View the mapped location"><b>' + E(x.n) + '</b></a> <small>' + E(x.t) + ' · ' + (x.d < 1 ? Math.round(x.d * 1000) + ' m' : x.d.toFixed(1) + ' km') + (op ? ' · ' + op.txt : '') + '</small></p>'; }
         var nb = function (a, km) { return (a || []).filter(function (x) { return x.d <= km; }); }, bars = nb(r[0], 15), food = nb(r[1], 8), bar = bars[0], fish = food.filter(function (x) { return !/by the water/.test(x.t); })[0] || food[0];
@@ -120,15 +127,34 @@
     }
   }
   /* ---------- saved list ---------- */
-  function sv() { try { return JSON.parse(localStorage.getItem('dm_save') || '{}'); } catch (e) { return {}; } }
+  /* one saved list for the whole site: dm_saved (the Saved page reads it); old dm_save entries are moved over once */
+  function rd(k, def) { try { var v = JSON.parse(localStorage.getItem(k) || 'null'); return v == null ? def : v; } catch (e) { return def; } }
+  function okRec(x) { return x && typeof x === 'object' && typeof x.id === 'string' && typeof x.t === 'string' && typeof x.u === 'string' && /^\/[A-Za-z0-9._#\/-]*$/.test(x.u); }
+  function list() { var a = rd('dm_saved', []); return Array.isArray(a) ? a : []; }
+  function put(a) { try { localStorage.setItem('dm_saved', JSON.stringify(a)); return true; } catch (e) { return false; } }
+  function migrate() {
+    var o = rd('dm_save', null); if (!o || typeof o !== 'object' || Array.isArray(o) || rd('dm_save_moved', 0)) return;
+    var a = list(), have = {}; a.forEach(function (x) { if (x && x.id) have[x.id] = 1; });
+    Object.keys(o).forEach(function (id) { var r = o[id]; if (!r || typeof r.n !== 'string' || typeof r.u !== 'string' || have[id]) return; var x = { id: id, t: r.n.slice(0, 200), u: r.u, k: id.charAt(0) === 't' ? 'town' : 'pick' }; if (okRec(x)) a.push(x); });
+    if (put(a)) try { localStorage.setItem('dm_save_moved', '1'); } catch (e) {}
+  }
   function svInit() {
+    migrate();
     [].forEach.call(D.querySelectorAll('.svB'), function (b) {
-      var id = b.dataset.sv; function sync() { var on = !!sv()[id]; b.setAttribute('aria-pressed', on); b.lastChild.textContent = on ? 'On your list' : 'Save to my list'; }
-      sync(); b.onclick = function () { var s = sv(); if (s[id]) delete s[id]; else s[id] = { n: b.dataset.n, u: b.dataset.u, la: +b.dataset.la, lo: +b.dataset.lo, t: Date.now() }; try { localStorage.setItem('dm_save', JSON.stringify(s)); } catch (e) {} sync(); };
+      var id = b.dataset.sv;
+      function on() { return list().some(function (x) { return x && x.id === id; }); }
+      function sync() { var o = on(); b.setAttribute('aria-pressed', o ? 'true' : 'false'); b.lastChild.textContent = o ? 'Saved – see your list' : 'Save to my list'; }
+      sync(); W.addEventListener('storage', function (e) { if (e.key === 'dm_saved') sync(); });
+      b.onclick = function () {
+        var a = list(), i = -1; a.forEach(function (x, k) { if (x && x.id === id) i = k; });
+        if (i >= 0) a.splice(i, 1); else { var x = { id: id, t: b.dataset.n, u: b.dataset.u, k: id.charAt(0) === 't' ? 'town' : 'pick' }; if (!okRec(x)) return; if (a.length >= 200) { b.lastChild.textContent = 'Your list is full (200)'; return; } a.unshift(x); }
+        if (!put(a)) { b.lastChild.textContent = 'Saving is not possible in this browser'; return; }
+        sync();
+      };
     });
-    var L = D.getElementById('hList'); if (!L) return; var s = sv(), k = Object.keys(s).sort(function (a, b) { return s[b].t - s[a].t; });
-    if (!k.length) { L.hidden = true; return; }
-    L.hidden = false; L.innerHTML = '<h2>' + ic('flag') + ' Your list</h2><ul class="btList">' + k.slice(0, 12).map(function (i) { return '<li><a href="' + E(s[i].u) + '">' + E(s[i].n) + '</a></li>'; }).join('') + '</ul>';
+    var L = D.getElementById('hList'); if (!L) return; var s = list().filter(okRec);
+    if (!s.length) { L.hidden = true; return; }
+    L.hidden = false; L.innerHTML = '<h2>' + ic('flag') + ' Your list</h2><ul class="btList">' + s.slice(0, 12).map(function (x) { return '<li><a href="' + E(x.u) + '">' + E(x.t) + '</a></li>'; }).join('') + '</ul><p class="tdS"><a href="/saved">All saved places →</a></p>';
   }
   function all() {
     svInit();
@@ -142,6 +168,8 @@
     });
   }
   function go(el, pt) {
+    if (!el.dataset.la && !el._lw) { el._lw = 1; W.addEventListener('dm:location', function () { var d = getLoc(); if (d && el._pt && (Math.abs(d.la - el._pt.la) > 1e-3 || Math.abs(d.lo - el._pt.lo) > 1e-3)) { el._pt = d; render(el, d); } }); }
+    el._pt = pt;
     if (el._io) return;
     if (!('IntersectionObserver' in W)) return render(el, pt);
     el._io = new IntersectionObserver(function (es) { if (es.some(function (x) { return x.isIntersecting; })) { el._io.disconnect(); el._io = null; render(el, pt); } }, { rootMargin: '300px' }); el._io.observe(el);

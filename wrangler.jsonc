@@ -1,11 +1,15 @@
 {
-  // DipMapper on Cloudflare: static assets only, no Worker code runs for page views.
+  // DipMapper on Cloudflare: every page and file is a static asset. Worker code runs only for /api/* (the shared
+  // OpenStreetMap cache in _tools/cf/osm-worker.js) – no extra Cloudflare product, no storage, nothing metered beyond Workers.
   // Build: python3 _tools/cf_public.py   Deploy: npx wrangler@4.156.0 deploy
   "name": "dipmapper",
+  "main": "_tools/cf/osm-worker.js",
   "compatibility_date": "2025-10-01",
   "assets": {
     "directory": "./public",
+    "binding": "ASSETS",
     "html_handling": "auto-trailing-slash",
-    "not_found_handling": "404-page"
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
   }
 }
